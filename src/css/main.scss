@@ -1,0 +1,697 @@
+$turquesa: #3ef2d0;
+$turquesa_strong: #19e6c0;
+$gris: #f0eeee;
+$blanco: #ffffff;
+$negro: #000000;
+$xsmall: 320px;
+$small: 570px;
+$medium: 760px;
+$large: 1024px;
+$font-family-poppins: "Poppins", sans-serif;
+$font-famiy-open: "Open Sans", sans-serif;
+$font-size-paragraph: 1.6rem;
+$font-W-regular-400: 400;
+$font-W-bold-700: 700;
+$font-z-h2: 2.4rem;
+$border-radius: 0.5rem;
+$box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+
+//variables clock halvin
+$font-size-clock: 3.5rem;
+
+html {
+  font-size: 62.5%;
+  font-family: $font-family-poppins;
+}
+
+body {
+  font-family: $font-family-poppins;
+  font-size: $font-size-paragraph;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  color: red;
+  font-size: $font-z-h2;
+  text-align: center;
+}
+
+@mixin but($bg-color, $text) {
+  font-family: $font-famiy-open;
+  background-color: $bg-color;
+  color: $text;
+  margin-top: 1.6rem;
+  font-size: 2rem;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 0.5rem;
+
+  &:hover {
+    background-color: $turquesa_strong;
+    cursor: pointer;
+  }
+}
+
+header {
+  max-width: 425px;
+  min-width: $xsmall;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: auto;
+  background-image: url("../../imagenes/BTC-greenopease-2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  text-align: center;
+  padding: 1.6rem 0px;
+
+  .contenido-encabezado {
+    margin: auto;
+    padding: 6px;
+    width: 100%;
+
+    .text-autor {
+      font-style: italic;
+      font-weight: $font-W-bold-700;
+    }
+
+    .clock {
+      display: flex;
+      justify-content: center;
+      margin: auto 0px;
+      width: 100%;
+    }
+
+    .boton {
+      @include but($turquesa, $negro);
+      padding: 2rem 3rem;
+      border-radius: 0.5rem;
+      font-weight: 700;
+    }
+
+    .flip-clock-wrapper ul {
+      margin: 0.3rem;
+    }
+
+    .flip-clock-wrapper ul li {
+      line-height: 4.5rem;
+    }
+
+    .flip-clock-wrapper ul li a .up .inn {
+      font-size: $font-size-clock;
+    }
+
+    .flip-clock-wrapper ul li a .down .inn {
+      font-size: $font-size-clock;
+    }
+
+    .flip-clock-wrapper ul li a div.up:after {
+      top: 2.2rem;
+    }
+
+    .flip-clock-wrapper .flip-clock-divider {
+      width: 1.1rem;
+      height: -webkit-fit-content;
+      height: -moz-fit-content;
+      height: fit-content;
+    }
+
+    .flip-clock-wrapper .flip-clock-divider .flip-clock-label {
+      right: -50px;
+      display: none;
+    }
+
+    .flip-clock-wrapper .days {
+      width: 0px;
+    }
+
+    .flip-clock-wrapper .hours .flip-clock-dot,
+    .flip-clock-wrapper .minutes .flip-clock-dot,
+    .flip-clock-wrapper .seconds .flip-clock-dot {
+      left: 0rem;
+    }
+
+    .flip-clock-wrapper .hours .top,
+    .flip-clock-wrapper .minutes .top,
+    .flip-clock-wrapper .seconds .top {
+      top: 15px;
+    }
+
+    .flip-clock-wrapper .hours .bottom,
+    .flip-clock-wrapper .minutes .bottom,
+    .flip-clock-wrapper .seconds .bottom {
+      top: 30px;
+    }
+
+    .clock .flip {
+      width: 2.5rem;
+      height: 4.5rem;
+    }
+  }
+}
+
+main {
+  min-width: $xsmall;
+  max-width: 425px;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  margin: auto;
+  width: 100vw;
+
+  .section--mis-redes {
+    min-width: 320px;
+    width: 100%;
+
+    padding: 0.6rem;
+    background-color: $gris;
+    padding: 1.8rem;
+    margin: auto;
+
+    .redes-conteiners {
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+
+      .button-group {
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+
+        .botones_redes {
+          background-color: #3ef2d0;
+          @include but($blanco, $negro);
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          gap: 0.6rem;
+          padding: 1rem 3rem;
+          margin-top: 0px;
+          box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+
+          img {
+            width: 5rem;
+          }
+
+          a {
+            text-decoration: none;
+            color: $negro;
+            margin: auto;
+          }
+        }
+      }
+
+      .linea {
+        display: none;
+      }
+
+      .container-live {
+        text-align: center;
+
+        .foto {
+          border-radius: 100%;
+        }
+
+        .stream_iconos {
+          img {
+            width: 9rem;
+          }
+        }
+      }
+    }
+  }
+
+  .section-mentoria {
+    min-width: $xsmall;
+
+    @extend .section--mis-redes;
+    background-color: $blanco;
+
+    .mentoria_contenido {
+      .mentoria-items {
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+
+        .mentoria_texto {
+          display: flex;
+
+          img {
+            width: 30px;
+            height: 30px;
+            margin-right: 8px;
+          }
+
+          .remember {
+            font-weight: 700;
+          }
+        }
+      }
+
+      .video-iframe {
+        margin-top: 1.6rem;
+
+        iframe {
+          width: 100%;
+          border-radius: $border-radius;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  .section-about-me {
+    text-align: center;
+
+    width: 100%;
+    max-width: 425px;
+    margin: auto;
+    padding: 0.6rem;
+    background-color: $gris;
+
+    .redes_contenido {
+      display: flex;
+      flex-direction: column;
+      gap: 2.6rem;
+
+      .marco {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        margin: auto;
+        padding: 2rem 0.6rem;
+        background-color: $blanco;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
+        height: fit-content;
+        border-radius: $border-radius;
+        justify-content: center;
+        align-items: center;
+        gap: 1.6rem;
+        box-shadow: $box-shadow;
+
+        img {
+          width: 100px;
+          border-radius: 100%;
+        }
+      }
+
+      .video {
+        height: 547px;
+        border-radius: $border-radius;
+        box-shadow: $box-shadow;
+      }
+    }
+  }
+
+  .section-merch {
+    text-align: center;
+    max-width: 425px;
+    margin: auto;
+
+    .container {
+      margin-top: 0%;
+      position: relative;
+      width: 100vw;
+      max-width: 300px;
+      height: 35rem;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      margin-bottom: 2rem;
+      padding: 0.6rem;
+
+      .slider {
+        input {
+          visibility: hidden;
+          display: none;
+        }
+
+        .content {
+          position: relative;
+          width: 100%;
+          height: -webkit-fit-content;
+          height: -moz-fit-content;
+          height: fit-content;
+          display: flex;
+          transition: 400ms ease-in-out;
+
+          .firstslide,
+          .secondslide,
+          .thirdslide,
+          .fourslide {
+            position: relative;
+            width: 130rem;
+            height: 25rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+              width: 300px;
+            }
+          }
+        }
+
+        .buttons {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          bottom: 50px;
+          gap: 10px;
+
+          label {
+            width: 20px;
+            height: 20px;
+            background-color: #3ef2d0;
+            opacity: 0.5;
+            cursor: pointer;
+            z-index: 1;
+            transition: 300ms ease-in-out;
+
+            &:hover {
+              scale: 1.2;
+              opacity: 1;
+            }
+
+            .slider input:nth-child(1):checked ~ .buttons label:nth-child(1),
+            .slider input:nth-child(2):checked ~ .buttons label:nth-child(2),
+            .slider input:nth-child(3):checked ~ .buttons label:nth-child(3),
+            .slider input:nth-child(4):checked ~ .buttons label:nth-child(4) {
+              opacity: 1;
+              scroll-margin: 1.2;
+              width: 40px;
+            }
+          }
+        }
+
+        input:nth-child(1):checked ~ .content {
+          left: 0rem;
+        }
+
+        input:nth-child(2):checked ~ .content {
+          left: -30rem;
+        }
+
+        input:nth-child(3):checked ~ .content {
+          left: -60rem;
+        }
+
+        input:nth-child(4):checked ~ .content {
+          left: -90rem;
+        }
+      }
+    }
+
+    .bpedido {
+      @include but($turquesa, $negro);
+      padding: 2rem 3rem;
+      border-radius: 0.5rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+@media screen and (min-width: 760px) {
+  $font-size-clock: 6.5rem;
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  header {
+    max-width: 80.5rem;
+
+    .contenido-encabezado {
+      .flip-clock-wrapper ul {
+        margin-top: 2.3rem;
+        margin-bottom: 2.3rem;
+      }
+
+      .flip-clock-wrapper ul li {
+        line-height: 6.5rem;
+      }
+
+      .flip-clock-wrapper ul li a .up .inn {
+        font-size: $font-size-clock;
+      }
+
+      .flip-clock-wrapper ul li a .down .inn {
+        font-size: $font-size-clock;
+      }
+
+      .flip-clock-wrapper ul li a div.up:after {
+        top: 3.2rem;
+      }
+
+      .flip-clock-wrapper .flip-clock-divider {
+        width: 1.1rem;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
+        height: fit-content;
+      }
+
+      .flip-clock-wrapper .flip-clock-divider .flip-clock-label {
+        right: -50px;
+        display: none;
+      }
+
+      .flip-clock-wrapper .days {
+        width: 0px;
+      }
+
+      .flip-clock-wrapper .hours .flip-clock-dot,
+      .flip-clock-wrapper .minutes .flip-clock-dot,
+      .flip-clock-wrapper .seconds .flip-clock-dot {
+        left: 0rem;
+      }
+
+      .flip-clock-wrapper .hours .top,
+      .flip-clock-wrapper .minutes .top,
+      .flip-clock-wrapper .seconds .top {
+        top: 45px;
+      }
+
+      .flip-clock-wrapper .hours .bottom,
+      .flip-clock-wrapper .minutes .bottom,
+      .flip-clock-wrapper .seconds .bottom {
+        top: 65px;
+      }
+
+      .clock .flip {
+        width: 6.5rem;
+        height: 6.5rem;
+      }
+    }
+  }
+
+  main {
+    max-width: 80.5rem;
+
+    .section--mis-redes {
+      .redes-conteiners {
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+      }
+    }
+
+    .section-mentoria {
+      .mentoria_contenido {
+        display: flex;
+
+        .mentoria-items {
+          width: 50%;
+        }
+
+        .video-iframe {
+          width: 50%;
+
+          iframe {
+            border-radius: 10px;
+            height: 100%;
+            margin: auto;
+          }
+        }
+      }
+    }
+
+    .section-about-me {
+      max-width: none;
+      height: -webkit-fit-content;
+      height: -moz-fit-content;
+      height: fit-content;
+      .redes_contenido {
+        flex-direction: row;
+        justify-content: space-evenly;
+        .marco {
+          height: 500px;
+          margin: 0px;
+        }
+        .video {
+          height: 500px;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  $font-size-clock: 15rem;
+  h1 {
+    font-size: 8rem;
+  }
+  h2 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+  header {
+    width: 100%;
+    max-width: none;
+
+    .contenido-encabezado {
+      .text-autor {
+        font-size: 3rem;
+      }
+      .boton {
+        padding: 3rem 7rem;
+      }
+
+      .flip-clock-wrapper ul {
+        margin-top: 2.3rem;
+        margin-bottom: 2.3rem;
+      }
+
+      .flip-clock-wrapper ul li {
+        /*centra los numeros en el flip*/
+        line-height: 14rem;
+      }
+
+      .flip-clock-wrapper ul li a .up .inn {
+        font-size: $font-size-clock;
+      }
+
+      .flip-clock-wrapper ul li a .down .inn {
+        font-size: $font-size-clock;
+      }
+
+      .flip-clock-wrapper ul li a div.up:after {
+        /*la linea que marca el dobles de cada flip*/
+        top: 6.5rem;
+      }
+
+      .flip-clock-wrapper .flip-clock-divider {
+        width: 3rem;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
+        height: fit-content;
+      }
+
+      .flip-clock-wrapper .flip-clock-divider .flip-clock-label {
+        right: -50px;
+        display: none;
+      }
+
+      .flip-clock-wrapper .days {
+        width: 0px;
+      }
+
+      .flip-clock-wrapper .hours .flip-clock-dot,
+      .flip-clock-wrapper .minutes .flip-clock-dot,
+      .flip-clock-wrapper .seconds .flip-clock-dot {
+        left: 0rem;
+        width: 30px;
+        height: 30px;
+      }
+
+      .flip-clock-wrapper .hours .top,
+      .flip-clock-wrapper .minutes .top,
+      .flip-clock-wrapper .seconds .top {
+        top: 45px;
+      }
+
+      .flip-clock-wrapper .hours .bottom,
+      .flip-clock-wrapper .minutes .bottom,
+      .flip-clock-wrapper .seconds .bottom {
+        top: 95px;
+      }
+
+      .clock .flip {
+        margin: 1rem;
+        width: 12rem;
+        height: 14rem;
+      }
+    }
+  }
+  main {
+    max-width: none;
+ 
+    .section--mis-redes {
+      .redes-conteiners {
+        max-width: 90rem;
+        margin: auto;
+      }
+    }
+    .section-mentoria {
+      .mentoria_contenido {
+        max-width: 90rem;
+        margin: auto;
+        gap: 1.5rem;
+      }
+    }
+    .section-about-me {
+      .redes_contenido {
+        max-width: 90rem;
+        margin: auto;
+        margin-bottom: 2rem;
+      }
+    }
+    .section-merch {
+        max-width: 90rem;
+      .container {
+     max-width: 51rem;
+     height: 50rem;
+        .slider {
+          .content {
+            .firstslide,
+            .secondslide,
+            .thirdslide,
+            .fourslide {
+                height: 40rem;
+              img {
+                width: 500px;
+              }
+            }
+          }
+          
+        input:nth-child(1):checked ~ .content {
+            left: 0rem;
+          }
+  
+          input:nth-child(2):checked ~ .content {
+            left: -50rem;
+          }
+  
+          input:nth-child(3):checked ~ .content {
+            left: -100rem;
+          }
+  
+          input:nth-child(4):checked ~ .content {
+            left: -150rem;
+          }
+        }
+      }
+    }
+  }
+}
