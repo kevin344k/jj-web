@@ -1,11 +1,12 @@
 html {
   font-size: 62.5%;
-  font-family: "Poppins", sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-size: 1.6rem;
+  overflow-x: hidden;
 }
 
 * {
@@ -15,32 +16,37 @@ body {
 }
 
 h1 {
+  font-family: "Ubuntu", sans-serif;
   font-size: 3rem;
 }
 
 h2 {
-  color: red;
   font-size: 2.4rem;
   text-align: center;
+  margin-bottom: 2.5rem;
 }
 
 header {
-  max-width: 425px;
+  width: 100%;
   min-width: 320px;
   height: -moz-fit-content;
-  height: fit-content;
+  height: 80vh;
   margin: auto;
-  background-image: url("../../imagenes/BTC-greenopease-2.jpg");
+  background-image: url("../../imagenes/BTC-greenopease.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
   padding: 1.6rem 0px;
+  display: flex;
 }
 header .contenido-encabezado {
   margin: auto;
   padding: 6px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 header .contenido-encabezado .text-autor {
   font-style: italic;
@@ -64,10 +70,16 @@ header .contenido-encabezado .boton {
   padding: 2rem 3rem;
   border-radius: 0.5rem;
   font-weight: 700;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
 }
 header .contenido-encabezado .boton:hover {
   background-color: #19e6c0;
   cursor: pointer;
+}
+header .contenido-encabezado .boton:active {
+  transform: scale(0.9);
 }
 header .contenido-encabezado .flip-clock-wrapper ul {
   margin: 0.3rem;
@@ -129,14 +141,14 @@ main .section--mis-redes, main .section-mentoria {
   min-width: 320px;
   width: 100%;
   padding: 0.6rem;
-  background-color: #f0eeee;
+  background-color: #f2f5f7;
   padding: 1.8rem;
   margin: auto;
 }
 main .section--mis-redes .redes-conteiners, main .section-mentoria .redes-conteiners {
   display: flex;
   flex-direction: column;
-  gap: 1.6rem;
+  gap: 3.6rem;
 }
 main .section--mis-redes .redes-conteiners .button-group, main .section-mentoria .redes-conteiners .button-group {
   display: flex;
@@ -153,34 +165,74 @@ main .section--mis-redes .redes-conteiners .button-group .botones_redes, main .s
   text-decoration: none;
   display: inline-block;
   border-radius: 0.5rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 0.6rem;
   padding: 1rem 3rem;
-  margin-top: 0px;
-  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 3px 5px 0px #d6d7d8;
 }
 main .section--mis-redes .redes-conteiners .button-group .botones_redes:hover, main .section-mentoria .redes-conteiners .button-group .botones_redes:hover {
   background-color: #19e6c0;
   cursor: pointer;
 }
-main .section--mis-redes .redes-conteiners .button-group .botones_redes img, main .section-mentoria .redes-conteiners .button-group .botones_redes img {
-  width: 5rem;
+main .section--mis-redes .redes-conteiners .button-group .botones_redes:active, main .section-mentoria .redes-conteiners .button-group .botones_redes:active {
+  transform: scale(0.9);
 }
 main .section--mis-redes .redes-conteiners .button-group .botones_redes a, main .section-mentoria .redes-conteiners .button-group .botones_redes a {
+  display: flex;
+  justify-content: center;
+  text-align: left;
   text-decoration: none;
+}
+main .section--mis-redes .redes-conteiners .button-group .botones_redes a img, main .section-mentoria .redes-conteiners .button-group .botones_redes a img {
+  width: 5rem;
+  margin-right: 0.5rem;
+}
+main .section--mis-redes .redes-conteiners .button-group .botones_redes a span, main .section-mentoria .redes-conteiners .button-group .botones_redes a span {
+  margin: auto 0px;
   color: #000000;
-  margin: auto;
 }
 main .section--mis-redes .redes-conteiners .linea, main .section-mentoria .redes-conteiners .linea {
   display: none;
 }
 main .section--mis-redes .redes-conteiners .container-live, main .section-mentoria .redes-conteiners .container-live {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.2rem;
 }
 main .section--mis-redes .redes-conteiners .container-live .foto, main .section-mentoria .redes-conteiners .container-live .foto {
   border-radius: 100%;
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  width: 20rem;
+  margin: auto;
+}
+main .section--mis-redes .redes-conteiners .container-live .live, main .section-mentoria .redes-conteiners .container-live .live {
+  font-family: "Open Sans", sans-serif;
+  background-color: transparent;
+  color: red;
+  margin-top: 1.6rem;
+  font-size: 2rem;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 0.5rem;
+  width: 20.5rem;
+  margin: auto;
+  padding: 1.5rem 3rem;
+  font-size: 2.4rem;
+  display: none;
+}
+main .section--mis-redes .redes-conteiners .container-live .live:hover, main .section-mentoria .redes-conteiners .container-live .live:hover {
+  background-color: #19e6c0;
+  cursor: pointer;
+}
+main .section--mis-redes .redes-conteiners .container-live .live:active, main .section-mentoria .redes-conteiners .container-live .live:active {
+  transform: scale(0.9);
+}
+main .section--mis-redes .redes-conteiners .container-live .animated_live, main .section-mentoria .redes-conteiners .container-live .animated_live {
+  height: 7.4rem;
+}
+main .section--mis-redes .redes-conteiners .container-live .live_texto, main .section-mentoria .redes-conteiners .container-live .live_texto {
+  font-weight: 700;
+  font-size: 2.5rem;
 }
 main .section--mis-redes .redes-conteiners .container-live .stream_iconos img, main .section-mentoria .redes-conteiners .container-live .stream_iconos img {
   width: 9rem;
@@ -211,7 +263,7 @@ main .section-mentoria .mentoria_contenido .video-iframe {
 main .section-mentoria .mentoria_contenido .video-iframe iframe {
   width: 100%;
   border-radius: 0.5rem;
-  height: auto;
+  height: 30rem;
 }
 main .section-about-me {
   text-align: center;
@@ -219,7 +271,7 @@ main .section-about-me {
   max-width: 425px;
   margin: auto;
   padding: 0.6rem;
-  background-color: #f0eeee;
+  background-color: #f2f5f7;
 }
 main .section-about-me .redes_contenido {
   display: flex;
@@ -355,13 +407,26 @@ main .section-merch .bpedido:hover {
   background-color: #19e6c0;
   cursor: pointer;
 }
+main .section-merch .bpedido:active {
+  transform: scale(0.9);
+}
 
-@media screen and (min-width: 760px) {
+@media (orientation: landscape) {
+  header {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  header .contenido-encabezado {
+    gap: 1rem;
+  }
+}
+@media screen and (min-width: 560px) {
   h1 {
+    margin-top: 2rem;
     font-size: 4rem;
   }
   header {
-    max-width: 80.5rem;
+    width: 100%;
   }
   header .contenido-encabezado .flip-clock-wrapper ul {
     margin-top: 2.3rem;
@@ -411,14 +476,22 @@ main .section-merch .bpedido:hover {
     height: 6.5rem;
   }
   main {
-    max-width: 80.5rem;
+    width: 100%;
+    max-width: none;
+  }
+  main .section--mis-redes, main .section-mentoria {
+    width: 100%;
   }
   main .section--mis-redes .redes-conteiners, main .section-mentoria .redes-conteiners {
-    flex-direction: row-reverse;
+    flex-direction: row;
     justify-content: space-evenly;
+  }
+  main .section--mis-redes .redes-conteiners .button-group, main .section-mentoria .redes-conteiners .button-group {
+    justify-content: space-around;
   }
   main .section-mentoria .mentoria_contenido {
     display: flex;
+    gap: 6.6rem;
   }
   main .section-mentoria .mentoria_contenido .mentoria-items {
     width: 50%;
@@ -439,6 +512,7 @@ main .section-merch .bpedido:hover {
   main .section-about-me .redes_contenido {
     flex-direction: row;
     justify-content: space-evenly;
+    margin-bottom: 3rem;
   }
   main .section-about-me .redes_contenido .marco {
     height: 500px;
@@ -450,21 +524,35 @@ main .section-merch .bpedido:hover {
 }
 @media screen and (min-width: 1024px) {
   h1 {
+    margin-top: 8rem;
+    margin-bottom: 8rem;
     font-size: 8rem;
   }
   h2 {
     font-size: 4rem;
-    margin-bottom: 2rem;
+    margin: 3rem 0rem;
+  }
+  p {
+    font-size: 1.9rem;
   }
   header {
     width: 100%;
     max-width: none;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
   }
   header .contenido-encabezado .text-autor {
     font-size: 3rem;
   }
   header .contenido-encabezado .boton {
     padding: 3rem 7rem;
+    margin: 4rem 0rem;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto;
   }
   header .contenido-encabezado .flip-clock-wrapper ul {
     margin-top: 2.3rem;
@@ -523,17 +611,28 @@ main .section-merch .bpedido:hover {
   }
   main .section--mis-redes .redes-conteiners, main .section-mentoria .redes-conteiners {
     max-width: 90rem;
-    margin: auto;
+    margin: 8rem auto;
+  }
+  main .section--mis-redes .redes-conteiners .linea, main .section-mentoria .redes-conteiners .linea {
+    display: block;
+    width: 4px;
+    background-color: #bbc9d6;
+  }
+  main .section--mis-redes .redes-conteiners .container-live .stream_iconos, main .section-mentoria .redes-conteiners .container-live .stream_iconos {
+    display: flex;
+    gap: 3rem;
   }
   main .section-mentoria .mentoria_contenido {
     max-width: 90rem;
-    margin: auto;
-    gap: 1.5rem;
+    margin: 8rem auto;
+    gap: 6.6rem;
   }
   main .section-about-me .redes_contenido {
     max-width: 90rem;
-    margin: auto;
-    margin-bottom: 2rem;
+    margin: 8rem auto;
+  }
+  main .section-about-me .redes_contenido .video {
+    width: 40%;
   }
   main .section-merch {
     max-width: 90rem;

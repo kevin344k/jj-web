@@ -21,9 +21,9 @@ var init = /*#__PURE__*/function () {
           console.log(resultHeightBlock);
           blockText = document.querySelector('.text-rewards-halvin'); //blockText.textContent= ` Bloque ${resultHeightBlock} de 840.000  ` 
           CurrentDate = Date.now(); //fecha actual
-          timeToHalvin = (840000 - resultHeightBlock) * (9.6 * 60);
+          timeToHalvin = (840000 - resultHeightBlock) * 10 * 60;
           dateH = CurrentDate + timeToHalvin * 1000;
-          console.log(timeToHalvin);
+          console.log(dateH);
           $(document).ready(function () {
             clock = $('.clock').FlipClock(timeToHalvin, {
               clockFace: 'DailyCounter',

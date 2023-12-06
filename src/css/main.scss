@@ -1,13 +1,15 @@
 $turquesa: #3ef2d0;
 $turquesa_strong: #19e6c0;
-$gris: #f0eeee;
+$gris: #f2f5f7;
+$gris-middle: #d6d7d8;
+$gris-strong: #bbc9d6;
 $blanco: #ffffff;
 $negro: #000000;
 $xsmall: 320px;
 $small: 570px;
 $medium: 760px;
 $large: 1024px;
-$font-family-poppins: "Poppins", sans-serif;
+$font-family-ubuntu: "Ubuntu", sans-serif;
 $font-famiy-open: "Open Sans", sans-serif;
 $font-size-paragraph: 1.6rem;
 $font-W-regular-400: 400;
@@ -21,12 +23,13 @@ $font-size-clock: 3.5rem;
 
 html {
   font-size: 62.5%;
-  font-family: $font-family-poppins;
+  font-family: $font-family-ubuntu;
 }
 
 body {
-  font-family: $font-family-poppins;
+  font-family: $font-family-ubuntu;
   font-size: $font-size-paragraph;
+  overflow-x: hidden;
 }
 
 * {
@@ -36,13 +39,14 @@ body {
 }
 
 h1 {
+  font-family: $font-family-ubuntu;
   font-size: 3rem;
 }
 
 h2 {
-  color: red;
   font-size: $font-z-h2;
   text-align: center;
+  margin-bottom: 2.5rem;
 }
 
 @mixin but($bg-color, $text) {
@@ -59,28 +63,34 @@ h2 {
     background-color: $turquesa_strong;
     cursor: pointer;
   }
+  &:active {
+    transform: scale(0.9);
+  }
 }
 
 header {
-  max-width: 425px;
+  width: 100%;
   min-width: $xsmall;
   height: -webkit-fit-content;
   height: -moz-fit-content;
-  height: fit-content;
+  height: 80vh;
   margin: auto;
-  background-image: url("../../imagenes/BTC-greenopease-2.jpg");
+  background-image: url("../../imagenes/BTC-greenopease.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 
   text-align: center;
   padding: 1.6rem 0px;
+  display: flex;
 
   .contenido-encabezado {
     margin: auto;
     padding: 6px;
     width: 100%;
-
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
     .text-autor {
       font-style: italic;
       font-weight: $font-W-bold-700;
@@ -98,6 +108,8 @@ header {
       padding: 2rem 3rem;
       border-radius: 0.5rem;
       font-weight: 700;
+      width: fit-content;
+      margin: auto;
     }
 
     .flip-clock-wrapper ul {
@@ -182,7 +194,7 @@ main {
     .redes-conteiners {
       display: flex;
       flex-direction: column;
-      gap: 1.6rem;
+      gap: 3.6rem;
 
       .button-group {
         display: flex;
@@ -192,22 +204,25 @@ main {
         .botones_redes {
           background-color: #3ef2d0;
           @include but($blanco, $negro);
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          gap: 0.6rem;
-          padding: 1rem 3rem;
-          margin-top: 0px;
-          box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
 
-          img {
-            width: 5rem;
-          }
+          padding: 1rem 3rem;
+
+          box-shadow: 3px 3px 5px 0px $gris-middle;
 
           a {
+            display: flex;
+            justify-content: center;
+            text-align: left;
+            img {
+              width: 5rem;
+              margin-right: 0.5rem;
+            }
+            span {
+              margin: auto 0px;
+              color: $negro;
+            }
+
             text-decoration: none;
-            color: $negro;
-            margin: auto;
           }
         }
       }
@@ -218,9 +233,31 @@ main {
 
       .container-live {
         text-align: center;
-
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2.2rem;
         .foto {
           border-radius: 100%;
+          box-shadow: $box-shadow;
+          width: 20rem;
+          margin: auto;
+        }
+        .live {
+          @include but(transparent, red);
+          width: 20.5rem;
+          margin: auto;
+          padding: 1.5rem 3rem;
+          font-size: 2.4rem;
+          display: none;
+        }
+
+        .animated_live {
+          height: 7.4rem;
+        }
+        .live_texto {
+          font-weight: 700;
+          font-size: 2.5rem;
         }
 
         .stream_iconos {
@@ -265,7 +302,7 @@ main {
         iframe {
           width: 100%;
           border-radius: $border-radius;
-          height: auto;
+          height: 30rem;
         }
       }
     }
@@ -424,18 +461,28 @@ main {
     }
   }
 }
+@media(orientation:landscape){
+  header{
+    height: fit-content;
+    .contenido-encabezado{
+      gap: 1rem;
+    }
+  }
+}
 
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 560px) {
   $font-size-clock: 6.5rem;
 
   h1 {
+    margin-top: 2rem;
     font-size: 4rem;
   }
 
   header {
-    max-width: 80.5rem;
+    width: 100%;
 
     .contenido-encabezado {
+
       .flip-clock-wrapper ul {
         margin-top: 2.3rem;
         margin-bottom: 2.3rem;
@@ -499,19 +546,23 @@ main {
   }
 
   main {
-    max-width: 80.5rem;
-
+    width: 100%;
+    max-width: none;
     .section--mis-redes {
+      width: 100%;
       .redes-conteiners {
-        flex-direction: row-reverse;
+        flex-direction: row;
         justify-content: space-evenly;
+        .button-group {
+          justify-content: space-around;
+        }
       }
     }
 
     .section-mentoria {
       .mentoria_contenido {
         display: flex;
-
+        gap: 6.6rem;
         .mentoria-items {
           width: 50%;
         }
@@ -533,9 +584,11 @@ main {
       height: -webkit-fit-content;
       height: -moz-fit-content;
       height: fit-content;
+
       .redes_contenido {
         flex-direction: row;
         justify-content: space-evenly;
+        margin-bottom: 3rem;
         .marco {
           height: 500px;
           margin: 0px;
@@ -549,23 +602,36 @@ main {
 }
 @media screen and (min-width: 1024px) {
   $font-size-clock: 15rem;
+  $font-size-paragraph: 1.9rem;
   h1 {
+    margin-top: 8rem;
+    margin-bottom: 8rem;
     font-size: 8rem;
   }
   h2 {
     font-size: 4rem;
-    margin-bottom: 2rem;
+    margin: 3rem 0rem;
+  }
+  p {
+    font-size: $font-size-paragraph;
   }
   header {
     width: 100%;
     max-width: none;
-
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
     .contenido-encabezado {
       .text-autor {
         font-size: 3rem;
       }
       .boton {
         padding: 3rem 7rem;
+        margin: 4rem 0rem;
+        width: fit-content;
+        margin: auto;
       }
 
       .flip-clock-wrapper ul {
@@ -636,57 +702,71 @@ main {
   }
   main {
     max-width: none;
- 
+
     .section--mis-redes {
       .redes-conteiners {
         max-width: 90rem;
-        margin: auto;
+        margin: 8rem auto;
+        .linea {
+          display: block;
+          width: 4px;
+          background-color: $gris-strong;
+        }
+        .container-live {
+          .stream_iconos {
+            display: flex;
+            gap: 3rem;
+          }
+        }
       }
     }
     .section-mentoria {
       .mentoria_contenido {
         max-width: 90rem;
-        margin: auto;
-        gap: 1.5rem;
+        margin: 8rem auto;
+        gap: 6.6rem;
       }
     }
     .section-about-me {
       .redes_contenido {
         max-width: 90rem;
-        margin: auto;
-        margin-bottom: 2rem;
+        margin: 8rem auto;
+
+        .video {
+          width: 40%;
+        }
       }
     }
     .section-merch {
-        max-width: 90rem;
+      max-width: 90rem;
       .container {
-     max-width: 51rem;
-     height: 50rem;
+        max-width: 51rem;
+        height: 50rem;
         .slider {
           .content {
             .firstslide,
             .secondslide,
             .thirdslide,
             .fourslide {
-                height: 40rem;
+              height: 40rem;
               img {
                 width: 500px;
               }
             }
           }
-          
-        input:nth-child(1):checked ~ .content {
+
+          input:nth-child(1):checked ~ .content {
             left: 0rem;
           }
-  
+
           input:nth-child(2):checked ~ .content {
             left: -50rem;
           }
-  
+
           input:nth-child(3):checked ~ .content {
             left: -100rem;
           }
-  
+
           input:nth-child(4):checked ~ .content {
             left: -150rem;
           }

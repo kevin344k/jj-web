@@ -1,0 +1,2 @@
+//modal header
+"use strict";
