@@ -130,7 +130,7 @@ header .contenido-encabezado .clock .flip {
 
 main {
   min-width: 320px;
-  max-width: 425px;
+  max-width: none;
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
@@ -149,6 +149,8 @@ main .section--mis-redes .redes-conteiners, main .section-mentoria .redes-contei
   display: flex;
   flex-direction: column;
   gap: 3.6rem;
+  max-width: 425px;
+  margin: auto;
 }
 main .section--mis-redes .redes-conteiners .button-group, main .section-mentoria .redes-conteiners .button-group {
   display: flex;
@@ -268,29 +270,29 @@ main .section-mentoria .mentoria_contenido .video-iframe iframe {
 main .section-about-me {
   text-align: center;
   width: 100%;
-  max-width: 425px;
   margin: auto;
-  padding: 0.6rem;
+  padding: 1.8rem;
   background-color: #f2f5f7;
 }
 main .section-about-me .redes_contenido {
   display: flex;
   flex-direction: column;
   gap: 2.6rem;
+  max-width: 425px;
+  margin: auto;
 }
 main .section-about-me .redes_contenido .marco {
   display: flex;
   flex-direction: column;
   width: 300px;
+  height: 500px;
   margin: auto;
   padding: 2rem 0.6rem;
   background-color: #ffffff;
-  height: -moz-fit-content;
-  height: fit-content;
   border-radius: 0.5rem;
   justify-content: center;
   align-items: center;
-  gap: 1.6rem;
+  gap: 2.5rem;
   box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
 }
 main .section-about-me .redes_contenido .marco img {
@@ -298,7 +300,8 @@ main .section-about-me .redes_contenido .marco img {
   border-radius: 100%;
 }
 main .section-about-me .redes_contenido .video {
-  height: 547px;
+  width: 300px;
+  margin: auto;
   border-radius: 0.5rem;
   box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
 }
@@ -519,7 +522,10 @@ main .section-merch .bpedido:active {
     margin: 0px;
   }
   main .section-about-me .redes_contenido .video {
+    width: -moz-fit-content;
+    width: fit-content;
     height: 500px;
+    margin: 0px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -630,9 +636,6 @@ main .section-merch .bpedido:active {
   main .section-about-me .redes_contenido {
     max-width: 90rem;
     margin: 8rem auto;
-  }
-  main .section-about-me .redes_contenido .video {
-    width: 40%;
   }
   main .section-merch {
     max-width: 90rem;

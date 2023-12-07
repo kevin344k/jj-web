@@ -175,7 +175,7 @@ header {
 
 main {
   min-width: $xsmall;
-  max-width: 425px;
+  max-width: none;
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
@@ -195,7 +195,8 @@ main {
       display: flex;
       flex-direction: column;
       gap: 3.6rem;
-
+      max-width: 425px;
+      margin: auto;
       .button-group {
         display: flex;
         flex-direction: column;
@@ -312,30 +313,29 @@ main {
     text-align: center;
 
     width: 100%;
-    max-width: 425px;
+    
     margin: auto;
-    padding: 0.6rem;
+    padding: 1.8rem ;
     background-color: $gris;
 
     .redes_contenido {
       display: flex;
       flex-direction: column;
       gap: 2.6rem;
-
+      max-width: 425px;
+      margin: auto;
       .marco {
         display: flex;
         flex-direction: column;
         width: 300px;
+        height: 500px;
         margin: auto;
         padding: 2rem 0.6rem;
         background-color: $blanco;
-        height: -webkit-fit-content;
-        height: -moz-fit-content;
-        height: fit-content;
         border-radius: $border-radius;
         justify-content: center;
         align-items: center;
-        gap: 1.6rem;
+        gap: 2.5rem;
         box-shadow: $box-shadow;
 
         img {
@@ -345,7 +345,8 @@ main {
       }
 
       .video {
-        height: 547px;
+        width: 300px;
+        margin: auto;
         border-radius: $border-radius;
         box-shadow: $box-shadow;
       }
@@ -594,7 +595,9 @@ main {
           margin: 0px;
         }
         .video {
+         width: fit-content;
           height: 500px;
+          margin: 0px;
         }
       }
     }
@@ -732,9 +735,7 @@ main {
         max-width: 90rem;
         margin: 8rem auto;
 
-        .video {
-          width: 40%;
-        }
+       
       }
     }
     .section-merch {
