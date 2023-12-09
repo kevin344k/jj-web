@@ -1,4 +1,5 @@
 $turquesa: #3ef2d0;
+$soft-black: #212529;
 $turquesa_strong: #19e6c0;
 $gris: #f2f5f7;
 $gris-middle: #d6d7d8;
@@ -118,6 +119,9 @@ header {
 
     .flip-clock-wrapper ul li {
       line-height: 4.5rem;
+      @-moz-document url-prefix() {
+      line-height:5.5rem;
+      }
     }
 
     .flip-clock-wrapper ul li a .up .inn {
@@ -313,16 +317,16 @@ main {
     text-align: center;
 
     width: 100%;
-    
+
     margin: auto;
-    padding: 1.8rem ;
+    padding: 1.8rem;
     background-color: $gris;
 
     .redes_contenido {
       display: flex;
       flex-direction: column;
       gap: 2.6rem;
-      max-width: 425px;
+      //max-width: 425px;
       margin: auto;
       .marco {
         display: flex;
@@ -341,6 +345,14 @@ main {
         img {
           width: 100px;
           border-radius: 100%;
+        }
+        .resaltado{
+          width: fit-content;
+           padding: 1rem 1.5rem;
+          background-color: $negro;
+          color: white;
+          font-size: 3rem;
+          border-radius: $border-radius;
         }
       }
 
@@ -462,10 +474,92 @@ main {
     }
   }
 }
-@media(orientation:landscape){
-  header{
+
+//modal
+.fondo_transparente {
+  top: 0;
+  left: 0;
+  background: rgba($color: #000, $alpha: 0.426);
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  display: none;
+  z-index: 6;
+  .modal {
+    background: $soft-black;
+    width: 80%;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: $box-shadow;
+    padding: 2.5rem;
+    gap: 2.5rem;
+    .modal_cerrar {
+      background: $soft-black;
+      position: absolute;
+      right: -20px;
+      color: $gris;
+      top: -20px;
+      width: 40px;
+      height: 40px;
+      border-radius: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      font-size: 30px;
+      display: none;
+    }
+    .modal_titulo {
+      color: white;
+      font-size: 3rem;
+      color: red;
+      font-weight: 700;
+    }
+    .modal_mensaje {
+      padding: 10px 0px;
+      p{
+        line-height: 3rem;
+        text-align: center;
+        color: $blanco;
+      
+        }
+        p:nth-child(1){
+          font-weight: 700;
+          font-size: 2rem;
+      }
+    }
+    .modal_botones {
+      width: 100%;
+
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .boton-modal {
+      @include but($turquesa, $negro);
+      text-align: center;
+      width: 100%;
+      padding: 1rem 3rem;
+      border-radius: 0.5rem;
+      font-weight: 700;
+
+      margin: auto;
+    }
+  }
+}
+
+@media (orientation: landscape) {
+  header {
     height: fit-content;
-    .contenido-encabezado{
+    .contenido-encabezado {
       gap: 1rem;
     }
   }
@@ -483,7 +577,6 @@ main {
     width: 100%;
 
     .contenido-encabezado {
-
       .flip-clock-wrapper ul {
         margin-top: 2.3rem;
         margin-bottom: 2.3rem;
@@ -592,10 +685,11 @@ main {
         margin-bottom: 3rem;
         .marco {
           height: 500px;
+
           margin: 0px;
         }
         .video {
-         width: fit-content;
+          width: fit-content;
           height: 500px;
           margin: 0px;
         }
@@ -607,8 +701,8 @@ main {
   $font-size-clock: 15rem;
   $font-size-paragraph: 1.9rem;
   h1 {
-    margin-top: 8rem;
-    margin-bottom: 8rem;
+    margin-top:6rem;
+   
     font-size: 8rem;
   }
   h2 {
@@ -627,6 +721,7 @@ main {
     align-items: center;
     justify-content: space-around;
     .contenido-encabezado {
+      gap: 3rem;
       .text-autor {
         font-size: 3rem;
       }
@@ -645,6 +740,9 @@ main {
       .flip-clock-wrapper ul li {
         /*centra los numeros en el flip*/
         line-height: 14rem;
+        @-moz-document url-prefix() {
+          line-height:17rem;
+          }
       }
 
       .flip-clock-wrapper ul li a .up .inn {
@@ -734,8 +832,6 @@ main {
       .redes_contenido {
         max-width: 90rem;
         margin: 8rem auto;
-
-       
       }
     }
     .section-merch {
@@ -775,4 +871,15 @@ main {
       }
     }
   }
+
+
+.fondo_transparente{
+  .modal{
+    max-width: 60rem;
+    .boton-modal{
+      width: fit-content;
+    }
+  }
+}
+
 }
