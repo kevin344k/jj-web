@@ -109,6 +109,8 @@ header {
       padding: 2rem 3rem;
       border-radius: 0.5rem;
       font-weight: 700;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
       width: fit-content;
       margin: auto;
     }
@@ -347,6 +349,8 @@ main {
           border-radius: 100%;
         }
         .resaltado{
+          width: -webkit-fit-content;
+          width: -moz-fit-content;
           width: fit-content;
            padding: 1rem 1.5rem;
           background-color: $negro;
@@ -558,6 +562,8 @@ main {
 
 @media (orientation: landscape) {
   header {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     .contenido-encabezado {
       gap: 1rem;
@@ -689,6 +695,8 @@ main {
           margin: 0px;
         }
         .video {
+          width: -webkit-fit-content;
+          width: -moz-fit-content;
           width: fit-content;
           height: 500px;
           margin: 0px;
@@ -728,6 +736,8 @@ main {
       .boton {
         padding: 3rem 7rem;
         margin: 4rem 0rem;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
         width: fit-content;
         margin: auto;
       }
@@ -877,6 +887,8 @@ main {
   .modal{
     max-width: 60rem;
     .boton-modal{
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
       width: fit-content;
     }
   }
