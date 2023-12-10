@@ -619,6 +619,7 @@ main .section-merch .bpedido:active {
     flex-direction: row;
     justify-content: space-evenly;
     margin-bottom: 3rem;
+    max-width: none;
   }
   main .section-about-me .redes_contenido .marco {
     height: 500px;
