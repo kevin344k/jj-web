@@ -10,7 +10,7 @@ const init = async () => {
 const blockText=document.querySelector('.text-rewards-halvin')
 //blockText.textContent= ` Bloque ${resultHeightBlock} de 840.000  ` 
 let CurrentDate=Date.now() //fecha actual
-let timeToHalvin=((840000 - resultHeightBlock)*(10))*60
+let timeToHalvin=((1050000 - resultHeightBlock)*(10))*60
 let dateH=CurrentDate+timeToHalvin*1000
 console.log(dateH);
 $(document).ready(function(){ 

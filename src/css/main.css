@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../fonts/Ubuntu-Regular.woff") format("woff"), url("../fonts/Ubuntu-Bold.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/Open-Regular.woff") format("woff"), url("../fonts/OpenSans-Bold.woff") format("woff");
+  font-display: swap;
+}
 html {
   font-size: 62.5%;
   font-family: "Ubuntu", sans-serif;
@@ -32,7 +42,7 @@ header {
   height: -moz-fit-content;
   height: 80vh;
   margin: auto;
-  background-image: url("../../imagenes/BTC-greenopease.jpg");
+  background-image: url("../../imagenes/hero-mobile-Greenpeace.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -138,9 +148,49 @@ main {
   max-width: none;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   gap: 3.2rem;
   margin: auto;
   width: 100vw;
+}
+main .section-announce {
+  min-width: 320px;
+  width: 100%;
+  padding: 1.8rem;
+  margin-top: 3.2rem;
+}
+main .section-announce .div-container--announce {
+  background-color: #FFF0F0;
+  border: 1px solid #FF5757;
+  border-radius: 3rem;
+  text-align: center;
+  padding: 1.4rem 3.4rem;
+  max-width: 425px;
+  box-shadow: 3px 3px 5px 0px #d6d7d8;
+  margin: auto;
+}
+main .section-announce .div-container--announce .h2-red-tittle {
+  color: #920A0A;
+  font-weight: 500;
+}
+main .section-announce .div-container--announce .boton {
+  font-family: "Open Sans", sans-serif;
+  background-color: #3ef2d0;
+  color: #000000;
+  margin-top: 1.6rem;
+  font-size: 2rem;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  font-weight: 700;
+}
+main .section-announce .div-container--announce .boton:hover {
+  background-color: #19e6c0;
+  cursor: pointer;
+}
+main .section-announce .div-container--announce .boton:active {
+  transform: scale(0.9);
 }
 main .section--mis-redes, main .section-mentoria {
   min-width: 320px;
@@ -189,7 +239,8 @@ main .section--mis-redes .redes-conteiners .button-group .botones_redes a, main 
   text-decoration: none;
 }
 main .section--mis-redes .redes-conteiners .button-group .botones_redes a img, main .section-mentoria .redes-conteiners .button-group .botones_redes a img {
-  width: 5rem;
+  width: 50px;
+  height: 50px;
   margin-right: 0.5rem;
 }
 main .section--mis-redes .redes-conteiners .button-group .botones_redes a span, main .section-mentoria .redes-conteiners .button-group .botones_redes a span {
@@ -427,96 +478,6 @@ main .section-merch .bpedido:active {
   transform: scale(0.9);
 }
 
-.fondo_transparente {
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.426);
-  position: absolute;
-  height: 100vh;
-  width: 100%;
-  display: none;
-  z-index: 6;
-}
-.fondo_transparente .modal {
-  background: #212529;
-  width: 80%;
-  height: 300px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  border-radius: 20px;
-  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
-  padding: 2.5rem;
-  gap: 2.5rem;
-}
-.fondo_transparente .modal .modal_cerrar {
-  background: #212529;
-  position: absolute;
-  right: -20px;
-  color: #f2f5f7;
-  top: -20px;
-  width: 40px;
-  height: 40px;
-  border-radius: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  font-size: 30px;
-  display: none;
-}
-.fondo_transparente .modal .modal_titulo {
-  color: white;
-  font-size: 3rem;
-  color: red;
-  font-weight: 700;
-}
-.fondo_transparente .modal .modal_mensaje {
-  padding: 10px 0px;
-}
-.fondo_transparente .modal .modal_mensaje p {
-  line-height: 3rem;
-  text-align: center;
-  color: #ffffff;
-}
-.fondo_transparente .modal .modal_mensaje p:nth-child(1) {
-  font-weight: 700;
-  font-size: 2rem;
-}
-.fondo_transparente .modal .modal_botones {
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-}
-.fondo_transparente .modal .boton-modal {
-  font-family: "Open Sans", sans-serif;
-  background-color: #3ef2d0;
-  color: #000000;
-  margin-top: 1.6rem;
-  font-size: 2rem;
-  text-decoration: none;
-  display: inline-block;
-  border-radius: 0.5rem;
-  text-align: center;
-  width: 100%;
-  padding: 1rem 3rem;
-  border-radius: 0.5rem;
-  font-weight: 700;
-  margin: auto;
-}
-.fondo_transparente .modal .boton-modal:hover {
-  background-color: #19e6c0;
-  cursor: pointer;
-}
-.fondo_transparente .modal .boton-modal:active {
-  transform: scale(0.9);
-}
-
 @media (orientation: landscape) {
   header {
     height: -moz-fit-content;
@@ -533,6 +494,7 @@ main .section-merch .bpedido:active {
   }
   header {
     width: 100%;
+    background-image: url("../../imagenes/hero-desktop-Greenpeace.webp");
   }
   header .contenido-encabezado .flip-clock-wrapper ul {
     margin-top: 2.3rem;
@@ -585,12 +547,16 @@ main .section-merch .bpedido:active {
     width: 100%;
     max-width: none;
   }
+  main .section-announce .div-container--announce {
+    max-width: none;
+  }
   main .section--mis-redes, main .section-mentoria {
     width: 100%;
   }
   main .section--mis-redes .redes-conteiners, main .section-mentoria .redes-conteiners {
     flex-direction: row;
     justify-content: space-evenly;
+    max-width: none;
   }
   main .section--mis-redes .redes-conteiners .button-group, main .section-mentoria .redes-conteiners .button-group {
     justify-content: space-around;
@@ -652,6 +618,7 @@ main .section-merch .bpedido:active {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    background-image: url("../../imagenes/hero-desktop-Greenpeace.webp");
   }
   header .contenido-encabezado {
     gap: 3rem;
@@ -726,6 +693,12 @@ main .section-merch .bpedido:active {
   main {
     max-width: none;
   }
+  main .section-announce .div-container--announce {
+    max-width: 90rem;
+  }
+  main .section-announce .div-container--announce p {
+    font-size: 2.5rem;
+  }
   main .section--mis-redes .redes-conteiners, main .section-mentoria .redes-conteiners {
     max-width: 90rem;
     margin: 8rem auto;
@@ -778,12 +751,5 @@ main .section-merch .bpedido:active {
   }
   main .section-merch .container .slider input:nth-child(4):checked ~ .content {
     left: -150rem;
-  }
-  .fondo_transparente .modal {
-    max-width: 60rem;
-  }
-  .fondo_transparente .modal .boton-modal {
-    width: -moz-fit-content;
-    width: fit-content;
   }
 }/*# sourceMappingURL=main.css.map */

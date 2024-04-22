@@ -1,3 +1,16 @@
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../fonts/Ubuntu-Regular.woff") format("woff"),
+  url("../fonts/Ubuntu-Bold.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/Open-Regular.woff") format("woff"),
+  url("../fonts/OpenSans-Bold.woff") format("woff");
+  font-display: swap;
+}
+
 $turquesa: #3ef2d0;
 $soft-black: #212529;
 $turquesa_strong: #19e6c0;
@@ -76,7 +89,7 @@ header {
   height: -moz-fit-content;
   height: 80vh;
   margin: auto;
-  background-image: url("../../imagenes/BTC-greenopease.jpg");
+  background-image: url("../../imagenes/hero-mobile-Greenpeace.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -184,9 +197,40 @@ main {
   max-width: none;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   gap: 3.2rem;
   margin: auto;
   width: 100vw;
+  .section-announce{
+  
+    min-width: 320px;
+    width: 100%;
+
+    padding: 1.8rem;
+margin-top: 3.2rem;
+   
+
+    .div-container--announce{
+      background-color: #FFF0F0;
+      border: 1px solid #FF5757;
+      border-radius: 3rem;
+      text-align: center;
+      padding: 1.4rem 3.4rem;
+      max-width: 425px;
+      box-shadow: 3px 3px 5px 0px #d6d7d8;
+      margin: auto;
+      .h2-red-tittle{
+        color: #920A0A;
+        font-weight: 500;
+      }
+      .boton{
+        @include but($turquesa,$negro );
+        padding: 1rem 2rem;
+      font-weight: 700;
+      }
+    }
+  
+  }
 
   .section--mis-redes {
     min-width: 320px;
@@ -221,7 +265,8 @@ main {
             justify-content: center;
             text-align: left;
             img {
-              width: 5rem;
+              width: 50px;
+              height: 50px;
               margin-right: 0.5rem;
             }
             span {
@@ -502,7 +547,7 @@ main {
 
   header {
     width: 100%;
-
+    background-image: url("../../imagenes/hero-desktop-Greenpeace.webp");
     .contenido-encabezado {
       .flip-clock-wrapper ul {
         margin-top: 2.3rem;
@@ -569,11 +614,17 @@ main {
   main {
     width: 100%;
     max-width: none;
+    .section-announce{
+      .div-container--announce{
+        max-width: none;
+      }
+    }
     .section--mis-redes {
       width: 100%;
       .redes-conteiners {
         flex-direction: row;
         justify-content: space-evenly;
+        max-width: none;
         .button-group {
           justify-content: space-around;
         }
@@ -650,6 +701,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    background-image: url("../../imagenes/hero-desktop-Greenpeace.webp");
     .contenido-encabezado {
       gap: 3rem;
       .text-autor {
@@ -735,6 +787,16 @@ main {
   }
   main {
     max-width: none;
+
+    .section-announce{
+      .div-container--announce{
+        
+        max-width: 90rem;
+        p{
+          font-size: 2.5rem;
+        }
+      }
+    }
 
     .section--mis-redes {
       .redes-conteiners {
