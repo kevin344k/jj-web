@@ -292,8 +292,26 @@ main .section--mis-redes .redes-conteiners .container-live .live_texto, main .se
   font-weight: 700;
   font-size: 2.5rem;
 }
+main .section--mis-redes .redes-conteiners .container-live .stream_iconos, main .section-mentoria .redes-conteiners .container-live .stream_iconos {
+  display: flex;
+  justify-content: space-around;
+}
+main .section--mis-redes .redes-conteiners .container-live .stream_iconos a, main .section-mentoria .redes-conteiners .container-live .stream_iconos a {
+  padding: 1rem 3rem;
+  background-color: #ffffff;
+  box-shadow: 3px 3px 5px 0px #d6d7d8;
+}
+main .section--mis-redes .redes-conteiners .container-live .stream_iconos a:hover, main .section-mentoria .redes-conteiners .container-live .stream_iconos a:hover {
+  background-color: #19e6c0;
+  cursor: pointer;
+}
+main .section--mis-redes .redes-conteiners .container-live .stream_iconos a:active, main .section-mentoria .redes-conteiners .container-live .stream_iconos a:active {
+  transform: scale(0.9);
+}
 main .section--mis-redes .redes-conteiners .container-live .stream_iconos img, main .section-mentoria .redes-conteiners .container-live .stream_iconos img {
-  width: 9rem;
+  width: 7rem;
+  display: flex;
+  margin: auto;
 }
 main .section-mentoria {
   min-width: 320px;
@@ -561,6 +579,9 @@ main .section-merch .bpedido:active {
   main .section--mis-redes .redes-conteiners .button-group, main .section-mentoria .redes-conteiners .button-group {
     justify-content: space-around;
   }
+  main .section--mis-redes .redes-conteiners .container-live .stream_iconos, main .section-mentoria .redes-conteiners .container-live .stream_iconos {
+    gap: 0.5rem;
+  }
   main .section-mentoria .mentoria_contenido {
     display: flex;
     gap: 6.6rem;
@@ -711,6 +732,13 @@ main .section-merch .bpedido:active {
   main .section--mis-redes .redes-conteiners .container-live .stream_iconos, main .section-mentoria .redes-conteiners .container-live .stream_iconos {
     display: flex;
     gap: 3rem;
+  }
+  main .section--mis-redes .redes-conteiners .container-live .stream_iconos a, main .section-mentoria .redes-conteiners .container-live .stream_iconos a {
+    display: flex;
+  }
+  main .section--mis-redes .redes-conteiners .container-live .stream_iconos img, main .section-mentoria .redes-conteiners .container-live .stream_iconos img {
+    display: flex;
+    margin: auto;
   }
   main .section-mentoria .mentoria_contenido {
     max-width: 90rem;

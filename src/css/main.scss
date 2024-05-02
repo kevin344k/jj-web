@@ -313,9 +313,30 @@ margin-top: 3.2rem;
         }
 
         .stream_iconos {
-          img {
-            width: 9rem;
+         a {
+      
+          padding: 1rem 3rem;
+          background-color: $blanco;
+          box-shadow: 3px 3px 5px 0px $gris-middle;
+        
+          &:hover {
+            background-color: $turquesa_strong;
+            cursor: pointer;
           }
+          &:active {
+            transform: scale(0.9);
+          }
+        
+        }
+          display: flex;
+          justify-content: space-around;
+          img {
+            width: 7rem;
+            display: flex;
+            margin: auto;
+           
+          }
+         
         }
       }
     }
@@ -628,6 +649,11 @@ margin-top: 3.2rem;
         .button-group {
           justify-content: space-around;
         }
+        .container-live{
+          .stream_iconos{
+            gap:0.5rem;
+          }
+        }
       }
     }
 
@@ -811,6 +837,14 @@ margin-top: 3.2rem;
           .stream_iconos {
             display: flex;
             gap: 3rem;
+            
+            a{
+display: flex;
+            }
+            img{
+              display: flex;
+              margin: auto;
+            }
           }
         }
       }
