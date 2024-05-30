@@ -160,8 +160,8 @@ main .section-announce {
   margin-top: 3.2rem;
 }
 main .section-announce .div-container--announce {
-  background-color: #FFF0F0;
-  border: 1px solid #FF5757;
+  background-color: #fff0f0;
+  border: 1px solid #ff5757;
   border-radius: 3rem;
   text-align: center;
   padding: 1.4rem 3.4rem;
@@ -170,7 +170,7 @@ main .section-announce .div-container--announce {
   margin: auto;
 }
 main .section-announce .div-container--announce .h2-red-tittle {
-  color: #920A0A;
+  color: #920a0a;
   font-weight: 500;
 }
 main .section-announce .div-container--announce .boton {
@@ -224,6 +224,9 @@ main .section--mis-redes .redes-conteiners .button-group .botones_redes, main .s
   border-radius: 0.5rem;
   padding: 1rem 3rem;
   box-shadow: 3px 3px 5px 0px #d6d7d8;
+  display: flex;
+  justify-content: center;
+  text-align: left;
 }
 main .section--mis-redes .redes-conteiners .button-group .botones_redes:hover, main .section-mentoria .redes-conteiners .button-group .botones_redes:hover {
   background-color: #19e6c0;
@@ -232,20 +235,21 @@ main .section--mis-redes .redes-conteiners .button-group .botones_redes:hover, m
 main .section--mis-redes .redes-conteiners .button-group .botones_redes:active, main .section-mentoria .redes-conteiners .button-group .botones_redes:active {
   transform: scale(0.9);
 }
+main .section--mis-redes .redes-conteiners .button-group .botones_redes img, main .section-mentoria .redes-conteiners .button-group .botones_redes img {
+  width: 50px;
+  height: 50px;
+  margin-right: 0.5rem;
+}
 main .section--mis-redes .redes-conteiners .button-group .botones_redes a, main .section-mentoria .redes-conteiners .button-group .botones_redes a {
   display: flex;
   justify-content: center;
   text-align: left;
   text-decoration: none;
 }
-main .section--mis-redes .redes-conteiners .button-group .botones_redes a img, main .section-mentoria .redes-conteiners .button-group .botones_redes a img {
-  width: 50px;
-  height: 50px;
-  margin-right: 0.5rem;
-}
 main .section--mis-redes .redes-conteiners .button-group .botones_redes a span, main .section-mentoria .redes-conteiners .button-group .botones_redes a span {
-  margin: auto 0px;
+  margin: auto;
   color: #000000;
+  font-weight: bold;
 }
 main .section--mis-redes .redes-conteiners .linea, main .section-mentoria .redes-conteiners .linea {
   display: none;

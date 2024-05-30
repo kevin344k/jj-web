@@ -1,13 +1,13 @@
 @font-face {
   font-family: "Ubuntu";
   src: url("../fonts/Ubuntu-Regular.woff") format("woff"),
-  url("../fonts/Ubuntu-Bold.woff") format("woff");
+    url("../fonts/Ubuntu-Bold.woff") format("woff");
   font-display: swap;
 }
 @font-face {
   font-family: "Open Sans";
   src: url("../fonts/OpenSans-Regular.woff") format("woff"),
-  url("../fonts/OpenSans-Bold.woff") format("woff");
+    url("../fonts/OpenSans-Bold.woff") format("woff");
   font-display: swap;
 }
 
@@ -135,7 +135,7 @@ header {
     .flip-clock-wrapper ul li {
       line-height: 4.5rem;
       @-moz-document url-prefix() {
-      line-height:5.5rem;
+        line-height: 5.5rem;
       }
     }
 
@@ -201,35 +201,32 @@ main {
   gap: 3.2rem;
   margin: auto;
   width: 100vw;
-  .section-announce{
-  
+  .section-announce {
     min-width: 320px;
     width: 100%;
 
     padding: 1.8rem;
-margin-top: 3.2rem;
-   
+    margin-top: 3.2rem;
 
-    .div-container--announce{
-      background-color: #FFF0F0;
-      border: 1px solid #FF5757;
+    .div-container--announce {
+      background-color: #fff0f0;
+      border: 1px solid #ff5757;
       border-radius: 3rem;
       text-align: center;
       padding: 1.4rem 3.4rem;
       max-width: 425px;
       box-shadow: 3px 3px 5px 0px #d6d7d8;
       margin: auto;
-      .h2-red-tittle{
-        color: #920A0A;
+      .h2-red-tittle {
+        color: #920a0a;
         font-weight: 500;
       }
-      .boton{
-        @include but($turquesa,$negro );
+      .boton {
+        @include but($turquesa, $negro);
         padding: 1rem 2rem;
-      font-weight: 700;
+        font-weight: 700;
       }
     }
-  
   }
 
   .section--mis-redes {
@@ -259,19 +256,23 @@ margin-top: 3.2rem;
           padding: 1rem 3rem;
 
           box-shadow: 3px 3px 5px 0px $gris-middle;
-
+          display: flex;
+          justify-content: center;
+          text-align: left;
+          img {
+            width: 50px;
+            height: 50px;
+            margin-right: 0.5rem;
+          }
           a {
             display: flex;
             justify-content: center;
             text-align: left;
-            img {
-              width: 50px;
-              height: 50px;
-              margin-right: 0.5rem;
-            }
+
             span {
-              margin: auto 0px;
+              margin: auto;
               color: $negro;
+              font-weight: bold;
             }
 
             text-decoration: none;
@@ -313,30 +314,26 @@ margin-top: 3.2rem;
         }
 
         .stream_iconos {
-         a {
-      
-          padding: 1rem 3rem;
-          background-color: $blanco;
-          box-shadow: 3px 3px 5px 0px $gris-middle;
-        
-          &:hover {
-            background-color: $turquesa_strong;
-            cursor: pointer;
+          a {
+            padding: 1rem 3rem;
+            background-color: $blanco;
+            box-shadow: 3px 3px 5px 0px $gris-middle;
+
+            &:hover {
+              background-color: $turquesa_strong;
+              cursor: pointer;
+            }
+            &:active {
+              transform: scale(0.9);
+            }
           }
-          &:active {
-            transform: scale(0.9);
-          }
-        
-        }
           display: flex;
           justify-content: space-around;
           img {
             width: 7rem;
             display: flex;
             margin: auto;
-           
           }
-         
         }
       }
     }
@@ -371,7 +368,7 @@ margin-top: 3.2rem;
 
       .video-iframe {
         margin-top: 1.6rem;
-background-color: #000000;
+        background-color: #000000;
         video {
           width: 100%;
           border-radius: $border-radius;
@@ -414,11 +411,11 @@ background-color: #000000;
           width: 100px;
           border-radius: 100%;
         }
-        .resaltado{
+        .resaltado {
           width: -webkit-fit-content;
           width: -moz-fit-content;
           width: fit-content;
-           padding: 1rem 1.5rem;
+          padding: 1rem 1.5rem;
           background-color: $negro;
           color: white;
           font-size: 3rem;
@@ -545,8 +542,6 @@ background-color: #000000;
   }
 }
 
-
-
 @media (orientation: landscape) {
   header {
     height: -webkit-fit-content;
@@ -635,8 +630,8 @@ background-color: #000000;
   main {
     width: 100%;
     max-width: none;
-    .section-announce{
-      .div-container--announce{
+    .section-announce {
+      .div-container--announce {
         max-width: none;
       }
     }
@@ -649,9 +644,9 @@ background-color: #000000;
         .button-group {
           justify-content: space-around;
         }
-        .container-live{
-          .stream_iconos{
-            gap:0.5rem;
+        .container-live {
+          .stream_iconos {
+            gap: 0.5rem;
           }
         }
       }
@@ -670,10 +665,10 @@ background-color: #000000;
           background-color: #000000;
           height: 420px;
           border-radius: 10px;
-        text-align: center;
+          text-align: center;
           video {
             border-radius: 10px;
-           height: 100%;
+            height: 100%;
             margin: auto;
           }
         }
@@ -711,8 +706,8 @@ background-color: #000000;
   $font-size-clock: 15rem;
   $font-size-paragraph: 1.9rem;
   h1 {
-    margin-top:6rem;
-   
+    margin-top: 6rem;
+
     font-size: 8rem;
   }
   h2 {
@@ -754,8 +749,8 @@ background-color: #000000;
         /*centra los numeros en el flip*/
         line-height: 14rem;
         @-moz-document url-prefix() {
-          line-height:17rem;
-          }
+          line-height: 17rem;
+        }
       }
 
       .flip-clock-wrapper ul li a .up .inn {
@@ -817,11 +812,10 @@ background-color: #000000;
   main {
     max-width: none;
 
-    .section-announce{
-      .div-container--announce{
-        
+    .section-announce {
+      .div-container--announce {
         max-width: 90rem;
-        p{
+        p {
           font-size: 2.5rem;
         }
       }
@@ -840,11 +834,11 @@ background-color: #000000;
           .stream_iconos {
             display: flex;
             gap: 3rem;
-            
-            a{
-display: flex;
+
+            a {
+              display: flex;
             }
-            img{
+            img {
               display: flex;
               margin: auto;
             }
@@ -902,7 +896,4 @@ display: flex;
       }
     }
   }
-
-
-
 }
