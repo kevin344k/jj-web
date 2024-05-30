@@ -5,7 +5,7 @@
 }
 @font-face {
   font-family: "Open Sans";
-  src: url("../fonts/Open-Regular.woff") format("woff"), url("../fonts/OpenSans-Bold.woff") format("woff");
+  src: url("../fonts/OpenSans-Regular.woff") format("woff"), url("../fonts/OpenSans-Bold.woff") format("woff");
   font-display: swap;
 }
 html {
@@ -335,8 +335,9 @@ main .section-mentoria .mentoria_contenido .mentoria-items .mentoria_texto .reme
 }
 main .section-mentoria .mentoria_contenido .video-iframe {
   margin-top: 1.6rem;
+  background-color: #000000;
 }
-main .section-mentoria .mentoria_contenido .video-iframe iframe {
+main .section-mentoria .mentoria_contenido .video-iframe video {
   width: 100%;
   border-radius: 0.5rem;
   height: 30rem;
@@ -591,8 +592,12 @@ main .section-merch .bpedido:active {
   }
   main .section-mentoria .mentoria_contenido .video-iframe {
     width: 50%;
+    background-color: #000000;
+    height: 420px;
+    border-radius: 10px;
+    text-align: center;
   }
-  main .section-mentoria .mentoria_contenido .video-iframe iframe {
+  main .section-mentoria .mentoria_contenido .video-iframe video {
     border-radius: 10px;
     height: 100%;
     margin: auto;
