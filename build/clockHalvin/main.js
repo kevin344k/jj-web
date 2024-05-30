@@ -6,7 +6,7 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 var init = /*#__PURE__*/function () {
   var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
-    var _mempoolJS, blocks, blocksTipHeight, resultHeightBlock, blockText, CurrentDate, timeToHalvin, dateH;
+    var _mempoolJS, blocks, blocksTipHeight, resultHeightBlock, CurrentDate, timeToHalvin, dateH;
     return _regeneratorRuntime().wrap(function _callee$(_context) {
       while (1) switch (_context.prev = _context.next) {
         case 0:
@@ -19,19 +19,20 @@ var init = /*#__PURE__*/function () {
           blocksTipHeight = _context.sent;
           resultHeightBlock = JSON.stringify(blocksTipHeight, undefined, 2);
           console.log(resultHeightBlock);
-          blockText = document.querySelector('.text-rewards-halvin'); //blockText.textContent= ` Bloque ${resultHeightBlock} de 840.000  ` 
+
+          //blockText.textContent= ` Bloque ${resultHeightBlock} de 840.000  ` 
           CurrentDate = Date.now(); //fecha actual
           timeToHalvin = (1050000 - resultHeightBlock) * 10 * 60;
           dateH = CurrentDate + timeToHalvin * 1000;
           console.log(dateH);
           $(document).ready(function () {
-            clock = $('.clock').FlipClock(timeToHalvin, {
+            var clock = $('.clock').FlipClock(timeToHalvin, {
               clockFace: 'DailyCounter',
               autoStart: true,
               countdown: true
             });
           });
-        case 12:
+        case 11:
         case "end":
           return _context.stop();
       }
