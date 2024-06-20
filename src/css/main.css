@@ -160,8 +160,8 @@ main .section-announce {
   margin-top: 3.2rem;
 }
 main .section-announce .div-container--announce {
-  background-color: #fff0f0;
-  border: 1px solid #ff5757;
+  background-color: #effefa;
+  border: 1px solid #22dfc1;
   border-radius: 3rem;
   text-align: center;
   padding: 1.4rem 3.4rem;
@@ -170,7 +170,7 @@ main .section-announce .div-container--announce {
   margin: auto;
 }
 main .section-announce .div-container--announce .h2-red-tittle {
-  color: #920a0a;
+  color: #000000;
   font-weight: 500;
 }
 main .section-announce .div-container--announce .boton {
@@ -182,8 +182,9 @@ main .section-announce .div-container--announce .boton {
   text-decoration: none;
   display: inline-block;
   border-radius: 0.5rem;
-  padding: 1rem 2rem;
-  font-weight: 700;
+  padding: 1.5rem 2.5rem;
+  font-weight: 600;
+  margin-top: 0;
 }
 main .section-announce .div-container--announce .boton:hover {
   background-color: #19e6c0;

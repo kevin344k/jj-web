@@ -209,8 +209,8 @@ main {
     margin-top: 3.2rem;
 
     .div-container--announce {
-      background-color: #fff0f0;
-      border: 1px solid #ff5757;
+      background-color: #effefa;
+      border: 1px solid #22dfc1;
       border-radius: 3rem;
       text-align: center;
       padding: 1.4rem 3.4rem;
@@ -218,13 +218,14 @@ main {
       box-shadow: 3px 3px 5px 0px #d6d7d8;
       margin: auto;
       .h2-red-tittle {
-        color: #920a0a;
+        color: $negro;
         font-weight: 500;
       }
       .boton {
         @include but($turquesa, $negro);
-        padding: 1rem 2rem;
-        font-weight: 700;
+        padding: 1.5rem 2.5rem;
+        font-weight: 600;
+        margin-top: 0;
       }
     }
   }
