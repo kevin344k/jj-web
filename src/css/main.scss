@@ -235,7 +235,7 @@ main {
     width: 100%;
 
     padding: 0.6rem;
-    background-color: $gris;
+   
     padding: 1.8rem;
     margin: auto;
 
@@ -253,7 +253,7 @@ main {
         .botones_redes {
           background-color: #3ef2d0;
           @include but($blanco, $negro);
-
+          border: 1px solid $turquesa;
           padding: 1rem 3rem;
 
           box-shadow: 3px 3px 5px 0px $gris-middle;
@@ -339,12 +339,181 @@ main {
       }
     }
   }
+  .section-calcujub {
+    min-width: 320px;
+ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.6rem;
+    background-color: $gris;
+    padding: 1.8rem;
+   
 
+    div var {
+      font-size: 1.6rem;
+    }
+
+    .card-body-calculadora {
+      background-color: white;
+      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
+        0 2px 4px -2px rgb(0 0 0 / 0.1);
+      width: 310px;
+      padding: 1rem;
+    
+      align-items: center;
+      border-radius: 0.375rem;
+      .div-group-price-formula {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        text-align: center;
+        padding-bottom: 3rem;
+        margin-top: 2rem;
+        .precio-btc {
+          display: flex;
+          align-items: center;
+          gap: 3px;
+         
+          .img-btc {
+            width: 30px;
+            height: 30px;
+          }
+        }
+        .ecuacion-formula {
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          gap: 0.2rem;
+          align-items: center;
+          .denominador_fraccion {
+            border-top: 1px solid black;
+          }
+        }
+      }
+      .input-group-inversion-inicial {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 3rem;
+        border-bottom: 1px solid gray;
+
+        .img {
+          width: 30px;
+        }
+        p {
+          font-size: 3rem;
+        }
+        input {
+          padding: 1rem;
+          outline-color: $turquesa;
+          width: 20rem;
+          text-align: center;
+        }
+        .input-group-inversion {
+          display: flex;
+          gap: 2rem;
+        }
+      }
+      .result-halvins {
+        padding: 3rem 0rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+        border-bottom: 1px solid gray;
+        .halvin {
+          border-radius: 2rem;
+          border: 1px solid rgb(211, 208, 208);
+          padding: 1rem;
+          width: 100%;
+          p {
+            font-weight: bold;
+            padding-bottom: 0.5rem;
+          }
+          span {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 1rem;
+            color: gray;
+          }
+        }
+        .halvin-jub {
+          border-radius: 2rem;
+          background-color: #effefa;
+          border: 1px solid $turquesa_strong;
+        box-shadow:   0px 5px 0px 2px rgba(0, 0, 0, 0.1);
+        }
+      }
+      .result-formula{
+        padding: 2rem;
+        text-align: center;
+        #result_calc-formula{
+          background-color: $turquesa_strong;
+          
+          display: block;
+          justify-content: center;
+          border-radius: 2rem;
+          padding: 2rem 1rem;
+          margin: 2rem 0rem ;
+          font-size: 1.8rem;
+          border-bottom: 5px solid #299b86;
+          box-shadow:   0px 5px 3px 2px rgba(0, 0, 0, 0.1);
+          min-width: 10rem;
+        }
+      }
+    }
+    .aside-section-calc-jub{
+      margin-top: 1.5rem;
+      padding: 1rem;
+   margin-bottom: 1.5rem;
+   text-align: center;
+   background-color: white;
+   width: 310px;
+   height: fit-content;
+   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
+   0 2px 4px -2px rgb(0 0 0 / 0.1);
+   border-radius: 0.375rem;
+      .header-aside{
+        display: flex;
+      flex-direction: row;
+padding: 1rem;
+        justify-content: space-between;
+        p{
+          font-size: 1.6rem;
+        }
+      }
+      #aside-calc-jub{
+        display: flex;
+        flex-direction: column;
+        padding: 0.5rem;
+        gap: 0.45rem;
+        
+        div{
+          display: flex;
+          justify-content: space-between;
+          padding: 0.5rem;
+          border: 1px solid $turquesa;
+          flex-direction: row;
+          border-radius: 0.5rem;
+          gap: 0.2rem;
+          p:nth-child(1){
+            font-weight: bold;
+          }
+       p{
+        font-size: 1.4rem;
+       }
+        }
+      }
+    }
+  }
   .section-mentoria {
     min-width: $xsmall;
-
+    background-color: $gris;
     @extend .section--mis-redes;
-    background-color: $blanco;
+  
 
     .mentoria_contenido {
       .mentoria-items {
@@ -386,7 +555,7 @@ main {
 
     margin: auto;
     padding: 1.8rem;
-    background-color: $gris;
+  
 
     .redes_contenido {
       display: flex;
@@ -435,9 +604,10 @@ main {
 
   .section-merch {
     text-align: center;
-    max-width: 425px;
+   max-width: 425px;
     margin: auto;
 
+padding-top: 2rem;
     .container {
       margin-top: 0%;
       position: relative;
@@ -636,6 +806,55 @@ main {
         max-width: none;
       }
     }
+    .section-calcujub{
+      .card-body-calculadora{
+        min-width: 524px;
+      padding: 1rem 2rem;
+      .div-group-price-formula{
+        gap: 6rem;
+        span{
+          font-size: 2rem;
+        }
+      }
+        .input-group-inversion-inicial{
+          flex-direction: row;
+          gap: 2rem;
+      
+         input{
+          width: 16rem;
+          font-size: 2rem;
+         }
+        }
+        .result-halvins{
+          flex-direction: row;
+        }
+        .result-formula{
+         
+          #result_calc-formula{
+            margin: auto;
+            margin: 2rem auto;
+            width: 30rem;
+          }
+        }
+      }
+      .aside-section-calc-jub{
+        min-width: 524px;
+        padding: 1rem 2rem;
+        .header-aside{
+          p{
+            font-size: 1.6rem;
+            font-weight: bold;
+          }
+        }
+        #aside-calc-jub{
+div{
+  p{
+    font-size: 1.6rem;
+  }
+}
+        }
+      }
+    }
     .section--mis-redes {
       width: 100%;
       .redes-conteiners {
@@ -812,6 +1031,52 @@ main {
   }
   main {
     max-width: none;
+    .section-calcujub{
+    
+      .group-calc-jub{
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+          .card-body-calculadora{
+            height: fit-content;
+        width: 70rem;
+        .input-group-inversion-inicial{
+          .input-group-inversion{
+             input{
+            width: 100%;
+          }
+          }
+         
+        }
+        .result-halvins{
+          justify-content: center;
+          .halvin{
+            width: 25rem;
+          }
+         
+        }
+      }
+      .aside-section-calc-jub{
+        min-width: 524px;
+        padding: 1rem 2rem;
+        margin-top: 0rem;
+        .header-aside{
+          p{
+            font-size: 1.6rem;
+            font-weight: bold;
+          }
+        }
+        #aside-calc-jub{
+div{
+  p{
+    font-size: 1.6rem;
+  }
+}
+        }
+      }
+      }
+    
+    }
 
     .section-announce {
       .div-container--announce {
@@ -847,6 +1112,7 @@ main {
         }
       }
     }
+
     .section-mentoria {
       .mentoria_contenido {
         max-width: 90rem;
