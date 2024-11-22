@@ -41,7 +41,7 @@
 
     <title>Aprende a invertir en criptomonedas | Mentoria Premium</title>
 
-    <link rel="stylesheet" href="./src/css/main.min.css" />
+    <link rel="stylesheet" href="./src/css/main.css" />
     <link
       fetchpriority="high"
       as="image"
@@ -101,190 +101,190 @@
     </header>
 
     <main class="container">
-   
       <section class="section-calcujub">
         <h2>Calculadora de Jubilación</h2>
-      <div class="group-calc-jub">
-        <div class="card-body-calculadora">
-          <div class="div-group-price-formula">
-            <div class="precio-btc">
-              <img
-                class="img-btc"
-                src="./imagenes/bitcoin.svg"
-                alt="btc-image"
-              />
-              <span class="span-precio" id="span-price-btc"></span>
-            </div>
-            <div class="ecuacion-formula">
-              <div><var>PBTC</var> =</div>
-              <div>
+        <div class="group-calc-jub">
+          <div class="card-body-calculadora">
+            <div class="div-group-price-formula">
+              <div class="precio-btc">
+                <img
+                  class="img-btc"
+                  src="./imagenes/bitcoin.svg"
+                  alt="btc-image"
+                />
+                <span class="span-precio" id="span-price-btc"></span>
+              </div>
+              <div class="ecuacion-formula">
+                <div><var>PBTC</var> =</div>
                 <div>
-                  <var>(RI</var> * <var>CP)</var><var>*2</var
-                  ><var><sup>NH</sup></var>
-                </div>
-                <div class="denominador_fraccion">
-                  <var>RF</var>
+                  <div>
+                    <var>(RI</var> * <var>CP)</var><var>*2</var
+                    ><var><sup>NH</sup></var>
+                  </div>
+                  <div class="denominador_fraccion">
+                    <var>RF</var>
+                  </div>
                 </div>
               </div>
             </div>
+            <div class="input-group-inversion-inicial">
+              <div class="input-group-inversion">
+                <img
+                  class="img"
+                  src="./imagenes/dollar.webp"
+                  alt="dollar-image"
+                />
+                <input
+                  id="inversion-inicial"
+                  type="number"
+                  placeholder="Inversión inicial"
+                />
+              </div>
+              <p>≈</p>
+              <div class="input-group-inversion">
+                <img class="img" src="./imagenes/bitcoin.svg" alt="btc-image" />
+                <input
+                  type="text"
+                  id="input-result-equiv-btc"
+                  readonly
+                  placeholder="Equivalencia en btc"
+                />
+              </div>
+            </div>
+            <div class="result-halvins">
+              <div class="halvin halvin-now">
+                <div>
+                  <p>Halvin actual</p>
+                  <span id="span-halvin-now-nro"></span>
+                </div>
+                <div>
+                  <p>Año</p>
+                  <span id="span-halvin-now-anio"></span>
+                </div>
+                <div>
+                  <p>Rec. x bloque</p>
+                  <span id="span-halvin-now-reward"></span>
+                </div>
+              </div>
+              <div class="halvin halvin-jub">
+                <div>
+                  <p>Halvin jubilación</p>
+                  <span id="span-halvin-jub-nro"></span>
+                </div>
+                <div>
+                  <p>Año</p>
+                  <span id="span-halvin-jub-anio"></span>
+                </div>
+                <div>
+                  <p>Rec. x bloque</p>
+                  <span id="span-halvin-jub-reward"></span>
+                </div>
+              </div>
+            </div>
+            <div class="result-formula">
+              <p>La inversión inicial equivale a:</p>
+              <span id="result_calc-formula"></span>
+              <p>para el año <span id="result-calc-anio"></span></p>
+            </div>
           </div>
-          <div class="input-group-inversion-inicial">
-            <div class="input-group-inversion">
-              <img
-                class="img"
-                src="./imagenes/dollar.webp"
-                alt="dollar-image"
-              />
-              <input id="inversion-inicial" type="number" placeholder="Inversión inicial">
+          <div class="aside-section-calc-jub">
+            <h3>Equivalencia en cada halvin</h3>
+            <div class="header-aside">
+              <p>Año</p>
+              <p>PBTC</p>
+              <p>Inversión</p>
             </div>
-            <p>≈</p>
-            <div class="input-group-inversion">
-              <img
-                class="img"
-                src="./imagenes/bitcoin.svg"
-                alt="btc-image"
-              />
-              <input type="text" id="input-result-equiv-btc" readonly placeholder="Equivalencia en btc">
-            </div>
-          </div>
-          <div class="result-halvins">
-            <div class=" halvin halvin-now">
-              <div>
-                <p>Halvin actual</p>
-              <span id="span-halvin-now-nro"></span>
-              </div>     
-              <div>
-                <p>Año</p>
-              <span id="span-halvin-now-anio"></span>
-              </div>  
-              <div>
-                <p>Rec. x bloque</p>
-              <span id="span-halvin-now-reward"></span>
-              </div>           
-            </div>
-            <div class="halvin halvin-jub">
-              <div>
-                <p>Halvin jubilación</p>
-              <span id="span-halvin-jub-nro"></span>
-              </div>     
-              <div>
-                <p>Año</p>
-              <span id="span-halvin-jub-anio"></span>
-              </div>  
-              <div>
-                <p>Rec. x bloque</p>
-              <span id="span-halvin-jub-reward"></span>
-              </div>  
-            </div>
-          </div>
-          <div class="result-formula">
-            <p>
-La inversión inicial equivale a:
-            </p>
-            <span id="result_calc-formula"></span>
-            <p >
-para el año <span id="result-calc-anio"></span>
-            </p>
+            <div id="aside-calc-jub"></div>
           </div>
         </div>
-        <div  class="aside-section-calc-jub">
-          <h3>Equivalencia en cada halvin</h3>
-          <div class="header-aside">
-         
-            <p>Año</p>
-            <p>Equivalencia</p>
-          </div>
-          <div id="aside-calc-jub">
-
-          </div>
-        </div>
-      </div>
       </section>
       <section class="section--mis-redes">
         <h2 class="centrar">Mis Redes</h2>
         <div class="redes-conteiners">
           <div class="button-group">
-            <div class="botones_redes">
+            <a
+              class="botones_redes"
+              href="https://tradingdifferent.com/?ref=YELgWNnX"
+            >
               <img
                 class="iconos_redes icono_circular"
                 src="imagenes/trading-diferent.png"
                 alt=""
                 loading="lazy"
               />
-              <a href="https://tradingdifferent.com/?ref=YELgWNnX">
-                <span>Pools de Liquidez</span></a
-              >
-            </div>
-            <div class="botones_redes">
+              <span>Pools de Liquidez</span></a
+            >
+
+            <a
+              class="botones_redes"
+              href="https://api.whatsapp.com/send?phone=593998177135"
+            >
               <img
                 class="iconos_redes icono_circular"
                 src="imagenes/whatsapp.svg"
                 alt=""
                 loading="lazy"
               />
-              <a href="https://api.whatsapp.com/send?phone=593998177135">
-                <span>+593 99 817 7135</span>
-              </a>
-            </div>
-            <div class="botones_redes">
+              <span>+593 99 817 7135</span>
+            </a>
+
+            <a class="botones_redes" href="https://t.me/jjchagerben357">
               <img
                 class="iconos_redes icono_circular"
                 src="imagenes/telegrama.svg"
                 alt=""
                 loading="lazy"
               />
-              <a href="https://t.me/jjchagerben357">
-                <span>Telegram</span>
-              </a>
-            </div>
-            <div class="botones_redes">
+              <span>Telegram</span>
+            </a>
+
+            <a
+              class="botones_redes"
+              href="https://www.instagram.com/jjchagerben33?igsh=d2wyZzEwcWx4cjZ2"
+            >
               <img
                 class="iconos_redes icono_circular"
                 src="imagenes/instagram.svg"
                 alt=""
                 loading="lazy"
               />
-              <a
-                href="https://www.instagram.com/jjchagerben33?igsh=d2wyZzEwcWx4cjZ2"
-              >
-                <span>@jjchagerben</span></a
-              >
-            </div>
-            <div class="botones_redes">
-              <a
-                href="https://www.facebook.com/people/JJChagerben/61557765639522/?mibextid=ZbWKwL"
-              >
-                <img
-                  class="iconos_redes icono_circular"
-                  src="imagenes/facebook.svg"
-                  alt=""
-                  loading="lazy"
-                />
-                <span>JJChagerben </span></a
-              >
-            </div>
-            <div class="botones_redes">
-              <a href="https://x.com/JJChagerben357"
-                ><img
-                  class="iconos_redes icono_circular"
-                  src="imagenes/Twitter_X.svg"
-                  alt=""
-                  loading="lazy"
-                />
-                <span>JJChagerben357</span>
-              </a>
-            </div>
+              <span>@jjchagerben</span></a
+            >
 
-            <div class="botones_redes">
-              <a href="https://www.bitmex.com/app/register/A7p8Lt">
-                <img
-                  class="iconos_redes"
-                  src="imagenes/bitmex-logo.webp"
-                  alt=""
-                  loading="lazy"
-                /><span>Bitmex-No hagas trading</span>
-              </a>
-            </div>
+            <a
+              class="botones_redes"
+              href="https://www.facebook.com/people/JJChagerben/61557765639522/?mibextid=ZbWKwL"
+            >
+              <img
+                class="iconos_redes icono_circular"
+                src="imagenes/facebook.svg"
+                alt=""
+                loading="lazy"
+              />
+              <span>JJChagerben </span></a
+            >
+
+            <a class="botones_redes" href="https://x.com/JJChagerben357"
+              ><img
+                class="iconos_redes icono_circular"
+                src="imagenes/Twitter_X.svg"
+                alt=""
+                loading="lazy"
+              />
+              <span>JJChagerben357</span>
+            </a>
+
+            <a
+              class="botones_redes"
+              href="https://www.bitmex.com/app/register/A7p8Lt"
+            >
+              <img
+                class="iconos_redes"
+                src="imagenes/bitmex-logo.webp"
+                alt=""
+                loading="lazy"
+              /><span>Bitmex-No hagas trading</span>
+            </a>
           </div>
           <div class="linea"></div>
           <div class="container-live">

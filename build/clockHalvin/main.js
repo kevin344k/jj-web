@@ -8,7 +8,7 @@ var span_price_btc = document.getElementById("span-price-btc");
 var input_inversion_inicial = document.getElementById("inversion-inicial");
 var input_result_equiv_btc = document.getElementById("input-result-equiv-btc");
 var data_halvin_now = {
-  costoProducciónBTC: 80000,
+  costoProducciónBTC: 82200,
   recompensaBloqueNow: 3.125,
   halvin_now_numero: 5,
   anio_halvin_actual: 2024
@@ -192,7 +192,7 @@ var init = /*#__PURE__*/function () {
             span_hal_jub_nro.textContent = "# ".concat(resultCallback.numero);
             span_hal_jub_anio.textContent = resultCallback.Year;
             span_hal_jub_reward.textContent = "".concat(resultCallback.Rewards.toFixed(9), " btc");
-            console.log(resultCallback.numero);
+            console.log(input_result_equiv_btc.value);
 
             ///VARIABLES FUNDAMENTALES PARA EL CÁLCUILO USANDO LA FÓRMULA
 
@@ -201,9 +201,12 @@ var init = /*#__PURE__*/function () {
             var NH = resultCallback.numero - data_halvin_now.halvin_now_numero;
             var RF = resultCallback.Rewards;
             if (NH != "" && RF != 0 && RF != "") {
-              var PBTC = new Intl.NumberFormat("es-Mx").format((RI * CP * Math.pow(2, NH) / RF).toFixed(3));
-              console.log(PBTC);
-              result_calc_formula.textContent = "$ ".concat(PBTC);
+              var PBTC = (RI * CP * Math.pow(2, NH) / RF).toFixed(3);
+              console.log("pbtc", PBTC);
+              console.log("equiv_inversion_inicial", Number(input_result_equiv_btc.value) * PBTC);
+              /*el resultado de PBTC se multiplica por l aequivalencia en btc de la inversioin inicial para obtener el aproximado del valor de la inversion ṕara el año de la jubilación  */
+              var inv_inicial_por_PBTC = new Intl.NumberFormat("es-Mx").format(Number(input_result_equiv_btc.value) * PBTC);
+              result_calc_formula.textContent = "$ ".concat(inv_inicial_por_PBTC);
               result_calc_anio.textContent = resultCallback.Year;
 
               /* TABLA ADICIONAL QUE MUESTRA EL EQUIVALENTE DE LA INVERSION INICIAL EN CADA HALVIN */
@@ -211,9 +214,8 @@ var init = /*#__PURE__*/function () {
               for (var i = 5; i < halvins.length; i++) {
                 var child_aside = document.createElement("div");
                 var calc_jub_aside = RI * CP * Math.pow(2, halvins[i].numero - data_halvin_now.halvin_now_numero) / halvins[i].Rewards;
-                console.log(halvins[i].numero - data_halvin_now.halvin_now_numero);
-                var rule_tree_calc_jub = calc_jub_aside * 1;
-                child_aside.innerHTML = "<p>".concat(halvins[i].Year, " </p><p> $ ").concat(new Intl.NumberFormat("es-Mx").format(rule_tree_calc_jub.toFixed(3)), "</p>");
+                var rule_tree_calc_jub = calc_jub_aside * input_result_equiv_btc.value;
+                child_aside.innerHTML = "<p>".concat(halvins[i].Year, " </p><p> $ ").concat(new Intl.NumberFormat("es-Mx").format(calc_jub_aside.toFixed()), "</p><p>$ ").concat(new Intl.NumberFormat("es-Mx").format(rule_tree_calc_jub.toFixed()), "</p>");
                 aside_calc_jub.appendChild(child_aside);
               }
             }
