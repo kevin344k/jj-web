@@ -86,6 +86,21 @@
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <header class="encabezado">
+      <!--
+      <nav>
+     <div>
+      <img src="./imagenes/jjcara.webp">
+      <ul>
+        <li><a class="boton-nav" href="#sec-calculadora-jub">Calculadora</a></li>
+        <li><a  class="boton-nav" href="#sec-redes">Redes</a></li>
+        <li><a  class="boton-nav" href="#sec-about-me">Acerca de mí</a></li>
+       <li><a  class="boton-nav" href="#sect-merch">Merch</a></li>
+            <li><a  class="boton-nav" href="#sec-books">Libros</a></li>
+
+      </ul>
+     </div>
+      </nav>
+-->
       <div class="contenido-encabezado">
         <div class="clock flip-clock-wrapper"></div>
         <h1>"BITCOIN ES SACARSE LA LOTERIA EN CÁMARA LENTA"</h1>
@@ -101,8 +116,14 @@
     </header>
 
     <main class="container">
-      <section class="section-calcujub">
+      <section id="sec-calculadora-jub" class="section-calcujub">
         <h2>Calculadora de Jubilación</h2>
+        <div class="announce-calc-jub">
+          <p>
+            Estos valores son especulativos de forma estática sobre un modelo
+            estático, pueden cambiar si cambian las condiciones de mercado.
+          </p>
+        </div>
         <div class="group-calc-jub">
           <div class="card-body-calculadora">
             <div class="div-group-price-formula">
@@ -198,7 +219,7 @@
           </div>
         </div>
       </section>
-      <section class="section--mis-redes">
+      <section id="sec-redes" class="section--mis-redes">
         <h2 class="centrar">Mis Redes</h2>
         <div class="redes-conteiners">
           <div class="button-group">
@@ -312,6 +333,9 @@
           </div>
         </div>
       </section>
+      <section id="sec-books" class="section-libros">
+        <h2>Libros que me hicieron millonario</h2>
+      </section>
       <section class="section-announce">
         <div class="div-container--announce">
           <h2 class="centrar h2-red-tittle">
@@ -415,7 +439,7 @@
 
       <!--===================================================================================-->
 
-      <section class="section-about-me">
+      <section id="sec-about-me" class="section-about-me">
         <h2 class="centrar">Acerca de mí</h2>
 
         <div class="redes_contenido">
@@ -438,7 +462,7 @@
         </div>
       </section>
 
-      <section class="section-merch">
+      <section id="sect-merch" class="section-merch">
         <h2>MERCH INCONFISCABLE</h2>
         <div class="container">
           <div class="slider">
@@ -488,7 +512,7 @@
     ></script>
 
     <script src="./build/clockHalvin/flipclock.min.js"></script>
-    <script src="./build/clockHalvin/main.min.js"></script>
+    <script src="./src/clockHalvin/main.js"></script>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"

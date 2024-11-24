@@ -199,6 +199,7 @@ span_hal_now_anio.textContent = data_halvin_now.anio_halvin_actual;
 span_hal_now_reward.textContent = `${data_halvin_now.recompensaBloqueNow} btc`;
 
 const init = async () => {
+ 
   const {
     bitcoin: { blocks },
   } = mempoolJS({
@@ -299,7 +300,7 @@ const inv_inicial_por_PBTC=new Intl.NumberFormat("es-Mx").format(Number(input_re
 
       /* TABLA ADICIONAL QUE MUESTRA EL EQUIVALENTE DE LA INVERSION INICIAL EN CADA HALVIN */
 
-      for (let i = 5; i < halvins.length; i++) {
+      for (let i = 5; i < halvins.length-13; i++) {
         const child_aside = document.createElement("div");
 
         const calc_jub_aside =
@@ -311,17 +312,53 @@ const inv_inicial_por_PBTC=new Intl.NumberFormat("es-Mx").format(Number(input_re
             )) /
           halvins[i].Rewards;
 
-        const rule_tree_calc_jub = calc_jub_aside * input_result_equiv_btc.value;
+        const rule_tree_calc_jub = Math.trunc(calc_jub_aside * Number(input_result_equiv_btc.value));
+
+        console.log((calc_jub_aside * Number(input_result_equiv_btc.value)));
+        
 
         child_aside.innerHTML = `<p>${
           halvins[i].Year
-        } </p><p class="p-largest-number "> $ ${new Intl.NumberFormat("es-Mx").format(
-          calc_jub_aside.toFixed()
-        )}</p><p class="p-largest-number">$ ${new Intl.NumberFormat("es-Mx").format(
-          rule_tree_calc_jub.toFixed()
-        )}</p>`;
+        } </p>
+        <p class="p-largest-number ">${short_amounts(calc_jub_aside)}</p>
+       
+        <p class="p-largest-number">${short_amounts(rule_tree_calc_jub)}</p>`;
         aside_calc_jub.appendChild(child_aside);
       }
+      function short_amounts(test_number) {
+
+        let shortNumber_result=0
+
+       
+        
+        
+        const millon=1000000
+        const billon=1000000000000
+        const trillon=1000000000000000000
+        
+        
+        const amount_init=test_number.toString().length
+        
+        
+        if (amount_init>=7&&amount_init<=12) {
+         return   shortNumber_result=`$${format_amount(test_number/millon)} Millones`
+        
+        
+        } else if(amount_init>=13&&amount_init<=18){
+          return shortNumber_result=`$${format_amount(test_number/billon)} Billones`
+        } else if(amount_init>=19&&amount_init<=21){
+          return shortNumber_result=`$${format_amount(test_number/trillon)} Trillones`
+        } else{
+        return shortNumber_result=`$${format_amount(test_number)}`
+        }
+        
+              
+        function format_amount(amount){
+          return new Intl.NumberFormat("es-Mx").format(amount.toFixed(1))
+        }
+        
+        }
+  
     }
   }
 
@@ -331,3 +368,22 @@ const inv_inicial_por_PBTC=new Intl.NumberFormat("es-Mx").format(Number(input_re
 init();
 
 ///calculadora de jubilacion
+
+
+//millon 1,000,000
+//min:7 -max:12
+//billon 1,000,000,000,000
+//min:13 max:18
+//trillon  1,000,000,000,000,000,000
+//min:19 max:22
+//example 123456789012345678 hasta el año 2108
+
+
+const libros=[
+  {
+    orden:"",
+    autor:"",
+    nombre_libro:"",
+    link_cover:"",
+  }
+]

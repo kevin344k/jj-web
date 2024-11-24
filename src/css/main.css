@@ -49,6 +49,46 @@ header {
   text-align: center;
   padding: 1.6rem 0px;
   display: flex;
+  /*
+    nav {
+      position: fixed;
+      top: 0;
+      padding: 0.2rem 0.5rem;
+      width: 100%;
+      div {
+        background-color: $soft-black;
+        padding: 1rem 1.5rem;
+        border-radius: 1rem;
+        display: flex;
+        justify-content: space-between;
+        img {
+          width: 5rem;
+          border-radius: 100%;
+          box-shadow: $box-shadow;
+        }
+        ul {
+          list-style: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.5rem;
+          li {
+            a {
+              color: white;
+              text-decoration: none;
+              font-size: 2rem;
+              padding: 1rem 1rem;
+              &:hover {
+                background-color: $turquesa;
+                border-radius: 1rem;
+                color: $soft-black;
+              }
+            }
+          }
+        }
+      }
+    }
+  */
 }
 header .contenido-encabezado {
   margin: auto;
@@ -326,6 +366,20 @@ main .section-calcujub {
   background-color: #f2f5f7;
   padding: 1.8rem;
 }
+main .section-calcujub h2 {
+  margin-bottom: 0rem;
+}
+main .section-calcujub .announce-calc-jub {
+  background-color: #effefa;
+  border: 1px solid #22dfc1;
+  border-radius: 1rem;
+  text-align: center;
+  padding: 1.4rem 1rem;
+  line-height: 2.5rem;
+  max-width: 425px;
+  box-shadow: 3px 3px 5px 0px #d6d7d8;
+  margin: 3rem auto;
+}
 main .section-calcujub div var {
   font-size: 1.6rem;
 }
@@ -475,6 +529,17 @@ main .section-calcujub .aside-section-calc-jub #aside-calc-jub div p:nth-child(1
 }
 main .section-calcujub .aside-section-calc-jub #aside-calc-jub div p:nth-child(2) {
   color: rgb(80, 79, 79);
+  width: 10rem;
+  text-align: right;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+main .section-calcujub .aside-section-calc-jub #aside-calc-jub div p:nth-child(3) {
+  width: 10rem;
+  text-align: right;
+  text-align: right;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 main .section-calcujub .aside-section-calc-jub #aside-calc-jub div p {
   font-size: 1.4rem;
@@ -740,6 +805,9 @@ main .section-merch .bpedido:active {
   main .section-announce .div-container--announce {
     max-width: none;
   }
+  main .section-calcujub .announce-calc-jub {
+    max-width: none;
+  }
   main .section-calcujub .card-body-calculadora {
     min-width: 524px;
     padding: 1rem 2rem;
@@ -770,69 +838,92 @@ main .section-merch .bpedido:active {
     min-width: 524px;
     padding: 1rem 2rem;
   }
+  main .section-calcujub .aside-section-calc-jub .header-aside {
+    padding: 0.5rem 1.5rem;
+  }
   main .section-calcujub .aside-section-calc-jub .header-aside p {
     font-size: 1.6rem;
     font-weight: bold;
   }
+  main .section-calcujub .aside-section-calc-jub #aside-calc-jub div {
+    padding: 0.5rem 1.5rem;
+  }
   main .section-calcujub .aside-section-calc-jub #aside-calc-jub div p {
     font-size: 1.6rem;
   }
-  main .section--mis-redes, main .section-mentoria {
+  main .section-calcujub .aside-section-calc-jub #aside-calc-jub div p:nth-child(2) {
+    width: 15rem;
+  }
+  main .section-calcujub .aside-section-calc-jub #aside-calc-jub div p:nth-child(3) {
+    width: 15rem;
+  }
+  main .section-calcujub .section--mis-redes, main .section-calcujub .section-mentoria {
     width: 100%;
   }
-  main .section--mis-redes .redes-conteiners, main .section-mentoria .redes-conteiners {
+  main .section-calcujub .section--mis-redes .redes-conteiners, main .section-calcujub .section-mentoria .redes-conteiners {
     flex-direction: row;
     justify-content: space-evenly;
     max-width: none;
   }
-  main .section--mis-redes .redes-conteiners .button-group, main .section-mentoria .redes-conteiners .button-group {
+  main .section-calcujub .section--mis-redes .redes-conteiners .button-group, main .section-calcujub .section-mentoria .redes-conteiners .button-group {
     justify-content: space-around;
   }
-  main .section--mis-redes .redes-conteiners .button-group .botones-redes span, main .section-mentoria .redes-conteiners .button-group .botones-redes span {
+  main .section-calcujub .section--mis-redes .redes-conteiners .button-group .botones-redes span, main .section-calcujub .section-mentoria .redes-conteiners .button-group .botones-redes span {
     font-size: 2rem;
   }
-  main .section--mis-redes .redes-conteiners .container-live .stream_iconos, main .section-mentoria .redes-conteiners .container-live .stream_iconos {
+  main .section-calcujub .section--mis-redes .redes-conteiners .container-live .stream_iconos, main .section-calcujub .section-mentoria .redes-conteiners .container-live .stream_iconos {
     gap: 0.5rem;
   }
-  main .section-mentoria .mentoria_contenido {
+  main .section-calcujub .section-mentoria .mentoria_contenido {
     display: flex;
     gap: 6.6rem;
   }
-  main .section-mentoria .mentoria_contenido .mentoria-items {
+  main .section-calcujub .section-mentoria .mentoria_contenido .mentoria-items {
     width: 50%;
   }
-  main .section-mentoria .mentoria_contenido .video-iframe {
+  main .section-calcujub .section-mentoria .mentoria_contenido .video-iframe {
     width: 50%;
     background-color: #000000;
     height: 420px;
     border-radius: 10px;
     text-align: center;
   }
-  main .section-mentoria .mentoria_contenido .video-iframe video {
+  main .section-calcujub .section-mentoria .mentoria_contenido .video-iframe video {
     border-radius: 10px;
     height: 100%;
     margin: auto;
   }
-  main .section-about-me {
+  main .section-calcujub .section-about-me {
     max-width: none;
     height: -moz-fit-content;
     height: fit-content;
   }
-  main .section-about-me .redes_contenido {
+  main .section-calcujub .section-about-me .redes_contenido {
     flex-direction: row;
     justify-content: space-evenly;
     margin-bottom: 3rem;
     max-width: none;
   }
-  main .section-about-me .redes_contenido .marco {
+  main .section-calcujub .section-about-me .redes_contenido .marco {
     height: 500px;
     margin: 0px;
   }
-  main .section-about-me .redes_contenido .video {
+  main .section-calcujub .section-about-me .redes_contenido .video {
     width: -moz-fit-content;
     width: fit-content;
     height: 500px;
     margin: 0px;
+  }
+  main .section--mis-redes .redes-conteiners, main .section-mentoria .redes-conteiners {
+    flex-direction: row;
+    justify-content: center;
+  }
+  main .section-about-me .redes_contenido {
+    display: flex;
+    flex-direction: row;
+  }
+  main .section-about-me .redes_contenido .marco {
+    border: 1px solid #3ef2d0;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -971,6 +1062,7 @@ main .section-merch .bpedido:active {
   main .section--mis-redes .redes-conteiners, main .section-mentoria .redes-conteiners {
     max-width: 90rem;
     margin: 8rem auto;
+    justify-content: space-between;
   }
   main .section--mis-redes .redes-conteiners .button-group .botones_redes span, main .section-mentoria .redes-conteiners .button-group .botones_redes span {
     font-size: 2rem;
@@ -978,7 +1070,8 @@ main .section-merch .bpedido:active {
   main .section--mis-redes .redes-conteiners .linea, main .section-mentoria .redes-conteiners .linea {
     display: block;
     width: 4px;
-    background-color: #bbc9d6;
+    border-radius: 20%;
+    background: linear-gradient(0deg, rgb(248, 248, 249) 1%, rgb(187, 201, 214) 13%, rgb(187, 201, 214) 50%, rgb(187, 201, 214) 83%, rgb(248, 248, 249) 95%);
   }
   main .section--mis-redes .redes-conteiners .container-live .stream_iconos, main .section-mentoria .redes-conteiners .container-live .stream_iconos {
     display: flex;

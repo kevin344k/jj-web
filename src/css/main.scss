@@ -14,6 +14,7 @@
 $turquesa: #3ef2d0;
 $soft-black: #212529;
 $turquesa_strong: #19e6c0;
+$turquesa_soft: #effefa;
 $gris: #f2f5f7;
 $gris-middle: #d6d7d8;
 $gris-strong: #bbc9d6;
@@ -44,6 +45,7 @@ body {
   font-family: $font-family-ubuntu;
   font-size: $font-size-paragraph;
   overflow-x: hidden;
+  
 }
 
 * {
@@ -97,7 +99,46 @@ header {
   text-align: center;
   padding: 1.6rem 0px;
   display: flex;
-
+/*
+  nav {
+    position: fixed;
+    top: 0;
+    padding: 0.2rem 0.5rem;
+    width: 100%;
+    div {
+      background-color: $soft-black;
+      padding: 1rem 1.5rem;
+      border-radius: 1rem;
+      display: flex;
+      justify-content: space-between;
+      img {
+        width: 5rem;
+        border-radius: 100%;
+        box-shadow: $box-shadow;
+      }
+      ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        li {
+          a {
+            color: white;
+            text-decoration: none;
+            font-size: 2rem;
+            padding: 1rem 1rem;
+            &:hover {
+              background-color: $turquesa;
+              border-radius: 1rem;
+              color: $soft-black;
+            }
+          }
+        }
+      }
+    }
+  }
+*/
   .contenido-encabezado {
     margin: auto;
     padding: 6px;
@@ -235,7 +276,7 @@ main {
     width: 100%;
 
     padding: 0.6rem;
-   
+
     padding: 1.8rem;
     margin: auto;
 
@@ -266,17 +307,15 @@ main {
             height: 50px;
             margin-right: 0.5rem;
           }
-          
 
-            span {
-              margin: auto 0rem ;
-              color: $negro;
-              font-weight: bold;
-              font-size: 1.8rem;
-            }
+          span {
+            margin: auto 0rem;
+            color: $negro;
+            font-weight: bold;
+            font-size: 1.8rem;
+          }
 
-            text-decoration: none;
-          
+          text-decoration: none;
         }
       }
 
@@ -340,8 +379,11 @@ main {
     }
   }
   .section-calcujub {
+    h2 {
+      margin-bottom: 0rem;
+    }
     min-width: 320px;
- 
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -349,8 +391,18 @@ main {
     padding: 0.6rem;
     background-color: $gris;
     padding: 1.8rem;
-   
 
+    .announce-calc-jub {
+      background-color: #effefa;
+      border: 1px solid #22dfc1;
+      border-radius: 1rem;
+      text-align: center;
+      padding: 1.4rem 1rem;
+      line-height: 2.5rem;
+      max-width: 425px;
+      box-shadow: 3px 3px 5px 0px #d6d7d8;
+      margin: 3rem auto;
+    }
     div var {
       font-size: 1.6rem;
     }
@@ -361,7 +413,7 @@ main {
         0 2px 4px -2px rgb(0 0 0 / 0.1);
       width: 310px;
       padding: 1rem;
-    
+
       align-items: center;
       border-radius: 0.375rem;
       .div-group-price-formula {
@@ -375,7 +427,7 @@ main {
           display: flex;
           align-items: center;
           gap: 3px;
-         
+
           .img-btc {
             width: 30px;
             height: 30px;
@@ -444,54 +496,56 @@ main {
           border-radius: 2rem;
           background-color: #effefa;
           border: 1px solid $turquesa_strong;
-        box-shadow:   0px 5px 0px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 5px 0px 2px rgba(0, 0, 0, 0.1);
         }
       }
-      .result-formula{
+      .result-formula {
         padding: 2rem;
         text-align: center;
-        #result_calc-formula{
+        #result_calc-formula {
           background-color: $turquesa_strong;
-          
+
           display: block;
           justify-content: center;
           border-radius: 2rem;
           padding: 2rem 1rem;
-          margin: 2rem 0rem ;
+          margin: 2rem 0rem;
           font-size: 1.8rem;
           border-bottom: 5px solid #299b86;
-          box-shadow:   0px 5px 3px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 5px 3px 2px rgba(0, 0, 0, 0.1);
           min-width: 10rem;
         }
       }
     }
-    .aside-section-calc-jub{
+    .aside-section-calc-jub {
       margin-top: 1.5rem;
       padding: 1rem;
-   margin-bottom: 1.5rem;
-   text-align: center;
-   background-color: white;
-   width: 310px;
-   height: fit-content;
-   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
-   0 2px 4px -2px rgb(0 0 0 / 0.1);
-   border-radius: 0.375rem;
-      .header-aside{
+      margin-bottom: 1.5rem;
+      text-align: center;
+      background-color: white;
+      width: 310px;
+      height: fit-content;
+      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
+        0 2px 4px -2px rgb(0 0 0 / 0.1);
+      border-radius: 0.375rem;
+
+      .header-aside {
         display: flex;
-      flex-direction: row;
-padding: 1rem;
+        flex-direction: row;
+        padding: 1rem;
         justify-content: space-between;
-        p{
+
+        p {
           font-size: 1.6rem;
         }
       }
-      #aside-calc-jub{
+      #aside-calc-jub {
         display: flex;
         flex-direction: column;
         padding: 0.5rem;
         gap: 0.45rem;
-        
-        div{
+
+        div {
           display: flex;
           justify-content: space-between;
           padding: 0.5rem;
@@ -499,23 +553,33 @@ padding: 1rem;
           flex-direction: row;
           border-radius: 0.5rem;
           gap: 0.2rem;
-          p:nth-child(1){
+          p:nth-child(1) {
             font-weight: bold;
           }
-          p:nth-child(2){
-           color: rgb(80, 79, 79);
+          p:nth-child(2) {
+            color: rgb(80, 79, 79);
+            width: 10rem;
+            text-align: right;
+
+            text-overflow: ellipsis;
+            overflow: hidden;
           }
-       p{
-        font-size: 1.4rem;
-       }
-       .p-largest-number{
-    
+          p:nth-child(3) {
+            width: 10rem;
+            text-align: right;
+            text-align: right;
 
-        width: fit-content;
-      
+            text-overflow: ellipsis;
+            overflow: hidden;
+          }
+          p {
+            font-size: 1.4rem;
+          }
+          .p-largest-number {
+            width: fit-content;
 
-        text-wrap: nowrap;
-       }
+            text-wrap: nowrap;
+          }
         }
       }
     }
@@ -524,7 +588,6 @@ padding: 1rem;
     min-width: $xsmall;
     background-color: $gris;
     @extend .section--mis-redes;
-  
 
     .mentoria_contenido {
       .mentoria-items {
@@ -566,7 +629,6 @@ padding: 1rem;
 
     margin: auto;
     padding: 1.8rem;
-  
 
     .redes_contenido {
       display: flex;
@@ -615,10 +677,10 @@ padding: 1rem;
 
   .section-merch {
     text-align: center;
-   max-width: 425px;
+    max-width: 425px;
     margin: auto;
 
-padding-top: 2rem;
+    padding-top: 2rem;
     .container {
       margin-top: 0%;
       position: relative;
@@ -812,57 +874,69 @@ padding-top: 2rem;
   main {
     width: 100%;
     max-width: none;
+ 
     .section-announce {
       .div-container--announce {
         max-width: none;
       }
     }
-    .section-calcujub{
-      .card-body-calculadora{
-        min-width: 524px;
-      padding: 1rem 2rem;
-      .div-group-price-formula{
-        gap: 6rem;
-        span{
-          font-size: 2rem;
-        }
+    .section-calcujub {
+      .announce-calc-jub {
+        max-width: none;
       }
-        .input-group-inversion-inicial{
+      .card-body-calculadora {
+        min-width: 524px;
+        padding: 1rem 2rem;
+        .div-group-price-formula {
+          gap: 6rem;
+          span {
+            font-size: 2rem;
+          }
+        }
+        .input-group-inversion-inicial {
           flex-direction: row;
           gap: 2rem;
-      
-         input{
-          width: 16rem;
-          font-size: 2rem;
-         }
+
+          input {
+            width: 16rem;
+            font-size: 2rem;
+          }
         }
-        .result-halvins{
+        .result-halvins {
           flex-direction: row;
         }
-        .result-formula{
-         
-          #result_calc-formula{
+        .result-formula {
+          #result_calc-formula {
             margin: auto;
             margin: 2rem auto;
             width: 30rem;
           }
         }
       }
-      .aside-section-calc-jub{
+      .aside-section-calc-jub {
         min-width: 524px;
         padding: 1rem 2rem;
-        .header-aside{
-          p{
+        .header-aside {
+          padding: 0.5rem 1.5rem;
+          p {
             font-size: 1.6rem;
             font-weight: bold;
+
           }
         }
-        #aside-calc-jub{
-div{
-  p{
-    font-size: 1.6rem;
-  }
-}
+        #aside-calc-jub {
+          div {
+           padding: 0.5rem 1.5rem;
+            p {
+              font-size: 1.6rem;
+            }
+            p:nth-child(2){
+              width: 15rem;
+            }
+            p:nth-child(3){
+              width: 15rem;
+           
+            }
         }
       }
     }
@@ -874,8 +948,8 @@ div{
         max-width: none;
         .button-group {
           justify-content: space-around;
-          .botones-redes{
-            span{
+          .botones-redes {
+            span {
               font-size: 2rem;
             }
           }
@@ -937,7 +1011,25 @@ div{
       }
     }
   }
-}
+  .section--mis-redes{
+    .redes-conteiners{
+      flex-direction: row;
+      justify-content: center;
+
+    }
+  
+  }
+  .section-about-me{
+    .redes_contenido{
+      display: flex;
+      flex-direction: row;
+      .marco{
+        border: 1px solid $turquesa;
+      }
+    }
+  }
+}}
+
 @media screen and (min-width: 1024px) {
   $font-size-clock: 15rem;
   $font-size-paragraph: 1.9rem;
@@ -1047,52 +1139,48 @@ div{
   }
   main {
     max-width: none;
-    .section-calcujub{
-    
-      .group-calc-jub{
+    .section-calcujub {
+      .group-calc-jub {
         display: flex;
         flex-direction: row;
         gap: 2rem;
-          .card-body-calculadora{
-            height: fit-content;
-        width: 70rem;
-        .input-group-inversion-inicial{
-          .input-group-inversion{
-             input{
-            width: 100%;
+        .card-body-calculadora {
+          height: fit-content;
+          width: 70rem;
+          .input-group-inversion-inicial {
+            .input-group-inversion {
+              input {
+                width: 100%;
+              }
+            }
           }
+          .result-halvins {
+            justify-content: center;
+            .halvin {
+              width: 25rem;
+            }
           }
-         
         }
-        .result-halvins{
-          justify-content: center;
-          .halvin{
-            width: 25rem;
+        .aside-section-calc-jub {
+          min-width: 524px;
+          width: 600px;
+          padding: 1rem 2rem;
+          margin-top: 0rem;
+          .header-aside {
+            p {
+              font-size: 1.6rem;
+              font-weight: bold;
+            }
           }
-         
+          #aside-calc-jub {
+            div {
+              p {
+                font-size: 1.6rem;
+              }
+            }
+          }
         }
       }
-      .aside-section-calc-jub{
-        min-width: 524px;
-        width: 600px;
-        padding: 1rem 2rem;
-        margin-top: 0rem;
-        .header-aside{
-          p{
-            font-size: 1.6rem;
-            font-weight: bold;
-          }
-        }
-        #aside-calc-jub{
-div{
-  p{
-    font-size: 1.6rem;
-  }
-}
-        }
-      }
-      }
-    
     }
 
     .section-announce {
@@ -1108,9 +1196,10 @@ div{
       .redes-conteiners {
         max-width: 90rem;
         margin: 8rem auto;
-        .button-group{
-          .botones_redes{
-            span{
+        justify-content: space-between;
+        .button-group {
+          .botones_redes {
+            span {
               font-size: 2rem;
             }
           }
@@ -1118,7 +1207,8 @@ div{
         .linea {
           display: block;
           width: 4px;
-          background-color: $gris-strong;
+          border-radius: 20%;
+          background: linear-gradient(0deg, rgba(248,248,249,1) 1%, rgba(187,201,214,1) 13%, rgba(187,201,214,1) 50%, rgba(187,201,214,1) 83%, rgba(248,248,249,1) 95%);
         }
         .container-live {
           .stream_iconos {
