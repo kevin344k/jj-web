@@ -190,7 +190,7 @@ var init = /*#__PURE__*/function () {
             };
             findHalvin();
             span_hal_jub_nro.textContent = "# ".concat(resultCallback.numero);
-            span_hal_jub_anio.textContent = resultCallback.Year;
+            span_hal_jub_anio.textContent = "".concat(resultCallback.Year);
             span_hal_jub_reward.textContent = "".concat(resultCallback.Rewards.toFixed(9), " btc");
             console.log(input_result_equiv_btc.value);
 
@@ -201,21 +201,41 @@ var init = /*#__PURE__*/function () {
             var NH = resultCallback.numero - data_halvin_now.halvin_now_numero;
             var RF = resultCallback.Rewards;
             if (NH != "" && RF != 0 && RF != "") {
+              var short_amounts = function short_amounts(test_number) {
+                var shortNumber_result = 0;
+                var millon = 1000000;
+                var billon = 1000000000000;
+                var trillon = 1000000000000000000;
+                var amount_init = test_number.toString().length;
+                if (amount_init >= 7 && amount_init <= 12) {
+                  return shortNumber_result = "$".concat(format_amount(test_number / millon), " Millones");
+                } else if (amount_init >= 13 && amount_init <= 18) {
+                  return shortNumber_result = "$".concat(format_amount(test_number / billon), " Billones");
+                } else if (amount_init >= 19 && amount_init <= 21) {
+                  return shortNumber_result = "$".concat(format_amount(test_number / trillon), " Trillones");
+                } else {
+                  return shortNumber_result = "$".concat(format_amount(test_number));
+                }
+                function format_amount(amount) {
+                  return new Intl.NumberFormat("es-Mx").format(amount.toFixed(1));
+                }
+              };
               var PBTC = (RI * CP * Math.pow(2, NH) / RF).toFixed(3);
               console.log("pbtc", PBTC);
               console.log("equiv_inversion_inicial", Number(input_result_equiv_btc.value) * PBTC);
               /*el resultado de PBTC se multiplica por l aequivalencia en btc de la inversioin inicial para obtener el aproximado del valor de la inversion ṕara el año de la jubilación  */
               var inv_inicial_por_PBTC = new Intl.NumberFormat("es-Mx").format(Number(input_result_equiv_btc.value) * PBTC);
               result_calc_formula.textContent = "$ ".concat(inv_inicial_por_PBTC);
-              result_calc_anio.textContent = resultCallback.Year;
+              result_calc_anio.textContent = "".concat(resultCallback.Year, " (").concat(resultCallback.Year - new Date(CurrentDate).getFullYear(), "a\xF1os)\n       ");
 
               /* TABLA ADICIONAL QUE MUESTRA EL EQUIVALENTE DE LA INVERSION INICIAL EN CADA HALVIN */
 
-              for (var i = 5; i < halvins.length; i++) {
+              for (var i = 5; i < halvins.length - 13; i++) {
                 var child_aside = document.createElement("div");
                 var calc_jub_aside = RI * CP * Math.pow(2, halvins[i].numero - data_halvin_now.halvin_now_numero) / halvins[i].Rewards;
-                var rule_tree_calc_jub = calc_jub_aside * input_result_equiv_btc.value;
-                child_aside.innerHTML = "<p>".concat(halvins[i].Year, " </p><p> $ ").concat(new Intl.NumberFormat("es-Mx").format(calc_jub_aside.toFixed()), "</p><p>$ ").concat(new Intl.NumberFormat("es-Mx").format(rule_tree_calc_jub.toFixed()), "</p>");
+                var rule_tree_calc_jub = Math.trunc(calc_jub_aside * Number(input_result_equiv_btc.value));
+                console.log(calc_jub_aside * Number(input_result_equiv_btc.value));
+                child_aside.innerHTML = "<p>".concat(halvins[i].Year, " </p>\n        <p class=\"p-largest-number \">").concat(short_amounts(calc_jub_aside), "</p>\n       \n        <p class=\"p-largest-number\">").concat(short_amounts(rule_tree_calc_jub), "</p>");
                 aside_calc_jub.appendChild(child_aside);
               }
             }
@@ -268,3 +288,18 @@ var init = /*#__PURE__*/function () {
 init();
 
 ///calculadora de jubilacion
+
+//millon 1,000,000
+//min:7 -max:12
+//billon 1,000,000,000,000
+//min:13 max:18
+//trillon  1,000,000,000,000,000,000
+//min:19 max:22
+//example 123456789012345678 hasta el año 2108
+
+var libros = [{
+  orden: "",
+  autor: "",
+  nombre_libro: "",
+  link_cover: ""
+}];
