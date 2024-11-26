@@ -746,16 +746,18 @@ main .section-libros .carousel {
   background: #d3d3d3;
   margin: auto;
 }
-main .section-libros .carousel img {
-  width: 25rem;
-  height: 40rem;
-  border-radius: 0.5rem;
+main .section-libros .carousel .img-book {
+  width: 24rem;
+  height: 38rem;
+  margin-right: 1.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
   /* establecer block para remover el espacio alrededor de las imágenes */
   display: block;
 }
 main .section-libros .arrow {
   position: absolute;
-  height: 90%;
+  height: 100%;
   border: none;
   color: #444;
   display: block;
@@ -767,25 +769,27 @@ main .section-libros .arrow:focus {
   outline: none;
 }
 main .section-libros .arrow:hover {
-  background: #ccc;
   cursor: pointer;
 }
 main .section-libros .prev {
+  top: 0;
   left: 5px;
   background-color: transparent;
 }
 main .section-libros .next {
-  bottom: 0;
-  height: 90%;
+  height: 100%;
   right: 5px;
-  rotate: 180deg;
+  top: 0;
   background-color: transparent;
+}
+main .section-libros .next img {
+  rotate: 180deg;
 }
 main .section-libros .gallery {
   overflow: hidden;
 }
 main .section-libros .gallery ul {
-  height: 40rem;
+  height: 38rem;
   width: 9999px;
   margin: 0;
   padding: 0;
@@ -799,6 +803,7 @@ main .section-libros .gallery ul {
 main .section-libros .gallery li {
   display: inline-block;
   position: relative;
+  height: 38rem;
 }
 main .section-libros .gallery li .span-order-book {
   height: 10rem;
@@ -806,8 +811,9 @@ main .section-libros .gallery li .span-order-book {
   position: absolute;
   bottom: 0;
   font-size: 3rem;
-  width: 100%;
+  width: 24rem;
   background: linear-gradient(0deg, rgba(44, 46, 45, 0.836) 0%, rgba(62, 242, 208, 0) 100%);
+  border-radius: 1.5rem;
   display: flex;
   justify-content: center;
 }
