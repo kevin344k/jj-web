@@ -32,7 +32,7 @@ $font-W-bold-700: 700;
 $font-z-h2: 2.4rem;
 $border-radius: 0.5rem;
 $box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
-
+$gap_slider: 3rem;
 //variables clock halvin
 $font-size-clock: 3.5rem;
 
@@ -45,7 +45,6 @@ body {
   font-family: $font-family-ubuntu;
   font-size: $font-size-paragraph;
   overflow-x: hidden;
-  
 }
 
 * {
@@ -99,7 +98,7 @@ header {
   text-align: center;
   padding: 1.6rem 0px;
   display: flex;
-/*
+  /*
   nav {
     position: fixed;
     top: 0;
@@ -784,6 +783,115 @@ main {
       margin-bottom: 2rem;
     }
   }
+
+  .section-libros {
+    margin: auto;
+    .carousel {
+      position: relative;
+      width: 100%;
+      max-width: 33rem;
+      padding: 10px 40px;
+      border: 1px solid gray;
+      border-radius: 15px;
+      background: #d3d3d3;
+      margin: auto;
+    }
+    .carousel img {
+      width: 25rem;
+      height: 40rem;
+      border-radius: 0.5rem;
+      
+      /* establecer block para remover el espacio alrededor de las imágenes */
+      display: block;
+    }
+
+    .arrow {
+      position: absolute;
+    
+      height: 90%;
+     
+    
+   
+      border: none;
+    
+     
+      color: #444;
+      display: block;
+      img{
+        width: 3rem;
+      }
+    }
+
+    .arrow:focus {
+      outline: none;
+    }
+
+    .arrow:hover {
+      background: #ccc;
+      cursor: pointer;
+    }
+
+    .prev {
+      left: 5px;
+      background-color: transparent;
+    }
+
+    .next {
+      bottom: 0;
+
+      height: 90%;
+      right: 5px;
+      rotate: 180deg;
+      background-color: transparent;
+    }
+
+    .gallery {
+      overflow: hidden;
+    }
+
+    .gallery ul {
+      height: 40rem;
+      width: 9999px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      transition: margin-left 250ms;
+      /* eliminando los espacios en blanco entre los li inline-block'ed */
+      /* http://davidwalsh.name/remove-whitespace-inline-block */
+      font-size: 0;
+      display: flex;
+    }
+
+    .gallery li {
+      display: inline-block;
+      position: relative;
+      .span-order-book {
+        height: 10rem;
+        color: $soft-black;
+        position: absolute;
+        bottom: 0;
+        font-size: 3rem;
+        width: 100%;
+        background: linear-gradient(0deg, rgba(44, 46, 45, 0.836) 0%, rgba(62,242,208,0) 100%);
+        display: flex;
+        justify-content: center;
+        .span-order{
+         color: $turquesa_strong;
+         font-size: 5rem;
+         padding: 1.5rem;
+          
+        }
+      }
+    }
+  }
+
+  .bpedido {
+    @include but($turquesa, $negro);
+    padding: 2rem 3rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
 }
 
 @media (orientation: landscape) {
@@ -874,7 +982,7 @@ main {
   main {
     width: 100%;
     max-width: none;
- 
+
     .section-announce {
       .div-container--announce {
         max-width: none;
@@ -921,114 +1029,111 @@ main {
           p {
             font-size: 1.6rem;
             font-weight: bold;
-
           }
         }
         #aside-calc-jub {
           div {
-           padding: 0.5rem 1.5rem;
+            padding: 0.5rem 1.5rem;
             p {
               font-size: 1.6rem;
             }
-            p:nth-child(2){
+            p:nth-child(2) {
               width: 15rem;
             }
-            p:nth-child(3){
+            p:nth-child(3) {
               width: 15rem;
-           
             }
+          }
+        }
+      }
+      .section--mis-redes {
+        width: 100%;
+        .redes-conteiners {
+          flex-direction: row;
+          justify-content: space-evenly;
+          max-width: none;
+          .button-group {
+            justify-content: space-around;
+            .botones-redes {
+              span {
+                font-size: 2rem;
+              }
+            }
+          }
+          .container-live {
+            .stream_iconos {
+              gap: 0.5rem;
+            }
+          }
+        }
+      }
+
+      .section-mentoria {
+        .mentoria_contenido {
+          display: flex;
+          gap: 6.6rem;
+          .mentoria-items {
+            width: 50%;
+          }
+
+          .video-iframe {
+            width: 50%;
+            background-color: #000000;
+            height: 420px;
+            border-radius: 10px;
+            text-align: center;
+            video {
+              border-radius: 10px;
+              height: 100%;
+              margin: auto;
+            }
+          }
+        }
+      }
+
+      .section-about-me {
+        max-width: none;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
+        height: fit-content;
+
+        .redes_contenido {
+          flex-direction: row;
+          justify-content: space-evenly;
+          margin-bottom: 3rem;
+          max-width: none;
+          .marco {
+            height: 500px;
+
+            margin: 0px;
+          }
+          .video {
+            width: -webkit-fit-content;
+            width: -moz-fit-content;
+            width: fit-content;
+            height: 500px;
+            margin: 0px;
+          }
         }
       }
     }
     .section--mis-redes {
-      width: 100%;
       .redes-conteiners {
         flex-direction: row;
-        justify-content: space-evenly;
-        max-width: none;
-        .button-group {
-          justify-content: space-around;
-          .botones-redes {
-            span {
-              font-size: 2rem;
-            }
-          }
-        }
-        .container-live {
-          .stream_iconos {
-            gap: 0.5rem;
-          }
-        }
+        justify-content: center;
       }
     }
-
-    .section-mentoria {
-      .mentoria_contenido {
-        display: flex;
-        gap: 6.6rem;
-        .mentoria-items {
-          width: 50%;
-        }
-
-        .video-iframe {
-          width: 50%;
-          background-color: #000000;
-          height: 420px;
-          border-radius: 10px;
-          text-align: center;
-          video {
-            border-radius: 10px;
-            height: 100%;
-            margin: auto;
-          }
-        }
-      }
-    }
-
     .section-about-me {
-      max-width: none;
-      height: -webkit-fit-content;
-      height: -moz-fit-content;
-      height: fit-content;
-
       .redes_contenido {
+        display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
-        margin-bottom: 3rem;
-        max-width: none;
         .marco {
-          height: 500px;
-
-          margin: 0px;
-        }
-        .video {
-          width: -webkit-fit-content;
-          width: -moz-fit-content;
-          width: fit-content;
-          height: 500px;
-          margin: 0px;
+          border: 1px solid $turquesa;
         }
       }
     }
   }
-  .section--mis-redes{
-    .redes-conteiners{
-      flex-direction: row;
-      justify-content: center;
-
-    }
-  
-  }
-  .section-about-me{
-    .redes_contenido{
-      display: flex;
-      flex-direction: row;
-      .marco{
-        border: 1px solid $turquesa;
-      }
-    }
-  }
-}}
+}
 
 @media screen and (min-width: 1024px) {
   $font-size-clock: 15rem;
@@ -1208,7 +1313,14 @@ main {
           display: block;
           width: 4px;
           border-radius: 20%;
-          background: linear-gradient(0deg, rgba(248,248,249,1) 1%, rgba(187,201,214,1) 13%, rgba(187,201,214,1) 50%, rgba(187,201,214,1) 83%, rgba(248,248,249,1) 95%);
+          background: linear-gradient(
+            0deg,
+            rgba(248, 248, 249, 1) 1%,
+            rgba(187, 201, 214, 1) 13%,
+            rgba(187, 201, 214, 1) 50%,
+            rgba(187, 201, 214, 1) 83%,
+            rgba(248, 248, 249, 1) 95%
+          );
         }
         .container-live {
           .stream_iconos {

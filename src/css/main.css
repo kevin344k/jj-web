@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Ubuntu";
   src: url("../fonts/Ubuntu-Regular.woff") format("woff"), url("../fonts/Ubuntu-Bold.woff") format("woff");
@@ -730,6 +731,110 @@ main .section-merch .bpedido:hover {
   cursor: pointer;
 }
 main .section-merch .bpedido:active {
+  transform: scale(0.9);
+}
+main .section-libros {
+  margin: auto;
+}
+main .section-libros .carousel {
+  position: relative;
+  width: 100%;
+  max-width: 33rem;
+  padding: 10px 40px;
+  border: 1px solid gray;
+  border-radius: 15px;
+  background: #d3d3d3;
+  margin: auto;
+}
+main .section-libros .carousel img {
+  width: 25rem;
+  height: 40rem;
+  border-radius: 0.5rem;
+  /* establecer block para remover el espacio alrededor de las imágenes */
+  display: block;
+}
+main .section-libros .arrow {
+  position: absolute;
+  height: 90%;
+  border: none;
+  color: #444;
+  display: block;
+}
+main .section-libros .arrow img {
+  width: 3rem;
+}
+main .section-libros .arrow:focus {
+  outline: none;
+}
+main .section-libros .arrow:hover {
+  background: #ccc;
+  cursor: pointer;
+}
+main .section-libros .prev {
+  left: 5px;
+  background-color: transparent;
+}
+main .section-libros .next {
+  bottom: 0;
+  height: 90%;
+  right: 5px;
+  rotate: 180deg;
+  background-color: transparent;
+}
+main .section-libros .gallery {
+  overflow: hidden;
+}
+main .section-libros .gallery ul {
+  height: 40rem;
+  width: 9999px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transition: margin-left 250ms;
+  /* eliminando los espacios en blanco entre los li inline-block'ed */
+  /* http://davidwalsh.name/remove-whitespace-inline-block */
+  font-size: 0;
+  display: flex;
+}
+main .section-libros .gallery li {
+  display: inline-block;
+  position: relative;
+}
+main .section-libros .gallery li .span-order-book {
+  height: 10rem;
+  color: #212529;
+  position: absolute;
+  bottom: 0;
+  font-size: 3rem;
+  width: 100%;
+  background: linear-gradient(0deg, rgba(44, 46, 45, 0.836) 0%, rgba(62, 242, 208, 0) 100%);
+  display: flex;
+  justify-content: center;
+}
+main .section-libros .gallery li .span-order-book .span-order {
+  color: #19e6c0;
+  font-size: 5rem;
+  padding: 1.5rem;
+}
+main .bpedido {
+  font-family: "Open Sans", sans-serif;
+  background-color: #3ef2d0;
+  color: #000000;
+  margin-top: 1.6rem;
+  font-size: 2rem;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 0.5rem;
+  padding: 2rem 3rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+main .bpedido:hover {
+  background-color: #19e6c0;
+  cursor: pointer;
+}
+main .bpedido:active {
   transform: scale(0.9);
 }
 
