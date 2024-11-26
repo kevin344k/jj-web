@@ -239,7 +239,7 @@ const init = async () => {
   function equivalenciaBTC() {
     
     aside_calc_jub.innerHTML = "";
-
+// INVERSION INICIAL INPUT DOLARES
     if (
       input_inversion_inicial.value != "" ||
       input_inversion_inicial.value != 0
@@ -252,6 +252,14 @@ const init = async () => {
     } else {
       result_calc_formula.textContent = "";
     }
+// INVERSION INICIAL INPUT BTC
+ 
+
+
+
+
+
+
 
     const findHalvin = () => {
       if (
@@ -363,6 +371,7 @@ const inv_inicial_por_PBTC=new Intl.NumberFormat("es-Mx").format(Number(input_re
   }
 
   input_inversion_inicial.oninput = equivalenciaBTC;
+  input_result_equiv_btc.oninput=equivalenciaBTC;
 };
 
 init();
@@ -378,12 +387,91 @@ init();
 //min:19 max:22
 //example 123456789012345678 hasta el año 2108
 
-
+const father_cont_sli_books=document.getElementById("container-slider-books")
 const libros=[
   {
-    orden:"",
-    autor:"",
-    nombre_libro:"",
-    link_cover:"",
+    orden:"1",
+    autor:"George S. Clason",
+    nombre_libro:"EL HOMBRE MÁS RICO DE BABILONIA",
+    link_cover:"https://i.ebayimg.com/images/g/HTMAAOSwXDZlQKbx/s-l1600.webp",
+  },
+ {
+    orden:"2",
+    autor:"Ayn Rand",
+    nombre_libro:"LA REVELION DE ATLAS",
+    link_cover:"https://cdn.kobo.com/book-images/Images/da121c46-e1b0-4c58-9316-cc6a1437e05b/300/300/False/image.jpg",
+  },{
+    orden:"3",
+    autor:"Saifedean Ammous",
+    nombre_libro:"EL PATRÓN BITCOIN",
+    link_cover:"https://app.blancoynegrostore.com/img/products/2956/el-patron-bitcoin-saifedean-ammous-paidos-1698878173.jpg?w=1000&h=1500&fit=crop&fm=webp",
+  },
+  {
+    orden:"4",
+    autor:"Richard Wyckoff",
+    nombre_libro:"EL MÉTODO WYCKOFF",
+    link_cover:"https://0.academia-photos.com/attachment_thumbnails/54886383/mini_magick20220707-27688-b05ndc.png?1657245970",
+  },
+  {
+    orden:"5",
+    autor:"Benjamin Graham ",
+    nombre_libro:"EL INVERSOR INTELIGENTE",
+    link_cover:"https://www.aprendefinanzas.com.ec/wp-content/uploads/2022/03/el-inversor-inteligente-benjamin-graham-195x300.jpeg",
+  },
+  {
+    orden:"6",
+    autor:"Jhon Miller",
+    nombre_libro:"BLACKROCK de Larry Fink",
+    link_cover:"https://images.cdn2.buscalibre.com/fit-in/360x360/b6/93/b693932028168108e75f9322a3dc56cf.jpg",
   }
 ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+CARROUSEL  
+*/
+
+
+  /* etiqueta las imágenes pra poder rastrearlas, solo por conveniencia */
+  let i = 1;
+  for(let li of carousel.querySelectorAll('li')) {
+    li.style.position = 'relative';
+    li.insertAdjacentHTML('beforeend', `<span style="position:absolute;left:0;top:0">${i}</span>`);
+    i++;
+  }
+
+  /* configuración */
+  let width = 255; // ancho de las imágenes
+  let count = 1; // conteo de las imágenes visibles
+
+  let list = carousel.querySelector('ul');
+  let listElems = carousel.querySelectorAll('li');
+
+  let position = 0; // posición del desplazamiento del carrete
+
+  carousel.querySelector('.prev').onclick = function() {
+    // desplazamiento izquierdo
+    position += width * count;
+    // no podemos mover demasiado a la izquierda, se acaban las imágenes
+    position = Math.min(position, 0)
+    list.style.marginLeft = position + 'px';
+  };
+
+  carousel.querySelector('.next').onclick = function() {
+    // desplazamiento derecho
+    position -= width * count;
+    // solo se puede desplazar el carrete de imágenes (longitud total de la cinta - conteo visibles)
+    position = Math.max(position, -width * (listElems.length - count));
+    list.style.marginLeft = position + 'px';
+  };
