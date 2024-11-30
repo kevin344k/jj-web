@@ -194,6 +194,7 @@ const span_hal_jub_reward = document.getElementById("span-halvin-jub-reward");
 const result_calc_formula = document.getElementById("result_calc-formula");
 const result_calc_anio = document.getElementById("result-calc-anio");
 const aside_calc_jub = document.getElementById("aside-calc-jub");
+const span_price_BTC=document.getElementById("span-price-BTC")
 span_hal_now_nro.textContent = `# ${data_halvin_now.halvin_now_numero}`;
 span_hal_now_anio.textContent = data_halvin_now.anio_halvin_actual;
 span_hal_now_reward.textContent = `${data_halvin_now.recompensaBloqueNow} btc`;
@@ -231,10 +232,16 @@ const init = async () => {
   const data = await response.json();
   const priceBTC = Number(data.price);
 
-
+  span_price_BTC.textContent=`$ ${new Intl.NumberFormat("es-Mx").format(
+    priceBTC.toFixed(1)
+  )}`
   span_price_btc.textContent = `$ ${new Intl.NumberFormat("es-Mx").format(
     priceBTC.toFixed(1)
-  )}`;
+  )}`
+  
+  
+  
+  ;
 
   function equivalenciaBTC() {
     

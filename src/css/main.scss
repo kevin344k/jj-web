@@ -149,6 +149,40 @@ header {
       font-style: italic;
       font-weight: $font-W-bold-700;
     }
+    .div-btc-price{
+      background-color: #333;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.1rem 1rem;
+      border-radius: 0.5rem;
+      min-width: 30rem;
+      max-width: 36rem;
+      margin: auto;
+    div{
+      display: flex;
+      font-size: 2rem;
+      font-weight: bold;
+     align-items: center;
+    gap: 0.5rem;
+   
+      p{
+        color: white;
+        span{
+          color: gray;
+          font-size: 1.3rem;
+        }
+      }
+      img{
+        width: 3rem;
+      }
+    }
+    span{
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    }
 
     .clock {
       display: flex;

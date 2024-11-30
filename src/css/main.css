@@ -103,6 +103,39 @@ header .contenido-encabezado .text-autor {
   font-style: italic;
   font-weight: 700;
 }
+header .contenido-encabezado .div-btc-price {
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.1rem 1rem;
+  border-radius: 0.5rem;
+  min-width: 30rem;
+  max-width: 36rem;
+  margin: auto;
+}
+header .contenido-encabezado .div-btc-price div {
+  display: flex;
+  font-size: 2rem;
+  font-weight: bold;
+  align-items: center;
+  gap: 0.5rem;
+}
+header .contenido-encabezado .div-btc-price div p {
+  color: white;
+}
+header .contenido-encabezado .div-btc-price div p span {
+  color: gray;
+  font-size: 1.3rem;
+}
+header .contenido-encabezado .div-btc-price div img {
+  width: 3rem;
+}
+header .contenido-encabezado .div-btc-price span {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
 header .contenido-encabezado .clock {
   display: flex;
   justify-content: center;
