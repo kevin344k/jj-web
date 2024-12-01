@@ -1,6 +1,9 @@
 "use strict";
 
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
 function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return e; }; var t, e = {}, r = Object.prototype, n = r.hasOwnProperty, o = Object.defineProperty || function (t, e, r) { t[e] = r.value; }, i = "function" == typeof Symbol ? Symbol : {}, a = i.iterator || "@@iterator", c = i.asyncIterator || "@@asyncIterator", u = i.toStringTag || "@@toStringTag"; function define(t, e, r) { return Object.defineProperty(t, e, { value: r, enumerable: !0, configurable: !0, writable: !0 }), t[e]; } try { define({}, ""); } catch (t) { define = function define(t, e, r) { return t[e] = r; }; } function wrap(t, e, r, n) { var i = e && e.prototype instanceof Generator ? e : Generator, a = Object.create(i.prototype), c = new Context(n || []); return o(a, "_invoke", { value: makeInvokeMethod(t, r, c) }), a; } function tryCatch(t, e, r) { try { return { type: "normal", arg: t.call(e, r) }; } catch (t) { return { type: "throw", arg: t }; } } e.wrap = wrap; var h = "suspendedStart", l = "suspendedYield", f = "executing", s = "completed", y = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var p = {}; define(p, a, function () { return this; }); var d = Object.getPrototypeOf, v = d && d(d(values([]))); v && v !== r && n.call(v, a) && (p = v); var g = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(p); function defineIteratorMethods(t) { ["next", "throw", "return"].forEach(function (e) { define(t, e, function (t) { return this._invoke(e, t); }); }); } function AsyncIterator(t, e) { function invoke(r, o, i, a) { var c = tryCatch(t[r], t, o); if ("throw" !== c.type) { var u = c.arg, h = u.value; return h && "object" == _typeof(h) && n.call(h, "__await") ? e.resolve(h.__await).then(function (t) { invoke("next", t, i, a); }, function (t) { invoke("throw", t, i, a); }) : e.resolve(h).then(function (t) { u.value = t, i(u); }, function (t) { return invoke("throw", t, i, a); }); } a(c.arg); } var r; o(this, "_invoke", { value: function value(t, n) { function callInvokeWithMethodAndArg() { return new e(function (e, r) { invoke(t, n, e, r); }); } return r = r ? r.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(e, r, n) { var o = h; return function (i, a) { if (o === f) throw new Error("Generator is already running"); if (o === s) { if ("throw" === i) throw a; return { value: t, done: !0 }; } for (n.method = i, n.arg = a;;) { var c = n.delegate; if (c) { var u = maybeInvokeDelegate(c, n); if (u) { if (u === y) continue; return u; } } if ("next" === n.method) n.sent = n._sent = n.arg;else if ("throw" === n.method) { if (o === h) throw o = s, n.arg; n.dispatchException(n.arg); } else "return" === n.method && n.abrupt("return", n.arg); o = f; var p = tryCatch(e, r, n); if ("normal" === p.type) { if (o = n.done ? s : l, p.arg === y) continue; return { value: p.arg, done: n.done }; } "throw" === p.type && (o = s, n.method = "throw", n.arg = p.arg); } }; } function maybeInvokeDelegate(e, r) { var n = r.method, o = e.iterator[n]; if (o === t) return r.delegate = null, "throw" === n && e.iterator["return"] && (r.method = "return", r.arg = t, maybeInvokeDelegate(e, r), "throw" === r.method) || "return" !== n && (r.method = "throw", r.arg = new TypeError("The iterator does not provide a '" + n + "' method")), y; var i = tryCatch(o, e.iterator, r.arg); if ("throw" === i.type) return r.method = "throw", r.arg = i.arg, r.delegate = null, y; var a = i.arg; return a ? a.done ? (r[e.resultName] = a.value, r.next = e.nextLoc, "return" !== r.method && (r.method = "next", r.arg = t), r.delegate = null, y) : a : (r.method = "throw", r.arg = new TypeError("iterator result is not an object"), r.delegate = null, y); } function pushTryEntry(t) { var e = { tryLoc: t[0] }; 1 in t && (e.catchLoc = t[1]), 2 in t && (e.finallyLoc = t[2], e.afterLoc = t[3]), this.tryEntries.push(e); } function resetTryEntry(t) { var e = t.completion || {}; e.type = "normal", delete e.arg, t.completion = e; } function Context(t) { this.tryEntries = [{ tryLoc: "root" }], t.forEach(pushTryEntry, this), this.reset(!0); } function values(e) { if (e || "" === e) { var r = e[a]; if (r) return r.call(e); if ("function" == typeof e.next) return e; if (!isNaN(e.length)) { var o = -1, i = function next() { for (; ++o < e.length;) if (n.call(e, o)) return next.value = e[o], next.done = !1, next; return next.value = t, next.done = !0, next; }; return i.next = i; } } throw new TypeError(_typeof(e) + " is not iterable"); } return GeneratorFunction.prototype = GeneratorFunctionPrototype, o(g, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), o(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, u, "GeneratorFunction"), e.isGeneratorFunction = function (t) { var e = "function" == typeof t && t.constructor; return !!e && (e === GeneratorFunction || "GeneratorFunction" === (e.displayName || e.name)); }, e.mark = function (t) { return Object.setPrototypeOf ? Object.setPrototypeOf(t, GeneratorFunctionPrototype) : (t.__proto__ = GeneratorFunctionPrototype, define(t, u, "GeneratorFunction")), t.prototype = Object.create(g), t; }, e.awrap = function (t) { return { __await: t }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, c, function () { return this; }), e.AsyncIterator = AsyncIterator, e.async = function (t, r, n, o, i) { void 0 === i && (i = Promise); var a = new AsyncIterator(wrap(t, r, n, o), i); return e.isGeneratorFunction(r) ? a : a.next().then(function (t) { return t.done ? t.value : a.next(); }); }, defineIteratorMethods(g), define(g, u, "Generator"), define(g, a, function () { return this; }), define(g, "toString", function () { return "[object Generator]"; }), e.keys = function (t) { var e = Object(t), r = []; for (var n in e) r.push(n); return r.reverse(), function next() { for (; r.length;) { var t = r.pop(); if (t in e) return next.value = t, next.done = !1, next; } return next.done = !0, next; }; }, e.values = values, Context.prototype = { constructor: Context, reset: function reset(e) { if (this.prev = 0, this.next = 0, this.sent = this._sent = t, this.done = !1, this.delegate = null, this.method = "next", this.arg = t, this.tryEntries.forEach(resetTryEntry), !e) for (var r in this) "t" === r.charAt(0) && n.call(this, r) && !isNaN(+r.slice(1)) && (this[r] = t); }, stop: function stop() { this.done = !0; var t = this.tryEntries[0].completion; if ("throw" === t.type) throw t.arg; return this.rval; }, dispatchException: function dispatchException(e) { if (this.done) throw e; var r = this; function handle(n, o) { return a.type = "throw", a.arg = e, r.next = n, o && (r.method = "next", r.arg = t), !!o; } for (var o = this.tryEntries.length - 1; o >= 0; --o) { var i = this.tryEntries[o], a = i.completion; if ("root" === i.tryLoc) return handle("end"); if (i.tryLoc <= this.prev) { var c = n.call(i, "catchLoc"), u = n.call(i, "finallyLoc"); if (c && u) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } else if (c) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); } else { if (!u) throw new Error("try statement without catch or finally"); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } } } }, abrupt: function abrupt(t, e) { for (var r = this.tryEntries.length - 1; r >= 0; --r) { var o = this.tryEntries[r]; if (o.tryLoc <= this.prev && n.call(o, "finallyLoc") && this.prev < o.finallyLoc) { var i = o; break; } } i && ("break" === t || "continue" === t) && i.tryLoc <= e && e <= i.finallyLoc && (i = null); var a = i ? i.completion : {}; return a.type = t, a.arg = e, i ? (this.method = "next", this.next = i.finallyLoc, y) : this.complete(a); }, complete: function complete(t, e) { if ("throw" === t.type) throw t.arg; return "break" === t.type || "continue" === t.type ? this.next = t.arg : "return" === t.type ? (this.rval = this.arg = t.arg, this.method = "return", this.next = "end") : "normal" === t.type && e && (this.next = e), y; }, finish: function finish(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.finallyLoc === t) return this.complete(r.completion, r.afterLoc), resetTryEntry(r), y; } }, "catch": function _catch(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.tryLoc === t) { var n = r.completion; if ("throw" === n.type) { var o = n.arg; resetTryEntry(r); } return o; } } throw new Error("illegal catch attempt"); }, delegateYield: function delegateYield(e, r, n) { return this.delegate = { iterator: values(e), resultName: r, nextLoc: n }, "next" === this.method && (this.arg = t), y; } }, e; }
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
@@ -160,6 +163,7 @@ var span_hal_jub_reward = document.getElementById("span-halvin-jub-reward");
 var result_calc_formula = document.getElementById("result_calc-formula");
 var result_calc_anio = document.getElementById("result-calc-anio");
 var aside_calc_jub = document.getElementById("aside-calc-jub");
+var span_price_BTC = document.getElementById("span-price-BTC");
 span_hal_now_nro.textContent = "# ".concat(data_halvin_now.halvin_now_numero);
 span_hal_now_anio.textContent = data_halvin_now.anio_halvin_actual;
 span_hal_now_reward.textContent = "".concat(data_halvin_now.recompensaBloqueNow, " btc");
@@ -171,6 +175,7 @@ var init = /*#__PURE__*/function () {
         case 0:
           equivalenciaBTC = function _equivalenciaBTC() {
             aside_calc_jub.innerHTML = "";
+            // INVERSION INICIAL INPUT DOLARES
             if (input_inversion_inicial.value != "" || input_inversion_inicial.value != 0) {
               if (priceBTC != "") {
                 var resultEquivBTC = input_inversion_inicial.value / priceBTC;
@@ -180,6 +185,8 @@ var init = /*#__PURE__*/function () {
             } else {
               result_calc_formula.textContent = "";
             }
+            // INVERSION INICIAL INPUT BTC
+
             var findHalvin = function findHalvin() {
               if (priceBTC != "" && input_inversion_inicial.value != "" && input_result_equiv_btc.value != 0) {
                 var _findRewards = function _findRewards(halvins) {
@@ -230,12 +237,12 @@ var init = /*#__PURE__*/function () {
 
               /* TABLA ADICIONAL QUE MUESTRA EL EQUIVALENTE DE LA INVERSION INICIAL EN CADA HALVIN */
 
-              for (var i = 5; i < halvins.length - 13; i++) {
+              for (var _i = 5; _i < halvins.length - 13; _i++) {
                 var child_aside = document.createElement("div");
-                var calc_jub_aside = RI * CP * Math.pow(2, halvins[i].numero - data_halvin_now.halvin_now_numero) / halvins[i].Rewards;
+                var calc_jub_aside = RI * CP * Math.pow(2, halvins[_i].numero - data_halvin_now.halvin_now_numero) / halvins[_i].Rewards;
                 var rule_tree_calc_jub = Math.trunc(calc_jub_aside * Number(input_result_equiv_btc.value));
                 console.log(calc_jub_aside * Number(input_result_equiv_btc.value));
-                child_aside.innerHTML = "<p>".concat(halvins[i].Year, " </p>\n        <p class=\"p-largest-number \">").concat(short_amounts(calc_jub_aside), "</p>\n       \n        <p class=\"p-largest-number\">").concat(short_amounts(rule_tree_calc_jub), "</p>");
+                child_aside.innerHTML = "<p>".concat(halvins[_i].Year, " </p>\n        <p class=\"p-largest-number \">").concat(short_amounts(calc_jub_aside), "</p>\n       \n        <p class=\"p-largest-number\">").concat(short_amounts(rule_tree_calc_jub), "</p>");
                 aside_calc_jub.appendChild(child_aside);
               }
             }
@@ -273,9 +280,11 @@ var init = /*#__PURE__*/function () {
         case 17:
           data = _context.sent;
           priceBTC = Number(data.price);
+          span_price_BTC.textContent = "$ ".concat(new Intl.NumberFormat("es-Mx").format(priceBTC.toFixed(1)));
           span_price_btc.textContent = "$ ".concat(new Intl.NumberFormat("es-Mx").format(priceBTC.toFixed(1)));
           input_inversion_inicial.oninput = equivalenciaBTC;
-        case 21:
+          input_result_equiv_btc.oninput = equivalenciaBTC;
+        case 23:
         case "end":
           return _context.stop();
       }
@@ -297,9 +306,79 @@ init();
 //min:19 max:22
 //example 123456789012345678 hasta el año 2108
 
+var father_cont_sli_books = document.getElementById("container-slider-books");
 var libros = [{
-  orden: "",
-  autor: "",
-  nombre_libro: "",
-  link_cover: ""
+  orden: "1",
+  autor: "George S. Clason",
+  nombre_libro: "EL HOMBRE MÁS RICO DE BABILONIA",
+  link_cover: "https://i.ebayimg.com/images/g/HTMAAOSwXDZlQKbx/s-l1600.webp"
+}, {
+  orden: "2",
+  autor: "Ayn Rand",
+  nombre_libro: "LA REVELION DE ATLAS",
+  link_cover: "https://cdn.kobo.com/book-images/Images/da121c46-e1b0-4c58-9316-cc6a1437e05b/300/300/False/image.jpg"
+}, {
+  orden: "3",
+  autor: "Saifedean Ammous",
+  nombre_libro: "EL PATRÓN BITCOIN",
+  link_cover: "https://app.blancoynegrostore.com/img/products/2956/el-patron-bitcoin-saifedean-ammous-paidos-1698878173.jpg?w=1000&h=1500&fit=crop&fm=webp"
+}, {
+  orden: "4",
+  autor: "Richard Wyckoff",
+  nombre_libro: "EL MÉTODO WYCKOFF",
+  link_cover: "https://0.academia-photos.com/attachment_thumbnails/54886383/mini_magick20220707-27688-b05ndc.png?1657245970"
+}, {
+  orden: "5",
+  autor: "Benjamin Graham ",
+  nombre_libro: "EL INVERSOR INTELIGENTE",
+  link_cover: "https://www.aprendefinanzas.com.ec/wp-content/uploads/2022/03/el-inversor-inteligente-benjamin-graham-195x300.jpeg"
+}, {
+  orden: "6",
+  autor: "Jhon Miller",
+  nombre_libro: "BLACKROCK de Larry Fink",
+  link_cover: "https://images.cdn2.buscalibre.com/fit-in/360x360/b6/93/b693932028168108e75f9322a3dc56cf.jpg"
 }];
+
+/*
+CARROUSEL  
+*/
+
+/* etiqueta las imágenes pra poder rastrearlas, solo por conveniencia */
+var i = 1;
+var _iterator = _createForOfIteratorHelper(carousel.querySelectorAll('li')),
+  _step;
+try {
+  for (_iterator.s(); !(_step = _iterator.n()).done;) {
+    var li = _step.value;
+    li.style.position = 'relative';
+    li.insertAdjacentHTML('beforeend', "<span style=\"position:absolute;left:0;top:0\">".concat(i, "</span>"));
+    i++;
+  }
+
+  /* configuración */
+} catch (err) {
+  _iterator.e(err);
+} finally {
+  _iterator.f();
+}
+var width = 255; // ancho de las imágenes
+var count = 1; // conteo de las imágenes visibles
+
+var list = carousel.querySelector('ul');
+var listElems = carousel.querySelectorAll('li');
+var position = 0; // posición del desplazamiento del carrete
+
+carousel.querySelector('.prev').onclick = function () {
+  // desplazamiento izquierdo
+  position += width * count;
+  // no podemos mover demasiado a la izquierda, se acaban las imágenes
+  position = Math.min(position, 0);
+  list.style.marginLeft = position + 'px';
+};
+carousel.querySelector('.next').onclick = function () {
+  // desplazamiento derecho
+  position -= width * count;
+  // solo se puede desplazar el carrete de imágenes (longitud total de la cinta - conteo visibles)
+  position = Math.max(position, -width * (listElems.length - count));
+  list.style.marginLeft = position + 'px';
+};
