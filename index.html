@@ -41,7 +41,7 @@
 
     <title>Aprende a invertir en criptomonedas | Mentoria Premium</title>
 
-    <link rel="stylesheet" href="./src/css/main.min.css" />
+    <link rel="stylesheet" href="./src/css/main.css" />
     <link
       fetchpriority="high"
       as="image"
@@ -106,7 +106,7 @@
         <div class="div-btc-price">
           <div>
            <img src="./imagenes/bitcoin.svg" alt="ico-btc">
-           <p>Bitcoin<span>/USD</span></p>
+           <p>Bitcoin</p>
           </div>
            <span id="span-price-BTC"></span>
          </div>
@@ -134,6 +134,8 @@
         </div>
         <div class="group-calc-jub">
           <div class="card-body-calculadora">
+            <button id="btn_modal_info"><img src="./imagenes/info.png" alt="info-ico"></button>
+
             <div class="div-group-price-formula">
               <div class="precio-btc">
                 <img
@@ -160,7 +162,7 @@
               <div class="input-group-inversion">
                 <img
                   class="img"
-                  src="./imagenes/dollar.webp"
+                  src="./imagenes/dollar.png"
                   alt="dollar-image"
                 />
                 <input
@@ -171,7 +173,7 @@
               </div>
               <p>≈</p>
               <div class="input-group-inversion">
-                <img class="img" src="./imagenes/bitcoin.svg" alt="btc-image" />
+                <img class="img" src="./imagenes/bitcoin.png" alt="btc-image" />
                 <input
                   type="text"
                   id="input-result-equiv-btc"
@@ -255,6 +257,19 @@
                 loading="lazy"
               />
               <span>+593 99 817 7135</span>
+            </a>
+
+            <a
+              class="botones_redes"
+              href="https://whatsapp.com/channel/0029Vah3B5n60eBiIBrX8J1Z"
+            >
+              <img
+                class="iconos_redes icono_circular"
+                src="imagenes/whatsapp.svg"
+                alt=""
+                loading="lazy"
+              />
+              <span>Canal JJChagerben</span>
             </a>
 
             <a class="botones_redes" href="https://t.me/jjchagerben357">
@@ -342,117 +357,6 @@
         </div>
       </section>
     
-<!--
-
-      <section id="sec-books" class="section-libros">
-        <h2>Libros que me hicieron millonario</h2>
-        <div id="carousel" class="carousel">
-          <button class="arrow prev"><img src="./imagenes/left-arrow.svg" alt=""></button>
-          <div class="gallery">
-            <ul>
-              <li> <img class="img-book" src="https://i.ebayimg.com/images/g/HTMAAOSwXDZlQKbx/s-l1600.webp">
-                <div class="span-order-book"><p class="span-order"># 1</p></div>
-              </li>
-              <li><img class="img-book" src="https://cdn.kobo.com/book-images/Images/da121c46-e1b0-4c58-9316-cc6a1437e05b/300/300/False/image.jpg">
-                <div class="span-order-book"><p class="span-order"># 2</p></div>
-              </li>
-              <li><img class="img-book" src="https://app.blancoynegrostore.com/img/products/2956/el-patron-bitcoin-saifedean-ammous-paidos-1698878173.jpg?w=1000&h=1500&fit=crop&fm=webp">
-                <div class="span-order-book"><p class="span-order"># 3</p></div>
-              </li>
-              <li><img class="img-book" src="https://0.academia-photos.com/attachment_thumbnails/54886383/mini_magick20220707-27688-b05ndc.png?1657245970">
-                <div class="span-order-book"><p class="span-order"># 4</p></div>
-              </li>
-              <li><img class="img-book" src="https://www.aprendefinanzas.com.ec/wp-content/uploads/2022/03/el-inversor-inteligente-benjamin-graham-195x300.jpeg">
-                <div class="span-order-book"><p class="span-order"># 5</p></div>
-              </li>
-         
-              <li><img class="img-book" src="https://images.cdn2.buscalibre.com/fit-in/360x360/b6/93/b693932028168108e75f9322a3dc56cf.jpg">
-                <div class="span-order-book"><p class="span-order"># 6</p></div>
-              </li>
-            </ul>
-          </div>
-          <button class="arrow next"><img src="./imagenes/left-arrow.svg" alt=""></button>
-        </div>
-
-        <div class="container-slider-books">
-          <div class="slider">
-           
-            
-            <div id="content-books"  class="content">
-              <div class="firstslide">
-                <img src="https://i.ebayimg.com/images/g/HTMAAOSwXDZlQKbx/s-l1600.webp" alt="img El hombre mas rico d ebabilonia" />
-               
-              </div>
-              <div class="secondslide">
-                <img src="https://cdn.kobo.com/book-images/Images/da121c46-e1b0-4c58-9316-cc6a1437e05b/300/300/False/image.jpg" alt="img libro 2" />
-              </div>
-              <div class="thirdslide">
-                <img src="https://app.blancoynegrostore.com/img/products/2956/el-patron-bitcoin-saifedean-ammous-paidos-1698878173.jpg?w=1000&h=1500&fit=crop&fm=webp" alt="img libro 3" />
-              </div>
-              <div class="fourslide">
-                <img src="https://0.academia-photos.com/attachment_thumbnails/54886383/mini_magick20220707-27688-b05ndc.png?1657245970" alt="img libro 4" />
-              </div>
-              <div class="fiveslide">
-                <img src="https://www.aprendefinanzas.com.ec/wp-content/uploads/2022/03/el-inversor-inteligente-benjamin-graham-195x300.jpeg" alt="img libro 5" />
-              </div>
-              <div class="sixslide">
-                <img src="https://images.cdn2.buscalibre.com/fit-in/360x360/b6/93/b693932028168108e75f9322a3dc56cf.jpg" alt="img libro 6" />
-              </div>
-            </div>
-            <input type="radio" name="slider" id="slideBookOne" checked />
-            <input type="radio" name="slider" id="slideBookTwo" />
-            <input type="radio" name="slider" id="slideBookThree" />
-            <input type="radio" name="slider" id="slideBookFour" />
-            <input type="radio" name="slider" id="slideBookFive" />
-            <input type="radio" name="slider" id="slideBookSix" />
-
-            <div class="buttons">
-              <label for="slideBookOne"></label>
-              <label for="slideBookTwo"></label>
-              <label for="slideBookThree"></label>
-              <label for="slideBookFour"></label>
-              <label for="slideBookFive"></label>
-              <label for="slideBookSix"></label>
-            </div>
-            <div class="buttons-mobile">
-              <button id="but-left-slider"><img src="./imagenes/left-arrow.svg" alt=""></button>
-              <button id="but-right-slider">
-                <img src="./imagenes/left-arrow.svg" alt="">
-
-              </button>
-            </div>
-          </div>
-        </div>
-      -->
-       <!--
-       <div class="slider-mobile">
-      
-      
-            <img src="https://i.ebayimg.com/images/g/HTMAAOSwXDZlQKbx/s-l1600.webp" alt="img El hombre mas rico d ebabilonia" />
-      
-        
-            <img src="https://cdn.kobo.com/book-images/Images/da121c46-e1b0-4c58-9316-cc6a1437e05b/300/300/False/image.jpg" alt="img libro 2" />
-      
-     
-            <img src="https://app.blancoynegrostore.com/img/products/2956/el-patron-bitcoin-saifedean-ammous-paidos-1698878173.jpg?w=1000&h=1500&fit=crop&fm=webp" alt="img libro 3" />
-         
-        
-            <img src="https://0.academia-photos.com/attachment_thumbnails/54886383/mini_magick20220707-27688-b05ndc.png?1657245970" alt="img libro 4" />
-        
-         
-            <img src="https://www.aprendefinanzas.com.ec/wp-content/uploads/2022/03/el-inversor-inteligente-benjamin-graham-195x300.jpeg" alt="img libro 5" />
-       
-        
-            <img src="https://images.cdn2.buscalibre.com/fit-in/360x360/b6/93/b693932028168108e75f9322a3dc56cf.jpg" alt="img libro 6" />
-          
-       </div>
-        
-     
-     
-      </section> 
-  -->
-
-
       <section class="section-announce">
         <div class="div-container--announce">
           <h2 class="centrar h2-red-tittle">
@@ -620,6 +524,47 @@
       </section>
     </main>
 
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Nomenclatura</h2>
+    </div>
+    <div class="modal-body">
+      <div class="ecuacion-formula">
+        <div><var>PBTC</var> =</div>
+        <div>
+          <div>
+            <var>(RI</var> * <var>CP)</var><var>*2</var
+            ><var><sup>NH</sup></var>
+          </div>
+          <div class="denominador_fraccion">
+            <var>RF</var>
+          </div>
+        </div>
+      </div>
+      <p><var>RI =</var> Recompensa Inicial</p>
+      <p><var>RF =</var> Recompensa Final</p>
+      <p><var>NH =</var> Número de Halvins</p>
+      <p><var>CP =</var> Costo de Producción</p>
+      <p><var>PBTC =</var> Precio de Bitcoin</p>
+    </div>
+    <div class="modal-footer">
+      <h3>No importa cuando leas esto, Bitcoin siempre será barato</h3>
+      <p> <var>-</var> JJ CHAGERBEN <var>-</var></p>
+    </div>
+  </div>
+
+</div>
+
+
+
+
     <script src="https://mempool.space/mempool.js"></script>
 
     <script
@@ -629,7 +574,7 @@
     ></script>
 
     <script src="./build/clockHalvin/flipclock.min.js"></script>
-    <script src="./build/clockHalvin/main.min.js"></script>
+    <script src="./src/clockHalvin/main.js"></script>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"

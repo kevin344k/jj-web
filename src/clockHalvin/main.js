@@ -4,7 +4,7 @@ const input_result_equiv_btc = document.getElementById(
   "input-result-equiv-btc"
 );
 const data_halvin_now = {
-  costoProducciónBTC: 82200,
+  costoProducciónBTC: 78345,
   recompensaBloqueNow: 3.125,
   halvin_now_numero: 5,
   anio_halvin_actual: 2024,
@@ -233,10 +233,10 @@ const init = async () => {
   const priceBTC = Number(data.price);
 
   span_price_BTC.textContent=`$ ${new Intl.NumberFormat("es-Mx").format(
-    priceBTC.toFixed(1)
+    priceBTC.toFixed(2)
   )}`
   span_price_btc.textContent = `$ ${new Intl.NumberFormat("es-Mx").format(
-    priceBTC.toFixed(1)
+    priceBTC.toFixed(2)
   )}`
   
   
@@ -305,9 +305,11 @@ const init = async () => {
       console.log("pbtc",PBTC);
       console.log("equiv_inversion_inicial",Number(input_result_equiv_btc.value)*PBTC);
 /*el resultado de PBTC se multiplica por l aequivalencia en btc de la inversioin inicial para obtener el aproximado del valor de la inversion ṕara el año de la jubilación  */
-const inv_inicial_por_PBTC=new Intl.NumberFormat("es-Mx").format(Number(input_result_equiv_btc.value)*PBTC)
+const inv_inicial_por_PBTC=new Intl.NumberFormat("es-Mx").format((Number(input_result_equiv_btc.value)*PBTC).toFixed(2))
 
+console.log(Number(inv_inicial_por_PBTC).toFixed(2));
       
+
       result_calc_formula.textContent = `$ ${inv_inicial_por_PBTC}`;
       result_calc_anio.textContent =`${resultCallback.Year} (${resultCallback.Year-new Date(CurrentDate).getFullYear()}años)
        ` ;
@@ -434,9 +436,32 @@ const libros=[
 ]
 
 
+/*modal */
 
+const modal = document.getElementById("myModal");
 
+// Get the button that opens the modal
+const btn_info = document.getElementById("btn_modal_info");
 
+// Get the <span> element that closes the modal
+const span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn_info.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
 
 
 
@@ -447,10 +472,10 @@ const libros=[
 
 /*
 CARROUSEL  
-*/
 
 
-  /* etiqueta las imágenes pra poder rastrearlas, solo por conveniencia */
+
+  /* etiqueta las imágenes pra poder rastrearlas, solo por conveniencia 
   let i = 1;
   for(let li of carousel.querySelectorAll('li')) {
     li.style.position = 'relative';
@@ -458,7 +483,7 @@ CARROUSEL
     i++;
   }
 
-  /* configuración */
+  /* configuración 
   let width = 255; // ancho de las imágenes
   let count = 1; // conteo de las imágenes visibles
 
@@ -482,3 +507,5 @@ CARROUSEL
     position = Math.max(position, -width * (listElems.length - count));
     list.style.marginLeft = position + 'px';
   };
+  
+  */
