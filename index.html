@@ -40,8 +40,15 @@
     <link rel="stylesheet" href="./src/css/normalize.min.css" />
 
     <title>Aprende a invertir en criptomonedas | Mentoria Premium</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="./src/css/main.min.css" />
+    <link rel="stylesheet" href="./src/css/main.css" />
+    <link rel="stylesheet" href="./src/css/sliderTestimonios.css" />
     <link
       fetchpriority="high"
       as="image"
@@ -55,7 +62,7 @@
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
-  
+
     <noscript
       ><link rel="stylesheet" href="./src/clockHalvin/flipclock.min.css"
     /></noscript>
@@ -105,11 +112,11 @@
       <div class="contenido-encabezado">
         <div class="div-btc-price">
           <div>
-           <img src="./imagenes/bitcoin.svg" alt="ico-btc">
-           <p>Bitcoin</p>
+            <img src="./imagenes/bitcoin.svg" alt="ico-btc" />
+            <p>Bitcoin</p>
           </div>
-           <span id="span-price-BTC"></span>
-         </div>
+          <span id="span-price-BTC"></span>
+        </div>
         <div class="clock flip-clock-wrapper"></div>
         <h1>"BITCOIN ES SACARSE LA LOTERIA EN CÁMARA LENTA"</h1>
         <p class="text-autor">-JJChagerben-</p>
@@ -134,7 +141,9 @@
         </div>
         <div class="group-calc-jub">
           <div class="card-body-calculadora">
-            <button id="btn_modal_info"><img src="./imagenes/info.png" alt="info-ico"></button>
+            <button id="btn_modal_info">
+              <img src="./imagenes/info.png" alt="info-ico" />
+            </button>
 
             <div class="div-group-price-formula">
               <div class="precio-btc">
@@ -356,7 +365,7 @@
           </div>
         </div>
       </section>
-    
+
       <section class="section-announce">
         <div class="div-container--announce">
           <h2 class="centrar h2-red-tittle">
@@ -457,6 +466,101 @@
           -->
         </div>
       </section>
+      <!--===================================================================================-->
+
+      <section id="sect-testimonial" class="section-testimonial">
+        <div class="header-title">
+          <p>Testimonios</p>
+          <div></div>
+        </div>
+        <div class="section-slider">
+          <div class="arrow-left" id="arrow_left">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="26"
+              height="32"
+              viewBox="0 0 26 32"
+              class="nav__arrow nav__arrow--left"
+            >
+              <path
+                fill="inherit"
+                d="M16.75 0L2.875 13.875.75 16l2.125 2.125L16.75 32h8.5l-16-16 16-16z"
+              ></path>
+            </svg>
+          </div>
+          <div class="container">
+            <div class="slider-container">
+              <picture class="image">
+                <img src="./imagenes/testimonios/img1.jpg" alt=""
+              /></picture>
+              <picture class="image"
+                ><img src="./imagenes/testimonios/img2.jpg" alt=""
+              /></picture>
+              <picture class="image"
+                ><img src="./imagenes/testimonios/img3.jpg" alt=""
+              /></picture>
+              <picture class="image">
+                <img src="./imagenes/testimonios/img4.jpg" alt=""
+              /></picture>
+              <picture class="image"
+                ><img src="./imagenes/testimonios/img5.jpg" alt=""
+              /></picture>
+              <picture class="image">
+                <img src="./imagenes/testimonios/img6.jpg" alt=""
+              /></picture>
+              <picture class="image">
+                <img src="./imagenes/testimonios/img7.jpg" alt=""
+              /></picture>
+              <picture class="image">
+                <img src="./imagenes/testimonios/img8.jpg" alt=""
+              /></picture>
+              <picture class="image">
+                <img src="./imagenes/testimonios/img9.jpg" alt=""
+              /></picture>
+              <picture class="image"
+                ><img src="./imagenes/testimonios/img10.jpg" alt=""
+              /></picture>
+              <picture class="image">
+                <img src="./imagenes/testimonios/img11.jpg" alt=""
+              /></picture>
+              <picture class="image">
+                <img src="./imagenes/testimonios/img12.jpg" alt=""
+              /></picture>
+              <picture class="image">
+                <img src="./imagenes/testimonios/img13.jpg" alt=""
+              /></picture>
+              <picture class="image">
+                <img src="./imagenes/testimonios/img14.jpg" alt=""
+              /></picture>
+              <picture class="image">
+                <img src="./imagenes/testimonios/img15.jpg" alt=""
+              /></picture>
+              <picture class="image">
+                <img src="./imagenes/testimonios/img16.jpg" alt=""
+              /></picture>
+              <picture class="image">
+                <img src="./imagenes/testimonios/img17.jpg" alt=""
+              /></picture>
+            </div>
+          </div>
+
+          <div class="arrow-right" id="arrow_right">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="26"
+              height="32"
+              viewBox="0 0 26 32"
+              class="nav__arrow nav__arrow--left"
+            >
+              <path
+                fill="inherit"
+                d="M16.75 0L2.875 13.875.75 16l2.125 2.125L16.75 32h8.5l-16-16 16-16z"
+              ></path>
+            </svg>
+          </div>
+          <div class="indicator-slider"></div>
+        </div>
+      </section>
 
       <!--===================================================================================-->
 
@@ -524,46 +628,39 @@
       </section>
     </main>
 
-
-
-<!-- The Modal -->
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <div class="modal-header">
-      <span class="close">&times;</span>
-      <h2>Nomenclatura</h2>
-    </div>
-    <div class="modal-body">
-      <div class="ecuacion-formula">
-        <div><var>PBTC</var> =</div>
-        <div>
-          <div>
-            <var>(RI</var> * <var>CP)</var><var>*2</var
-            ><var><sup>NH</sup></var>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>Nomenclatura</h2>
+        </div>
+        <div class="modal-body">
+          <div class="ecuacion-formula">
+            <div><var>PBTC</var> =</div>
+            <div>
+              <div>
+                <var>(RI</var> * <var>CP)</var><var>*2</var
+                ><var><sup>NH</sup></var>
+              </div>
+              <div class="denominador_fraccion">
+                <var>RF</var>
+              </div>
+            </div>
           </div>
-          <div class="denominador_fraccion">
-            <var>RF</var>
-          </div>
+          <p><var>RI =</var> Recompensa Inicial</p>
+          <p><var>RF =</var> Recompensa Final</p>
+          <p><var>NH =</var> Número de Halvins</p>
+          <p><var>CP =</var> Costo de Producción</p>
+          <p><var>PBTC =</var> Precio de Bitcoin</p>
+        </div>
+        <div class="modal-footer">
+          <h3>No importa cuando leas esto, Bitcoin siempre será barato</h3>
+          <p><var>-</var> JJ CHAGERBEN <var>-</var></p>
         </div>
       </div>
-      <p><var>RI =</var> Recompensa Inicial</p>
-      <p><var>RF =</var> Recompensa Final</p>
-      <p><var>NH =</var> Número de Halvins</p>
-      <p><var>CP =</var> Costo de Producción</p>
-      <p><var>PBTC =</var> Precio de Bitcoin</p>
     </div>
-    <div class="modal-footer">
-      <h3>No importa cuando leas esto, Bitcoin siempre será barato</h3>
-      <p> <var>-</var> JJ CHAGERBEN <var>-</var></p>
-    </div>
-  </div>
-
-</div>
-
-
-
 
     <script src="https://mempool.space/mempool.js"></script>
 
@@ -575,6 +672,7 @@
 
     <script src="./build/clockHalvin/flipclock.min.js"></script>
     <script src="./src/clockHalvin/main.js"></script>
+    <script src="./src/clockHalvin/sliderTestimonios.js"></script>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"

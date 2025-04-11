@@ -11,11 +11,11 @@
 }
 html {
   font-size: 62.5%;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 body {
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 1.6rem;
   overflow-x: hidden;
 }
@@ -27,7 +27,7 @@ body {
 }
 
 h1 {
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 3rem;
 }
 
@@ -228,169 +228,6 @@ main {
   gap: 3.2rem;
   margin: auto;
   width: 100vw;
-}
-main .section-announce {
-  min-width: 320px;
-  width: 100%;
-  padding: 1.8rem;
-  margin-top: 3.2rem;
-}
-main .section-announce .div-container--announce {
-  background-color: #effefa;
-  border: 1px solid #22dfc1;
-  border-radius: 3rem;
-  text-align: center;
-  padding: 1.4rem 3.4rem;
-  max-width: 425px;
-  box-shadow: 3px 3px 5px 0px #d6d7d8;
-  margin: auto;
-}
-main .section-announce .div-container--announce .h2-red-tittle {
-  color: #000000;
-  font-weight: 500;
-}
-main .section-announce .div-container--announce .boton {
-  font-family: "Open Sans", sans-serif;
-  background-color: #3ef2d0;
-  color: #000000;
-  margin-top: 1.6rem;
-  font-size: 2rem;
-  text-decoration: none;
-  display: inline-block;
-  border-radius: 0.5rem;
-  padding: 1.5rem 2.5rem;
-  font-weight: 600;
-  margin-top: 0;
-}
-main .section-announce .div-container--announce .boton:hover {
-  background-color: #19e6c0;
-  cursor: pointer;
-}
-main .section-announce .div-container--announce .boton:active {
-  transform: scale(0.9);
-}
-main .section--mis-redes, main .section-mentoria {
-  min-width: 320px;
-  width: 100%;
-  padding: 0.6rem;
-  padding: 1.8rem;
-  margin: auto;
-}
-main .section--mis-redes .redes-conteiners, main .section-mentoria .redes-conteiners {
-  display: flex;
-  flex-direction: column;
-  gap: 3.6rem;
-  max-width: 425px;
-  margin: auto;
-}
-main .section--mis-redes .redes-conteiners .button-group, main .section-mentoria .redes-conteiners .button-group {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-main .section--mis-redes .redes-conteiners .button-group .botones_redes, main .section-mentoria .redes-conteiners .button-group .botones_redes {
-  background-color: #3ef2d0;
-  font-family: "Open Sans", sans-serif;
-  background-color: #ffffff;
-  color: #000000;
-  margin-top: 1.6rem;
-  font-size: 2rem;
-  text-decoration: none;
-  display: inline-block;
-  border-radius: 0.5rem;
-  border: 1px solid #3ef2d0;
-  padding: 1rem 3rem;
-  margin-top: 0rem;
-  box-shadow: 3px 3px 5px 0px #d6d7d8;
-  display: flex;
-  justify-content: center;
-  text-align: left;
-  gap: 0.5rem;
-  text-decoration: none;
-}
-main .section--mis-redes .redes-conteiners .button-group .botones_redes:hover, main .section-mentoria .redes-conteiners .button-group .botones_redes:hover {
-  background-color: #19e6c0;
-  cursor: pointer;
-}
-main .section--mis-redes .redes-conteiners .button-group .botones_redes:active, main .section-mentoria .redes-conteiners .button-group .botones_redes:active {
-  transform: scale(0.9);
-}
-main .section--mis-redes .redes-conteiners .button-group .botones_redes img, main .section-mentoria .redes-conteiners .button-group .botones_redes img {
-  width: 50px;
-  height: 50px;
-  margin-right: 0.5rem;
-}
-main .section--mis-redes .redes-conteiners .button-group .botones_redes span, main .section-mentoria .redes-conteiners .button-group .botones_redes span {
-  margin: auto 0rem;
-  color: #000000;
-  font-weight: bold;
-  font-size: 1.8rem;
-}
-main .section--mis-redes .redes-conteiners .linea, main .section-mentoria .redes-conteiners .linea {
-  display: none;
-}
-main .section--mis-redes .redes-conteiners .container-live, main .section-mentoria .redes-conteiners .container-live {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 2.2rem;
-}
-main .section--mis-redes .redes-conteiners .container-live .foto, main .section-mentoria .redes-conteiners .container-live .foto {
-  border-radius: 100%;
-  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
-  width: 15rem;
-  margin: auto;
-}
-main .section--mis-redes .redes-conteiners .container-live .live, main .section-mentoria .redes-conteiners .container-live .live {
-  font-family: "Open Sans", sans-serif;
-  background-color: transparent;
-  color: red;
-  margin-top: 1.6rem;
-  font-size: 2rem;
-  text-decoration: none;
-  display: inline-block;
-  border-radius: 0.5rem;
-  width: 20.5rem;
-  margin: auto;
-  padding: 1.5rem 3rem;
-  font-size: 2.4rem;
-  display: none;
-}
-main .section--mis-redes .redes-conteiners .container-live .live:hover, main .section-mentoria .redes-conteiners .container-live .live:hover {
-  background-color: #19e6c0;
-  cursor: pointer;
-}
-main .section--mis-redes .redes-conteiners .container-live .live:active, main .section-mentoria .redes-conteiners .container-live .live:active {
-  transform: scale(0.9);
-}
-main .section--mis-redes .redes-conteiners .container-live .animated_live, main .section-mentoria .redes-conteiners .container-live .animated_live {
-  height: 7.4rem;
-}
-main .section--mis-redes .redes-conteiners .container-live .live_texto, main .section-mentoria .redes-conteiners .container-live .live_texto {
-  font-weight: 700;
-  font-size: 2.5rem;
-}
-main .section--mis-redes .redes-conteiners .container-live .stream_iconos, main .section-mentoria .redes-conteiners .container-live .stream_iconos {
-  display: flex;
-  justify-content: space-around;
-}
-main .section--mis-redes .redes-conteiners .container-live .stream_iconos a, main .section-mentoria .redes-conteiners .container-live .stream_iconos a {
-  padding: 1rem 3rem;
-  background-color: #ffffff;
-  box-shadow: 3px 3px 5px 0px #d6d7d8;
-  border: 1px solid #3ef2d0;
-}
-main .section--mis-redes .redes-conteiners .container-live .stream_iconos a:hover, main .section-mentoria .redes-conteiners .container-live .stream_iconos a:hover {
-  background-color: #19e6c0;
-  cursor: pointer;
-}
-main .section--mis-redes .redes-conteiners .container-live .stream_iconos a:active, main .section-mentoria .redes-conteiners .container-live .stream_iconos a:active {
-  transform: scale(0.9);
-}
-main .section--mis-redes .redes-conteiners .container-live .stream_iconos img, main .section-mentoria .redes-conteiners .container-live .stream_iconos img {
-  width: 7rem;
-  margin: auto;
 }
 main .section-calcujub {
   min-width: 320px;
@@ -600,6 +437,169 @@ main .section-calcujub .aside-section-calc-jub #aside-calc-jub div .p-largest-nu
   width: fit-content;
   text-wrap: nowrap;
 }
+main .section--mis-redes, main .section-mentoria {
+  min-width: 320px;
+  width: 100%;
+  padding: 0.6rem;
+  padding: 1.8rem;
+  margin: auto;
+}
+main .section--mis-redes .redes-conteiners, main .section-mentoria .redes-conteiners {
+  display: flex;
+  flex-direction: column;
+  gap: 3.6rem;
+  max-width: 425px;
+  margin: auto;
+}
+main .section--mis-redes .redes-conteiners .button-group, main .section-mentoria .redes-conteiners .button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+main .section--mis-redes .redes-conteiners .button-group .botones_redes, main .section-mentoria .redes-conteiners .button-group .botones_redes {
+  background-color: #3ef2d0;
+  font-family: "Open Sans", sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+  margin-top: 1.6rem;
+  font-size: 2rem;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 0.5rem;
+  border: 1px solid #3ef2d0;
+  padding: 1rem 3rem;
+  margin-top: 0rem;
+  box-shadow: 3px 3px 5px 0px #d6d7d8;
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+main .section--mis-redes .redes-conteiners .button-group .botones_redes:hover, main .section-mentoria .redes-conteiners .button-group .botones_redes:hover {
+  background-color: #19e6c0;
+  cursor: pointer;
+}
+main .section--mis-redes .redes-conteiners .button-group .botones_redes:active, main .section-mentoria .redes-conteiners .button-group .botones_redes:active {
+  transform: scale(0.9);
+}
+main .section--mis-redes .redes-conteiners .button-group .botones_redes img, main .section-mentoria .redes-conteiners .button-group .botones_redes img {
+  width: 50px;
+  height: 50px;
+  margin-right: 0.5rem;
+}
+main .section--mis-redes .redes-conteiners .button-group .botones_redes span, main .section-mentoria .redes-conteiners .button-group .botones_redes span {
+  margin: auto 0rem;
+  color: #000000;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+main .section--mis-redes .redes-conteiners .linea, main .section-mentoria .redes-conteiners .linea {
+  display: none;
+}
+main .section--mis-redes .redes-conteiners .container-live, main .section-mentoria .redes-conteiners .container-live {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.2rem;
+}
+main .section--mis-redes .redes-conteiners .container-live .foto, main .section-mentoria .redes-conteiners .container-live .foto {
+  border-radius: 100%;
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  width: 15rem;
+  margin: auto;
+}
+main .section--mis-redes .redes-conteiners .container-live .live, main .section-mentoria .redes-conteiners .container-live .live {
+  font-family: "Open Sans", sans-serif;
+  background-color: transparent;
+  color: red;
+  margin-top: 1.6rem;
+  font-size: 2rem;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 0.5rem;
+  width: 20.5rem;
+  margin: auto;
+  padding: 1.5rem 3rem;
+  font-size: 2.4rem;
+  display: none;
+}
+main .section--mis-redes .redes-conteiners .container-live .live:hover, main .section-mentoria .redes-conteiners .container-live .live:hover {
+  background-color: #19e6c0;
+  cursor: pointer;
+}
+main .section--mis-redes .redes-conteiners .container-live .live:active, main .section-mentoria .redes-conteiners .container-live .live:active {
+  transform: scale(0.9);
+}
+main .section--mis-redes .redes-conteiners .container-live .animated_live, main .section-mentoria .redes-conteiners .container-live .animated_live {
+  height: 7.4rem;
+}
+main .section--mis-redes .redes-conteiners .container-live .live_texto, main .section-mentoria .redes-conteiners .container-live .live_texto {
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+main .section--mis-redes .redes-conteiners .container-live .stream_iconos, main .section-mentoria .redes-conteiners .container-live .stream_iconos {
+  display: flex;
+  justify-content: space-around;
+}
+main .section--mis-redes .redes-conteiners .container-live .stream_iconos a, main .section-mentoria .redes-conteiners .container-live .stream_iconos a {
+  padding: 1rem 3rem;
+  background-color: #ffffff;
+  box-shadow: 3px 3px 5px 0px #d6d7d8;
+  border: 1px solid #3ef2d0;
+}
+main .section--mis-redes .redes-conteiners .container-live .stream_iconos a:hover, main .section-mentoria .redes-conteiners .container-live .stream_iconos a:hover {
+  background-color: #19e6c0;
+  cursor: pointer;
+}
+main .section--mis-redes .redes-conteiners .container-live .stream_iconos a:active, main .section-mentoria .redes-conteiners .container-live .stream_iconos a:active {
+  transform: scale(0.9);
+}
+main .section--mis-redes .redes-conteiners .container-live .stream_iconos img, main .section-mentoria .redes-conteiners .container-live .stream_iconos img {
+  width: 7rem;
+  margin: auto;
+}
+main .section-announce {
+  min-width: 320px;
+  width: 100%;
+  padding: 1.8rem;
+  margin-top: 3.2rem;
+}
+main .section-announce .div-container--announce {
+  background-color: #effefa;
+  border: 1px solid #22dfc1;
+  border-radius: 3rem;
+  text-align: center;
+  padding: 1.4rem 3.4rem;
+  max-width: 425px;
+  box-shadow: 3px 3px 5px 0px #d6d7d8;
+  margin: auto;
+}
+main .section-announce .div-container--announce .h2-red-tittle {
+  color: #000000;
+  font-weight: 500;
+}
+main .section-announce .div-container--announce .boton {
+  font-family: "Open Sans", sans-serif;
+  background-color: #3ef2d0;
+  color: #000000;
+  margin-top: 1.6rem;
+  font-size: 2rem;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 0.5rem;
+  padding: 1.5rem 2.5rem;
+  font-weight: 600;
+  margin-top: 0;
+}
+main .section-announce .div-container--announce .boton:hover {
+  background-color: #19e6c0;
+  cursor: pointer;
+}
+main .section-announce .div-container--announce .boton:active {
+  transform: scale(0.9);
+}
 main .section-mentoria {
   min-width: 320px;
   background-color: #f2f5f7;
@@ -634,6 +634,7 @@ main .section-about-me {
   width: 100%;
   margin: auto;
   padding: 1.8rem;
+  margin-top: 60px;
 }
 main .section-about-me .redes_contenido {
   display: flex;
