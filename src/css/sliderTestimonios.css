@@ -1,3 +1,12 @@
+* {
+  outline: none;
+}
+
+.section-testimonial {
+  margin: 25px auto;
+  width: 99%;
+}
+
 .header-title {
   width: 100%;
   margin: 0 auto;
@@ -5,7 +14,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 120px;
+  margin-bottom: 20px;
 }
 .header-title div {
   font-family: Arial, Helvetica, sans-serif;
@@ -47,6 +56,7 @@
   position: absolute;
   margin: 0 10px;
   left: 0;
+  outline: none;
   gap: 20px;
   transition: all 0.2s ease-in;
 }
@@ -55,9 +65,11 @@
   height: 400px;
   display: flex;
   justify-content: center;
+  outline: none;
 }
 .section-slider .container .slider-container .image img {
   position: relative;
+  outline: none;
   max-width: 100%;
   max-height: 100%;
   border-radius: 20px;
@@ -71,12 +83,14 @@
 .section-slider .arrow-left, .section-slider .arrow-right {
   z-index: 1;
   position: absolute;
-  bottom: calc(50% - 50px);
+  bottom: calc(50% - 25px);
   margin: auto;
   margin-right: 0;
   width: 50px;
-  height: 100px;
+  height: 50px;
   background-color: rgba(25, 230, 192, 0.6901960784);
+  outline: none;
+  border-radius: 100%;
   display: flex;
   place-content: center;
   align-items: center;
@@ -86,6 +100,10 @@
   transform: scale(1.1);
   box-shadow: 2px 2px 30px 4px rgba(110, 108, 108, 0.137);
   transition: all 0.2s ease-in-out;
+}
+.section-slider .arrow-left:active, .section-slider .arrow-right:active {
+  transform: scale(0.7);
+  outline: none;
 }
 .section-slider .arrow-left svg path, .section-slider .arrow-right svg path {
   fill: #fff;
@@ -141,6 +159,12 @@
   }
 }
 @media screen and (width > 1024px) {
+  .section-testimonial {
+    margin: 50px auto;
+  }
+  .header-title {
+    margin-bottom: 120px;
+  }
   .header-title p {
     font-size: 40px;
   }

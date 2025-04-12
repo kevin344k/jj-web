@@ -17,6 +17,15 @@ $gris: #f2f5f7;
 $gris-middle: #d6d7d8;
 $gris-strong: #bbc9d6;
 $box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+* {
+    outline: none;
+  }
+.section-testimonial{
+    margin: 25px auto;
+   width:99%;
+}
+
+
 .header-title {
   width: 100%;
 
@@ -25,7 +34,7 @@ $box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 120px;
+  margin-bottom: 20px;
   div {
     font-family: Arial, Helvetica, sans-serif;
     height: 5px;
@@ -69,7 +78,7 @@ margin-bottom: 32px;
       position: absolute;
       margin: 0 10px; //se pone un margin left para contrarrestar el gap intermedio y que cuadre
       left: 0;
-
+outline: none;
       gap: 20px;
       transition: all 0.2s ease-in;
 
@@ -79,11 +88,11 @@ margin-bottom: 32px;
         display: flex;
         justify-content: center;
         //    background-color: yellow;
-
+outline: none;
         img {
           position: relative;
           //    background-color: red;
-
+            outline: none;
           max-width: 100%;
           max-height: 100%;
           border-radius: 20px;
@@ -104,13 +113,14 @@ margin-bottom: 32px;
     //en mobile
     z-index: 1;
     position: absolute;
-    bottom: calc(50% - 50px);
+    bottom: calc(50% - 25px);
     margin: auto;
     margin-right: 0;
     width: 50px;
-    height: 100px;
+    height: 50px;
     background-color: #19e6c0b0;
-
+    outline: none;
+border-radius: 100%;
     display: flex;
     place-content: center;
     align-items: center;
@@ -120,6 +130,10 @@ margin-bottom: 32px;
       transform: scale(1.1);
       box-shadow: 2px 2px 30px 4px rgba(110, 108, 108, 0.137);
       transition: all 0.2s ease-in-out;
+    }
+    &:active{
+        transform: scale(0.7);
+        outline: none   ;
     }
 
     svg {
@@ -172,9 +186,6 @@ margin-bottom: 32px;
   }
 }
 
-.section-testimonial{
-    
-}
 
 @media screen and (width>768px) {
   .section-slider {
@@ -196,9 +207,13 @@ margin-bottom: 32px;
 }
 
 @media screen and (width>1024px) {
-
+    .section-testimonial{
+        margin: 50px auto;
+    }
+    
 
     .header-title{
+        margin-bottom: 120px;
         p{
             font-size: 40px;
         }

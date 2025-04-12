@@ -1,10 +1,5 @@
 @charset "UTF-8";
 @font-face {
-  font-family: "Ubuntu";
-  src: url("../fonts/Ubuntu-Regular.woff") format("woff"), url("../fonts/Ubuntu-Bold.woff") format("woff");
-  font-display: swap;
-}
-@font-face {
   font-family: "Open Sans";
   src: url("../fonts/OpenSans-Regular.woff") format("woff"), url("../fonts/OpenSans-Bold.woff") format("woff");
   font-display: swap;
