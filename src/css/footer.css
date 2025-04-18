@@ -13,7 +13,7 @@
   font-size: 12px;
 }
 .footer ul li a:hover {
-  color: rgb(25, 230, 192);
+  color: #19e6c0;
 }
 .footer ul li a img {
   width: 15px;
@@ -39,7 +39,7 @@
 }
 .footer .footer-anounce a {
   text-decoration: none;
-  background-color: rgb(25, 230, 192);
+  background-color: #19e6c0;
   border-radius: 50px;
   font-size: 18px;
   color: black;

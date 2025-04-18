@@ -66,6 +66,9 @@
   display: flex;
   justify-content: center;
   outline: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .section-slider .container .slider-container .image img {
   position: relative;

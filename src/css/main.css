@@ -7,6 +7,7 @@
 html {
   font-size: 62.5%;
   font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -33,7 +34,9 @@ header {
   background-repeat: no-repeat;
   text-align: center;
   padding: 1.6rem 0px;
+  padding-top: 0;
   display: flex;
+  flex-direction: column;
   /*
     nav {
       position: fixed;
@@ -127,8 +130,8 @@ header .contenido-encabezado .clock {
   width: 100%;
 }
 header .contenido-encabezado .text_slogan {
-  font-size: 3rem;
   font-weight: bold;
+  font-size: 3rem;
 }
 header .contenido-encabezado .boton {
   font-family: "Open Sans", sans-serif;
@@ -217,6 +220,9 @@ main {
   gap: 3.2rem;
   margin: auto;
 }
+main > *:nth-child(even) {
+  background-color: #f3f5f7;
+}
 main section {
   padding: 5rem 1rem;
 }
@@ -243,13 +249,11 @@ main section .header-title p {
   margin-bottom: 10px;
 }
 main .section-calcujub {
-  background-color: red;
   min-width: 320px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #f2f5f7;
 }
 main .section-calcujub .announce-calc-jub {
   background-color: #effefa;
@@ -611,7 +615,6 @@ main .section-announce .div-container--announce .boton:active {
 }
 main .section-mentoria {
   min-width: 320px;
-  background-color: #f2f5f7;
 }
 main .section-mentoria .mentoria_contenido .mentoria-items {
   display: flex;
@@ -640,7 +643,6 @@ main .section-mentoria .mentoria_contenido .video-iframe video {
 }
 main .section-about-me {
   text-align: center;
-  background-color: #f2f5f7;
   width: 100%;
   margin: auto;
   padding: 1.8rem;
@@ -1216,7 +1218,7 @@ main .bpedido:active {
   header {
     width: 100%;
     max-width: none;
-    height: 90vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;

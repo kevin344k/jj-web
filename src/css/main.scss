@@ -1,4 +1,3 @@
-
 @font-face {
   font-family: "Open Sans";
   src: url("../fonts/OpenSans-Regular.woff") format("woff"),
@@ -31,15 +30,18 @@ $gap_slider: 3rem;
 //variables clock halvin
 $font-size-clock: 3.5rem;
 
+
 html {
   font-size: 62.5%;
   font-family: $font-family-ubuntu;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: $font-family-ubuntu;
   font-size: $font-size-paragraph;
   overflow-x: hidden;
+
 }
 
 * {
@@ -47,7 +49,6 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
-
 
 @mixin but($bg-color, $text) {
   font-family: $font-famiy-open;
@@ -75,6 +76,7 @@ header {
   height: -moz-fit-content;
   height: 70vh;
   margin: auto;
+
   background-image: url("../../imagenes/hero-mobile-Greenpeace.webp");
   background-position: center;
   background-size: cover;
@@ -82,7 +84,9 @@ header {
 
   text-align: center;
   padding: 1.6rem 0px;
+  padding-top: 0;
   display: flex;
+  flex-direction: column;
   /*
   nav {
     position: fixed;
@@ -175,10 +179,12 @@ header {
       margin: auto 0px;
       width: 100%;
     }
+
 .text_slogan{
-  font-size: 3rem;
   font-weight: bold;
+  font-size: 3rem;
 }
+
     .boton {
       @include but($turquesa, $negro);
       padding: 1.5rem 2.5rem;
@@ -266,12 +272,15 @@ main {
   gap: 3.2rem;
   margin: auto;
 
+  > *:nth-child(even) {
+    background-color: #f3f5f7;
+  }
 
-section{
-padding: 5rem 1rem;
+  section {
+    padding: 5rem 1rem;
     .header-title {
       width: 100%;
-    
+
       margin: 0 auto;
       display: flex;
       flex-direction: column;
@@ -292,25 +301,15 @@ padding: 5rem 1rem;
         margin-bottom: 10px;
       }
     }
-  
-}
-
-
-
-
+  }
 
   .section-calcujub {
-    background-color: red;
-
     min-width: 320px;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  
-    background-color: $gris;
-
 
     .announce-calc-jub {
       background-color: #effefa;
@@ -659,7 +658,7 @@ padding: 5rem 1rem;
 
   .section-mentoria {
     min-width: $xsmall;
-    background-color: $gris;
+
     @extend .section--mis-redes;
 
     .mentoria_contenido {
@@ -695,15 +694,14 @@ padding: 5rem 1rem;
     }
   }
 
-
   .section-about-me {
     text-align: center;
-    background-color: #f2f5f7;
+
     width: 100%;
 
     margin: auto;
     padding: 1.8rem;
-margin-top: 60px;
+    margin-top: 60px;
 
     .redes_contenido {
       display: flex;
@@ -1094,6 +1092,7 @@ margin-top: 60px;
 
 ////MODAL END
 
+
 @media (orientation: landscape) {
   header {
     height: -webkit-fit-content;
@@ -1107,8 +1106,6 @@ margin-top: 60px;
 
 @media screen and (min-width: 560px) {
   $font-size-clock: 6.5rem;
-
-
 
   header {
     width: 100%;
@@ -1129,7 +1126,7 @@ margin-top: 60px;
           font-size: 2.6rem;
         }
       }
-      .text_slogan{
+      .text_slogan {
         font-size: 4rem;
       }
 
@@ -1355,14 +1352,13 @@ margin-top: 60px;
   $font-size-clock: 15rem;
   $font-size-paragraph: 1.9rem;
 
-
   p {
     font-size: $font-size-paragraph;
   }
   header {
     width: 100%;
     max-width: none;
-    height: 90vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1387,14 +1383,14 @@ margin-top: 60px;
           font-size: 2.6rem;
         }
       }
-      .text_slogan{
+      .text_slogan {
         font-size: 5rem;
-       }
+      }
       .text-autor {
         font-size: 2rem;
       }
       .boton {
-         margin: 4rem 0rem;
+        margin: 4rem 0rem;
         width: -webkit-fit-content;
         width: -moz-fit-content;
         width: fit-content;
@@ -1473,32 +1469,30 @@ margin-top: 60px;
   main {
     max-width: none;
 
-section{
-  .header-title {
-    width: 100%;
-  
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-    div {
-      font-family: Arial, Helvetica, sans-serif;
-      height: 5px;
-      width: 100px;
-      background-color: $turquesa;
-    }
-    p {
-      font-weight: bold;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-  }
-}
+    section {
+      .header-title {
+        width: 100%;
 
-
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        div {
+          font-family: Arial, Helvetica, sans-serif;
+          height: 5px;
+          width: 100px;
+          background-color: $turquesa;
+        }
+        p {
+          font-weight: bold;
+          font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+          font-size: 3rem;
+          margin-bottom: 10px;
+        }
+      }
+    }
 
     .section-calcujub {
       .group-calc-jub {

@@ -1,0 +1,106 @@
+/*ESTILOS PARA EL NAVBAR Y EL BOTON FLOTANTE DE NAVEGACIÓN*/
+
+$turquesa: #3ef2d0;
+$soft-black: #212529;
+$turquesa_strong: #19e6c0;
+$turquesa_soft: #effefa;
+$gris: #f2f5f7;
+$gris-middle: #d6d7d8;
+$gris-strong: #bbc9d6;
+$turquesa_strong: #19e6c0;
+
+.but-floating {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #fff;
+  border-radius: 100%;
+  box-shadow: 0px 0px 5px 0px rgb(24, 32, 37);
+  z-index: 100;
+  user-select: none;
+  img {
+    width: 5rem;
+    height: 4.5rem;
+    user-select: none;
+  }
+}
+
+nav {
+  display: flex;
+
+  top: 0;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem 1rem;
+  background-color: rgb(24, 32, 37);
+  align-items: center;
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7rem;
+    img {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 100%;
+    }
+    p {
+      color: white;
+      font-weight: bold;
+    }
+  }
+  .svg-menu {
+    width: 30px;
+    height: 30px;
+  }
+  .menu-items {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  nav {
+    padding: 1rem 8rem;
+    .menu-items {
+      display: flex;
+      ul {
+        display: flex;
+        gap: 2rem;
+        li {
+          list-style: none;
+
+          a {
+            color: white;
+            text-decoration: none;
+
+            &:hover {
+              color: $turquesa;
+              transition: all 0.2s ease-in-out;
+            }
+          }
+          .boton-mentoria {
+            padding: 1rem 2rem;
+            background-color: $turquesa;
+            color: #000;
+            font-weight: bold;
+            &:hover {
+              transform: scale(1.1);
+              background-color: #fff;
+              color: #000;
+              font-weight: bold;
+              transition: all 0.2s ease-in-out;
+            }
+            &:active {
+              transform: scale(0.9);
+            }
+          }
+        }
+      }
+    }
+    .svg-menu {
+      display: none;
+    }
+  }
+}

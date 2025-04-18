@@ -46,7 +46,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
-
+    <link rel="stylesheet" href="./src/css/navBar.css" />
     <link rel="stylesheet" href="./src/css/main.css" />
     <link rel="stylesheet" href="./src/css/sliderTestimonios.css" />
     <link rel="stylesheet" href="./src/css/footer.css" />
@@ -84,6 +84,11 @@
   </script>
 
   <body>
+
+<div class="but-floating">
+<a href="#navBar">  <img src="./imagenes/arrow-top.svg" alt="img-arrow-top"></a>
+</div>
+
     <!-- Google Tag Manager (noscript) -->
     <noscript
       ><iframe
@@ -94,22 +99,30 @@
       ></iframe
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <header class="encabezado">
-      <!--
-      <nav>
-     <div>
-      <img src="./imagenes/jjcara.webp">
+    <header id="header" class="encabezado">
+      
+      <nav id="navBar">
+        <div class="logo">
+          <img class="jjface" src="./imagenes/jjcara.webp"><p>JJChagerben</p>
+        </div>
+     <div class="menu-items">
+  
       <ul>
+           <li><a  class="boton-nav" href="#sec-about-me">Acerca de mí</a></li>
         <li><a class="boton-nav" href="#sec-calculadora-jub">Calculadora</a></li>
         <li><a  class="boton-nav" href="#sec-redes">Redes</a></li>
-        <li><a  class="boton-nav" href="#sec-about-me">Acerca de mí</a></li>
+        <li><a  class="boton-nav" href="#sec-redes">Qué enseño?</a></li>
+        <li><a  class="boton-nav" href="#sect-testimonial">Testimonios</a></li>
        <li><a  class="boton-nav" href="#sect-merch">Merch</a></li>
-            <li><a  class="boton-nav" href="#sec-books">Libros</a></li>
+       <li><a class="boton-mentoria" href="https://api.whatsapp.com/send?phone=593996737500&text=INFORMACION%20SOBRE%20LA%20MENTORIA%20PREMIUM">Mentoria Premium</a></li>
+          
 
       </ul>
      </div>
+     <img class="svg-menu" src="./imagenes//menu-svgrepo-com.svg" alt="img-menu" >
+
       </nav>
--->
+
       <div class="contenido-encabezado">
         <div class="div-btc-price">
           <div>
@@ -119,7 +132,9 @@
           <span id="span-price-BTC"></span>
         </div>
         <div class="clock flip-clock-wrapper"></div>
-        <p class="text_slogan">"BITCOIN ES SACARSE LA LOTERIA EN CÁMARA LENTA"</p>
+        <div class="text-effect-writter">
+          <p class="text_slogan">"BITCOIN ES SACARSE LA LOTERIA EN CÁMARA LENTA"</p>
+        </div>
         <p class="text-autor">-JJChagerben-</p>
         <a
           class="boton"
