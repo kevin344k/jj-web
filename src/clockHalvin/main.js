@@ -4,7 +4,7 @@ const input_result_equiv_btc = document.getElementById(
   "input-result-equiv-btc"
 );
 const data_halvin_now = {
-  costoProducciónBTC: 78345,
+  costoProducciónBTC: 60965,
   recompensaBloqueNow: 3.125,
   halvin_now_numero: 5,
   anio_halvin_actual: 2024,

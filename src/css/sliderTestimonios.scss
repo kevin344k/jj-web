@@ -9,7 +9,7 @@ $width-tablet-container-img: #{$width-mobile-container-img * 2} + $unidad;
 $width-desktop-img: "320px";
 $width-desktop-container-img: #{($width-mobile-container-img * 4) + 60} +
   $unidad; //se suma 60px por el gap
-  $turquesa: #3ef2d0;
+$turquesa: #3ef2d0;
 $soft-black: #212529;
 $turquesa_strong: #19e6c0;
 $turquesa_soft: #effefa;
@@ -18,13 +18,12 @@ $gris-middle: #d6d7d8;
 $gris-strong: #bbc9d6;
 $box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
 * {
-    outline: none;
-  }
-.section-testimonial{
-    margin: 25px auto;
-   width:99%;
+  outline: none;
 }
-
+.section-testimonial {
+  margin: 25px auto;
+  width: 99%;
+}
 
 .header-title {
   width: 100%;
@@ -63,14 +62,14 @@ $box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
     height: 450px;
     //  background-color: beige;
     margin: auto;
-  
+
     border-radius: 20px;
 
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-margin-bottom: 32px;
+    margin-bottom: 32px;
     position: relative;
 
     .slider-container {
@@ -78,7 +77,7 @@ margin-bottom: 32px;
       position: absolute;
       margin: 0 10px; //se pone un margin left para contrarrestar el gap intermedio y que cuadre
       left: 0;
-outline: none;
+      outline: none;
       gap: 20px;
       transition: all 0.2s ease-in;
 
@@ -88,11 +87,11 @@ outline: none;
         display: flex;
         justify-content: center;
         //    background-color: yellow;
-outline: none;
+        outline: none;
         img {
           position: relative;
           //    background-color: red;
-            outline: none;
+          outline: none;
           max-width: 100%;
           max-height: 100%;
           border-radius: 20px;
@@ -120,7 +119,7 @@ outline: none;
     height: 50px;
     background-color: #19e6c0b0;
     outline: none;
-border-radius: 100%;
+    border-radius: 100%;
     display: flex;
     place-content: center;
     align-items: center;
@@ -131,9 +130,9 @@ border-radius: 100%;
       box-shadow: 2px 2px 30px 4px rgba(110, 108, 108, 0.137);
       transition: all 0.2s ease-in-out;
     }
-    &:active{
-        transform: scale(0.7);
-        outline: none   ;
+    &:active {
+      transform: scale(0.7);
+      outline: none;
     }
 
     svg {
@@ -162,7 +161,7 @@ border-radius: 100%;
     bottom: -0px;
     left: calc(50% - 125px);
     height: 40px;
-   width: 250px;
+    width: 250px;
     display: flex;
     //gap: 4px;
     justify-content: center;
@@ -181,11 +180,10 @@ border-radius: 100%;
       background-color: $turquesa;
       transition: all 0.2s ease-out;
       transform: scale(1.4);
-      box-shadow:  0px 0px 5px 1px $gris-middle;
+      box-shadow: 0px 0px 5px 1px $gris-middle;
     }
   }
 }
-
 
 @media screen and (width>768px) {
   .section-slider {
@@ -207,17 +205,16 @@ border-radius: 100%;
 }
 
 @media screen and (width>1024px) {
-    .section-testimonial{
-        margin: 50px auto;
-    }
-    
+  .section-testimonial {
+    margin: 50px auto;
+  }
 
-    .header-title{
-        margin-bottom: 120px;
-        p{
-            font-size: 40px;
-        }
+  .header-title {
+    margin-bottom: 120px;
+    p {
+      font-size: 40px;
     }
+  }
   .section-slider {
     //    background-color: red;
     margin: auto;
@@ -236,19 +233,16 @@ border-radius: 100%;
       position: inherit;
     }
 
-
     .indicator-slider {
-    width: 500px;
-    left: calc(50% - 250px);
-        .indicator {
+      width: 500px;
+      left: calc(50% - 250px);
+      .indicator {
         width: 15px;
         height: 15px;
-        }
-    
-        .activate_indicator {
-          
-        }
       }
-  }
 
+      .activate_indicator {
+      }
+    }
+  }
 }

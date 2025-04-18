@@ -21,22 +21,11 @@ body {
   box-sizing: border-box;
 }
 
-h1 {
-  font-family: "Inter", sans-serif;
-  font-size: 3rem;
-}
-
-h2 {
-  font-size: 2.4rem;
-  text-align: center;
-  margin-bottom: 2.5rem;
-}
-
 header {
   width: 100%;
   min-width: 320px;
   height: -moz-fit-content;
-  height: 80vh;
+  height: 70vh;
   margin: auto;
   background-image: url("../../imagenes/hero-mobile-Greenpeace.webp");
   background-position: center;
@@ -137,6 +126,10 @@ header .contenido-encabezado .clock {
   margin: auto 0px;
   width: 100%;
 }
+header .contenido-encabezado .text_slogan {
+  font-size: 3rem;
+  font-weight: bold;
+}
 header .contenido-encabezado .boton {
   font-family: "Open Sans", sans-serif;
   background-color: #3ef2d0;
@@ -146,8 +139,9 @@ header .contenido-encabezado .boton {
   text-decoration: none;
   display: inline-block;
   border-radius: 0.5rem;
-  padding: 2rem 3rem;
+  padding: 1.5rem 2.5rem;
   border-radius: 0.5rem;
+  font-size: 1.6rem;
   font-weight: 700;
   width: -moz-fit-content;
   width: fit-content;
@@ -222,20 +216,40 @@ main {
   justify-content: space-around;
   gap: 3.2rem;
   margin: auto;
-  width: 100vw;
+}
+main section {
+  padding: 5rem 1rem;
+}
+main section .header-title {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+main section .header-title div {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 5px;
+  width: 100px;
+  background-color: #3ef2d0;
+}
+main section .header-title p {
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 10px;
 }
 main .section-calcujub {
+  background-color: red;
   min-width: 320px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0.6rem;
   background-color: #f2f5f7;
-  padding: 1.8rem;
-}
-main .section-calcujub h2 {
-  margin-bottom: 0rem;
 }
 main .section-calcujub .announce-calc-jub {
   background-color: #effefa;
@@ -626,6 +640,7 @@ main .section-mentoria .mentoria_contenido .video-iframe video {
 }
 main .section-about-me {
   text-align: center;
+  background-color: #f2f5f7;
   width: 100%;
   margin: auto;
   padding: 1.8rem;
@@ -998,10 +1013,6 @@ main .bpedido:active {
   }
 }
 @media screen and (min-width: 560px) {
-  h1 {
-    margin-top: 2rem;
-    font-size: 4rem;
-  }
   header {
     width: 100%;
     background-image: url("../../imagenes/hero-desktop-Greenpeace.webp");
@@ -1019,6 +1030,9 @@ main .bpedido:active {
   }
   header .contenido-encabezado .div-btc-price #span-price-BTC {
     font-size: 2.6rem;
+  }
+  header .contenido-encabezado .text_slogan {
+    font-size: 4rem;
   }
   header .contenido-encabezado .flip-clock-wrapper ul {
     margin-top: 2.3rem;
@@ -1196,14 +1210,6 @@ main .bpedido:active {
   }
 }
 @media screen and (min-width: 1024px) {
-  h1 {
-    margin-top: 6rem;
-    font-size: 8rem;
-  }
-  h2 {
-    font-size: 4rem;
-    margin: 3rem 0rem;
-  }
   p {
     font-size: 1.9rem;
   }
@@ -1234,11 +1240,13 @@ main .bpedido:active {
   header .contenido-encabezado .div-btc-price #span-price-BTC {
     font-size: 2.6rem;
   }
+  header .contenido-encabezado .text_slogan {
+    font-size: 5rem;
+  }
   header .contenido-encabezado .text-autor {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   header .contenido-encabezado .boton {
-    padding: 3rem 7rem;
     margin: 4rem 0rem;
     width: -moz-fit-content;
     width: fit-content;
@@ -1303,6 +1311,27 @@ main .bpedido:active {
   }
   main {
     max-width: none;
+  }
+  main section .header-title {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  main section .header-title div {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 5px;
+    width: 100px;
+    background-color: #3ef2d0;
+  }
+  main section .header-title p {
+    font-weight: bold;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3rem;
+    margin-bottom: 10px;
   }
   main .section-calcujub .group-calc-jub {
     display: flex;

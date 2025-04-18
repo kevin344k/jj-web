@@ -48,16 +48,6 @@ body {
   box-sizing: border-box;
 }
 
-h1 {
-  font-family: $font-family-ubuntu;
-  font-size: 3rem;
-}
-
-h2 {
-  font-size: $font-z-h2;
-  text-align: center;
-  margin-bottom: 2.5rem;
-}
 
 @mixin but($bg-color, $text) {
   font-family: $font-famiy-open;
@@ -83,7 +73,7 @@ header {
   min-width: $xsmall;
   height: -webkit-fit-content;
   height: -moz-fit-content;
-  height: 80vh;
+  height: 70vh;
   margin: auto;
   background-image: url("../../imagenes/hero-mobile-Greenpeace.webp");
   background-position: center;
@@ -185,11 +175,15 @@ header {
       margin: auto 0px;
       width: 100%;
     }
-
+.text_slogan{
+  font-size: 3rem;
+  font-weight: bold;
+}
     .boton {
       @include but($turquesa, $negro);
-      padding: 2rem 3rem;
+      padding: 1.5rem 2.5rem;
       border-radius: 0.5rem;
+      font-size: 1.6rem;
       font-weight: 700;
       width: -webkit-fit-content;
       width: -moz-fit-content;
@@ -271,20 +265,52 @@ main {
   justify-content: space-around;
   gap: 3.2rem;
   margin: auto;
-  width: 100vw;
-  .section-calcujub {
-    h2 {
-      margin-bottom: 0rem;
+
+
+section{
+padding: 5rem 1rem;
+    .header-title {
+      width: 100%;
+    
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+      div {
+        font-family: Arial, Helvetica, sans-serif;
+        height: 5px;
+        width: 100px;
+        background-color: $turquesa;
+      }
+      p {
+        font-weight: bold;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 2.4rem;
+        text-align: center;
+        margin-bottom: 10px;
+      }
     }
+  
+}
+
+
+
+
+
+  .section-calcujub {
+    background-color: red;
+
     min-width: 320px;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0.6rem;
+  
     background-color: $gris;
-    padding: 1.8rem;
+
 
     .announce-calc-jub {
       background-color: #effefa;
@@ -672,12 +698,13 @@ main {
 
   .section-about-me {
     text-align: center;
-
+    background-color: #f2f5f7;
     width: 100%;
 
     margin: auto;
     padding: 1.8rem;
 margin-top: 60px;
+
     .redes_contenido {
       display: flex;
       flex-direction: column;
@@ -1081,10 +1108,7 @@ margin-top: 60px;
 @media screen and (min-width: 560px) {
   $font-size-clock: 6.5rem;
 
-  h1 {
-    margin-top: 2rem;
-    font-size: 4rem;
-  }
+
 
   header {
     width: 100%;
@@ -1104,6 +1128,9 @@ margin-top: 60px;
         #span-price-BTC {
           font-size: 2.6rem;
         }
+      }
+      .text_slogan{
+        font-size: 4rem;
       }
 
       .flip-clock-wrapper ul {
@@ -1327,15 +1354,8 @@ margin-top: 60px;
 @media screen and (min-width: 1024px) {
   $font-size-clock: 15rem;
   $font-size-paragraph: 1.9rem;
-  h1 {
-    margin-top: 6rem;
 
-    font-size: 8rem;
-  }
-  h2 {
-    font-size: 4rem;
-    margin: 3rem 0rem;
-  }
+
   p {
     font-size: $font-size-paragraph;
   }
@@ -1367,12 +1387,14 @@ margin-top: 60px;
           font-size: 2.6rem;
         }
       }
+      .text_slogan{
+        font-size: 5rem;
+       }
       .text-autor {
-        font-size: 3rem;
+        font-size: 2rem;
       }
       .boton {
-        padding: 3rem 7rem;
-        margin: 4rem 0rem;
+         margin: 4rem 0rem;
         width: -webkit-fit-content;
         width: -moz-fit-content;
         width: fit-content;
@@ -1450,6 +1472,34 @@ margin-top: 60px;
   }
   main {
     max-width: none;
+
+section{
+  .header-title {
+    width: 100%;
+  
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    div {
+      font-family: Arial, Helvetica, sans-serif;
+      height: 5px;
+      width: 100px;
+      background-color: $turquesa;
+    }
+    p {
+      font-weight: bold;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+
+
     .section-calcujub {
       .group-calc-jub {
         display: flex;
