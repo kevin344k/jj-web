@@ -172,6 +172,9 @@ header {
         font-weight: bold;
       }
     }
+    .fear-and-greed{
+      display: none;
+    }
 
     .clock {
       display: flex;
@@ -1111,19 +1114,52 @@ main {
     width: 100%;
     background-image: url("../../imagenes/hero-desktop-Greenpeace.webp");
     .contenido-encabezado {
-      .div-btc-price {
-        max-width: 52.4rem;
-        width: 45rem;
-        padding: 1.5rem 2rem;
-        div {
-          font-size: 2.6rem;
+   
+      .btc-container-data{
 
-          img {
-            width: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 20px;
+        .div-btc-price {
+          max-width: 52.4rem;
+          width: 45rem;
+          padding: 1.5rem 2rem;
+          margin: 0;
+          div {
+            font-size: 2.6rem;
+  
+            img {
+              width: 4rem;
+            }
+          }
+          #span-price-BTC {
+            font-size: 2.6rem;
           }
         }
-        #span-price-BTC {
-          font-size: 2.6rem;
+         .fear-and-greed{
+          display: flex;
+          position: relative;
+        background-color: #333;
+        border-radius: 5px;
+        color: white;
+       height: 100%;
+       padding: 2px;
+        justify-content: center;
+        align-items: center;
+        padding: 0 30px;
+       
+        p{
+          color: rgb(146, 146, 146);
+          font-size: 14px;
+          position: absolute;
+          top: 5px;
+        }
+        span{
+          font-size: 26px;
+          font-weight: bold;
+        }
         }
       }
       .text_slogan {

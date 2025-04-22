@@ -188,6 +188,10 @@ const APIPriceBTC_1 = "https://api.binance.com/api/v3/avgPrice?symbol=BTCUSDT";
 
 const APIPriceBTC_2 =
   "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd";
+const APIFearGreedIndex='https://api.alternative.me/fng/' //indice de miedo y codicia
+
+
+
 
 let resultCallback = "";
 
@@ -202,6 +206,8 @@ const result_calc_formula = document.getElementById("result_calc-formula");
 const result_calc_anio = document.getElementById("result-calc-anio");
 const aside_calc_jub = document.getElementById("aside-calc-jub");
 const span_price_BTC = document.getElementById("span-price-BTC");
+const span_fear_greed = document.getElementById("span-fear-greed");
+
 span_hal_now_nro.textContent = `# ${data_halvin_now.halvin_now_numero}`;
 span_hal_now_anio.textContent = data_halvin_now.anio_halvin_actual;
 span_hal_now_reward.textContent = `${data_halvin_now.recompensaBloqueNow} btc`;
@@ -234,6 +240,7 @@ const init = async () => {
 init();
 
 let priceBTC = 0;
+let fearIndex=""
 
 //ejecuta las funciones async con las peticoines api luego de cargar el DOM
 document.addEventListener("DOMContentLoaded", () => {
@@ -259,7 +266,33 @@ document.addEventListener("DOMContentLoaded", () => {
       );
     });
 
-  //traer el precio de un btc desde binance
+
+  fetchIndexFearAndGreed(APIFearGreedIndex)
+  .then((index) => {
+    fearIndex = `${index.value_classification}`;
+    console.log(fearIndex);
+    span_fear_greed.textContent = fearIndex;
+    if (fearIndex === "Greed") {
+      span_fear_greed.style.color='#32CD32';
+    } else if (fearIndex === "Fear") {
+      span_fear_greed.style.color="#FF4500";
+    } else if (fearIndex === "Extreme Greed") {
+      span_fear_greed.style.color='#006400';
+    } else if (fearIndex === "Extreme Fear") {
+      span_fear_greed.style.color='#8B0000';
+    }
+ 
+
+
+  })
+  .catch((error) => {
+    console.error(
+      "Las dos solicitudes API del precio de Bitcoin han fallado :(",
+      error.message
+    );
+  });
+
+
 
 
 });
@@ -389,7 +422,7 @@ function equivalenciaBTC() {
 input_inversion_inicial.oninput = equivalenciaBTC;
 input_result_equiv_btc.oninput = equivalenciaBTC;
 
-async function fetchFuncAsync(url1, url2) {
+async function fetchFuncAsync(url1, url2=null) {
   try {
     const response = await fetch(url1);
 
@@ -405,24 +438,48 @@ async function fetchFuncAsync(url1, url2) {
     return precio;
   } catch (error) {
     console.error("Error al obtener el precio desde Binance:", error.message);
-    try {
-      const response2 = await fetch(url2);
+ if (url2!==null) {
+  try {
+    const response2 = await fetch(url2);
 
-      if (!response2.ok) {
-        throw new Error(
-          `Error HTTP: ${response.status},INTENTANDO CON OTRO RECURSO...`
-        );
-      }
-
-      const data = await response2.json();
-      const precio = data.bitcoin.usd;
-      console.log(`El precio 2 coingeko actual de Bitcoin es: $${precio}`);
-      return precio;
-    } catch (error) {
-      console.error("Error al obtener el precio2:", error.message);
+    if (!response2.ok) {
+      throw new Error(
+        `Error HTTP: ${response.status},INTENTANDO CON OTRO RECURSO...`
+      );
     }
+
+    const data = await response2.json();
+    const precio = data.bitcoin.usd;
+    console.log(`El precio 2 coingeko actual de Bitcoin es: $${precio}`);
+    return precio;
+  } catch (error) {
+    console.error("Error al obtener el precio2:", error.message);
+  }
+ }
   }
 }
+
+//funcoin par atraen el indice Fear and Greed
+async function fetchIndexFearAndGreed(url) {
+  try {
+    const response = await fetch(url);
+
+    if (!response.ok) {
+      throw new Error(
+        `Error HTTP: ${response.status},INTENTANDO CON OTRO RECURSO...`
+      );
+    }
+
+    const data = await response.json();
+    const fng=data.data[0]
+    console.log(`El index Fear and Greed es: ${fng.value}`);
+    return fng;
+  } catch (error) {
+    console.error("Error al obtener el index Fear and Greed:", error.message);
+
+  }
+}
+
 
 ///calculadora de jubilacion
 

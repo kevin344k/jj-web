@@ -123,6 +123,9 @@ header .contenido-encabezado .div-btc-price span {
   font-size: 2rem;
   font-weight: bold;
 }
+header .contenido-encabezado .fear-and-greed {
+  display: none;
+}
 header .contenido-encabezado .clock {
   display: flex;
   justify-content: center;
@@ -1019,19 +1022,49 @@ main .bpedido:active {
     width: 100%;
     background-image: url("../../imagenes/hero-desktop-Greenpeace.webp");
   }
-  header .contenido-encabezado .div-btc-price {
+  header .contenido-encabezado .btc-container-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+  }
+  header .contenido-encabezado .btc-container-data .div-btc-price {
     max-width: 52.4rem;
     width: 45rem;
     padding: 1.5rem 2rem;
+    margin: 0;
   }
-  header .contenido-encabezado .div-btc-price div {
+  header .contenido-encabezado .btc-container-data .div-btc-price div {
     font-size: 2.6rem;
   }
-  header .contenido-encabezado .div-btc-price div img {
+  header .contenido-encabezado .btc-container-data .div-btc-price div img {
     width: 4rem;
   }
-  header .contenido-encabezado .div-btc-price #span-price-BTC {
+  header .contenido-encabezado .btc-container-data .div-btc-price #span-price-BTC {
     font-size: 2.6rem;
+  }
+  header .contenido-encabezado .btc-container-data .fear-and-greed {
+    display: flex;
+    position: relative;
+    background-color: #333;
+    border-radius: 5px;
+    color: white;
+    height: 100%;
+    padding: 2px;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+  }
+  header .contenido-encabezado .btc-container-data .fear-and-greed p {
+    color: rgb(146, 146, 146);
+    font-size: 14px;
+    position: absolute;
+    top: 5px;
+  }
+  header .contenido-encabezado .btc-container-data .fear-and-greed span {
+    font-size: 26px;
+    font-weight: bold;
   }
   header .contenido-encabezado .text_slogan {
     font-size: 4rem;

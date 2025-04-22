@@ -7,6 +7,9 @@ const arrow_right = document.querySelector('#arrow_right')
 
 const parent_indicator = document.querySelector('.indicator-slider')
 
+
+
+
 for (let i = 0; i < arr.length; i++) {
     const element = document.createElement('span')
     element.classList.add('indicator')
@@ -16,14 +19,21 @@ for (let i = 0; i < arr.length; i++) {
 
 const indicators_group = document.querySelectorAll('.indicator')
 
-indicators_group[0].classList.add('activate_indicator')
+indicators_group[3].classList.add('activate_indicator')
 
 
 let sliderPosition = 0
 let indexArr = 0
 
+if (window.innerWidth>=1024) {
+    indexArr = 3
+    console.log('pantalla grande');
+    
+}
 
 //para dispositivos pequeños el width de cada imagen debe ser de 320px
+
+
 
 
 
@@ -53,8 +63,9 @@ arrow_left.addEventListener('click', () => {
 
     console.log(indexArr);
 
+    let positinoLeftArr=window.innerWidth>=1024? 4: 0  //esto p3ermite q el slider se detenga en la imagen 3
 
-    if (indexArr >= 1) {
+    if (indexArr >= positinoLeftArr) {
         sliderContainer.style.left = `${sliderPosition + 320}px`
         indicators_group[indexArr].classList.remove('activate_indicator')
         indicators_group[indexArr - 1].classList.add('activate_indicator')
