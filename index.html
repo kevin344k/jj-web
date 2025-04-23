@@ -105,13 +105,14 @@
         <div class="logo">
           <img class="jjface" src="./imagenes/jjcara.webp"><p>JJChagerben</p>
         </div>
-     <div class="menu-items">
-  
-      <ul>
+     <div class=" sidebar" id="sideMenu">
+
+      <img class="close-btn" id="closeMenu" src="./imagenes//cross-close.svg" alt="">
+      <ul class="menu-options">
            <li><a  class="boton-nav" href="#sec-about-me">Acerca de mí</a></li>
         <li><a class="boton-nav" href="#sec-calculadora-jub">Calculadora</a></li>
         <li><a  class="boton-nav" href="#sec-redes">Redes</a></li>
-        <li><a  class="boton-nav" href="#sec-redes">Qué enseño?</a></li>
+        <li><a  class="boton-nav" href="#section-mentoria">Qué enseño?</a></li>
         <li><a  class="boton-nav" href="#sect-testimonial">Testimonios</a></li>
        <li><a  class="boton-nav" href="#sect-merch">Merch</a></li>
        <li><a class="boton-mentoria" href="https://api.whatsapp.com/send?phone=593996737500&text=INFORMACION%20SOBRE%20LA%20MENTORIA%20PREMIUM">Mentoria Premium</a></li>
@@ -119,7 +120,7 @@
 
       </ul>
      </div>
-     <img class="svg-menu" src="./imagenes//menu-svgrepo-com.svg" alt="img-menu" >
+     <img class="svg-menu menu-toggle" id="menuToggle" src="./imagenes//menu-svgrepo-com.svg" alt="img-menu" >
 
       </nav>
 
@@ -409,7 +410,7 @@
           >
         </div>
       </section>
-      <section class="section-mentoria">
+      <section id="section-mentoria" class="section-mentoria">
      
         <div class="header-title">
           <p>¿Qué enseño en mi mentoría?</p>
@@ -482,12 +483,21 @@
             </div>
             <div class="mentoria_texto">
               <img
+                class="visto"
+                src="/imagenes/visto.png"
+                alt=""
+                loading="lazy"
+              />
+              <p>Soporte técnico 24/7.</p>
+            </div>
+            <div class="mentoria_texto">
+              <img
                 class="brojo"
                 src="/imagenes/puntorojo.png"
                 alt=""
                 loading="lazy"
               />
-              <p class="remember">RECUERDA: LA MENTORIA ES DE PAGO ÚNICO</p>
+              <p class="remember">RECUERDA: LA MENTORIA ES DE PAGO ÚNICO ANUAL</p>
             </div>
           </div>
           <!--
@@ -729,7 +739,7 @@
         </div>
       </div>
     </div>
-
+    <div id="overlay" class="overlay"></div>
     <script src="https://mempool.space/mempool.js"></script>
 
     <script
@@ -737,7 +747,7 @@
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
       crossorigin="anonymous"
     ></script>
-
+    <script src="./src/clockHalvin/navBar.js"></script>
     <script src="./build/clockHalvin/flipclock.min.js"></script>
     <script src="./src/clockHalvin/main.js"></script>
     <script src="./src/clockHalvin/sliderTestimonios.js"></script>

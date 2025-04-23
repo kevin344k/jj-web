@@ -5,6 +5,7 @@
 .section-testimonial {
   margin: 25px auto;
   width: 99%;
+  max-width: 1800px;
 }
 
 .header-title {
@@ -41,7 +42,7 @@
 }
 .section-slider .container {
   width: 320px;
-  height: 450px;
+  height: 500px;
   margin: auto;
   border-radius: 20px;
   display: flex;
@@ -79,8 +80,8 @@
   -o-object-fit: contain;
      object-fit: contain;
 }
-.section-slider .container .slider-container .image img:hover {
-  transform: scale(1.05);
+.section-slider .container .slider-container .image:hover {
+  transform: scale(1.2);
   transition: all 0.2s ease;
 }
 .section-slider .arrow-left, .section-slider .arrow-right {

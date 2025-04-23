@@ -9,6 +9,26 @@ $gris-middle: #d6d7d8;
 $gris-strong: #bbc9d6;
 $turquesa_strong: #19e6c0;
 
+
+
+/* Clase para oscurecer el body */
+body{
+  .overlay{
+  display: none; // Ocultar por defecto
+
+  }
+  .active{
+    display: block;
+    width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5); // Fondo oscuro semitransparente
+  transition: background-color 0.3s ease; // Animación suave para el fondo
+  //z-index: 2000;
+  }
+}
+
 .but-floating {
   position: fixed;
   bottom: 20px;
@@ -55,26 +75,108 @@ nav {
     width: 30px;
     height: 30px;
   }
-  .menu-items {
-    display: none;
-  }
-}
 
-@media screen and (min-width: 1024px) {
+
+
+  /* Estilos del menú lateral */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Oculto por defecto */
+    width: 300px;
+    height: 100%;
+    background-color: rgb(24, 32, 37);
+    transition: right 0.3s ease;
+    padding: 20px;
+    z-index: 999;
+  }
+
+  .sidebar.active {
+    right: 0; /* Mostrar cuando esté activo */
+  }
+
+  /* Botón de cierre */
+  .close-btn {
+  width: 50px;
+  height: 50px;
+    border: none;
+  background-color: $soft-black;
+    font-size: 16px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+
+  /* Opciones del menú */
+  .menu-options {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    li {
+      margin-bottom: 15px;
+     
+
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $turquesa;
+          transition: all 0.2s ease-in-out;
+        }
+      }
+      .boton-mentoria {
+        padding: 1rem 2rem;
+        background-color: $turquesa;
+        color: #000;
+        font-weight: bold;
+        &:hover {
+          transform: scale(1.1);
+          background-color: #fff;
+          color: #000;
+          font-weight: bold;
+          transition: all 0.2s ease-in-out;
+        }
+        &:active {
+          transform: scale(0.9);
+        }
+      }
+    }
+  }
+
+
+}
+@media screen and (min-width: 768px) {
   nav {
-    padding: 1rem 8rem;
-    .menu-items {
+    padding: 1.5rem 1rem;
+
+  
+    .sidebar{
       display: flex;
-      ul {
+      position: static;
+      justify-content: flex-end;
+      width: 100%;
+      padding: 0px;
+      .menu-options {
         display: flex;
-        gap: 2rem;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
         li {
           list-style: none;
-
+          margin-bottom: 0;
           a {
             color: white;
             text-decoration: none;
-
+font-size: 12px;
             &:hover {
               color: $turquesa;
               transition: all 0.2s ease-in-out;
@@ -97,6 +199,67 @@ nav {
             }
           }
         }
+      }
+      .close-btn{
+        display: none;
+      }
+    }
+    .svg-menu {
+      display: none;
+    }
+  }
+}
+
+
+@media screen and (min-width: 1024px) {
+  nav {
+    padding: 1.5rem 4rem;
+
+  
+    .sidebar{
+      display: flex;
+      position: static;
+      justify-content: flex-end;
+      width: 100%;
+      padding: 0px;
+      .menu-options {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        li {
+          list-style: none;
+          margin-bottom: 0;
+          a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            &:hover {
+              color: $turquesa;
+              transition: all 0.2s ease-in-out;
+            }
+          }
+          .boton-mentoria {
+            padding: 1rem 2rem;
+            background-color: $turquesa;
+            color: #000;
+            font-weight: bold;
+            &:hover {
+              transform: scale(1.1);
+              background-color: #fff;
+              color: #000;
+              font-weight: bold;
+              transition: all 0.2s ease-in-out;
+            }
+            &:active {
+              transform: scale(0.9);
+            }
+          }
+        }
+      }
+      .close-btn{
+        display: none;
       }
     }
     .svg-menu {

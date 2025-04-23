@@ -1,5 +1,19 @@
 @charset "UTF-8";
 /*ESTILOS PARA EL NAVBAR Y EL BOTON FLOTANTE DE NAVEGACIÓN*/
+/* Clase para oscurecer el body */
+body .overlay {
+  display: none;
+}
+body .active {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease;
+}
+
 .but-floating {
   position: fixed;
   bottom: 20px;
@@ -29,6 +43,9 @@ nav {
   padding: 0.8rem 1rem;
   background-color: rgb(24, 32, 37);
   align-items: center;
+  /* Estilos del menú lateral */
+  /* Botón de cierre */
+  /* Opciones del menú */
 }
 nav .logo {
   display: flex;
@@ -49,47 +66,172 @@ nav .svg-menu {
   width: 30px;
   height: 30px;
 }
-nav .menu-items {
-  display: none;
+nav .sidebar {
+  position: fixed;
+  top: 0;
+  right: -300px; /* Oculto por defecto */
+  width: 300px;
+  height: 100%;
+  background-color: rgb(24, 32, 37);
+  transition: right 0.3s ease;
+  padding: 20px;
+  z-index: 999;
+}
+nav .sidebar.active {
+  right: 0; /* Mostrar cuando esté activo */
+}
+nav .close-btn {
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: #212529;
+  font-size: 16px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+nav .menu-options {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+nav .menu-options li {
+  margin-bottom: 15px;
+}
+nav .menu-options li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+nav .menu-options li a:hover {
+  color: #3ef2d0;
+  transition: all 0.2s ease-in-out;
+}
+nav .menu-options li .boton-mentoria {
+  padding: 1rem 2rem;
+  background-color: #3ef2d0;
+  color: #000;
+  font-weight: bold;
+}
+nav .menu-options li .boton-mentoria:hover {
+  transform: scale(1.1);
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+}
+nav .menu-options li .boton-mentoria:active {
+  transform: scale(0.9);
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   nav {
-    padding: 1rem 8rem;
+    padding: 1.5rem 1rem;
   }
-  nav .menu-items {
+  nav .sidebar {
     display: flex;
+    position: static;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 0px;
   }
-  nav .menu-items ul {
+  nav .sidebar .menu-options {
     display: flex;
-    gap: 2rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
   }
-  nav .menu-items ul li {
+  nav .sidebar .menu-options li {
     list-style: none;
+    margin-bottom: 0;
   }
-  nav .menu-items ul li a {
+  nav .sidebar .menu-options li a {
     color: white;
     text-decoration: none;
+    font-size: 12px;
   }
-  nav .menu-items ul li a:hover {
+  nav .sidebar .menu-options li a:hover {
     color: #3ef2d0;
     transition: all 0.2s ease-in-out;
   }
-  nav .menu-items ul li .boton-mentoria {
+  nav .sidebar .menu-options li .boton-mentoria {
     padding: 1rem 2rem;
     background-color: #3ef2d0;
     color: #000;
     font-weight: bold;
   }
-  nav .menu-items ul li .boton-mentoria:hover {
+  nav .sidebar .menu-options li .boton-mentoria:hover {
     transform: scale(1.1);
     background-color: #fff;
     color: #000;
     font-weight: bold;
     transition: all 0.2s ease-in-out;
   }
-  nav .menu-items ul li .boton-mentoria:active {
+  nav .sidebar .menu-options li .boton-mentoria:active {
     transform: scale(0.9);
+  }
+  nav .sidebar .close-btn {
+    display: none;
+  }
+  nav .svg-menu {
+    display: none;
+  }
+}
+@media screen and (min-width: 1024px) {
+  nav {
+    padding: 1.5rem 4rem;
+  }
+  nav .sidebar {
+    display: flex;
+    position: static;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 0px;
+  }
+  nav .sidebar .menu-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  nav .sidebar .menu-options li {
+    list-style: none;
+    margin-bottom: 0;
+  }
+  nav .sidebar .menu-options li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  nav .sidebar .menu-options li a:hover {
+    color: #3ef2d0;
+    transition: all 0.2s ease-in-out;
+  }
+  nav .sidebar .menu-options li .boton-mentoria {
+    padding: 1rem 2rem;
+    background-color: #3ef2d0;
+    color: #000;
+    font-weight: bold;
+  }
+  nav .sidebar .menu-options li .boton-mentoria:hover {
+    transform: scale(1.1);
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+  }
+  nav .sidebar .menu-options li .boton-mentoria:active {
+    transform: scale(0.9);
+  }
+  nav .sidebar .close-btn {
+    display: none;
   }
   nav .svg-menu {
     display: none;

@@ -37,46 +37,6 @@ header {
   padding-top: 0;
   display: flex;
   flex-direction: column;
-  /*
-    nav {
-      position: fixed;
-      top: 0;
-      padding: 0.2rem 0.5rem;
-      width: 100%;
-      div {
-        background-color: $soft-black;
-        padding: 1rem 1.5rem;
-        border-radius: 1rem;
-        display: flex;
-        justify-content: space-between;
-        img {
-          width: 5rem;
-          border-radius: 100%;
-          box-shadow: $box-shadow;
-        }
-        ul {
-          list-style: none;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 0.5rem;
-          li {
-            a {
-              color: white;
-              text-decoration: none;
-              font-size: 2rem;
-              padding: 1rem 1rem;
-              &:hover {
-                background-color: $turquesa;
-                border-radius: 1rem;
-                color: $soft-black;
-              }
-            }
-          }
-        }
-      }
-    }
-  */
 }
 header .contenido-encabezado {
   margin: auto;
