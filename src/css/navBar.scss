@@ -89,6 +89,9 @@ nav {
     transition: right 0.3s ease;
     padding: 20px;
     z-index: 999;
+    &.hidden {
+      transform: translateX(-100%);
+    }
   }
 
   .sidebar.active {
@@ -222,6 +225,7 @@ font-size: 12px;
       justify-content: flex-end;
       width: 100%;
       padding: 0px;
+  
       .menu-options {
         display: flex;
         flex-direction: row;

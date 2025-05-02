@@ -273,13 +273,13 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log(fearIndex);
     span_fear_greed.textContent = fearIndex;
     if (fearIndex === "Greed") {
-      span_fear_greed.style.color='#32CD32';
+      span_fear_greed.style.color='#05DF72'; //green-400 tailwind code
     } else if (fearIndex === "Fear") {
-      span_fear_greed.style.color="#FF4500";
+      span_fear_greed.style.color="#FB2C36"; //red-500 tailwind code
     } else if (fearIndex === "Extreme Greed") {
-      span_fear_greed.style.color='#006400';
+      span_fear_greed.style.color='#00A63E'; //green-600 tailwind code
     } else if (fearIndex === "Extreme Fear") {
-      span_fear_greed.style.color='#8B0000';
+      span_fear_greed.style.color='#9F0712'; //red-800 tailwind code
     }
  
 

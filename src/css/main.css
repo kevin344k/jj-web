@@ -1,9 +1,4 @@
 @charset "UTF-8";
-@font-face {
-  font-family: "Open Sans";
-  src: url("../fonts/OpenSans-Regular.woff") format("woff"), url("../fonts/OpenSans-Bold.woff") format("woff");
-  font-display: swap;
-}
 html {
   font-size: 62.5%;
   font-family: "Inter", sans-serif;
@@ -50,41 +45,66 @@ header .contenido-encabezado .text-autor {
   font-style: italic;
   font-weight: 700;
 }
-header .contenido-encabezado .div-btc-price {
+header .contenido-encabezado .btc-container-data {
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+header .contenido-encabezado .btc-container-data .div-btc-price {
   background-color: #333;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.1rem 1rem;
   border-radius: 0.5rem;
-  min-width: 30rem;
+  min-width: 24rem;
   max-width: 36rem;
-  margin: auto;
 }
-header .contenido-encabezado .div-btc-price div {
+header .contenido-encabezado .btc-container-data .div-btc-price div {
   display: flex;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
   align-items: center;
   gap: 0.5rem;
 }
-header .contenido-encabezado .div-btc-price div p {
+header .contenido-encabezado .btc-container-data .div-btc-price div p {
   color: white;
 }
-header .contenido-encabezado .div-btc-price div p span {
+header .contenido-encabezado .btc-container-data .div-btc-price div p span {
   color: gray;
   font-size: 1.3rem;
 }
-header .contenido-encabezado .div-btc-price div img {
-  width: 3rem;
+header .contenido-encabezado .btc-container-data .div-btc-price div img {
+  width: 2.5rem;
 }
-header .contenido-encabezado .div-btc-price span {
+header .contenido-encabezado .btc-container-data .div-btc-price span {
   color: white;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
 }
-header .contenido-encabezado .fear-and-greed {
-  display: none;
+header .contenido-encabezado .btc-container-data .fear-and-greed {
+  display: flex;
+  position: relative;
+  background-color: #333;
+  border-radius: 5px;
+  color: white;
+  min-width: 10rem;
+  height: 100%;
+  padding: 2px;
+  justify-content: center;
+  align-items: center;
+}
+header .contenido-encabezado .btc-container-data .fear-and-greed p {
+  color: rgb(146, 146, 146);
+  font-size: 12px;
+  position: absolute;
+  top: 1px;
+}
+header .contenido-encabezado .btc-container-data .fear-and-greed span {
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 header .contenido-encabezado .clock {
   display: flex;
@@ -97,7 +117,6 @@ header .contenido-encabezado .text_slogan {
   font-size: 3rem;
 }
 header .contenido-encabezado .boton {
-  font-family: "Open Sans", sans-serif;
   background-color: #3ef2d0;
   color: #000000;
   margin-top: 1.6rem;
@@ -210,6 +229,11 @@ main section .header-title p {
   font-size: 2.4rem;
   text-align: center;
   margin-bottom: 10px;
+}
+main > section:not(:first-of-type) {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 35%;
 }
 main .section-calcujub {
   min-width: 320px;
@@ -434,7 +458,6 @@ main .section--mis-redes .redes-conteiners .button-group, main .section-mentoria
 }
 main .section--mis-redes .redes-conteiners .button-group .botones_redes, main .section-mentoria .redes-conteiners .button-group .botones_redes {
   background-color: #3ef2d0;
-  font-family: "Open Sans", sans-serif;
   background-color: #ffffff;
   color: #000000;
   margin-top: 1.6rem;
@@ -487,7 +510,6 @@ main .section--mis-redes .redes-conteiners .container-live .foto, main .section-
   margin: auto;
 }
 main .section--mis-redes .redes-conteiners .container-live .live, main .section-mentoria .redes-conteiners .container-live .live {
-  font-family: "Open Sans", sans-serif;
   background-color: transparent;
   color: red;
   margin-top: 1.6rem;
@@ -557,7 +579,6 @@ main .section-announce .div-container--announce .h2-red-tittle {
   font-weight: 500;
 }
 main .section-announce .div-container--announce .boton {
-  font-family: "Open Sans", sans-serif;
   background-color: #3ef2d0;
   color: #000000;
   margin-top: 1.6rem;
@@ -739,7 +760,6 @@ main .section-merch .container .slider input:nth-child(4):checked ~ .content {
   left: -90rem;
 }
 main .section-merch .bpedido {
-  font-family: "Open Sans", sans-serif;
   background-color: #3ef2d0;
   color: #000000;
   margin-top: 1.6rem;
@@ -849,7 +869,6 @@ main .section-libros .gallery li .span-order-book .span-order {
   padding: 1.5rem;
 }
 main .bpedido {
-  font-family: "Open Sans", sans-serif;
   background-color: #3ef2d0;
   color: #000000;
   margin-top: 1.6rem;
@@ -996,7 +1015,7 @@ main .bpedido:active {
     margin: 0;
   }
   header .contenido-encabezado .btc-container-data .div-btc-price div {
-    font-size: 2.6rem;
+    font-size: 2.2rem;
   }
   header .contenido-encabezado .btc-container-data .div-btc-price div img {
     width: 4rem;
@@ -1369,6 +1388,9 @@ main .bpedido:active {
   main .section-announce .div-container--announce p {
     font-size: 2.5rem;
   }
+  main .section--mis-redes, main .section-mentoria {
+    padding: 50px 0;
+  }
   main .section--mis-redes .redes-conteiners, main .section-mentoria .redes-conteiners {
     max-width: 90rem;
     margin: 8rem auto;
@@ -1433,5 +1455,15 @@ main .bpedido:active {
   }
   main .section-merch .container .slider input:nth-child(4):checked ~ .content {
     left: -150rem;
+  }
+}
+@keyframes appear {
+  from {
+    opacity: 0.5;
+    scale: 0.6;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
   }
 }/*# sourceMappingURL=main.css.map */

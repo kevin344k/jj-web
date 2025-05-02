@@ -1,9 +1,4 @@
-@font-face {
-  font-family: "Open Sans";
-  src: url("../fonts/OpenSans-Regular.woff") format("woff"),
-    url("../fonts/OpenSans-Bold.woff") format("woff");
-  font-display: swap;
-}
+
 
 $turquesa: #3ef2d0;
 $soft-black: #212529;
@@ -14,12 +9,12 @@ $gris-middle: #d6d7d8;
 $gris-strong: #bbc9d6;
 $blanco: #ffffff;
 $negro: #000000;
-$xsmall: 320px;
-$small: 570px;
-$medium: 760px;
-$large: 1024px;
+$xsmall: 320px; //mobile-samll
+$small: 570px; //mobile-medium
+$medium: 760px; //tablet
+$large: 1024px; //desktop
 $font-family-ubuntu: "Inter", sans-serif;
-$font-famiy-open: "Open Sans", sans-serif;
+
 $font-size-paragraph: 1.6rem;
 $font-W-regular-400: 400;
 $font-W-bold-700: 700;
@@ -51,7 +46,7 @@ body {
 }
 
 @mixin but($bg-color, $text) {
-  font-family: $font-famiy-open;
+
   background-color: $bg-color;
   color: $text;
   margin-top: 1.6rem;
@@ -99,19 +94,27 @@ header {
       font-style: italic;
       font-weight: $font-W-bold-700;
     }
-    .div-btc-price {
+
+
+.btc-container-data{
+  
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+      .div-btc-price {
       background-color: #333;
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 1.1rem 1rem;
       border-radius: 0.5rem;
-      min-width: 30rem;
+      min-width: 24rem;
       max-width: 36rem;
-      margin: auto;
+  
       div {
         display: flex;
-        font-size: 2rem;
+        font-size: 1.8rem;
         font-weight: bold;
         align-items: center;
         gap: 0.5rem;
@@ -124,18 +127,50 @@ header {
           }
         }
         img {
-          width: 3rem;
+          width: 2.5rem;
         }
       }
       span {
         color: white;
-        font-size: 2rem;
+        font-size: 1.8rem;
         font-weight: bold;
       }
     }
     .fear-and-greed{
-      display: none;
+
+      
+      display: flex;
+      position: relative;
+    background-color: #333;
+    border-radius: 5px;
+    color: white;
+min-width: 10rem;
+    
+   height: 100%;
+   padding: 2px;
+    justify-content: center;
+    align-items: center;
+  // padding: 0 30px;
+   
+    p{
+      color: rgb(146, 146, 146);
+      font-size: 12px;
+      position: absolute;
+      top: 1px;
     }
+    span{
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+
+
+      
+    }
+}
+
+
+
 
     .clock {
       display: flex;
@@ -242,6 +277,7 @@ main {
 
   section {
     padding: 5rem 1rem;
+      
     .header-title {
       width: 100%;
 
@@ -265,6 +301,15 @@ main {
         margin-bottom: 10px;
       }
     }
+
+
+  }
+
+  &>section:not(:first-of-type){
+  //animacion elegante scroll
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range:entry 0% cover 35% ;
   }
 
   .section-calcujub {
@@ -1089,7 +1134,7 @@ main {
           padding: 1.5rem 2rem;
           margin: 0;
           div {
-            font-size: 2.6rem;
+            font-size: 2.2rem;
   
             img {
               width: 4rem;
@@ -1467,6 +1512,8 @@ main {
     max-width: none;
 
     section {
+      
+
       .header-title {
         width: 100%;
 
@@ -1548,6 +1595,7 @@ main {
     }
 
     .section--mis-redes {
+   padding: 50px 0;
       .redes-conteiners {
         max-width: 90rem;
         margin: 8rem auto;
@@ -1639,4 +1687,18 @@ main {
       }
     }
   }
+}
+
+
+
+@keyframes appear {
+  from{
+      opacity: 0.5;
+      scale: 0.6;
+  }
+  to{
+      opacity: 1;
+      scale: 1;
+  }
+
 }

@@ -17,7 +17,7 @@ const indicators_group = document.querySelectorAll(".indicator");
 
 
 let sliderPosition = 0; //oindicador redondo de posicion de la imgen visible vs las que faltan
-let indexArr = 0;
+let indexArr = 0; //indica la posicion del array de imagenes de donde partira el conteo hasta llegar a el total de imagenes que hay
 
 if (window.innerWidth >= 768 && window.innerWidth < 1024) {
   indexArr = 1;
@@ -32,7 +32,7 @@ indicators_group[indexArr].classList.add("activate_indicator");
 //para dispositivos pequeños el width de cada imagen debe ser de 320px
 
 arrow_right.addEventListener("click", () => {
-  console.log(indexArr < arr.length);
+ // console.log(indexArr < arr.length);
 
   if (indexArr < arr.length - 1) {
     sliderContainer.style.left = `${sliderPosition - 320}px`;
@@ -60,7 +60,7 @@ arrow_left.addEventListener("click", () => {
   }
 console.log(indexArr, positinoLeftArr);
 
-  if (indexArr > positinoLeftArr) {
+  if (indexArr >= positinoLeftArr) {
     sliderContainer.style.left = `${sliderPosition + 320}px`;
     indicators_group[indexArr].classList.remove("activate_indicator");
     indicators_group[indexArr - 1].classList.add("activate_indicator");
@@ -69,3 +69,6 @@ console.log(indexArr, positinoLeftArr);
     indexArr--;
   }
 });
+
+
+console.log(indexArr,'inmdex arr');

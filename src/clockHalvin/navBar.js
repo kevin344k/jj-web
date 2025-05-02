@@ -28,3 +28,12 @@ document.addEventListener("click", (event) => {
     overlay.classList.remove("active");
   }
 });
+
+
+    // Agregar evento a los enlaces del menú para cerrarlo al hacer clic
+    const menuLinks = document.querySelectorAll('.sidebar ul li a');
+    menuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        sideMenu.classList.remove("active");
+        overlay.classList.remove("active");
+      })})
