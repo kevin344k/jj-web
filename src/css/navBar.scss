@@ -30,18 +30,46 @@ body{
 }
 
 .but-floating {
+  display: none;
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 25px;
+  left: 20px;
   background-color: #fff;
   border-radius: 100%;
   box-shadow: 0px 0px 5px 0px rgb(24, 32, 37);
-  z-index: 100;
+  z-index: 10;
   user-select: none;
+  animation: fadeInUp 0.4s forwards;
+  
   img {
-    width: 5rem;
-    height: 4.5rem;
+    width: 4rem;
+    height: 3.5rem;
     user-select: none;
+  }
+ 
+}
+
+ .hidden{
+  animation: fadeOutDown 0.4s forwards;
+}
+
+.but-floating-wasap {
+  position: fixed;
+  bottom: 25px;
+  right: 20px;
+
+
+
+  z-index: 10;
+  user-select: none;
+  -webkit-animation: shake-bottom 3s cubic-bezier(0.455, 0.030, 0.515, 0.955) both infinite;
+	        animation: shake-bottom 3s cubic-bezier(0.455, 0.030, 0.515, 0.955) both infinite;
+  img {
+    width: 6rem;
+    height: 5.5rem;
+    user-select: none;
+       filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+      
   }
 }
 
@@ -88,7 +116,7 @@ nav {
     background-color: rgb(24, 32, 37);
     transition: right 0.3s ease;
     padding: 20px;
-    z-index: 999;
+    z-index: 10;
     &.hidden {
       transform: translateX(-100%);
     }
@@ -215,6 +243,28 @@ font-size: 12px;
 
 
 @media screen and (min-width: 1024px) {
+
+
+body{
+
+   
+  .but-floating {
+    img{
+      width: 6rem;
+      height: 5.5rem;
+    }
+  }
+  .but-floating-wasap {
+    img{
+      width: 8rem;
+      height: 7.5rem;
+    }
+  }
+}
+
+
+
+
   nav {
     padding: 1.5rem 4rem;
 
@@ -269,5 +319,80 @@ font-size: 12px;
     .svg-menu {
       display: none;
     }
+  }
+}
+
+@-webkit-keyframes shake-bottom {
+  0%, 100% {
+    -webkit-transform: rotate(0deg);
+    -webkit-transform-origin: 50% 100%;
+  }
+
+  1% {
+    -webkit-transform: rotate(2deg);
+  }
+  2%, 4%, 6% {
+    -webkit-transform: rotate(-4deg);
+  }
+  3%, 5%, 7% {
+    -webkit-transform: rotate(4deg);
+  }
+  8% {
+    -webkit-transform: rotate(-2deg);
+  }
+  9% {
+    -webkit-transform: rotate(2deg);
+  }
+  10%, 100% {
+    -webkit-transform: rotate(0deg);
+  }
+}
+
+@keyframes shake-bottom {
+  0%, 100% {
+    transform: rotate(0deg);
+    transform-origin: 50% 100%;
+  }
+
+  1% {
+    transform: rotate(2deg);
+  }
+  2%, 4%, 6% {
+    transform: rotate(-4deg);
+  }
+  3%, 5%, 7% {
+    transform: rotate(4deg);
+  }
+  8% {
+    transform: rotate(-2deg);
+  }
+  9% {
+    transform: rotate(2deg);
+  }
+  10%, 100% {
+    transform: rotate(0deg);
+  }
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.9) translateY(10px);
   }
 }

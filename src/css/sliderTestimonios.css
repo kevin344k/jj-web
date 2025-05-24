@@ -59,7 +59,7 @@
   left: 0;
   outline: none;
   gap: 20px;
-  transition: all 0.2s ease-in;
+  transition: transform 0.3s ease;
 }
 .section-slider .container .slider-container .image {
   width: 300px;
@@ -82,7 +82,7 @@
 }
 .section-slider .container .slider-container .image:hover {
   transform: scale(1.2);
-  transition: all 0.2s ease;
+  transition: transform ease-in-out 0.2s;
 }
 .section-slider .arrow-left, .section-slider .arrow-right {
   z-index: 1;

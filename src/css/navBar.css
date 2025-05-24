@@ -15,23 +15,48 @@ body .active {
 }
 
 .but-floating {
+  display: none;
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 25px;
+  left: 20px;
   background-color: #fff;
   border-radius: 100%;
   box-shadow: 0px 0px 5px 0px rgb(24, 32, 37);
-  z-index: 100;
+  z-index: 10;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  animation: fadeInUp 0.4s forwards;
+}
+.but-floating img {
+  width: 4rem;
+  height: 3.5rem;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
 }
-.but-floating img {
-  width: 5rem;
-  height: 4.5rem;
+
+.hidden {
+  animation: fadeOutDown 0.4s forwards;
+}
+
+.but-floating-wasap {
+  position: fixed;
+  bottom: 25px;
+  right: 20px;
+  z-index: 10;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  animation: shake-bottom 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) both infinite;
+}
+.but-floating-wasap img {
+  width: 6rem;
+  height: 5.5rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
 }
 
 nav {
@@ -75,7 +100,7 @@ nav .sidebar {
   background-color: rgb(24, 32, 37);
   transition: right 0.3s ease;
   padding: 20px;
-  z-index: 999;
+  z-index: 10;
 }
 nav .sidebar.hidden {
   transform: translateX(-100%);
@@ -187,6 +212,14 @@ nav .menu-options li .boton-mentoria:active {
   }
 }
 @media screen and (min-width: 1024px) {
+  body .but-floating img {
+    width: 6rem;
+    height: 5.5rem;
+  }
+  body .but-floating-wasap img {
+    width: 8rem;
+    height: 7.5rem;
+  }
   nav {
     padding: 1.5rem 4rem;
   }
@@ -238,5 +271,49 @@ nav .menu-options li .boton-mentoria:active {
   }
   nav .svg-menu {
     display: none;
+  }
+}
+@keyframes shake-bottom {
+  0%, 100% {
+    transform: rotate(0deg);
+    transform-origin: 50% 100%;
+  }
+  1% {
+    transform: rotate(2deg);
+  }
+  2%, 4%, 6% {
+    transform: rotate(-4deg);
+  }
+  3%, 5%, 7% {
+    transform: rotate(4deg);
+  }
+  8% {
+    transform: rotate(-2deg);
+  }
+  9% {
+    transform: rotate(2deg);
+  }
+  10%, 100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.9) translateY(10px);
   }
 }/*# sourceMappingURL=navBar.css.map */

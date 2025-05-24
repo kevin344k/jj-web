@@ -73,7 +73,7 @@ $box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
     overflow: hidden;
     margin-bottom: 32px;
     position: relative;
-
+    
     .slider-container {
       display: flex;
       position: absolute;
@@ -82,7 +82,7 @@ $box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
       outline: none;
 
       gap: 20px;
-      transition: all 0.2s ease-in;
+      transition: transform .3s ease ;
 
       .image {
         width: 300px; //ancho contenedor de imagen
@@ -107,7 +107,7 @@ $box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
         }
         &:hover {
           transform: scale(1.20);
-          transition: all 0.2s ease;
+          transition: transform ease-in-out .2s;
         }
        
       }
@@ -247,8 +247,7 @@ $box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
         height: 15px;
       }
 
-      .activate_indicator {
-      }
+
     }
   }
 }

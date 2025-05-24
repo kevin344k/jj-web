@@ -17,182 +17,6 @@ body {
   box-sizing: border-box;
 }
 
-header {
-  width: 100%;
-  min-width: 320px;
-  height: -moz-fit-content;
-  height: 70vh;
-  margin: auto;
-  background-image: url("../../imagenes/hero-mobile-Greenpeace.webp");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  text-align: center;
-  padding: 1.6rem 0px;
-  padding-top: 0;
-  display: flex;
-  flex-direction: column;
-}
-header .contenido-encabezado {
-  margin: auto;
-  padding: 6px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-}
-header .contenido-encabezado .text-autor {
-  font-style: italic;
-  font-weight: 700;
-}
-header .contenido-encabezado .btc-container-data {
-  height: -moz-fit-content;
-  height: fit-content;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-header .contenido-encabezado .btc-container-data .div-btc-price {
-  background-color: #333;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.1rem 1rem;
-  border-radius: 0.5rem;
-  min-width: 24rem;
-  max-width: 36rem;
-}
-header .contenido-encabezado .btc-container-data .div-btc-price div {
-  display: flex;
-  font-size: 1.8rem;
-  font-weight: bold;
-  align-items: center;
-  gap: 0.5rem;
-}
-header .contenido-encabezado .btc-container-data .div-btc-price div p {
-  color: white;
-}
-header .contenido-encabezado .btc-container-data .div-btc-price div p span {
-  color: gray;
-  font-size: 1.3rem;
-}
-header .contenido-encabezado .btc-container-data .div-btc-price div img {
-  width: 2.5rem;
-}
-header .contenido-encabezado .btc-container-data .div-btc-price span {
-  color: white;
-  font-size: 1.8rem;
-  font-weight: bold;
-}
-header .contenido-encabezado .btc-container-data .fear-and-greed {
-  display: flex;
-  position: relative;
-  background-color: #333;
-  border-radius: 5px;
-  color: white;
-  min-width: 10rem;
-  height: 100%;
-  padding: 2px;
-  justify-content: center;
-  align-items: center;
-}
-header .contenido-encabezado .btc-container-data .fear-and-greed p {
-  color: rgb(146, 146, 146);
-  font-size: 12px;
-  position: absolute;
-  top: 1px;
-}
-header .contenido-encabezado .btc-container-data .fear-and-greed span {
-  font-size: 1.8rem;
-  font-weight: bold;
-}
-header .contenido-encabezado .clock {
-  display: flex;
-  justify-content: center;
-  margin: auto 0px;
-  width: 100%;
-}
-header .contenido-encabezado .text_slogan {
-  font-weight: bold;
-  font-size: 3rem;
-}
-header .contenido-encabezado .boton {
-  background-color: #3ef2d0;
-  color: #000000;
-  margin-top: 1.6rem;
-  font-size: 2rem;
-  text-decoration: none;
-  display: inline-block;
-  border-radius: 0.5rem;
-  padding: 1.5rem 2.5rem;
-  border-radius: 0.5rem;
-  font-size: 1.6rem;
-  font-weight: 700;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: auto;
-  border-bottom: 8px solid #299b86;
-  box-shadow: 0px 5px 3px 2px rgba(0, 0, 0, 0.1);
-}
-header .contenido-encabezado .boton:hover {
-  background-color: #19e6c0;
-  cursor: pointer;
-}
-header .contenido-encabezado .boton:active {
-  transform: scale(0.9);
-}
-header .contenido-encabezado .flip-clock-wrapper ul {
-  margin: 0.3rem;
-}
-header .contenido-encabezado .flip-clock-wrapper ul li {
-  line-height: 4.5rem;
-}
-@-moz-document url-prefix() {
-  header .contenido-encabezado .flip-clock-wrapper ul li {
-    line-height: 5.5rem;
-  }
-}
-header .contenido-encabezado .flip-clock-wrapper ul li a .up .inn {
-  font-size: 3.5rem;
-}
-header .contenido-encabezado .flip-clock-wrapper ul li a .down .inn {
-  font-size: 3.5rem;
-}
-header .contenido-encabezado .flip-clock-wrapper ul li a div.up:after {
-  top: 2.2rem;
-}
-header .contenido-encabezado .flip-clock-wrapper .flip-clock-divider {
-  width: 1.1rem;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-header .contenido-encabezado .flip-clock-wrapper .flip-clock-divider .flip-clock-label {
-  right: -50px;
-  display: none;
-}
-header .contenido-encabezado .flip-clock-wrapper .days {
-  width: 0px;
-}
-header .contenido-encabezado .flip-clock-wrapper .hours .flip-clock-dot,
-header .contenido-encabezado .flip-clock-wrapper .minutes .flip-clock-dot,
-header .contenido-encabezado .flip-clock-wrapper .seconds .flip-clock-dot {
-  left: 0rem;
-}
-header .contenido-encabezado .flip-clock-wrapper .hours .top,
-header .contenido-encabezado .flip-clock-wrapper .minutes .top,
-header .contenido-encabezado .flip-clock-wrapper .seconds .top {
-  top: 15px;
-}
-header .contenido-encabezado .flip-clock-wrapper .hours .bottom,
-header .contenido-encabezado .flip-clock-wrapper .minutes .bottom,
-header .contenido-encabezado .flip-clock-wrapper .seconds .bottom {
-  top: 30px;
-}
-header .contenido-encabezado .clock .flip {
-  width: 2.5rem;
-  height: 4.5rem;
-}
-
 main {
   min-width: 320px;
   max-width: none;
@@ -233,7 +57,7 @@ main section .header-title p {
 main > section:not(:first-of-type) {
   animation: appear linear;
   animation-timeline: view();
-  animation-range: entry 0% cover 35%;
+  animation-range: entry 0% cover 20%;
 }
 main .section-calcujub {
   min-width: 320px;
@@ -454,6 +278,8 @@ main .section--mis-redes .redes-conteiners, main .section-mentoria .redes-contei
 main .section--mis-redes .redes-conteiners .button-group, main .section-mentoria .redes-conteiners .button-group {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 1.5rem;
 }
 main .section--mis-redes .redes-conteiners .button-group .botones_redes, main .section-mentoria .redes-conteiners .button-group .botones_redes {
@@ -466,8 +292,12 @@ main .section--mis-redes .redes-conteiners .button-group .botones_redes, main .s
   display: inline-block;
   border-radius: 0.5rem;
   border: 1px solid #3ef2d0;
-  padding: 1rem 3rem;
+  padding: 1rem 2.5rem;
   margin-top: 0rem;
+  min-width: 25rem;
+  width: 25rem;
+  max-width: 30rem;
+  font-size: 1.6rem;
   box-shadow: 3px 3px 5px 0px #d6d7d8;
   display: flex;
   justify-content: center;
@@ -483,15 +313,19 @@ main .section--mis-redes .redes-conteiners .button-group .botones_redes:active, 
   transform: scale(0.9);
 }
 main .section--mis-redes .redes-conteiners .button-group .botones_redes img, main .section-mentoria .redes-conteiners .button-group .botones_redes img {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   margin-right: 0.5rem;
 }
 main .section--mis-redes .redes-conteiners .button-group .botones_redes span, main .section-mentoria .redes-conteiners .button-group .botones_redes span {
   margin: auto 0rem;
   color: #000000;
   font-weight: bold;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+  width: 100%;
+  overflow: hidden;
+  white-space: wrap;
+  text-overflow: ellipsis;
 }
 main .section--mis-redes .redes-conteiners .linea, main .section-mentoria .redes-conteiners .linea {
   display: none;
@@ -501,15 +335,27 @@ main .section--mis-redes .redes-conteiners .container-live, main .section-mentor
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-top: 6rem;
   gap: 2.2rem;
 }
-main .section--mis-redes .redes-conteiners .container-live .foto, main .section-mentoria .redes-conteiners .container-live .foto {
+main .section--mis-redes .redes-conteiners .container-live .live_texto, main .section-mentoria .redes-conteiners .container-live .live_texto {
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+main .section--mis-redes .redes-conteiners .container-live .live-group, main .section-mentoria .redes-conteiners .container-live .live-group {
+  width: -moz-fit-content;
+  width: fit-content;
+  align-self: center;
+  position: relative;
+}
+main .section--mis-redes .redes-conteiners .container-live .live-group .foto, main .section-mentoria .redes-conteiners .container-live .live-group .foto {
   border-radius: 100%;
   box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
-  width: 15rem;
+  width: 10rem;
   margin: auto;
+  border: 5px solid #FF0042;
 }
-main .section--mis-redes .redes-conteiners .container-live .live, main .section-mentoria .redes-conteiners .container-live .live {
+main .section--mis-redes .redes-conteiners .container-live .live-group .live, main .section-mentoria .redes-conteiners .container-live .live-group .live {
   background-color: transparent;
   color: red;
   margin-top: 1.6rem;
@@ -523,19 +369,18 @@ main .section--mis-redes .redes-conteiners .container-live .live, main .section-
   font-size: 2.4rem;
   display: none;
 }
-main .section--mis-redes .redes-conteiners .container-live .live:hover, main .section-mentoria .redes-conteiners .container-live .live:hover {
+main .section--mis-redes .redes-conteiners .container-live .live-group .live:hover, main .section-mentoria .redes-conteiners .container-live .live-group .live:hover {
   background-color: #19e6c0;
   cursor: pointer;
 }
-main .section--mis-redes .redes-conteiners .container-live .live:active, main .section-mentoria .redes-conteiners .container-live .live:active {
+main .section--mis-redes .redes-conteiners .container-live .live-group .live:active, main .section-mentoria .redes-conteiners .container-live .live-group .live:active {
   transform: scale(0.9);
 }
-main .section--mis-redes .redes-conteiners .container-live .animated_live, main .section-mentoria .redes-conteiners .container-live .animated_live {
-  height: 7.4rem;
-}
-main .section--mis-redes .redes-conteiners .container-live .live_texto, main .section-mentoria .redes-conteiners .container-live .live_texto {
-  font-weight: 700;
-  font-size: 2.5rem;
+main .section--mis-redes .redes-conteiners .container-live .live-group .animated_live, main .section-mentoria .redes-conteiners .container-live .live-group .animated_live {
+  height: 5.4rem;
+  position: absolute;
+  right: -80px;
+  top: -20px;
 }
 main .section--mis-redes .redes-conteiners .container-live .stream_iconos, main .section-mentoria .redes-conteiners .container-live .stream_iconos {
   display: flex;
@@ -555,8 +400,32 @@ main .section--mis-redes .redes-conteiners .container-live .stream_iconos a:acti
   transform: scale(0.9);
 }
 main .section--mis-redes .redes-conteiners .container-live .stream_iconos img, main .section-mentoria .redes-conteiners .container-live .stream_iconos img {
-  width: 7rem;
+  width: 4rem;
   margin: auto;
+}
+main .section--mis-redes .redes-conteiners .container-live .live-horarios, main .section-mentoria .redes-conteiners .container-live .live-horarios {
+  border: 1px solid #d6d7d8;
+  border-radius: 12px;
+  padding: 12px;
+}
+main .section--mis-redes .redes-conteiners .container-live .live-horarios p, main .section-mentoria .redes-conteiners .container-live .live-horarios p {
+  margin-bottom: 12px;
+  color: #5c5c5c;
+}
+main .section--mis-redes .redes-conteiners .container-live .live-horarios .container-paises, main .section-mentoria .redes-conteiners .container-live .live-horarios .container-paises {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+main .section--mis-redes .redes-conteiners .container-live .live-horarios .container-paises div img, main .section-mentoria .redes-conteiners .container-live .live-horarios .container-paises div img {
+  width: 32px;
+  height: 32px;
+}
+main .section--mis-redes .redes-conteiners .container-live .live-horarios .container-paises div p, main .section-mentoria .redes-conteiners .container-live .live-horarios .container-paises div p {
+  font-size: 14px;
+  color: #707070;
 }
 main .section-announce {
   min-width: 320px;
@@ -987,114 +856,7 @@ main .bpedido:active {
   text-align: center;
 }
 
-@media (orientation: landscape) {
-  header {
-    height: -moz-fit-content;
-    height: fit-content;
-  }
-  header .contenido-encabezado {
-    gap: 1rem;
-  }
-}
 @media screen and (min-width: 560px) {
-  header {
-    width: 100%;
-    background-image: url("../../imagenes/hero-desktop-Greenpeace.webp");
-  }
-  header .contenido-encabezado .btc-container-data {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    gap: 20px;
-  }
-  header .contenido-encabezado .btc-container-data .div-btc-price {
-    max-width: 52.4rem;
-    width: 45rem;
-    padding: 1.5rem 2rem;
-    margin: 0;
-  }
-  header .contenido-encabezado .btc-container-data .div-btc-price div {
-    font-size: 2.2rem;
-  }
-  header .contenido-encabezado .btc-container-data .div-btc-price div img {
-    width: 4rem;
-  }
-  header .contenido-encabezado .btc-container-data .div-btc-price #span-price-BTC {
-    font-size: 2.6rem;
-  }
-  header .contenido-encabezado .btc-container-data .fear-and-greed {
-    display: flex;
-    position: relative;
-    background-color: #333;
-    border-radius: 5px;
-    color: white;
-    height: 100%;
-    padding: 2px;
-    justify-content: center;
-    align-items: center;
-    padding: 0 30px;
-  }
-  header .contenido-encabezado .btc-container-data .fear-and-greed p {
-    color: rgb(146, 146, 146);
-    font-size: 14px;
-    position: absolute;
-    top: 5px;
-  }
-  header .contenido-encabezado .btc-container-data .fear-and-greed span {
-    font-size: 26px;
-    font-weight: bold;
-  }
-  header .contenido-encabezado .text_slogan {
-    font-size: 4rem;
-  }
-  header .contenido-encabezado .flip-clock-wrapper ul {
-    margin-top: 2.3rem;
-    margin-bottom: 2.3rem;
-  }
-  header .contenido-encabezado .flip-clock-wrapper ul li {
-    line-height: 6.5rem;
-  }
-  header .contenido-encabezado .flip-clock-wrapper ul li a .up .inn {
-    font-size: 6.5rem;
-  }
-  header .contenido-encabezado .flip-clock-wrapper ul li a .down .inn {
-    font-size: 6.5rem;
-  }
-  header .contenido-encabezado .flip-clock-wrapper ul li a div.up:after {
-    top: 3.2rem;
-  }
-  header .contenido-encabezado .flip-clock-wrapper .flip-clock-divider {
-    width: 1.1rem;
-    height: -moz-fit-content;
-    height: fit-content;
-  }
-  header .contenido-encabezado .flip-clock-wrapper .flip-clock-divider .flip-clock-label {
-    right: -50px;
-    display: none;
-  }
-  header .contenido-encabezado .flip-clock-wrapper .days {
-    width: 0px;
-  }
-  header .contenido-encabezado .flip-clock-wrapper .hours .flip-clock-dot,
-  header .contenido-encabezado .flip-clock-wrapper .minutes .flip-clock-dot,
-  header .contenido-encabezado .flip-clock-wrapper .seconds .flip-clock-dot {
-    left: 0rem;
-  }
-  header .contenido-encabezado .flip-clock-wrapper .hours .top,
-  header .contenido-encabezado .flip-clock-wrapper .minutes .top,
-  header .contenido-encabezado .flip-clock-wrapper .seconds .top {
-    top: 45px;
-  }
-  header .contenido-encabezado .flip-clock-wrapper .hours .bottom,
-  header .contenido-encabezado .flip-clock-wrapper .minutes .bottom,
-  header .contenido-encabezado .flip-clock-wrapper .seconds .bottom {
-    top: 65px;
-  }
-  header .contenido-encabezado .clock .flip {
-    width: 6.5rem;
-    height: 6.5rem;
-  }
   main {
     width: 100%;
     max-width: none;
@@ -1156,8 +918,10 @@ main .bpedido:active {
   }
   main .section-calcujub .section--mis-redes, main .section-calcujub .section-mentoria {
     width: 100%;
+    background-color: red;
   }
   main .section-calcujub .section--mis-redes .redes-conteiners, main .section-calcujub .section-mentoria .redes-conteiners {
+    background-color: red;
     flex-direction: row;
     justify-content: space-evenly;
     max-width: none;
@@ -1167,6 +931,10 @@ main .bpedido:active {
   }
   main .section-calcujub .section--mis-redes .redes-conteiners .button-group .botones-redes span, main .section-calcujub .section-mentoria .redes-conteiners .button-group .botones-redes span {
     font-size: 2rem;
+  }
+  main .section-calcujub .section--mis-redes .redes-conteiners .container-live, main .section-calcujub .section-mentoria .redes-conteiners .container-live {
+    padding-top: 0px;
+    background-color: red;
   }
   main .section-calcujub .section--mis-redes .redes-conteiners .container-live .stream_iconos, main .section-calcujub .section-mentoria .redes-conteiners .container-live .stream_iconos {
     gap: 0.5rem;
@@ -1213,7 +981,12 @@ main .bpedido:active {
   }
   main .section--mis-redes .redes-conteiners, main .section-mentoria .redes-conteiners {
     flex-direction: row;
+    max-width: none;
     justify-content: center;
+    padding-top: 2rem;
+  }
+  main .section--mis-redes .redes-conteiners .container-live, main .section-mentoria .redes-conteiners .container-live {
+    padding-top: 0px;
   }
   main .section-about-me .redes_contenido {
     display: flex;
@@ -1225,103 +998,31 @@ main .bpedido:active {
 }
 @media screen and (min-width: 1024px) {
   p {
-    font-size: 1.9rem;
+    font-size: 1.6rem;
   }
-  header {
-    width: 100%;
+  main {
     max-width: none;
-    height: 80vh;
+  }
+  main section .header-title {
+    width: 100%;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: space-around;
-    background-image: url("../../imagenes/hero-desktop-Greenpeace.webp");
+    margin-bottom: 20px;
   }
-  header .contenido-encabezado {
-    gap: 3rem;
+  main section .header-title div {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 5px;
+    width: 100px;
+    background-color: #3ef2d0;
   }
-  header .contenido-encabezado .div-btc-price {
-    max-width: 52.4rem;
-    width: 45rem;
-    padding: 1.5rem 2rem;
-  }
-  header .contenido-encabezado .div-btc-price div p {
-    font-size: 2.6rem;
-  }
-  header .contenido-encabezado .div-btc-price div img {
-    width: 4rem;
-  }
-  header .contenido-encabezado .div-btc-price #span-price-BTC {
-    font-size: 2.6rem;
-  }
-  header .contenido-encabezado .text_slogan {
-    font-size: 5rem;
-  }
-  header .contenido-encabezado .text-autor {
-    font-size: 2rem;
-  }
-  header .contenido-encabezado .boton {
-    margin: 4rem 0rem;
-    width: -moz-fit-content;
-    width: fit-content;
-    margin: auto;
-  }
-  header .contenido-encabezado .flip-clock-wrapper ul {
-    margin-top: 2.3rem;
-    margin-bottom: 2.3rem;
-  }
-  header .contenido-encabezado .flip-clock-wrapper ul li {
-    /*centra los numeros en el flip*/
-    line-height: 14rem;
-  }
-  @-moz-document url-prefix() {
-    header .contenido-encabezado .flip-clock-wrapper ul li {
-      line-height: 17rem;
-    }
-  }
-  header .contenido-encabezado .flip-clock-wrapper ul li a .up .inn {
-    font-size: 15rem;
-  }
-  header .contenido-encabezado .flip-clock-wrapper ul li a .down .inn {
-    font-size: 15rem;
-  }
-  header .contenido-encabezado .flip-clock-wrapper ul li a div.up:after {
-    /*la linea que marca el dobles de cada flip*/
-    top: 6.5rem;
-  }
-  header .contenido-encabezado .flip-clock-wrapper .flip-clock-divider {
-    width: 3rem;
-    height: -moz-fit-content;
-    height: fit-content;
-  }
-  header .contenido-encabezado .flip-clock-wrapper .flip-clock-divider .flip-clock-label {
-    right: -50px;
-    display: none;
-  }
-  header .contenido-encabezado .flip-clock-wrapper .days {
-    width: 0px;
-  }
-  header .contenido-encabezado .flip-clock-wrapper .hours .flip-clock-dot,
-  header .contenido-encabezado .flip-clock-wrapper .minutes .flip-clock-dot,
-  header .contenido-encabezado .flip-clock-wrapper .seconds .flip-clock-dot {
-    left: 0rem;
-    width: 30px;
-    height: 30px;
-  }
-  header .contenido-encabezado .flip-clock-wrapper .hours .top,
-  header .contenido-encabezado .flip-clock-wrapper .minutes .top,
-  header .contenido-encabezado .flip-clock-wrapper .seconds .top {
-    top: 45px;
-  }
-  header .contenido-encabezado .flip-clock-wrapper .hours .bottom,
-  header .contenido-encabezado .flip-clock-wrapper .minutes .bottom,
-  header .contenido-encabezado .flip-clock-wrapper .seconds .bottom {
-    top: 95px;
-  }
-  header .contenido-encabezado .clock .flip {
-    margin: 1rem;
-    width: 12rem;
-    height: 14rem;
+  main section .header-title p {
+    font-weight: bold;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3rem;
+    margin-bottom: 10px;
   }
   main {
     max-width: none;
@@ -1396,6 +1097,10 @@ main .bpedido:active {
     margin: 8rem auto;
     justify-content: space-between;
   }
+  main .section--mis-redes .redes-conteiners .button-group .botones_redes, main .section-mentoria .redes-conteiners .button-group .botones_redes {
+    max-width: none;
+    width: 30rem;
+  }
   main .section--mis-redes .redes-conteiners .button-group .botones_redes span, main .section-mentoria .redes-conteiners .button-group .botones_redes span {
     font-size: 2rem;
   }
@@ -1407,6 +1112,7 @@ main .bpedido:active {
   }
   main .section--mis-redes .redes-conteiners .container-live .stream_iconos, main .section-mentoria .redes-conteiners .container-live .stream_iconos {
     display: flex;
+    justify-content: center;
     gap: 3rem;
   }
   main .section--mis-redes .redes-conteiners .container-live .stream_iconos a, main .section-mentoria .redes-conteiners .container-live .stream_iconos a {
@@ -1456,14 +1162,12 @@ main .bpedido:active {
   main .section-merch .container .slider input:nth-child(4):checked ~ .content {
     left: -150rem;
   }
-}
-@keyframes appear {
-  from {
-    opacity: 0.5;
-    scale: 0.6;
-  }
-  to {
-    opacity: 1;
-    scale: 1;
+  @keyframes appear {
+    from {
+      opacity: 0.3;
+    }
+    to {
+      opacity: 1;
+    }
   }
 }/*# sourceMappingURL=main.css.map */

@@ -318,9 +318,14 @@ function equivalenciaBTC() {
     if (
       priceBTC != "" &&
       input_inversion_inicial.value != "" &&
-      input_result_equiv_btc.value != 0
+      input_result_equiv_btc.value != 0 
     ) {
       function findRewards(halvins) {
+
+        console.log(halvins.Rewards <= input_result_equiv_btc.value);
+        
+
+
         return halvins.Rewards <= input_result_equiv_btc.value;
       }
     }
@@ -330,7 +335,7 @@ function equivalenciaBTC() {
 
   findHalvin();
 
-  span_hal_jub_nro.textContent = `# ${resultCallback.numero}`;
+  span_hal_jub_nro.textContent = `# ${resultCallback.numero}`; 
   span_hal_jub_anio.textContent = `${resultCallback.Year}`;
   span_hal_jub_reward.textContent = `${resultCallback.Rewards.toFixed(9)} btc`;
 
@@ -338,30 +343,28 @@ function equivalenciaBTC() {
 
   ///VARIABLES FUNDAMENTALES PARA EL CÁLCUILO USANDO LA FÓRMULA
 
-  const RI = data_halvin_now.recompensaBloqueNow;
-  const CP = data_halvin_now.costoProducciónBTC;
-  const NH = resultCallback.numero - data_halvin_now.halvin_now_numero;
+  const RI = data_halvin_now.recompensaBloqueNow; //halvin actual
+  const CP = data_halvin_now.costoProducciónBTC; //costo de producción
+  const NH = resultCallback.numero - data_halvin_now.halvin_now_numero; 
   const RF = resultCallback.Rewards;
   const CurrentDate = Date.now();
   if (NH != "" && RF != 0 && RF != "") {
     const PBTC = ((RI * CP * Math.pow(2, NH)) / RF).toFixed(3);
 
-    console.log("pbtc", PBTC);
-    console.log(
-      "equiv_inversion_inicial",
-      Number(input_result_equiv_btc.value) * PBTC
-    );
-    /*el resultado de PBTC se multiplica por l aequivalencia en btc de la inversioin inicial para obtener el aproximado del valor de la inversion ṕara el año de la jubilación  */
+   // console.log("pbtc", PBTC);
+   // console.log("equiv_inversion_inicial", Number(input_result_equiv_btc.value) * PBTC );
+
+    /*el resultado de PBTC se multiplica por la equivalencia en btc de la inversioin inicial para obtener el aproximado del valor de la inversion ṕara el año de la jubilación  */
     const inv_inicial_por_PBTC = new Intl.NumberFormat("es-Mx").format(
       (Number(input_result_equiv_btc.value) * PBTC).toFixed(2)
     );
 
-    console.log(Number(inv_inicial_por_PBTC).toFixed(2));
+   // console.log(parseFloat(inv_inicial_por_PBTC).toFixed(2));
 
     result_calc_formula.textContent = `$ ${inv_inicial_por_PBTC}`;
     result_calc_anio.textContent = `${resultCallback.Year} (${
       resultCallback.Year - new Date(CurrentDate).getFullYear()
-    }años)
+    } años)
        `;
 
     /* TABLA ADICIONAL QUE MUESTRA EL EQUIVALENTE DE LA INVERSION INICIAL EN CADA HALVIN */
@@ -369,12 +372,10 @@ function equivalenciaBTC() {
     for (let i = 5; i < halvins.length - 13; i++) {
       const child_aside = document.createElement("div");
 
-      const calc_jub_aside =
-        (RI *
-          CP *
-          Math.pow(2, halvins[i].numero - data_halvin_now.halvin_now_numero)) /
-        halvins[i].Rewards;
+      const calc_jub_aside =(RI * CP * Math.pow(2, halvins[i].numero - data_halvin_now.halvin_now_numero)) / halvins[i].Rewards;
 
+        console.log(calc_jub_aside);
+        
       const rule_tree_calc_jub = Math.trunc(
         calc_jub_aside * Number(input_result_equiv_btc.value)
       );
@@ -392,7 +393,7 @@ function equivalenciaBTC() {
 
       const millon = 1000000;
       const billon = 1000000000000;
-      const trillon = 1000000000000000000;
+      const trillon = 1000000000000000000n;
 
       const amount_init = test_number.toString().length;
 
@@ -422,6 +423,7 @@ function equivalenciaBTC() {
 input_inversion_inicial.oninput = equivalenciaBTC;
 input_result_equiv_btc.oninput = equivalenciaBTC;
 
+//fect para binance y coingeko
 async function fetchFuncAsync(url1, url2=null) {
   try {
     const response = await fetch(url1);

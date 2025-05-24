@@ -39,7 +39,7 @@
     <link rel="shortcut icon" href="./imagenes/bitcoin.svg" />
     <link rel="stylesheet" href="./src/css/normalize.min.css" />
 
-    <title>Mentoría en Criptomonedas - JJ Chagerben</title>
+    <title>Mentoría Premium</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -47,11 +47,13 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./build/css/navBar.min.css" />
-    <link rel="stylesheet" href="./build/css/main.min.css" />
+     <link rel="stylesheet" href="./src/css/header.css" />
+    <link rel="stylesheet" href="./src/css/navBar.css" />
+    <link rel="stylesheet" href="./src/css/main.css" />
     <link rel="stylesheet" href="./build/css/sliderTestimonios.min.css" />
     <link rel="stylesheet" href="./build/css/sectionBooks.min.css" />
     <link rel="stylesheet" href="./build/css/footer.min.css" />
+    <link rel="stylesheet" href="./src/css/modal_antiscam.css" />
     <link
       fetchpriority="high"
       as="image"
@@ -86,10 +88,25 @@
   </script>
 
   <body>
-
-<div class="but-floating">
-<a href="#navBar">  <img src="./imagenes/arrow-top.svg" alt="img-arrow-top"></a>
-</div>
+    <div class="but-floating">
+      <a href="#navBar">
+        <img src="./imagenes/arrow-top.svg" alt="img-arrow-top"
+      /></a>
+    </div>
+       <div class="but-floating-wasap">
+           <a
+              class="botones_redes"
+              href="https://api.whatsapp.com/send?phone=593996737500&text=INFORMACION%20SOBRE%20LA%20MENTORIA%20PREMIUM"
+            >
+              <img
+                class="iconos_redes icono_circular"
+                src="imagenes/whatsapp.svg"
+                alt=""
+                loading="lazy"
+              />
+             
+            </a>
+    </div>
 
     <!-- Google Tag Manager (noscript) -->
     <noscript
@@ -102,63 +119,92 @@
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <header id="header" class="encabezado">
-      
+        <div class="fade-layer" id="fade1"></div>
+    <div class="fade-layer" id="fade2"></div>
       <nav id="navBar">
         <div class="logo">
-          <img class="jjface" src="./imagenes/jjcara.webp"><p>JJChagerben</p>
+          <img class="jjface" src="./imagenes/jjcara.webp" />
+          <p>JJChagerben</p>
         </div>
-     <div class=" sidebar" id="sideMenu">
+        <div class="sidebar" id="sideMenu">
+          <img
+            class="close-btn"
+            id="closeMenu"
+            src="./imagenes//cross-close.svg"
+            alt=""
+          />
+          <ul class="menu-options">
+            <li>
+              <a class="boton-nav" href="#section-mentoria">Qué enseño?</a>
+            </li>
+            <li>
+              <a class="boton-nav" href="#sec-calculadora-jub">Calculadora</a>
+            </li>
+            <li><a class="boton-nav" href="#sec-redes">Redes</a></li>
 
-      <img class="close-btn" id="closeMenu" src="./imagenes//cross-close.svg" alt="">
-      <ul class="menu-options">
-           <li><a  class="boton-nav" href="#sec-about-me">Acerca de mí</a></li>
-        <li><a class="boton-nav" href="#sec-calculadora-jub">Calculadora</a></li>
-        <li><a  class="boton-nav" href="#sec-redes">Redes</a></li>
-        <li><a  class="boton-nav" href="#section-mentoria">Qué enseño?</a></li>
-        <li><a  class="boton-nav" href="#sect-testimonial">Testimonios</a></li>
-       <li><a  class="boton-nav" href="#sect-merch">Merch</a></li>
-       <li><a  class="boton-nav" href="#sect-books">Libros</a></li>
-       <li><a class="boton-mentoria" href="https://api.whatsapp.com/send?phone=593996737500&text=INFORMACION%20SOBRE%20LA%20MENTORIA%20PREMIUM">Mentoria Premium</a></li>
-          
+            <li>
+              <a class="boton-nav" href="#sect-testimonial">Testimonios</a>
+            </li>
 
-      </ul>
-     </div>
-     <img class="svg-menu menu-toggle" id="menuToggle" src="./imagenes//menu-svgrepo-com.svg" alt="img-menu" >
-
+            <li><a class="boton-nav" href="#sect-books">Libros</a></li>
+            <li>
+              <a
+                class="boton-mentoria"
+                href="https://api.whatsapp.com/send?phone=593996737500&text=INFORMACION%20SOBRE%20LA%20MENTORIA%20PREMIUM"
+                >Mentoria Premium</a
+              >
+            </li>
+          </ul>
+        </div>
+        <img
+          class="svg-menu menu-toggle"
+          id="menuToggle"
+          src="./imagenes//menu-svgrepo-com.svg"
+          alt="img-menu"
+        />
       </nav>
 
       <div class="contenido-encabezado">
-      <div class="btc-container-data">
-        <div class="div-btc-price">
-          <div>
-            <img src="./imagenes/bitcoin.svg" alt="ico-btc" />
-            <p>Bitcoin</p>
+       <div>
+         <div class="btc-container-data">
+          <div class="div-btc-price">
+            <div>
+              <img src="./imagenes/bitcoin.svg" alt="ico-btc" />
+              <p>Bitcoin</p>
+            </div>
+            <span id="span-price-BTC"></span>
           </div>
-          <span id="span-price-BTC"></span>
+          <div class="fear-and-greed">
+            <p>F&G</p>
+            <span id="span-fear-greed"></span>
+          </div>
         </div>
-        <div class="fear-and-greed">
-          <p>Fear and Greed</p>
-          <span id="span-fear-greed"></span>
-        </div>
-      </div>
         <div class="clock flip-clock-wrapper"></div>
+       </div>
         <div class="text-effect-writter">
-          <p class="text_slogan">"BITCOIN ES SACARSE LA LOTERIA EN CÁMARA LENTA"</p>
-        </div>
-        <p class="text-autor">-JJChagerben-</p>
-        <a
+          <p class="text_slogan">
+            BITCOIN ES SACARSE LA LOTERIA EN CÁMARA LENTA
+          </p>  <a
           class="boton"
           href="https://api.whatsapp.com/send?phone=593996737500&text=INFORMACION%20SOBRE%20LA%20MENTORIA%20PREMIUM"
           target
           rel="nofollow noopener"
           >Mentoria Premium</a
         >
+        </div>
+    
+      
+      </div>
+      <div class="preview-container">
+        <div class="thumbnails "><img  src="./imagenes//hero/thumbnails/hero_desktop_1.jpeg" alt=""></div>
+        <div class="thumbnails "><img   src="./imagenes//hero/thumbnails/hero_desktop_2.jpeg" alt=""></div>
+        <div class="thumbnails "><img   src="./imagenes//hero/thumbnails/hero_desktop_3.jpeg" alt=""></div>
+        <div class="thumbnails "><img   src="./imagenes//hero/thumbnails/hero_desktop_4.jpeg" alt=""></div>
       </div>
     </header>
 
     <main class="container">
       <section id="sec-calculadora-jub" class="section-calcujub">
-    
         <div class="header-title">
           <p>Calculadora de Jubilación</p>
           <div></div>
@@ -207,6 +253,7 @@
                 <input
                   id="inversion-inicial"
                   type="number"
+                  min="0"
                   placeholder="Inversión inicial"
                 />
               </div>
@@ -269,7 +316,6 @@
         </div>
       </section>
       <section id="sec-redes" class="section--mis-redes">
-     
         <div class="header-title">
           <p>Mis Redes</p>
           <div></div>
@@ -366,7 +412,7 @@
               href="https://www.bitmex.com/app/register/A7p8Lt"
             >
               <img
-                class="iconos_redes"
+                class="iconos_redes icono_circular"
                 src="imagenes/bitmex-logo.webp"
                 alt=""
                 loading="lazy"
@@ -375,19 +421,55 @@
           </div>
           <div class="linea"></div>
           <div class="container-live">
-            <div class="animated_live"></div>
+          <div class="live-group">
+              <div class="animated_live"></div>
             <img
               class="foto"
               src="/imagenes/jjcara.webp"
               alt=""
               loading="lazy"
             />
-            <p class="live">LIVE</p>
+          </div>
+           
 
-            <p class="live_texto">Lunes a Viernes</p>
-            <p class="live_texto">20:00</p>
+         <div class="text-group-live">
+             <p class="live_texto">Lunes a Viernes</p>
+            <p class="live_texto">20:00 Horas</p>
             <p class="live_texto">UTC -05:00</p>
-
+         </div>
+            <div class="live-horarios">
+              <p>Horario</p>
+              <div class="container-paises">
+                <div>
+                  <img src="./imagenes//paises/ec.png" alt="" />
+                  <p>20:00</p>
+                </div>
+                <div>
+                  <img src="./imagenes//paises/ar.png" alt="" />
+                  <p>22:00</p>
+                </div>
+                <div>
+                  <img src="./imagenes//paises/bo.png" alt="" />
+                  <p>21:00</p>
+                </div>
+                <div>
+                  <img src="./imagenes//paises/pe.png" alt="" />
+                  <p>20:00</p>
+                </div>
+                <div>
+                  <img src="./imagenes//paises/es.png" alt="" />
+                  <p>03:00</p>
+                </div>
+                <div>
+                  <img src="./imagenes//paises/ve.png" alt="" />
+                  <p>21:00</p>
+                </div>
+                <div>
+                  <img src="./imagenes//paises/mx.png" alt="" />
+                  <p>19:00</p>
+                </div>
+              </div>
+            </div>
             <div class="stream_iconos">
               <a href="https://www.twitch.tv/jjchagerben">
                 <img class="iconos_redes_r" src="/imagenes/twitch.svg" alt=""
@@ -414,7 +496,6 @@
         </div>
       </section>
       <section id="section-mentoria" class="section-mentoria">
-     
         <div class="header-title">
           <p>¿Qué enseño en mi mentoría?</p>
           <div></div>
@@ -500,7 +581,9 @@
                 alt=""
                 loading="lazy"
               />
-              <p class="remember">RECUERDA: LA MENTORIA ES DE PAGO ÚNICO ANUAL</p>
+              <p class="remember">
+                RECUERDA: LA MENTORIA ES DE PAGO ÚNICO ANUAL
+              </p>
             </div>
           </div>
           <!--
@@ -537,55 +620,106 @@
           <div class="container">
             <div class="slider-container">
               <picture class="image">
-                <img src="./imagenes/testimonios/img1.jpg"  loading="lazy" alt="img-testimonio-1"
+                <img
+                  src="./imagenes/testimonios/img1.jpg"
+                  loading="lazy"
+                  alt="img-testimonio-1"
               /></picture>
               <picture class="image"
-                ><img src="./imagenes/testimonios/img2.jpg" loading="lazy" alt="img-testimonio-2"
+                ><img
+                  src="./imagenes/testimonios/img2.jpg"
+                  loading="lazy"
+                  alt="img-testimonio-2"
               /></picture>
               <picture class="image"
-                ><img src="./imagenes/testimonios/img3.jpg" loading="lazy" alt="img-testimonio-3"
+                ><img
+                  src="./imagenes/testimonios/img3.jpg"
+                  loading="lazy"
+                  alt="img-testimonio-3"
               /></picture>
               <picture class="image">
-                <img src="./imagenes/testimonios/img4.jpg" loading="lazy" alt="img-testimonio-4"
+                <img
+                  src="./imagenes/testimonios/img4.jpg"
+                  loading="lazy"
+                  alt="img-testimonio-4"
               /></picture>
               <picture class="image"
-                ><img src="./imagenes/testimonios/img5.jpg" loading="lazy" alt="img-testimonio-5"
+                ><img
+                  src="./imagenes/testimonios/img5.jpg"
+                  loading="lazy"
+                  alt="img-testimonio-5"
               /></picture>
               <picture class="image">
-                <img src="./imagenes/testimonios/img6.jpg" loading="lazy" alt="img-testimonio-6"
+                <img
+                  src="./imagenes/testimonios/img6.jpg"
+                  loading="lazy"
+                  alt="img-testimonio-6"
               /></picture>
               <picture class="image">
-                <img src="./imagenes/testimonios/img7.jpg" loading="lazy" alt="img-testimonio-7"
+                <img
+                  src="./imagenes/testimonios/img7.jpg"
+                  loading="lazy"
+                  alt="img-testimonio-7"
               /></picture>
               <picture class="image">
-                <img src="./imagenes/testimonios/img8.png" loading="lazy" alt="img-testimonio-8"
+                <img
+                  src="./imagenes/testimonios/img8.png"
+                  loading="lazy"
+                  alt="img-testimonio-8"
               /></picture>
               <picture class="image">
-                <img src="./imagenes/testimonios/img9.jpg" loading="lazy" alt="img-testimonio-9"
+                <img
+                  src="./imagenes/testimonios/img9.jpg"
+                  loading="lazy"
+                  alt="img-testimonio-9"
               /></picture>
               <picture class="image"
-                ><img src="./imagenes/testimonios/img10.jpg" loading="lazy" alt="img-testimonio-10"
+                ><img
+                  src="./imagenes/testimonios/img10.jpg"
+                  loading="lazy"
+                  alt="img-testimonio-10"
               /></picture>
               <picture class="image">
-                <img src="./imagenes/testimonios/img11.jpg" loading="lazy" alt="img-testimonio-11"
+                <img
+                  src="./imagenes/testimonios/img11.jpg"
+                  loading="lazy"
+                  alt="img-testimonio-11"
               /></picture>
               <picture class="image">
-                <img src="./imagenes/testimonios/img12.jpg" loading="lazy" alt="img-testimonio-12"
+                <img
+                  src="./imagenes/testimonios/img12.jpg"
+                  loading="lazy"
+                  alt="img-testimonio-12"
               /></picture>
               <picture class="image">
-                <img src="./imagenes/testimonios/img13.jpg" loading="lazy" alt="img-testimonio-13"
+                <img
+                  src="./imagenes/testimonios/img13.jpg"
+                  loading="lazy"
+                  alt="img-testimonio-13"
               /></picture>
               <picture class="image">
-                <img src="./imagenes/testimonios/img14.jpg" loading="lazy" alt="img-testimonio-14"
+                <img
+                  src="./imagenes/testimonios/img14.jpg"
+                  loading="lazy"
+                  alt="img-testimonio-14"
               /></picture>
               <picture class="image">
-                <img src="./imagenes/testimonios/img15.jpg" loading="lazy" alt="img-testimonio-15"
+                <img
+                  src="./imagenes/testimonios/img15.jpg"
+                  loading="lazy"
+                  alt="img-testimonio-15"
               /></picture>
               <picture class="image">
-                <img src="./imagenes/testimonios/img16.jpg" loading="lazy" alt="img-testimonio-16"
+                <img
+                  src="./imagenes/testimonios/img16.jpg"
+                  loading="lazy"
+                  alt="img-testimonio-16"
               /></picture>
               <picture class="image">
-                <img src="./imagenes/testimonios/img17.jpg" loading="lazy" alt="img-testimonio-17"
+                <img
+                  src="./imagenes/testimonios/img17.jpg"
+                  loading="lazy"
+                  alt="img-testimonio-17"
               /></picture>
             </div>
           </div>
@@ -610,173 +744,294 @@
 
       <!--===================================================================================-->
 
-      <section id="sec-about-me" class="section-about-me">
-
-        <div class="header-title">
-          <p>Acerca de mí</p>
-          <div></div>
-        </div>
-
-        <div class="redes_contenido">
-          <div class="marco">
-            <img
-              class="foto"
-              src="imagenes/jjcara.webp"
-              alt=""
-              loading="lazy"
-            />
-            <p class="resaltado">~JJchagerben~</p>
-            <p>Petroleum Engineer</p>
-            <p>Jubilado gracias a Bitcoin</p>
-            <p>Inversionista en cripto-activos</p>
-          </div>
-
-          <video class="video" controls>
-            <source src="/Video/jjbarco.mp4" type="video/mp4" />
-          </video>
-        </div>
-      </section>
-
-      <section id="sect-merch" class="section-merch">
-       
-        <div class="header-title">
-          <p>MERCH INCONFISCABLE</p>
-          <div></div>
-        </div>
-        <div class="container">
-          <div class="slider">
-            <input type="radio" name="slider" id="slideOne" checked />
-            <input type="radio" name="slider" id="slideTwo" />
-            <input type="radio" name="slider" id="slideThree" />
-            <input type="radio" name="slider" id="slideFour" />
-
-            <div class="buttons">
-              <label for="slideOne"></label>
-              <label for="slideTwo"></label>
-              <label for="slideThree"></label>
-              <label for="slideFour"></label>
-            </div>
-
-            <div class="content">
-              <div class="firstslide">
-                <img src="/imagenes/CND.webp" alt="img CDN" />
-              </div>
-              <div class="secondslide">
-                <img src="/imagenes/CNT.webp" alt="img CNT" />
-              </div>
-              <div class="thirdslide">
-                <img src="/imagenes/CRD.webp" alt="img CRD" />
-              </div>
-              <div class="fourslide">
-                <img src="/imagenes/CRT.webp" alt="img CRT" />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <a
-          class="bpedido"
-          href="https://api.whatsapp.com/send?phone=593999864446&amp;text=La%20quiero%20AHORA!%2C%20la%20camisa%20Inconfiscable!"
-          >Pidela Aquí
-        </a>
-      </section>
-
       <section id="sect-books" class="sect-books">
         <div class="header-title">
           <p>Libros</p>
           <div></div>
         </div>
         <div class="books-container">
-            <button class="button-arrow button-left-slider-book" type="button"><img src="./imagenes/arrow-download.svg" alt="icon-arrow-slider"></button>
+          <button class="button-arrow button-left-slider-book" type="button">
+            <img src="./imagenes/arrow-download.svg" alt="icon-arrow-slider" />
+          </button>
           <div class="cover-container-books">
             <div class="div-libros">
-                <div class="div-libro">
-                    <img class="img-portada" loading="lazy" src="./libros/portadas/el_hombre_mas_rico_de_babilonia.jpg" alt="">
-                    <div class="overlay">
-                      <a class="a-dowload-button" href="./libros/pdf/el_hombre_mas_rico_de_babilonia.pdf">
-                        <img class="eye-ico" src="./imagenes/eye-ico.svg"></img>
-                        <p class="text-white">|</p>
-                        <p class="eye-text">Leer</p>
-                    </a>
-                        <a class="a-dowload-button" href="./libros/pdf/el_hombre_mas_rico_de_babilonia.pdf" download="el_hombre_mas_rico_de_babilonia.pdf">
-                            <img class="" src="./imagenes/arrow-download.svg"></img>
-                            <p class="text-white">|</p>
-                            <p class="">Descargar</p>
-                        </a>
-                    </div>
-                </div>
-           
-           
-                <div class="div-libro">
-                  <img class="img-portada" loading="lazy"  src="./libros/portadas/revelion_de_atlas.jpg" alt="">
-                  <div class="overlay">
-                    <a class="a-dowload-button" href="./libros/pdf/revelion_de_atlas.pdf">
-                      <img class="eye-ico" src="./imagenes/eye-ico.svg"></img>
-                      <p class="text-white">|</p>
-                      <p class="eye-text">Leer</p>
-                  </a>
-                      <a class="a-dowload-button" href="./libros/pdf/revelion_de_atlas.pdf" download="revelion_de_atlas.pdf">
-                          <img class="" src="./imagenes/arrow-download.svg"></img>
-                          <p class="text-white">|</p>
-                          <p class="">Descargar</p>
-                      </a>
-                  </div>
-              </div>
-         
-          
               <div class="div-libro">
-                <img class="img-portada" loading="lazy"  src="./libros/portadas/patron_bitcoin.jpg" alt="">
+                <img
+                  class="img-portada"
+                  loading="lazy"
+                  src="./libros/portadas/el_hombre_mas_rico_de_babilonia.jpg"
+                  alt=""
+                />
                 <div class="overlay">
-                  <a class="a-dowload-button" href="./libros/pdf/patron_bitcoin.pdf">
-                    <img class="eye-ico" src="./imagenes/eye-ico.svg"></img>
+                  <a
+                    class="a-dowload-button"
+                    href="./libros/pdf/el_hombre_mas_rico_de_babilonia.pdf"
+                  >
+                    <img class="eye-ico" src="./imagenes/eye-ico.svg" />
                     <p class="text-white">|</p>
                     <p class="eye-text">Leer</p>
-                </a>
-                    <a class="a-dowload-button" href="./libros/pdf/patron_bitcoin.pdf" download="patron_bitcoin.pdf">
-                        <img class="" src="./imagenes/arrow-download.svg"></img>
-                        <p class="text-white">|</p>
-                        <p class="">Descargar</p>
-                    </a>
-                </div>
-            </div>
-       
-            <div class="div-libro">
-              <img class="img-portada" loading="lazy"  src="./libros/portadas/metodo_wycoff.jpg" alt="">
-              <div class="overlay">
-                <a class="a-dowload-button" href="./libros/pdf/metodo_wycoff.pdf">
-                  <img class="eye-ico" src="./imagenes/eye-ico.svg"></img>
-                  <p class="text-white">|</p>
-                  <p class="eye-text">Leer</p>
-              </a>
-                  <a class="a-dowload-button" href="./libros/pdf/metodo_wycoff.pdf" download="metodo_wycoff.pdf">
-                      <img class="" src="./imagenes/arrow-download.svg"></img>
-                      <p class="text-white">|</p>
-                      <p class="">Descargar</p>
                   </a>
-              </div>
-          </div>
-          <div class="div-libro">
-            <img class="img-portada" loading="lazy"  src="./libros/portadas/inversor_inteligente.jpg" alt="">
-            <div class="overlay">
-              <a class="a-dowload-button" href="./libros/pdf/inversor_inteligente.pdf">
-                <img class="eye-ico" src="./imagenes/eye-ico.svg"></img>
-                <p class="text-white">|</p>
-                <p class="eye-text">Leer</p>
-            </a>
-                <a class="a-dowload-button" href="./libros/pdf/inversor_inteligente.pdf" download="inversor_inteligente.pdf">
-                    <img class="" src="./imagenes/arrow-download.svg"></img>
+                  <a
+                    class="a-dowload-button"
+                    href="./libros/pdf/el_hombre_mas_rico_de_babilonia.pdf"
+                    download="el_hombre_mas_rico_de_babilonia.pdf"
+                  >
+                    <img class="" src="./imagenes/arrow-download.svg" />
                     <p class="text-white">|</p>
                     <p class="">Descargar</p>
-                </a>
-            </div>
-        </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="div-libro">
+                <img
+                  class="img-portada"
+                  loading="lazy"
+                  src="./libros/portadas/revelion_de_atlas.jpg"
+                  alt=""
+                />
+                <div class="overlay">
+                  <a
+                    class="a-dowload-button"
+                    href="./libros/pdf/revelion_de_atlas.pdf"
+                  >
+                    <img class="eye-ico" src="./imagenes/eye-ico.svg" />
+                    <p class="text-white">|</p>
+                    <p class="eye-text">Leer</p>
+                  </a>
+                  <a
+                    class="a-dowload-button"
+                    href="./libros/pdf/revelion_de_atlas.pdf"
+                    download="revelion_de_atlas.pdf"
+                  >
+                    <img class="" src="./imagenes/arrow-download.svg" />
+                    <p class="text-white">|</p>
+                    <p class="">Descargar</p>
+                  </a>
+                </div>
+              </div>
+
+              <div class="div-libro">
+                <img
+                  class="img-portada"
+                  loading="lazy"
+                  src="./libros/portadas/patron_bitcoin.jpg"
+                  alt=""
+                />
+                <div class="overlay">
+                  <a
+                    class="a-dowload-button"
+                    href="./libros/pdf/patron_bitcoin.pdf"
+                  >
+                    <img class="eye-ico" src="./imagenes/eye-ico.svg" />
+                    <p class="text-white">|</p>
+                    <p class="eye-text">Leer</p>
+                  </a>
+                  <a
+                    class="a-dowload-button"
+                    href="./libros/pdf/patron_bitcoin.pdf"
+                    download="patron_bitcoin.pdf"
+                  >
+                    <img class="" src="./imagenes/arrow-download.svg" />
+                    <p class="text-white">|</p>
+                    <p class="">Descargar</p>
+                  </a>
+                </div>
+              </div>
+              <div class="div-libro">
+                <img
+                  class="img-portada"
+                  loading="lazy"
+                  src="./libros/portadas/del_oro_al_bitcoin.jpg"
+                  alt=""
+                />
+                <div class="overlay">
+                  <a
+                    class="a-dowload-button"
+                    href="./libros/pdf/del_oro_al_bitcoin.pdf"
+                  >
+                    <img class="eye-ico" src="./imagenes/eye-ico.svg" />
+                    <p class="text-white">|</p>
+                    <p class="eye-text">Leer</p>
+                  </a>
+                  <a
+                    class="a-dowload-button"
+                    href="./libros/pdf/del_oro_al_bitcoin.pdf"
+                    download="del_oro_al_bitcoin.pdf"
+                  >
+                    <img class="" src="./imagenes/arrow-download.svg" />
+                    <p class="text-white">|</p>
+                    <p class="">Descargar</p>
+                  </a>
+                </div>
+              </div>
+
+              <div class="div-libro">
+                <img
+                  class="img-portada"
+                  loading="lazy"
+                  src="./libros/portadas/el_patron_fiat.jpg"
+                  alt=""
+                />
+                <div class="overlay">
+                  <a
+                    class="a-dowload-button"
+                    href="./libros/pdf/el_patron_fiat_Saifedean_Ammous.pdf"
+                  >
+                    <img class="eye-ico" src="./imagenes/eye-ico.svg" />
+                    <p class="text-white">|</p>
+                    <p class="eye-text">Leer</p>
+                  </a>
+                  <a
+                    class="a-dowload-button"
+                    href="./libros/pdf/metodo_wycoff.pdf"
+                    download="el_patron_fiat_Saifedean_Ammous.pdf"
+                  >
+                    <img class="" src="./imagenes/arrow-download.svg" />
+                    <p class="text-white">|</p>
+                    <p class="">Descargar</p>
+                  </a>
+                </div>
+              </div>
+              <div class="div-libro">
+                <img
+                  class="img-portada"
+                  loading="lazy"
+                  src="./libros/portadas/como_ganar_amigos.jpg"
+                  alt=""
+                />
+                <div class="overlay">
+                  <a
+                    class="a-dowload-button"
+                    href="./libros/pdf/como_ganar_amigos_Carnegie.pdf"
+                  >
+                    <img class="eye-ico" src="./imagenes/eye-ico.svg" />
+                    <p class="text-white">|</p>
+                    <p class="eye-text">Leer</p>
+                  </a>
+                  <a
+                    class="a-dowload-button"
+                    href="./libros/pdf/como_ganar_amigos_Carnegie.pdf"
+                    download="como_ganar_amigos_Carnegie.pdf"
+                  >
+                    <img class="" src="./imagenes/arrow-download.svg" />
+                    <p class="text-white">|</p>
+                    <p class="">Descargar</p>
+                  </a>
+                </div>
+              </div>
+              <div class="div-libro">
+                <img
+                  class="img-portada"
+                  loading="lazy"
+                  src="./libros/portadas/inversor_inteligente.jpg"
+                  alt=""
+                />
+                <div class="overlay">
+                  <a
+                    class="a-dowload-button"
+                    href="./libros/pdf/inversor_inteligente.pdf"
+                  >
+                    <img class="eye-ico" src="./imagenes/eye-ico.svg" />
+                    <p class="text-white">|</p>
+                    <p class="eye-text">Leer</p>
+                  </a>
+                  <a
+                    class="a-dowload-button"
+                    href="./libros/pdf/inversor_inteligente.pdf"
+                    download="inversor_inteligente.pdf"
+                  >
+                    <img class="" src="./imagenes/arrow-download.svg" />
+                    <p class="text-white">|</p>
+                    <p class="">Descargar</p>
+                  </a>
+                </div>
+              </div>
+              <div class="div-libro">
+                <img
+                  class="img-portada"
+                  loading="lazy"
+                  src="./libros/portadas/la_mentalidad_anticapitalista.jpg"
+                  alt=""
+                />
+                <div class="overlay">
+                  <a
+                    class="a-dowload-button"
+                    href="./libros/pdf/la_mentalidad_anticapitalista_ludwig_von_mises.pdf"
+                  >
+                    <img class="eye-ico" src="./imagenes/eye-ico.svg" />
+                    <p class="text-white">|</p>
+                    <p class="eye-text">Leer</p>
+                  </a>
+                  <a
+                    class="a-dowload-button"
+                    href="./libros/pdf/la_mentalidad_anticapitalista_ludwig_von_mises.pdf"
+                    download="la_mentalidad_anticapitalista_ludwig_von_mises.pdf"
+                  >
+                    <img class="" src="./imagenes/arrow-download.svg" />
+                    <p class="text-white">|</p>
+                    <p class="">Descargar</p>
+                  </a>
+                </div>
+              </div>
+              <div class="div-libro">
+                <img
+                  class="img-portada"
+                  loading="lazy"
+                  src="./libros/portadas/flash_boys.jpg"
+                  alt=""
+                />
+                <div class="overlay">
+                  <a
+                    class="a-dowload-button"
+                    href="./libros/pdf/flash_boys_michael_lewis.pdf"
+                  >
+                    <img class="eye-ico" src="./imagenes/eye-ico.svg" />
+                    <p class="text-white">|</p>
+                    <p class="eye-text">Leer</p>
+                  </a>
+                  <a
+                    class="a-dowload-button"
+                    href="./libros/pdf/flash_boys_michael_lewis.pdf"
+                    download="flash_boys_michael_lewis.pdf"
+                  >
+                    <img class="" src="./imagenes/arrow-download.svg" />
+                    <p class="text-white">|</p>
+                    <p class="">Descargar</p>
+                  </a>
+                </div>
+              </div>
+              <div class="div-libro">
+                <img
+                  class="img-portada"
+                  loading="lazy"
+                  src="./libros/portadas/blackrock.webp"
+                  alt=""
+                />
+                <div class="overlay">
+                  <a class="a-dowload-button" href="./libros/pdf/blackrock.pdf">
+                    <img class="eye-ico" src="./imagenes/eye-ico.svg" />
+                    <p class="text-white">|</p>
+                    <p class="eye-text">Leer</p>
+                  </a>
+                  <a
+                    class="a-dowload-button"
+                    href="./libros/pdf/blackrock.pdf"
+                    download="blackrock.pdf"
+                  >
+                    <img class="" src="./imagenes/arrow-download.svg" />
+                    <p class="text-white">|</p>
+                    <p class="">Descargar</p>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
-            <button class="button-arrow button-right-slider-book" type="button"><img src="./imagenes/arrow-download.svg" alt="icon-arrow-slider"></button>
-
+          <button class="button-arrow button-right-slider-book" type="button">
+            <img src="./imagenes/arrow-download.svg" alt="icon-arrow-slider" />
+          </button>
         </div>
-    </section>
-
+      </section>
     </main>
     <footer class="footer">
       <ul>
@@ -802,7 +1057,10 @@
       </ul>
       <div class="footer-anounce">
         <p>¿Eres nuevo el el mundo de las criptomonedas?</p>
-        <a href="https://api.whatsapp.com/send?phone=593996737500&text=INFORMACION%20SOBRE%20LA%20MENTORIA%20PREMIUM">¡Contáctame!</a>
+        <a
+          href="https://api.whatsapp.com/send?phone=593996737500&text=INFORMACION%20SOBRE%20LA%20MENTORIA%20PREMIUM"
+          >¡Contáctame!</a
+        >
       </div>
     </footer>
 
@@ -839,6 +1097,34 @@
         </div>
       </div>
     </div>
+
+    <!-- The Modal ALERT SCAM-->
+    <div id="modalAlertScam" class="modal_antiscam">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close-alert-scam"
+            ><img src="./imagenes/cross-close.svg"
+          /></span>
+          <div class="title-modal">
+            <img src="./imagenes/alert.svg" alt="" />
+            <p>Advertencia</p>
+            <img src="./imagenes/alert.svg" alt="" />
+          </div>
+        </div>
+        <div class="modal-body">
+          <p>
+            No caigas en estafas,<span>
+              yo nunca te voy a seguir,ni escribir </span
+            >por interno en telegram, tiktok, wasap ni ninguna otra red social.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button class="boton-modal-antiscam">Aceptar</button>
+        </div>
+      </div>
+    </div>
+
     <div id="overlay" class="overlay"></div>
     <script src="https://mempool.space/mempool.js"></script>
 
@@ -848,10 +1134,12 @@
       crossorigin="anonymous"
     ></script>
     <script src="./build/clockHalvin/navBar.min.js"></script>
+    <script src="./src/clockHalvin/slider_hero.js"></script>
     <script src="./build/clockHalvin/flipclock.min.js"></script>
     <script src="./build/clockHalvin/main.min.js"></script>
     <script src="./build/clockHalvin/sliderTestimonios.min.js"></script>
     <script src="./build/clockHalvin/sectionBooks.min.js"></script>
+    <script src="./src/clockHalvin/modal_antiscam.js"></script>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"
