@@ -50,7 +50,7 @@
      <link rel="stylesheet" href="./src/css/header.css" />
     <link rel="stylesheet" href="./src/css/navBar.css" />
     <link rel="stylesheet" href="./src/css/main.css" />
-    <link rel="stylesheet" href="./build/css/sliderTestimonios.min.css" />
+    <link rel="stylesheet" href="./src/css/sliderTestimonios.css" />
     <link rel="stylesheet" href="./build/css/sectionBooks.min.css" />
     <link rel="stylesheet" href="./build/css/footer.min.css" />
     <link rel="stylesheet" href="./src/css/modal_antiscam.css" />
@@ -118,9 +118,8 @@
       ></iframe
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <header id="header" class="encabezado">
-        <div class="fade-layer" id="fade1"></div>
-    <div class="fade-layer" id="fade2"></div>
+    <header id="header" class="hero-slider encabezado">
+
       <nav id="navBar">
         <div class="logo">
           <img class="jjface" src="./imagenes/jjcara.webp" />
@@ -191,9 +190,7 @@
           rel="nofollow noopener"
           >Mentoria Premium</a
         >
-        </div>
-    
-      
+        </div>     
       </div>
       <div class="preview-container">
         <div class="thumbnails "><img  src="./imagenes//hero/thumbnails/hero_desktop_1.jpeg" alt=""></div>
@@ -201,6 +198,12 @@
         <div class="thumbnails "><img   src="./imagenes//hero/thumbnails/hero_desktop_3.jpeg" alt=""></div>
         <div class="thumbnails "><img   src="./imagenes//hero/thumbnails/hero_desktop_4.jpeg" alt=""></div>
       </div>
+      
+        <div class="slide active"><img  src="./imagenes//hero/hero_desktop_1.jpeg" alt=""></div>
+        <div class="slide "><img   src="./imagenes//hero/hero_desktop_2.jpeg" alt=""></div>
+        <div class="slide "><img   src="./imagenes//hero/hero_desktop_3.jpeg" alt=""></div>
+        <div class="slide "><img   src="./imagenes//hero/hero_desktop_4.jpeg" alt=""></div>
+   
     </header>
 
     <main class="container">
@@ -604,18 +607,7 @@
         </div>
         <div class="section-slider">
           <div class="arrow-left" id="arrow_left">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="26"
-              height="32"
-              viewBox="0 0 26 32"
-              class="nav__arrow nav__arrow--left"
-            >
-              <path
-                fill="inherit"
-                d="M16.75 0L2.875 13.875.75 16l2.125 2.125L16.75 32h8.5l-16-16 16-16z"
-              ></path>
-            </svg>
+          <img src="./imagenes/arrow-download.svg" alt="icon-arrow-slider" />
           </div>
           <div class="container">
             <div class="slider-container">
@@ -725,13 +717,7 @@
           </div>
 
           <div class="arrow-right" id="arrow_right">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="26"
-              height="32"
-              viewBox="0 0 26 32"
-              class="nav__arrow nav__arrow--left"
-            >
+            <img src="./imagenes/arrow-download.svg" alt="icon-arrow-slider" />
               <path
                 fill="inherit"
                 d="M16.75 0L2.875 13.875.75 16l2.125 2.125L16.75 32h8.5l-16-16 16-16z"
@@ -1137,7 +1123,7 @@
     <script src="./src/clockHalvin/slider_hero.js"></script>
     <script src="./build/clockHalvin/flipclock.min.js"></script>
     <script src="./build/clockHalvin/main.min.js"></script>
-    <script src="./build/clockHalvin/sliderTestimonios.min.js"></script>
+    <script src="./src/clockHalvin/sliderTestimonios.js"></script>
     <script src="./build/clockHalvin/sectionBooks.min.js"></script>
     <script src="./src/clockHalvin/modal_antiscam.js"></script>
 

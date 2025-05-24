@@ -55,12 +55,10 @@ $box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
   height: fit-content;
   display: flex;
   margin: 0;
-
   z-index: 0;
   position: relative;
-
   .container {
-    width: 320px;
+    width: 100%;
     height: 500px;
     //  background-color: beige;
     margin: auto;
@@ -70,10 +68,10 @@ $box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    overflow: scroll;
     margin-bottom: 32px;
     position: relative;
-    
+
     .slider-container {
       display: flex;
       position: absolute;
@@ -82,7 +80,6 @@ $box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
       outline: none;
 
       gap: 20px;
-      transition: transform .3s ease ;
 
       .image {
         width: 300px; //ancho contenedor de imagen
@@ -92,9 +89,10 @@ $box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
         //    background-color: yellow;
         outline: none;
         user-select: none;
+        transition: transform 0.3s ease;
         img {
           position: relative;
-      
+          transition: transform 0.3s ease;
           outline: none;
           max-width: 100%;
           max-height: 100%;
@@ -103,13 +101,11 @@ $box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
           //   box-shadow: 0px 0px 5px 3px rgba(128, 128, 128, 0.842);
 
           // z-index: -1;
-        
         }
         &:hover {
-          transform: scale(1.20);
-          transition: transform ease-in-out .2s;
+          transform: scale(1.2);
+          transition: transform ease-in-out 0.3s;
         }
-       
       }
     }
   }
@@ -129,6 +125,7 @@ $box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
     display: flex;
     place-content: center;
     align-items: center;
+    display: none;
     cursor: pointer;
 
     &:hover {
@@ -172,7 +169,7 @@ $box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
     //gap: 4px;
     justify-content: center;
     align-items: center;
-
+    display: none;
     .indicator {
       display: block;
       margin: 0 auto;
@@ -222,21 +219,81 @@ $box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
     }
   }
   .section-slider {
-    //    background-color: red;
     margin: auto;
-
+    scroll-behavior: smooth; /* <- transición suave */
+    scroll-snap-type: x mandatory;
+    align-items: center;
     .container {
-      width: $width-desktop-container-img;
-      // background-color: rgb(73, 66, 66);
+      width: 100%;
+
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      scroll-snap-type: x mandatory;
+      // Ocultar scrollbar en navegadores modernos
+      scrollbar-width: none; // Firefox
+      -ms-overflow-style: none; // IE y Edge antiguos
+
+      &::-webkit-scrollbar {
+        // Chrome, Safari
+        display: none;
+      }
       .slider-container {
-        margin-left: 0;
+        margin-left: 50px;
+         margin-right: 50px;
+        display: flex;
+        display: flex;
+        gap: 50px;
+        scroll-padding-left: 20px;
+        scroll-padding-right: 20px;
+        .image {
+          flex-shrink: 0;
+       width: fit-content;
+          scroll-snap-align: start;
+         
+          img{
+            width: 300px;
+             scroll-snap-align: center;
+             border-radius: 12px;
+              box-shadow: rgba(0, 0, 0, .24) 0 3px 8px;
+              object-fit: contain;
+          }
+        }
       }
     }
     .arrow-left {
+      display: flex;
       position: inherit;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: -moz-fit-content;
+      height: fit-content;
+      border-radius: 100%;
+      background-color: #fff;
+
+      border: 1px solid #d1d0d0;
+      margin: 0 18px;
+      padding: 8px 12px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0 0 8px;
+      transform: rotate(90deg);
+      &:hover {
+        transform: rotate(90deg) scale(1.05);
+      }
+      &:active {
+        transform: rotate(90deg) scale(0.9);
+      }
     }
     .arrow-right {
       position: inherit;
+      transform: rotate(270deg);
+      transition: transform 0.3s ease;
+      &:hover {
+        transform: rotate(270deg) scale(1.09);
+      }
+      &:active {
+        transform: rotate(270deg) scale(0.9);
+      }
     }
 
     .indicator-slider {
@@ -246,8 +303,6 @@ $box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
         width: 15px;
         height: 15px;
       }
-
-
     }
   }
 }
