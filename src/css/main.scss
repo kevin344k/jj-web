@@ -1,7 +1,10 @@
 $turquesa: #3ef2d0;
 $soft-black: #212529;
+$black-light: #303235;
 $turquesa_strong: #19e6c0;
+$turquesa_very_strong: #23a78e;
 $turquesa_soft: #effefa;
+$icon-redes-yellow: #f8c114;
 $gris: #f2f5f7;
 $gris-middle: #d6d7d8;
 $gris-strong: #bbc9d6;
@@ -33,7 +36,6 @@ body {
   font-family: $font-family-ubuntu;
   font-size: $font-size-paragraph;
   overflow-x: hidden;
-  
 }
 
 * {
@@ -60,14 +62,13 @@ body {
   }
 }
 
-
 main {
   min-width: $xsmall;
   max-width: none;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  gap: 3.2rem;
+  background-color: none;
   margin: auto;
 
   > *:nth-child(even) {
@@ -116,6 +117,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-top: 0.5rem solid $turquesa_very_strong;
 
     .announce-calc-jub {
       background-color: #effefa;
@@ -323,514 +325,260 @@ main {
       }
     }
   }
-  .section--mis-redes {
-    min-width: 320px;
-    width: 100%;
-
-    padding: 0.6rem;
-
-    padding: 1.8rem;
-    margin: auto;
-
-    .redes-conteiners {
-      display: flex;
-      flex-direction: column;
-      gap: 3.6rem;
-      max-width: 425px;
-      margin: auto;
-      .button-group {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 1.5rem;
-
-        .botones_redes {
-          background-color: #3ef2d0;
-          @include but($blanco, $negro);
-          border: 1px solid $turquesa;
-          padding: 1rem 2.5rem;
-          margin-top: 0rem;
-          min-width: 25rem;
-          width: 25rem;
-          max-width: 30rem;
-          font-size: 1.6rem;
-          box-shadow: 3px 3px 5px 0px $gris-middle;
-          display: flex;
-          justify-content: center;
-          text-align: left;
-          gap: 0.5rem;
-          img {
-            width: 40px;
-            height: 40px;
-            margin-right: 0.5rem;
-          }
-
-          span {
-            margin: auto 0rem;
-            color: $negro;
-            font-weight: bold;
-            font-size: 1.6rem;
-            width: 100%;
-         
-            overflow: hidden;
-              white-space: wrap; 
-            text-overflow: ellipsis;
-          }
-
-          text-decoration: none;
-        }
-      }
-
-      .linea {
-        display: none;
-      }
-  
-      .container-live {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-     padding-top: 6rem;
-        gap: 2.2rem;
- 
-        .live_texto {
-          font-weight: 700;
-          font-size: 2.5rem;
-        }
-    .live-group{
-     width: fit-content;
-
-     align-self: center;
-     position: relative;
-       .foto {
-          border-radius: 100%;
-          box-shadow: $box-shadow;
-          width: 10rem;
-          margin: auto;
-          border: 5px solid #FF0042;
-           
-        }
-        .live {
-          @include but(transparent, red);
-          width: 20.5rem;
-          margin: auto;
-          padding: 1.5rem 3rem;
-          font-size: 2.4rem;
-          display: none;
-        }
-
-        .animated_live {
-          height: 5.4rem;
-          position: absolute;
-        right: -80px;
-        top: -20px;
-
-        }
-      }
-        .stream_iconos {
-          display: flex;
-          a {
-            padding: 1rem 3rem;
-            background-color: $blanco;
-            box-shadow: 3px 3px 5px 0px $gris-middle;
-            border: 1px solid $turquesa;
-
-            &:hover {
-              background-color: $turquesa_strong;
-              cursor: pointer;
-            }
-            &:active {
-              transform: scale(0.9);
-            }
-          }
-
-          justify-content: space-around;
-          img {
-            width: 4rem;
-
-            margin: auto;
-          }
-        }
-        .live-horarios {
-          border: 1px solid $gris-middle;
-          border-radius: 12px;
-          padding: 12px;
-          p {
-            margin-bottom: 12px;
-             color: #5c5c5c;
-          }
-
-          .container-paises {
-            display: flex;
-            gap: 18px;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            div {
-              img {
-                width: 32px;
-                height: 32px;
-              }
-              p{
-                font-size: 14px;
-                color: #707070;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
   .section-announce {
-    min-width: 320px;
     width: 100%;
-
-    padding: 1.8rem;
-    margin-top: 3.2rem;
+    background-color: $turquesa_very_strong;
 
     .div-container--announce {
-      background-color: #effefa;
-      border: 1px solid #22dfc1;
+      background-color: $turquesa_very_strong;
+
       border-radius: 3rem;
       text-align: center;
       padding: 1.4rem 3.4rem;
-      max-width: 425px;
-      box-shadow: 3px 3px 5px 0px #d6d7d8;
+
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
       margin: auto;
       .h2-red-tittle {
-        color: $negro;
-        font-weight: 500;
+        color: white;
+
+        font-weight: bold;
       }
       .boton {
         @include but($turquesa, $negro);
-        padding: 1.5rem 2.5rem;
+        margin-top: 1rem;
+        padding: 0.8rem 2.5rem;
+        width: 300px;
+        border-radius: 100px;
         font-weight: 600;
-        margin-top: 0;
+
+        text-transform: uppercase;
+        color: $black-light;
       }
     }
   }
-
   .section-mentoria {
     min-width: $xsmall;
+    position: relative;
+padding-top: 3rem;
+padding-bottom: 3rem;
 
-    @extend .section--mis-redes;
+.bg-section-btc{
+  background-image: url("../../imagenes/btg-bg-section.jpg");
+position: absolute;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+filter: brightness(0.3);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+}
 
-    .mentoria_contenido {
+    padding: 2rem;
+    .div-mentoria {
+      position: inherit;
+      z-index: 2;
+      .header-title {
+        color: $turquesa;
+      }
       .mentoria-items {
         display: flex;
         flex-direction: column;
-        gap: 1.6rem;
-
-        .mentoria_texto {
-          display: flex;
-
-          img {
-            width: 30px;
-            height: 30px;
-            margin-right: 8px;
-          }
-
-          .remember {
-            font-weight: 700;
-          }
-        }
-      }
-
-      .video-iframe {
-        margin-top: 1.6rem;
-        background-color: #000000;
-        video {
-          width: 100%;
-          border-radius: $border-radius;
-          height: 30rem;
-        }
+        color: white;
+        list-style: disc;
+        padding-left: 1.5rem;
+        gap: 0.6rem;
+        font-weight: bold;
       }
     }
-  }
-
-  .section-about-me {
-    text-align: center;
-
-    width: 100%;
-
-    margin: auto;
-    padding: 1.8rem;
-    margin-top: 60px;
-
-    .redes_contenido {
-      display: flex;
-      flex-direction: column;
-      gap: 2.6rem;
-      //max-width: 425px;
-      margin: auto;
-      .marco {
+    .div-mis-redes {
+      position: inherit;
+      z-index: 2;
+      .button-group {
         display: flex;
-        flex-direction: column;
-        width: 300px;
-        height: 500px;
-        margin: auto;
-        padding: 2rem 0.6rem;
-        background-color: $blanco;
-        border-radius: $border-radius;
         justify-content: center;
+        width: 100%;
+        flex-wrap: wrap;
         align-items: center;
-        gap: 2.5rem;
-        box-shadow: $box-shadow;
+        gap: 2rem;
+        list-style: none;
 
-        img {
-          width: 100px;
-          border-radius: 100%;
-        }
-        .resaltado {
-          width: -webkit-fit-content;
-          width: -moz-fit-content;
-          width: fit-content;
-          padding: 1rem 1.5rem;
-          background-color: $negro;
-          color: white;
-          font-size: 3rem;
-          border-radius: $border-radius;
-        }
-      }
-
-      .video {
-        width: 300px;
-        margin: auto;
-        border-radius: $border-radius;
-        box-shadow: $box-shadow;
-      }
-    }
-  }
-
-  .section-merch {
-    text-align: center;
-    max-width: 425px;
-    margin: auto;
-
-    padding-top: 2rem;
-    .container {
-      margin-top: 0%;
-      position: relative;
-      width: 100vw;
-      max-width: 300px;
-      height: 35rem;
-      overflow-x: hidden;
-      overflow-y: hidden;
-      margin-bottom: 2rem;
-      padding: 0.6rem;
-
-      .slider {
-        input {
-          visibility: hidden;
-          display: none;
-        }
-
-        .content {
-          position: relative;
-          width: 100%;
-          height: -webkit-fit-content;
-          height: -moz-fit-content;
-          height: fit-content;
-          display: flex;
-          transition: 400ms ease-in-out;
-
-          .firstslide,
-          .secondslide,
-          .thirdslide,
-          .fourslide {
-            position: relative;
-            width: 130rem;
-            height: 25rem;
+        li {
+          a {
             display: flex;
             justify-content: center;
             align-items: center;
+            padding: 1rem;
+            background-color: $icon-redes-yellow;
+            transform: rotate(45deg);
+            border-radius: 15px;
 
             img {
-              width: 300px;
+              width: 3rem;
+              height: 3rem;
+              transform: rotate(-45deg);
             }
           }
         }
-
-        .buttons {
-          position: absolute;
-          bottom: 0;
-          width: 100%;
+      }
+      .linea {
+        width: 25rem;
+        height: 0.4rem;
+        background-color: $turquesa_very_strong;
+        margin: auto;
+        margin-top: 8rem;
+        margin-bottom: 3rem;
+      }
+      .redes-live {
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        p {
+          margin-top: 3rem;
+          margin-bottom: 3rem;
+        }
+        .redes-live-icons {
           display: flex;
           justify-content: center;
-          bottom: 50px;
-          gap: 10px;
+          align-items: center;
+          gap: 3rem;
+          list-style: none;
 
-          label {
-            width: 20px;
-            height: 20px;
-            background-color: #3ef2d0;
-            opacity: 0.5;
-            cursor: pointer;
-            z-index: 1;
-            transition: 300ms ease-in-out;
+          li {
+            a {
+              display: flex;
+              justify-content: center;
+              padding: 1rem;
+              background-color: $icon-redes-yellow;
+              transform: rotate(45deg);
+              border-radius: 15px;
 
-            &:hover {
-              scale: 1.2;
-              opacity: 1;
-            }
-
-            .slider input:nth-child(1):checked ~ .buttons label:nth-child(1),
-            .slider input:nth-child(2):checked ~ .buttons label:nth-child(2),
-            .slider input:nth-child(3):checked ~ .buttons label:nth-child(3),
-            .slider input:nth-child(4):checked ~ .buttons label:nth-child(4) {
-              opacity: 1;
-              scroll-margin: 1.2;
-              width: 40px;
+              img {
+                width: 3rem;
+                height: 3rem;
+                transform: rotate(-45deg);
+              }
             }
           }
         }
-
-        input:nth-child(1):checked ~ .content {
-          left: 0rem;
-        }
-
-        input:nth-child(2):checked ~ .content {
-          left: -30rem;
-        }
-
-        input:nth-child(3):checked ~ .content {
-          left: -60rem;
-        }
-
-        input:nth-child(4):checked ~ .content {
-          left: -90rem;
-        }
       }
     }
-
-    .bpedido {
-      @include but($turquesa, $negro);
-      padding: 2rem 3rem;
-      border-radius: 0.5rem;
-      font-weight: 700;
-      margin-bottom: 2rem;
-    }
   }
+}
 
-  .section-libros {
+.section-libros {
+  margin: auto;
+  .carousel {
+    position: relative;
+    width: 100%;
+
+    max-width: 33rem;
+    padding: 10px 40px;
+    border: 1px solid gray;
+    border-radius: 15px;
+    background: #d3d3d3;
     margin: auto;
-    .carousel {
-      position: relative;
-      width: 100%;
+  }
+  .carousel .img-book {
+    width: 24rem;
+    height: 38rem;
 
-      max-width: 33rem;
-      padding: 10px 40px;
-      border: 1px solid gray;
-      border-radius: 15px;
-      background: #d3d3d3;
-      margin: auto;
-    }
-    .carousel .img-book {
-      width: 24rem;
-      height: 38rem;
+    margin-right: 1.5rem;
 
-      margin-right: 1.5rem;
+    border-radius: 1.5rem;
+    box-shadow: $box-shadow;
+    /* establecer block para remover el espacio alrededor de las imágenes */
+    display: block;
+  }
 
-      border-radius: 1.5rem;
-      box-shadow: $box-shadow;
-      /* establecer block para remover el espacio alrededor de las imágenes */
-      display: block;
-    }
+  .arrow {
+    position: absolute;
 
-    .arrow {
-      position: absolute;
+    height: 100%;
 
-      height: 100%;
+    border: none;
 
-      border: none;
-
-      color: #444;
-      display: block;
-      img {
-        width: 3rem;
-      }
-    }
-
-    .arrow:focus {
-      outline: none;
-    }
-
-    .arrow:hover {
-      cursor: pointer;
-    }
-
-    .prev {
-      top: 0;
-      left: 5px;
-      background-color: transparent;
-    }
-
-    .next {
-      height: 100%;
-
-      right: 5px;
-      top: 0;
-
-      background-color: transparent;
-      img {
-        rotate: 180deg;
-      }
-    }
-
-    .gallery {
-      overflow: hidden;
-    }
-
-    .gallery ul {
-      height: 38rem;
-      width: 9999px;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      transition: margin-left 250ms;
-      /* eliminando los espacios en blanco entre los li inline-block'ed */
-      /* http://davidwalsh.name/remove-whitespace-inline-block */
-      font-size: 0;
-      display: flex;
-    }
-
-    .gallery li {
-      display: inline-block;
-      position: relative;
-      height: 38rem;
-
-      .span-order-book {
-        height: 10rem;
-        color: $soft-black;
-        position: absolute;
-        bottom: 0;
-        font-size: 3rem;
-        width: 24rem;
-        background: linear-gradient(
-          0deg,
-          rgba(44, 46, 45, 0.836) 0%,
-          rgba(62, 242, 208, 0) 100%
-        );
-        border-radius: 1.5rem;
-        display: flex;
-        justify-content: center;
-        .span-order {
-          color: $turquesa_strong;
-          font-size: 5rem;
-          padding: 1.5rem;
-        }
-      }
+    color: #444;
+    display: block;
+    img {
+      width: 3rem;
     }
   }
 
-  .bpedido {
-    @include but($turquesa, $negro);
-    padding: 2rem 3rem;
-    border-radius: 0.5rem;
-    font-weight: 700;
-    margin-bottom: 2rem;
+  .arrow:focus {
+    outline: none;
+  }
+
+  .arrow:hover {
+    cursor: pointer;
+  }
+
+  .prev {
+    top: 0;
+    left: 5px;
+    background-color: transparent;
+  }
+
+  .next {
+    height: 100%;
+
+    right: 5px;
+    top: 0;
+
+    background-color: transparent;
+    img {
+      rotate: 180deg;
+    }
+  }
+
+  .gallery {
+    overflow: hidden;
+  }
+
+  .gallery ul {
+    height: 38rem;
+    width: 9999px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transition: margin-left 250ms;
+    /* eliminando los espacios en blanco entre los li inline-block'ed */
+    /* http://davidwalsh.name/remove-whitespace-inline-block */
+    font-size: 0;
+    display: flex;
+  }
+
+  .gallery li {
+    display: inline-block;
+    position: relative;
+    height: 38rem;
+
+    .span-order-book {
+      height: 10rem;
+      color: $soft-black;
+      position: absolute;
+      bottom: 0;
+      font-size: 3rem;
+      width: 24rem;
+      background: linear-gradient(
+        0deg,
+        rgba(44, 46, 45, 0.836) 0%,
+        rgba(62, 242, 208, 0) 100%
+      );
+      border-radius: 1.5rem;
+      display: flex;
+      justify-content: center;
+      .span-order {
+        color: $turquesa_strong;
+        font-size: 5rem;
+        padding: 1.5rem;
+      }
+    }
   }
 }
 
@@ -948,12 +696,7 @@ main {
 
 ////MODAL END
 
-
-
 @media screen and (min-width: 560px) {
-
-
-
   main {
     width: 100%;
     max-width: none;
@@ -1097,14 +840,12 @@ main {
       }
     }
     .section--mis-redes {
-
-     
       .redes-conteiners {
         flex-direction: row;
-         max-width: none;
+        max-width: none;
         justify-content: center;
         padding-top: 2rem;
-        .container-live{
+        .container-live {
           padding-top: 0px;
         }
       }
@@ -1122,8 +863,6 @@ main {
 }
 
 @media screen and (min-width: 1024px) {
-
-
   p {
     font-size: $font-size-paragraph;
   }
@@ -1155,8 +894,7 @@ main {
         }
       }
     }
-
-}
+  }
 
   main {
     max-width: none;
@@ -1245,12 +983,10 @@ main {
     .section--mis-redes {
       padding: 50px 0;
       .redes-conteiners {
- 
         max-width: 90rem;
         margin: 8rem auto;
         justify-content: space-between;
         .button-group {
-
           .botones_redes {
             max-width: none;
             width: 30rem;
@@ -1260,97 +996,49 @@ main {
             }
           }
         }
-        .linea {
-          display: block;
-          width: 4px;
-          border-radius: 20%;
-          background: linear-gradient(
-            0deg,
-            rgba(248, 248, 249, 1) 1%,
-            rgba(187, 201, 214, 1) 13%,
-            rgba(187, 201, 214, 1) 50%,
-            rgba(187, 201, 214, 1) 83%,
-            rgba(248, 248, 249, 1) 95%
-          );
-        }
-        .container-live {
-          .stream_iconos {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-
-            a {
-              display: flex;
-            }
-            img {
-              display: flex;
-              margin: auto;
-            }
-          }
-        }
+     
+    
       }
     }
 
     .section-mentoria {
-      .mentoria_contenido {
-        max-width: 90rem;
-        margin: 8rem auto;
-        gap: 6.6rem;
-      }
+padding-top: 10rem;
+padding-bottom: 10rem;
+    .div-mentoria{
+max-width: 100rem;
+margin: auto;
+.header-title{
+  p{
+    font-size: 3.4rem;
+  }
+}
+
+.mentoria-items{
+font-size: 2.4rem;
+ gap: 2rem;
+
+}
     }
-    .section-about-me {
-      .redes_contenido {
-        max-width: 90rem;
-        margin: 8rem auto;
-      }
-    }
-    .section-merch {
-      max-width: 90rem;
-      .container {
-        max-width: 51rem;
-        height: 50rem;
-        .slider {
-          .content {
-            .firstslide,
-            .secondslide,
-            .thirdslide,
-            .fourslide {
-              height: 40rem;
-              img {
-                width: 500px;
-              }
-            }
-          }
-
-          input:nth-child(1):checked ~ .content {
-            left: 0rem;
-          }
-
-          input:nth-child(2):checked ~ .content {
-            left: -50rem;
-          }
-
-          input:nth-child(3):checked ~ .content {
-            left: -100rem;
-          }
-
-          input:nth-child(4):checked ~ .content {
-            left: -150rem;
-          }
+    .div-mis-redes{
+      margin: auto;
+      max-width: 100rem;
+      .redes-live{
+        p{
+          font-size: 2.4rem;
         }
       }
     }
-  }
 
-@keyframes appear {
-  from {
-    opacity: 0.3;
-   
-  }
-  to {
-    opacity: 1;
+    }
  
+
+  @keyframes appear {
+    from {
+      opacity: 0.3;
+    }
+    to {
+      opacity: 1;
+    }
   }
 }
 }
-

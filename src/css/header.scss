@@ -1,7 +1,9 @@
 $turquesa: #3ef2d0;
 $soft-black: #212529;
+$black-light: #303235;
 $turquesa_strong: #19e6c0;
 $turquesa_soft: #effefa;
+$color-dot-clock: #ccc;
 $gris: #f2f5f7;
 $gris-middle: #d6d7d8;
 $gris-strong: #bbc9d6;
@@ -22,7 +24,6 @@ $box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
 $gap_slider: 3rem;
 //variables clock halvin
 $font-size-clock: 3.5rem;
-
 
 @mixin but($bg-color, $text) {
   background-color: $bg-color;
@@ -47,258 +48,271 @@ header {
   min-width: $xsmall;
   height: -webkit-fit-content;
   height: -moz-fit-content;
-  height: 70vh;
+  height: 60vh;
   margin: auto;
   position: relative;
-  background-image: url("../../imagenes/hero/hero_mobile_craneo_satoshi.jpeg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  //background-position: 70% center;
   text-align: center;
   padding: 1.6rem 0px;
   padding-top: 0;
   display: flex;
   flex-direction: column;
 
-  .contenido-encabezado {
-    margin: 1rem auto;
-    padding: 0px 16px;
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 3rem;
     height: 100%;
-    .text-autor {
-      font-style: italic;
-      font-weight: $font-W-bold-700;
-    }
-    div {
-      .btc-container-data {
-        height: 50px;
+    object-fit: fill;
+    z-index: -1;
+  }
+}
+.contenido-encabezado {
+  margin: 1rem auto;
+  padding: 0px 16px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  .text-autor {
+    font-style: italic;
+    font-weight: $font-W-bold-700;
+  }
+  div {
+    .btc-container-data {
+      height: 50px;
+      display: none;
+      justify-content: center;
+      gap: 1rem;
+      .div-btc-price {
+        background-color: #333;
         display: flex;
-        justify-content: center;
-        gap: 1rem;
-        .div-btc-price {
-          background-color: #333;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.1rem 1rem;
+        border-radius: 0.5rem;
+        min-width: 24rem;
+        max-width: 36rem;
+
+        div {
           display: flex;
-          justify-content: space-between;
+          font-size: 1.8rem;
+          font-weight: bold;
           align-items: center;
-          padding: 1.1rem 1rem;
-          border-radius: 0.5rem;
-          min-width: 24rem;
-          max-width: 36rem;
-
-          div {
-            display: flex;
-            font-size: 1.8rem;
-            font-weight: bold;
-            align-items: center;
-            gap: 0.5rem;
-
-            p {
-              color: white;
-              font-size: 1.6rem;
-              span {
-                color: gray;
-                font-size: 1.3rem;
-              }
-            }
-            img {
-              width: 2.5rem;
-            }
-          }
-          span {
-            color: white;
-            font-size: 1.6rem;
-            font-weight: bold;
-          }
-        }
-        .fear-and-greed {
-          display: flex;
-          position: relative;
-          background-color: #333;
-          border-radius: 5px;
-          color: white;
-          min-width: 10rem;
-
-          height: 100%;
-          padding: 2px;
-          justify-content: center;
-          align-items: center;
-          // padding: 0 30px;
+          gap: 0.5rem;
 
           p {
-            color: rgb(146, 146, 146);
-            font-size: 12px;
-            position: absolute;
-            left: 5px;
-            top: 5px;
-          }
-          span {
+            color: white;
             font-size: 1.6rem;
-            font-weight: bold;
+            span {
+              color: gray;
+              font-size: 1.3rem;
+            }
+          }
+          img {
+            width: 2.5rem;
           }
         }
+        span {
+          color: white;
+          font-size: 1.6rem;
+          font-weight: bold;
+        }
       }
-
-      .clock {
-        display: flex;
-        justify-content: center;
-        margin: auto 0px;
-        width: 100%;
-      }
-    }
-    .text-effect-writter {
-      display: flex;
-      gap: 8px;
-      align-items: center;
-      justify-content: center;
-      .text_slogan {
-        font-weight: bold;
-        font-size: 2.2rem;
+      .fear-and-greed {
+        display: none;
+        position: relative;
+        background-color: #333;
+        border-radius: 5px;
         color: white;
-        text-shadow: #000;
-
-        text-align: start;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .boton {
-        @include but($turquesa, $negro);
-        padding: 0.4rem 1.2rem;
         min-width: 10rem;
-        border-radius: 0.5rem;
-        font-size: 1.4rem;
-        font-weight: 700;
-        width: -webkit-fit-content;
-        width: -moz-fit-content;
-        width: fit-content;
-        align-self: flex-end;
-
-        border-bottom: 8px solid #299b86;
-        box-shadow: 0px 5px 3px 2px rgba(0, 0, 0, 0.1);
-      }
-    }
-
-    .flip-clock-wrapper ul {
-      margin: 0.3rem;
-    }
-
-    .flip-clock-wrapper ul li {
-      line-height: 4.5rem;
-      @-moz-document url-prefix() {
-        line-height: 5.5rem;
-      }
-    }
-
-    .flip-clock-wrapper ul li a .up .inn {
-      font-size: $font-size-clock;
-    }
-
-    .flip-clock-wrapper ul li a .down .inn {
-      font-size: $font-size-clock;
-    }
-
-    .flip-clock-wrapper ul li a div.up:after {
-      top: 2.2rem;
-    }
-
-    .flip-clock-wrapper .flip-clock-divider {
-      width: 1.1rem;
-      height: -webkit-fit-content;
-      height: -moz-fit-content;
-      height: fit-content;
-    }
-
-    .flip-clock-wrapper .flip-clock-divider .flip-clock-label {
-      right: -50px;
-      display: none;
-    }
-
-    .flip-clock-wrapper .days {
-      width: 0px;
-    }
-
-    .flip-clock-wrapper .hours .flip-clock-dot,
-    .flip-clock-wrapper .minutes .flip-clock-dot,
-    .flip-clock-wrapper .seconds .flip-clock-dot {
-      left: 0rem;
-    }
-
-    .flip-clock-wrapper .hours .top,
-    .flip-clock-wrapper .minutes .top,
-    .flip-clock-wrapper .seconds .top {
-      top: 15px;
-    }
-
-    .flip-clock-wrapper .hours .bottom,
-    .flip-clock-wrapper .minutes .bottom,
-    .flip-clock-wrapper .seconds .bottom {
-      top: 30px;
-    }
-
-    .clock .flip {
-      width: 2.5rem;
-      height: 4.5rem;
-    }
-  }
-  .preview-container {
-    position: absolute;
-    display: none;
-
-    bottom: 40px;
-    right: 60px;
-    gap: 1.2rem;
-    div {
-      border-radius: 12px;
-      border: 3px solid white;
-      position: relative;
-      overflow: hidden;
-
-      box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
-      img {
-        width: 9.6rem;
-        height: 5.4rem;
-        border-radius: 12px;
-      }
-      &:hover {
-        cursor: pointer;
-        transform: scale(0.98);
-      }
-    }
-    .img-preview-thumbnails {
-      &::after {
-        position: absolute;
-        content: "";
 
         height: 100%;
+        padding: 2px;
+        justify-content: center;
+        align-items: center;
+        // padding: 0 30px;
 
-        background: rgba(255, 255, 255, 0.39);
-
-        left: 0;
-        top: 0;
-        animation: whiteOverlaySlide 6s ease-in-out infinite;
+        p {
+          color: rgb(146, 146, 146);
+          font-size: 12px;
+          position: absolute;
+          left: 5px;
+          top: 5px;
+        }
+        span {
+          font-size: 1.6rem;
+          font-weight: bold;
+        }
       }
     }
-  }
-      .preview-container {
-      display: none;
+
+    .clock {
+      display: flex;
+      justify-content: center;
+      margin: auto 0px;
+      width: 100%;
     }
-    .slide {
-      display: none;
+  }
+  .text-effect-writter {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    .text_slogan {
+      font-weight: bold;
+      font-size: 2.2rem;
+      color: white;
+      text-shadow: #000;
+
+      text-align: center;
+      align-items: center;
+      justify-content: center;
     }
 
-    .slide.active {
-      display: none;
-      opacity: 1;
-      z-index: -10;
+    .boton {
+      @include but($turquesa, $negro);
+      padding: 0.8rem 1.2rem;
+      min-width: 10rem;
+      border-radius: 0.5rem;
+      font-size: 1.4rem;
+      font-weight: 700;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: 25rem;
+      border-radius: 50px;
+      text-transform: uppercase;
+      color: $black-light;
+      box-shadow: 0px 5px 3px 2px rgba(0, 0, 0, 0.1);
     }
-    .slide img {
-      display: none;
+  }
+
+  .flip-clock-wrapper ul {
+    margin: 0.3rem;
+  }
+
+  .flip-clock-wrapper ul li {
+    line-height: 4.5rem;
+    @-moz-document url-prefix() {
+      line-height: 5.5rem;
     }
+  }
+
+  .flip-clock-wrapper ul li a .up .inn {
+    font-size: $font-size-clock;
+  }
+
+  .flip-clock-wrapper ul li a .down .inn {
+    font-size: $font-size-clock;
+  }
+
+  .flip-clock-wrapper ul li a div.up:after {
+    top: 2.2rem;
+  }
+
+  .flip-clock-wrapper .flip-clock-divider {
+    width: 1.1rem;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    border-radius: 0rem;
+  }
+
+  .flip-clock-wrapper .flip-clock-divider .flip-clock-label {
+    right: -50px;
+    display: none;
+  }
+
+  .flip-clock-wrapper .days {
+    width: 0px;
+  }
+
+  .flip-clock-wrapper .hours .flip-clock-dot,
+  .flip-clock-wrapper .minutes .flip-clock-dot,
+  .flip-clock-wrapper .seconds .flip-clock-dot {
+    left: 0rem;
+    background-color: $color-dot-clock;
+  }
+
+  .flip-clock-wrapper .hours .top,
+  .flip-clock-wrapper .minutes .top,
+  .flip-clock-wrapper .seconds .top {
+    top: 15px;
+  }
+
+  .flip-clock-wrapper .hours .bottom,
+  .flip-clock-wrapper .minutes .bottom,
+  .flip-clock-wrapper .seconds .bottom {
+    top: 30px;
+  }
+  .flip-clock-wrapper ul li a div.down {
+    border-radius: 0rem;
+  }
+  .flip-clock-wrapper ul li a div div.inn {
+    border-radius: 0rem;
+  }
+  .clock .flip {
+    width: 2.5rem;
+    height: 4.5rem;
+  }
+}
+.preview-container {
+  position: absolute;
+  display: none;
+
+  bottom: 40px;
+  right: 60px;
+  gap: 1.2rem;
+  div {
+    border-radius: 12px;
+    border: 3px solid white;
+    position: relative;
+    overflow: hidden;
+
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+    img {
+      width: 9.6rem;
+      height: 5.4rem;
+      border-radius: 12px;
+    }
+    &:hover {
+      cursor: pointer;
+      transform: scale(0.98);
+    }
+  }
+  .img-preview-thumbnails {
+    &::after {
+      position: absolute;
+      content: "";
+
+      height: 100%;
+
+      background: rgba(255, 255, 255, 0.39);
+
+      left: 0;
+      top: 0;
+      animation: whiteOverlaySlide 6s ease-in-out infinite;
+    }
+  }
+}
+.preview-container {
+  display: none;
+}
+.slide {
+  display: none;
+}
+
+.slide.active {
+  display: none;
+  opacity: 1;
+  z-index: -10;
+}
+.slide img {
+  display: none;
 }
 
 @media (orientation: landscape) {
@@ -317,7 +331,7 @@ header {
   header {
     width: 100%;
     height: 70vh;
-    background-image: url("../../imagenes/hero/hero_mobile_craneo_satoshi.jpeg");
+
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -331,6 +345,7 @@ header {
           gap: 20px;
 
           .div-btc-price {
+            display: none;
             width: fit-content;
             gap: 3rem;
             height: fit-content;
@@ -350,7 +365,7 @@ header {
             }
           }
           .fear-and-greed {
-            display: flex;
+            display: none;
             position: relative;
             background-color: #333;
             border-radius: 5px;
@@ -382,9 +397,7 @@ header {
         .text_slogan {
           font-size: 3rem;
         }
-        .boton {
-          align-self: flex-start;
-        }
+       
       }
 
       .flip-clock-wrapper ul {
@@ -530,9 +543,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    background-image: none;
 
-    transition: opacity 2s ease-in-out;
     .contenido-encabezado {
       gap: 3rem;
 
@@ -554,27 +565,32 @@ header {
         }
       }
       .text-effect-writter {
-        padding-left: 6rem;
+      
 
         padding-bottom: 4rem;
         min-width: 60rem;
-        width: 40%;
+        width: 60%;
         flex-direction: column;
         gap: 12px;
         .text_slogan {
-          font-size: 5rem;
-          line-height: 6.5rem;
+          font-size: 3rem;
+        
+          &::after{
+            content: "-JJCHAGERBEN-";
+            font-size: 2rem;
+            display: block;
+          }
         }
         .boton {
           margin: 4rem 0rem;
           width: -webkit-fit-content;
           width: -moz-fit-content;
-          width: fit-content;
+          width: 45rem;
           margin: auto;
-          align-self: flex-start;
-          padding: 0.5rem 2rem;
-          margin-left: 0;
-          font-size: 2rem;
+       
+          padding: 0.4rem 2rem;
+        
+          font-size: 1.8rem;
         }
       }
     }

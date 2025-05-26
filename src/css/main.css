@@ -23,7 +23,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  gap: 3.2rem;
+  background-color: none;
   margin: auto;
 }
 main > *:nth-child(even) {
@@ -65,6 +65,7 @@ main .section-calcujub {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-top: 0.5rem solid #23a78e;
 }
 main .section-calcujub .announce-calc-jub {
   background-color: #effefa;
@@ -261,191 +262,24 @@ main .section-calcujub .aside-section-calc-jub #aside-calc-jub div .p-largest-nu
   width: fit-content;
   text-wrap: nowrap;
 }
-main .section--mis-redes, main .section-mentoria {
-  min-width: 320px;
-  width: 100%;
-  padding: 0.6rem;
-  padding: 1.8rem;
-  margin: auto;
-}
-main .section--mis-redes .redes-conteiners, main .section-mentoria .redes-conteiners {
-  display: flex;
-  flex-direction: column;
-  gap: 3.6rem;
-  max-width: 425px;
-  margin: auto;
-}
-main .section--mis-redes .redes-conteiners .button-group, main .section-mentoria .redes-conteiners .button-group {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-}
-main .section--mis-redes .redes-conteiners .button-group .botones_redes, main .section-mentoria .redes-conteiners .button-group .botones_redes {
-  background-color: #3ef2d0;
-  background-color: #ffffff;
-  color: #000000;
-  margin-top: 1.6rem;
-  font-size: 2rem;
-  text-decoration: none;
-  display: inline-block;
-  border-radius: 0.5rem;
-  border: 1px solid #3ef2d0;
-  padding: 1rem 2.5rem;
-  margin-top: 0rem;
-  min-width: 25rem;
-  width: 25rem;
-  max-width: 30rem;
-  font-size: 1.6rem;
-  box-shadow: 3px 3px 5px 0px #d6d7d8;
-  display: flex;
-  justify-content: center;
-  text-align: left;
-  gap: 0.5rem;
-  text-decoration: none;
-}
-main .section--mis-redes .redes-conteiners .button-group .botones_redes:hover, main .section-mentoria .redes-conteiners .button-group .botones_redes:hover {
-  background-color: #19e6c0;
-  cursor: pointer;
-}
-main .section--mis-redes .redes-conteiners .button-group .botones_redes:active, main .section-mentoria .redes-conteiners .button-group .botones_redes:active {
-  transform: scale(0.9);
-}
-main .section--mis-redes .redes-conteiners .button-group .botones_redes img, main .section-mentoria .redes-conteiners .button-group .botones_redes img {
-  width: 40px;
-  height: 40px;
-  margin-right: 0.5rem;
-}
-main .section--mis-redes .redes-conteiners .button-group .botones_redes span, main .section-mentoria .redes-conteiners .button-group .botones_redes span {
-  margin: auto 0rem;
-  color: #000000;
-  font-weight: bold;
-  font-size: 1.6rem;
-  width: 100%;
-  overflow: hidden;
-  white-space: wrap;
-  text-overflow: ellipsis;
-}
-main .section--mis-redes .redes-conteiners .linea, main .section-mentoria .redes-conteiners .linea {
-  display: none;
-}
-main .section--mis-redes .redes-conteiners .container-live, main .section-mentoria .redes-conteiners .container-live {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-top: 6rem;
-  gap: 2.2rem;
-}
-main .section--mis-redes .redes-conteiners .container-live .live_texto, main .section-mentoria .redes-conteiners .container-live .live_texto {
-  font-weight: 700;
-  font-size: 2.5rem;
-}
-main .section--mis-redes .redes-conteiners .container-live .live-group, main .section-mentoria .redes-conteiners .container-live .live-group {
-  width: -moz-fit-content;
-  width: fit-content;
-  align-self: center;
-  position: relative;
-}
-main .section--mis-redes .redes-conteiners .container-live .live-group .foto, main .section-mentoria .redes-conteiners .container-live .live-group .foto {
-  border-radius: 100%;
-  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
-  width: 10rem;
-  margin: auto;
-  border: 5px solid #FF0042;
-}
-main .section--mis-redes .redes-conteiners .container-live .live-group .live, main .section-mentoria .redes-conteiners .container-live .live-group .live {
-  background-color: transparent;
-  color: red;
-  margin-top: 1.6rem;
-  font-size: 2rem;
-  text-decoration: none;
-  display: inline-block;
-  border-radius: 0.5rem;
-  width: 20.5rem;
-  margin: auto;
-  padding: 1.5rem 3rem;
-  font-size: 2.4rem;
-  display: none;
-}
-main .section--mis-redes .redes-conteiners .container-live .live-group .live:hover, main .section-mentoria .redes-conteiners .container-live .live-group .live:hover {
-  background-color: #19e6c0;
-  cursor: pointer;
-}
-main .section--mis-redes .redes-conteiners .container-live .live-group .live:active, main .section-mentoria .redes-conteiners .container-live .live-group .live:active {
-  transform: scale(0.9);
-}
-main .section--mis-redes .redes-conteiners .container-live .live-group .animated_live, main .section-mentoria .redes-conteiners .container-live .live-group .animated_live {
-  height: 5.4rem;
-  position: absolute;
-  right: -80px;
-  top: -20px;
-}
-main .section--mis-redes .redes-conteiners .container-live .stream_iconos, main .section-mentoria .redes-conteiners .container-live .stream_iconos {
-  display: flex;
-  justify-content: space-around;
-}
-main .section--mis-redes .redes-conteiners .container-live .stream_iconos a, main .section-mentoria .redes-conteiners .container-live .stream_iconos a {
-  padding: 1rem 3rem;
-  background-color: #ffffff;
-  box-shadow: 3px 3px 5px 0px #d6d7d8;
-  border: 1px solid #3ef2d0;
-}
-main .section--mis-redes .redes-conteiners .container-live .stream_iconos a:hover, main .section-mentoria .redes-conteiners .container-live .stream_iconos a:hover {
-  background-color: #19e6c0;
-  cursor: pointer;
-}
-main .section--mis-redes .redes-conteiners .container-live .stream_iconos a:active, main .section-mentoria .redes-conteiners .container-live .stream_iconos a:active {
-  transform: scale(0.9);
-}
-main .section--mis-redes .redes-conteiners .container-live .stream_iconos img, main .section-mentoria .redes-conteiners .container-live .stream_iconos img {
-  width: 4rem;
-  margin: auto;
-}
-main .section--mis-redes .redes-conteiners .container-live .live-horarios, main .section-mentoria .redes-conteiners .container-live .live-horarios {
-  border: 1px solid #d6d7d8;
-  border-radius: 12px;
-  padding: 12px;
-}
-main .section--mis-redes .redes-conteiners .container-live .live-horarios p, main .section-mentoria .redes-conteiners .container-live .live-horarios p {
-  margin-bottom: 12px;
-  color: #5c5c5c;
-}
-main .section--mis-redes .redes-conteiners .container-live .live-horarios .container-paises, main .section-mentoria .redes-conteiners .container-live .live-horarios .container-paises {
-  display: flex;
-  gap: 18px;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-main .section--mis-redes .redes-conteiners .container-live .live-horarios .container-paises div img, main .section-mentoria .redes-conteiners .container-live .live-horarios .container-paises div img {
-  width: 32px;
-  height: 32px;
-}
-main .section--mis-redes .redes-conteiners .container-live .live-horarios .container-paises div p, main .section-mentoria .redes-conteiners .container-live .live-horarios .container-paises div p {
-  font-size: 14px;
-  color: #707070;
-}
 main .section-announce {
-  min-width: 320px;
   width: 100%;
-  padding: 1.8rem;
-  margin-top: 3.2rem;
+  background-color: #23a78e;
 }
 main .section-announce .div-container--announce {
-  background-color: #effefa;
-  border: 1px solid #22dfc1;
+  background-color: #23a78e;
   border-radius: 3rem;
   text-align: center;
   padding: 1.4rem 3.4rem;
-  max-width: 425px;
-  box-shadow: 3px 3px 5px 0px #d6d7d8;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   margin: auto;
 }
 main .section-announce .div-container--announce .h2-red-tittle {
-  color: #000000;
-  font-weight: 500;
+  color: white;
+  font-weight: bold;
 }
 main .section-announce .div-container--announce .boton {
   background-color: #3ef2d0;
@@ -455,9 +289,13 @@ main .section-announce .div-container--announce .boton {
   text-decoration: none;
   display: inline-block;
   border-radius: 0.5rem;
-  padding: 1.5rem 2.5rem;
+  margin-top: 1rem;
+  padding: 0.8rem 2.5rem;
+  width: 300px;
+  border-radius: 100px;
   font-weight: 600;
-  margin-top: 0;
+  text-transform: uppercase;
+  color: #303235;
 }
 main .section-announce .div-container--announce .boton:hover {
   background-color: #19e6c0;
@@ -468,190 +306,109 @@ main .section-announce .div-container--announce .boton:active {
 }
 main .section-mentoria {
   min-width: 320px;
-}
-main .section-mentoria .mentoria_contenido .mentoria-items {
-  display: flex;
-  flex-direction: column;
-  gap: 1.6rem;
-}
-main .section-mentoria .mentoria_contenido .mentoria-items .mentoria_texto {
-  display: flex;
-}
-main .section-mentoria .mentoria_contenido .mentoria-items .mentoria_texto img {
-  width: 30px;
-  height: 30px;
-  margin-right: 8px;
-}
-main .section-mentoria .mentoria_contenido .mentoria-items .mentoria_texto .remember {
-  font-weight: 700;
-}
-main .section-mentoria .mentoria_contenido .video-iframe {
-  margin-top: 1.6rem;
-  background-color: #000000;
-}
-main .section-mentoria .mentoria_contenido .video-iframe video {
-  width: 100%;
-  border-radius: 0.5rem;
-  height: 30rem;
-}
-main .section-about-me {
-  text-align: center;
-  width: 100%;
-  margin: auto;
-  padding: 1.8rem;
-  margin-top: 60px;
-}
-main .section-about-me .redes_contenido {
-  display: flex;
-  flex-direction: column;
-  gap: 2.6rem;
-  margin: auto;
-}
-main .section-about-me .redes_contenido .marco {
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-  height: 500px;
-  margin: auto;
-  padding: 2rem 0.6rem;
-  background-color: #ffffff;
-  border-radius: 0.5rem;
-  justify-content: center;
-  align-items: center;
-  gap: 2.5rem;
-  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
-}
-main .section-about-me .redes_contenido .marco img {
-  width: 100px;
-  border-radius: 100%;
-}
-main .section-about-me .redes_contenido .marco .resaltado {
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 1rem 1.5rem;
-  background-color: #000000;
-  color: white;
-  font-size: 3rem;
-  border-radius: 0.5rem;
-}
-main .section-about-me .redes_contenido .video {
-  width: 300px;
-  margin: auto;
-  border-radius: 0.5rem;
-  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
-}
-main .section-merch {
-  text-align: center;
-  max-width: 425px;
-  margin: auto;
-  padding-top: 2rem;
-}
-main .section-merch .container {
-  margin-top: 0%;
   position: relative;
-  width: 100vw;
-  max-width: 300px;
-  height: 35rem;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  margin-bottom: 2rem;
-  padding: 0.6rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding: 2rem;
 }
-main .section-merch .container .slider input {
-  visibility: hidden;
-  display: none;
-}
-main .section-merch .container .slider .content {
-  position: relative;
-  width: 100%;
-  height: -moz-fit-content;
-  height: fit-content;
-  display: flex;
-  transition: 400ms ease-in-out;
-}
-main .section-merch .container .slider .content .firstslide,
-main .section-merch .container .slider .content .secondslide,
-main .section-merch .container .slider .content .thirdslide,
-main .section-merch .container .slider .content .fourslide {
-  position: relative;
-  width: 130rem;
-  height: 25rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-main .section-merch .container .slider .content .firstslide img,
-main .section-merch .container .slider .content .secondslide img,
-main .section-merch .container .slider .content .thirdslide img,
-main .section-merch .container .slider .content .fourslide img {
-  width: 300px;
-}
-main .section-merch .container .slider .buttons {
+main .section-mentoria .bg-section-btc {
+  background-image: url("../../imagenes/btg-bg-section.jpg");
   position: absolute;
-  bottom: 0;
   width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  filter: brightness(0.3);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+}
+main .section-mentoria .div-mentoria {
+  position: inherit;
+  z-index: 2;
+}
+main .section-mentoria .div-mentoria .header-title {
+  color: #3ef2d0;
+}
+main .section-mentoria .div-mentoria .mentoria-items {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  list-style: disc;
+  padding-left: 1.5rem;
+  gap: 0.6rem;
+  font-weight: bold;
+}
+main .section-mentoria .div-mis-redes {
+  position: inherit;
+  z-index: 2;
+}
+main .section-mentoria .div-mis-redes .button-group {
   display: flex;
   justify-content: center;
-  bottom: 50px;
-  gap: 10px;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
 }
-main .section-merch .container .slider .buttons label {
-  width: 20px;
-  height: 20px;
-  background-color: #3ef2d0;
-  opacity: 0.5;
-  cursor: pointer;
-  z-index: 1;
-  transition: 300ms ease-in-out;
+main .section-mentoria .div-mis-redes .button-group li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f8c114;
+  transform: rotate(45deg);
+  border-radius: 15px;
 }
-main .section-merch .container .slider .buttons label:hover {
-  scale: 1.2;
-  opacity: 1;
+main .section-mentoria .div-mis-redes .button-group li a img {
+  width: 3rem;
+  height: 3rem;
+  transform: rotate(-45deg);
 }
-main .section-merch .container .slider .buttons label .slider input:nth-child(1):checked ~ .buttons label:nth-child(1),
-main .section-merch .container .slider .buttons label .slider input:nth-child(2):checked ~ .buttons label:nth-child(2),
-main .section-merch .container .slider .buttons label .slider input:nth-child(3):checked ~ .buttons label:nth-child(3),
-main .section-merch .container .slider .buttons label .slider input:nth-child(4):checked ~ .buttons label:nth-child(4) {
-  opacity: 1;
-  scroll-margin: 1.2;
-  width: 40px;
+main .section-mentoria .div-mis-redes .linea {
+  width: 25rem;
+  height: 0.4rem;
+  background-color: #23a78e;
+  margin: auto;
+  margin-top: 8rem;
+  margin-bottom: 3rem;
 }
-main .section-merch .container .slider input:nth-child(1):checked ~ .content {
-  left: 0rem;
+main .section-mentoria .div-mis-redes .redes-live {
+  color: white;
+  font-weight: bold;
+  text-align: center;
 }
-main .section-merch .container .slider input:nth-child(2):checked ~ .content {
-  left: -30rem;
+main .section-mentoria .div-mis-redes .redes-live p {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
-main .section-merch .container .slider input:nth-child(3):checked ~ .content {
-  left: -60rem;
+main .section-mentoria .div-mis-redes .redes-live .redes-live-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  list-style: none;
 }
-main .section-merch .container .slider input:nth-child(4):checked ~ .content {
-  left: -90rem;
+main .section-mentoria .div-mis-redes .redes-live .redes-live-icons li a {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #f8c114;
+  transform: rotate(45deg);
+  border-radius: 15px;
 }
-main .section-merch .bpedido {
-  background-color: #3ef2d0;
-  color: #000000;
-  margin-top: 1.6rem;
-  font-size: 2rem;
-  text-decoration: none;
-  display: inline-block;
-  border-radius: 0.5rem;
-  padding: 2rem 3rem;
-  border-radius: 0.5rem;
-  font-weight: 700;
-  margin-bottom: 2rem;
+main .section-mentoria .div-mis-redes .redes-live .redes-live-icons li a img {
+  width: 3rem;
+  height: 3rem;
+  transform: rotate(-45deg);
 }
-main .section-merch .bpedido:hover {
-  background-color: #19e6c0;
-  cursor: pointer;
-}
-main .section-merch .bpedido:active {
-  transform: scale(0.9);
-}
-main .section-libros {
+
+.section-libros {
   margin: auto;
 }
-main .section-libros .carousel {
+.section-libros .carousel {
   position: relative;
   width: 100%;
   max-width: 33rem;
@@ -661,7 +418,7 @@ main .section-libros .carousel {
   background: #d3d3d3;
   margin: auto;
 }
-main .section-libros .carousel .img-book {
+.section-libros .carousel .img-book {
   width: 24rem;
   height: 38rem;
   margin-right: 1.5rem;
@@ -670,40 +427,40 @@ main .section-libros .carousel .img-book {
   /* establecer block para remover el espacio alrededor de las imágenes */
   display: block;
 }
-main .section-libros .arrow {
+.section-libros .arrow {
   position: absolute;
   height: 100%;
   border: none;
   color: #444;
   display: block;
 }
-main .section-libros .arrow img {
+.section-libros .arrow img {
   width: 3rem;
 }
-main .section-libros .arrow:focus {
+.section-libros .arrow:focus {
   outline: none;
 }
-main .section-libros .arrow:hover {
+.section-libros .arrow:hover {
   cursor: pointer;
 }
-main .section-libros .prev {
+.section-libros .prev {
   top: 0;
   left: 5px;
   background-color: transparent;
 }
-main .section-libros .next {
+.section-libros .next {
   height: 100%;
   right: 5px;
   top: 0;
   background-color: transparent;
 }
-main .section-libros .next img {
+.section-libros .next img {
   rotate: 180deg;
 }
-main .section-libros .gallery {
+.section-libros .gallery {
   overflow: hidden;
 }
-main .section-libros .gallery ul {
+.section-libros .gallery ul {
   height: 38rem;
   width: 9999px;
   margin: 0;
@@ -715,12 +472,12 @@ main .section-libros .gallery ul {
   font-size: 0;
   display: flex;
 }
-main .section-libros .gallery li {
+.section-libros .gallery li {
   display: inline-block;
   position: relative;
   height: 38rem;
 }
-main .section-libros .gallery li .span-order-book {
+.section-libros .gallery li .span-order-book {
   height: 10rem;
   color: #212529;
   position: absolute;
@@ -732,30 +489,10 @@ main .section-libros .gallery li .span-order-book {
   display: flex;
   justify-content: center;
 }
-main .section-libros .gallery li .span-order-book .span-order {
+.section-libros .gallery li .span-order-book .span-order {
   color: #19e6c0;
   font-size: 5rem;
   padding: 1.5rem;
-}
-main .bpedido {
-  background-color: #3ef2d0;
-  color: #000000;
-  margin-top: 1.6rem;
-  font-size: 2rem;
-  text-decoration: none;
-  display: inline-block;
-  border-radius: 0.5rem;
-  padding: 2rem 3rem;
-  border-radius: 0.5rem;
-  font-weight: 700;
-  margin-bottom: 2rem;
-}
-main .bpedido:hover {
-  background-color: #19e6c0;
-  cursor: pointer;
-}
-main .bpedido:active {
-  transform: scale(0.9);
 }
 
 /* The Modal (background) */
@@ -916,27 +653,27 @@ main .bpedido:active {
   main .section-calcujub .aside-section-calc-jub #aside-calc-jub div p:nth-child(3) {
     width: 15rem;
   }
-  main .section-calcujub .section--mis-redes, main .section-calcujub .section-mentoria {
+  main .section-calcujub .section--mis-redes {
     width: 100%;
     background-color: red;
   }
-  main .section-calcujub .section--mis-redes .redes-conteiners, main .section-calcujub .section-mentoria .redes-conteiners {
+  main .section-calcujub .section--mis-redes .redes-conteiners {
     background-color: red;
     flex-direction: row;
     justify-content: space-evenly;
     max-width: none;
   }
-  main .section-calcujub .section--mis-redes .redes-conteiners .button-group, main .section-calcujub .section-mentoria .redes-conteiners .button-group {
+  main .section-calcujub .section--mis-redes .redes-conteiners .button-group {
     justify-content: space-around;
   }
-  main .section-calcujub .section--mis-redes .redes-conteiners .button-group .botones-redes span, main .section-calcujub .section-mentoria .redes-conteiners .button-group .botones-redes span {
+  main .section-calcujub .section--mis-redes .redes-conteiners .button-group .botones-redes span {
     font-size: 2rem;
   }
-  main .section-calcujub .section--mis-redes .redes-conteiners .container-live, main .section-calcujub .section-mentoria .redes-conteiners .container-live {
+  main .section-calcujub .section--mis-redes .redes-conteiners .container-live {
     padding-top: 0px;
     background-color: red;
   }
-  main .section-calcujub .section--mis-redes .redes-conteiners .container-live .stream_iconos, main .section-calcujub .section-mentoria .redes-conteiners .container-live .stream_iconos {
+  main .section-calcujub .section--mis-redes .redes-conteiners .container-live .stream_iconos {
     gap: 0.5rem;
   }
   main .section-calcujub .section-mentoria .mentoria_contenido {
@@ -979,13 +716,13 @@ main .bpedido:active {
     height: 500px;
     margin: 0px;
   }
-  main .section--mis-redes .redes-conteiners, main .section-mentoria .redes-conteiners {
+  main .section--mis-redes .redes-conteiners {
     flex-direction: row;
     max-width: none;
     justify-content: center;
     padding-top: 2rem;
   }
-  main .section--mis-redes .redes-conteiners .container-live, main .section-mentoria .redes-conteiners .container-live {
+  main .section--mis-redes .redes-conteiners .container-live {
     padding-top: 0px;
   }
   main .section-about-me .redes_contenido {
@@ -1089,78 +826,42 @@ main .bpedido:active {
   main .section-announce .div-container--announce p {
     font-size: 2.5rem;
   }
-  main .section--mis-redes, main .section-mentoria {
+  main .section--mis-redes {
     padding: 50px 0;
   }
-  main .section--mis-redes .redes-conteiners, main .section-mentoria .redes-conteiners {
+  main .section--mis-redes .redes-conteiners {
     max-width: 90rem;
     margin: 8rem auto;
     justify-content: space-between;
   }
-  main .section--mis-redes .redes-conteiners .button-group .botones_redes, main .section-mentoria .redes-conteiners .button-group .botones_redes {
+  main .section--mis-redes .redes-conteiners .button-group .botones_redes {
     max-width: none;
     width: 30rem;
   }
-  main .section--mis-redes .redes-conteiners .button-group .botones_redes span, main .section-mentoria .redes-conteiners .button-group .botones_redes span {
+  main .section--mis-redes .redes-conteiners .button-group .botones_redes span {
     font-size: 2rem;
   }
-  main .section--mis-redes .redes-conteiners .linea, main .section-mentoria .redes-conteiners .linea {
-    display: block;
-    width: 4px;
-    border-radius: 20%;
-    background: linear-gradient(0deg, rgb(248, 248, 249) 1%, rgb(187, 201, 214) 13%, rgb(187, 201, 214) 50%, rgb(187, 201, 214) 83%, rgb(248, 248, 249) 95%);
+  main .section-mentoria {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
   }
-  main .section--mis-redes .redes-conteiners .container-live .stream_iconos, main .section-mentoria .redes-conteiners .container-live .stream_iconos {
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-  }
-  main .section--mis-redes .redes-conteiners .container-live .stream_iconos a, main .section-mentoria .redes-conteiners .container-live .stream_iconos a {
-    display: flex;
-  }
-  main .section--mis-redes .redes-conteiners .container-live .stream_iconos img, main .section-mentoria .redes-conteiners .container-live .stream_iconos img {
-    display: flex;
+  main .section-mentoria .div-mentoria {
+    max-width: 100rem;
     margin: auto;
   }
-  main .section-mentoria .mentoria_contenido {
-    max-width: 90rem;
-    margin: 8rem auto;
-    gap: 6.6rem;
+  main .section-mentoria .div-mentoria .header-title p {
+    font-size: 3.4rem;
   }
-  main .section-about-me .redes_contenido {
-    max-width: 90rem;
-    margin: 8rem auto;
+  main .section-mentoria .div-mentoria .mentoria-items {
+    font-size: 2.4rem;
+    gap: 2rem;
   }
-  main .section-merch {
-    max-width: 90rem;
+  main .section-mentoria .div-mis-redes {
+    margin: auto;
+    max-width: 100rem;
   }
-  main .section-merch .container {
-    max-width: 51rem;
-    height: 50rem;
-  }
-  main .section-merch .container .slider .content .firstslide,
-  main .section-merch .container .slider .content .secondslide,
-  main .section-merch .container .slider .content .thirdslide,
-  main .section-merch .container .slider .content .fourslide {
-    height: 40rem;
-  }
-  main .section-merch .container .slider .content .firstslide img,
-  main .section-merch .container .slider .content .secondslide img,
-  main .section-merch .container .slider .content .thirdslide img,
-  main .section-merch .container .slider .content .fourslide img {
-    width: 500px;
-  }
-  main .section-merch .container .slider input:nth-child(1):checked ~ .content {
-    left: 0rem;
-  }
-  main .section-merch .container .slider input:nth-child(2):checked ~ .content {
-    left: -50rem;
-  }
-  main .section-merch .container .slider input:nth-child(3):checked ~ .content {
-    left: -100rem;
-  }
-  main .section-merch .container .slider input:nth-child(4):checked ~ .content {
-    left: -150rem;
+  main .section-mentoria .div-mis-redes .redes-live p {
+    font-size: 2.4rem;
   }
   @keyframes appear {
     from {

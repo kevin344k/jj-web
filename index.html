@@ -47,7 +47,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
-     <link rel="stylesheet" href="./src/css/header.css" />
+    <link rel="stylesheet" href="./src/css/header.css" />
     <link rel="stylesheet" href="./src/css/navBar.css" />
     <link rel="stylesheet" href="./src/css/main.css" />
     <link rel="stylesheet" href="./src/css/sliderTestimonios.css" />
@@ -93,19 +93,18 @@
         <img src="./imagenes/arrow-top.svg" alt="img-arrow-top"
       /></a>
     </div>
-       <div class="but-floating-wasap">
-           <a
-              class="botones_redes"
-              href="https://api.whatsapp.com/send?phone=593996737500&text=INFORMACION%20SOBRE%20LA%20MENTORIA%20PREMIUM"
-            >
-              <img
-                class="iconos_redes icono_circular"
-                src="imagenes/whatsapp.svg"
-                alt=""
-                loading="lazy"
-              />
-             
-            </a>
+    <div class="but-floating-wasap">
+      <a
+        class="botones_redes"
+        href="https://api.whatsapp.com/send?phone=593996737500&text=INFORMACION%20SOBRE%20LA%20MENTORIA%20PREMIUM"
+      >
+        <img
+          class="iconos_redes icono_circular"
+          src="imagenes/wasap-fill-green.svg"
+          alt=""
+          loading="lazy"
+        />
+      </a>
     </div>
 
     <!-- Google Tag Manager (noscript) -->
@@ -119,7 +118,6 @@
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <header id="header" class="hero-slider encabezado">
-
       <nav id="navBar">
         <div class="logo">
           <img class="jjface" src="./imagenes/jjcara.webp" />
@@ -139,7 +137,6 @@
             <li>
               <a class="boton-nav" href="#sec-calculadora-jub">Calculadora</a>
             </li>
-            <li><a class="boton-nav" href="#sec-redes">Redes</a></li>
 
             <li>
               <a class="boton-nav" href="#sect-testimonial">Testimonios</a>
@@ -164,46 +161,39 @@
       </nav>
 
       <div class="contenido-encabezado">
-       <div>
-         <div class="btc-container-data">
-          <div class="div-btc-price">
-            <div>
-              <img src="./imagenes/bitcoin.svg" alt="ico-btc" />
-              <p>Bitcoin</p>
+        <div>
+          <div class="btc-container-data">
+            <div class="div-btc-price">
+              <div>
+                <img src="./imagenes/bitcoin.svg" alt="ico-btc" />
+                <p>Bitcoin</p>
+              </div>
+              <span id="span-price-BTC"></span>
             </div>
-            <span id="span-price-BTC"></span>
+            <div class="fear-and-greed">
+              <p>F&G</p>
+              <span id="span-fear-greed"></span>
+            </div>
           </div>
-          <div class="fear-and-greed">
-            <p>F&G</p>
-            <span id="span-fear-greed"></span>
-          </div>
+          <div class="clock flip-clock-wrapper"></div>
         </div>
-        <div class="clock flip-clock-wrapper"></div>
-       </div>
         <div class="text-effect-writter">
           <p class="text_slogan">
             BITCOIN ES SACARSE LA LOTERIA EN CÁMARA LENTA
-          </p>  <a
-          class="boton"
-          href="https://api.whatsapp.com/send?phone=593996737500&text=INFORMACION%20SOBRE%20LA%20MENTORIA%20PREMIUM"
-          target
-          rel="nofollow noopener"
-          >Mentoria Premium</a
-        >
-        </div>     
+          </p>
+          <a
+            class="boton"
+            href="https://api.whatsapp.com/send?phone=593996737500&text=INFORMACION%20SOBRE%20LA%20MENTORIA%20PREMIUM"
+            target
+            rel="nofollow noopener"
+            >Mentoria Premium</a
+          >
+        </div>
       </div>
-      <div class="preview-container">
-        <div class="thumbnails "><img  src="./imagenes//hero/thumbnails/hero_desktop_1.jpeg" alt=""></div>
-        <div class="thumbnails "><img   src="./imagenes//hero/thumbnails/hero_desktop_2.jpeg" alt=""></div>
-        <div class="thumbnails "><img   src="./imagenes//hero/thumbnails/hero_desktop_3.jpeg" alt=""></div>
-        <div class="thumbnails "><img   src="./imagenes//hero/thumbnails/hero_desktop_4.jpeg" alt=""></div>
-      </div>
-      
-        <div class="slide active"><img  src="./imagenes//hero/hero_desktop_1.jpeg" alt=""></div>
-        <div class="slide "><img   src="./imagenes//hero/hero_desktop_2.jpeg" alt=""></div>
-        <div class="slide "><img   src="./imagenes//hero/hero_desktop_3.jpeg" alt=""></div>
-        <div class="slide "><img   src="./imagenes//hero/hero_desktop_4.jpeg" alt=""></div>
-   
+
+      <video autoplay muted loop>
+        <source src="./Video//hero_video.mp4" type="video/mp4" />
+      </video>
     </header>
 
     <main class="container">
@@ -318,170 +308,197 @@
           </div>
         </div>
       </section>
-      <section id="sec-redes" class="section--mis-redes">
+
+      <section id="section-mentoria" class="section-mentoria">
+        <div class="bg-section-btc"></div>
+        <div class="div-mentoria">
+          <div class="header-title">
+            <p>¿Qué enseño en mi mentoría?</p>
+          </div>
+
+          <ul class="mentoria-items">
+            <li>Al ser personalizada si te equivocas yo te daré una pu#@da.</li>
+            <li>Reconocer estafas.</li>
+            <li>Como crear tus wallets.</li>
+            <li>Como guardar tus llaves privadas.</li>
+            <li>Como comprar BTC al mejor precio del mercado.</li>
+            <li>Mis estrategia de inversión.</li>
+            <li>Acceso al grupo de difusión exclusivo para ALUMNOS</li>
+            <li>Soporte técnico 24/7.</li>
+            <li>RECUERDA: LA MENTORÍA ES DE PAGO ÚNICO ANUAL</li>
+          </ul>
+        </div>
+        <div class="div-mis-redes">
+          <div class="linea"></div>
+          <ul class="button-group">
+            <li>
+              <a
+                class="botones_redes"
+                href="https://tradingdifferent.com/?ref=YELgWNnX"
+              >
+                <img src="./imagenes/trading-different.svg" alt="" />
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="botones_redes"
+                href="https://api.whatsapp.com/send?phone=593996737500&text=INFORMACION%20SOBRE%20LA%20MENTORIA%20PREMIUM"
+              >
+                <img src="./imagenes/whatsapp.svg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a
+                class="botones_redes"
+                href="https://www.whatsapp.com/channel/0029Vah3B5n60eBiIBrX8J1Z"
+              >
+                <img src="./imagenes/whatsapp.svg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a class="botones_redes" href="https://t.me/jjchagerben357">
+                <img src="./imagenes/telegrama.svg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a
+                class="botones_redes"
+                href="https://www.instagram.com/jjchagerben33/"
+              >
+                <img src="./imagenes/instagram.svg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a
+                class="botones_redes"
+                href="https://www.facebook.com/people/JJChagerben/61557765639522/?mibextid=ZbWKwL"
+              >
+                <img src="./imagenes/facebook.svg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a class="botones_redes" href="https://x.com/JJChagerben357">
+                <img src="./imagenes/twitter_X.svg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a
+                class="botones_redes"
+                href="https://www.bitmex.com/app/register/A7p8Lt"
+              >
+                <img src="./imagenes/bitmex.svg" alt="" />
+              </a>
+            </li>
+          </ul>
+
+          <div class="redes-live">
+            <p>Lunes a Viernes | 20:00 | UTC -05:00</p>
+
+            <ul class="redes-live-icons">
+              <li>
+                <a href="https://www.twitch.tv/jjchagerben"> <img src="./imagenes/twitch.svg" alt="" /> </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/@jjchagerben">
+                  <img src="./imagenes/youtube.svg" alt="" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="sect-testimonial" class="section-testimonial">
         <div class="header-title">
-          <p>Mis Redes</p>
+          <p>Testimonios</p>
           <div></div>
         </div>
-        <div class="redes-conteiners">
-          <div class="button-group">
-            <a
-              class="botones_redes"
-              href="https://tradingdifferent.com/?ref=YELgWNnX"
-            >
-              <img
-                class="iconos_redes icono_circular"
-                src="imagenes/trading-diferent.png"
-                alt=""
-                loading="lazy"
-              />
-              <span>Pools de Liquidez</span></a
-            >
-
-            <a
-              class="botones_redes"
-              href="https://api.whatsapp.com/send?phone=593996737500&text=INFORMACION%20SOBRE%20LA%20MENTORIA%20PREMIUM"
-            >
-              <img
-                class="iconos_redes icono_circular"
-                src="imagenes/whatsapp.svg"
-                alt=""
-                loading="lazy"
-              />
-              <span>+593 99 673 7500</span>
-            </a>
-
-            <a
-              class="botones_redes"
-              href="https://www.whatsapp.com/channel/0029Vah3B5n60eBiIBrX8J1Z"
-            >
-              <img
-                class="iconos_redes icono_circular"
-                src="imagenes/whatsapp.svg"
-                alt=""
-                loading="lazy"
-              />
-              <span>Canal JJChagerben</span>
-            </a>
-
-            <a class="botones_redes" href="https://t.me/jjchagerben357">
-              <img
-                class="iconos_redes icono_circular"
-                src="imagenes/telegrama.svg"
-                alt=""
-                loading="lazy"
-              />
-              <span>Telegram</span>
-            </a>
-
-            <a
-              class="botones_redes"
-              href="https://www.instagram.com/jjchagerben33/"
-            >
-              <img
-                class="iconos_redes icono_circular"
-                src="imagenes/instagram.svg"
-                alt=""
-                loading="lazy"
-              />
-              <span>@jjchagerben</span></a
-            >
-
-            <a
-              class="botones_redes"
-              href="https://www.facebook.com/people/JJChagerben/61557765639522/?mibextid=ZbWKwL"
-            >
-              <img
-                class="iconos_redes icono_circular"
-                src="imagenes/facebook.svg"
-                alt=""
-                loading="lazy"
-              />
-              <span>JJChagerben </span></a
-            >
-
-            <a class="botones_redes" href="https://x.com/JJChagerben357"
-              ><img
-                class="iconos_redes icono_circular"
-                src="imagenes/Twitter_X.svg"
-                alt=""
-                loading="lazy"
-              />
-              <span>JJChagerben357</span>
-            </a>
-
-            <a
-              class="botones_redes"
-              href="https://www.bitmex.com/app/register/A7p8Lt"
-            >
-              <img
-                class="iconos_redes icono_circular"
-                src="imagenes/bitmex-logo.webp"
-                alt=""
-                loading="lazy"
-              /><span>Bitmex-No hagas trading</span>
-            </a>
+        <div class="section-slider">
+          <div class="arrow-left" id="arrow_left">
+            <img src="./imagenes/arrow-download.svg" alt="icon-arrow-slider" />
           </div>
-          <div class="linea"></div>
-          <div class="container-live">
-          <div class="live-group">
-              <div class="animated_live"></div>
-            <img
-              class="foto"
-              src="/imagenes/jjcara.webp"
-              alt=""
-              loading="lazy"
-            />
-          </div>
-           
-
-         <div class="text-group-live">
-             <p class="live_texto">Lunes a Viernes</p>
-            <p class="live_texto">20:00 Horas</p>
-            <p class="live_texto">UTC -05:00</p>
-         </div>
-            <div class="live-horarios">
-              <p>Horario</p>
-              <div class="container-paises">
-                <div>
-                  <img src="./imagenes//paises/ec.png" alt="" />
-                  <p>20:00</p>
-                </div>
-                <div>
-                  <img src="./imagenes//paises/ar.png" alt="" />
-                  <p>22:00</p>
-                </div>
-                <div>
-                  <img src="./imagenes//paises/bo.png" alt="" />
-                  <p>21:00</p>
-                </div>
-                <div>
-                  <img src="./imagenes//paises/pe.png" alt="" />
-                  <p>20:00</p>
-                </div>
-                <div>
-                  <img src="./imagenes//paises/es.png" alt="" />
-                  <p>03:00</p>
-                </div>
-                <div>
-                  <img src="./imagenes//paises/ve.png" alt="" />
-                  <p>21:00</p>
-                </div>
-                <div>
-                  <img src="./imagenes//paises/mx.png" alt="" />
-                  <p>19:00</p>
-                </div>
-              </div>
-            </div>
-            <div class="stream_iconos">
-              <a href="https://www.twitch.tv/jjchagerben">
-                <img class="iconos_redes_r" src="/imagenes/twitch.svg" alt=""
-              /></a>
-              <a href="https://www.youtube.com/@jjchagerben">
-                <img class="iconos_redes_r" src="/imagenes/Youtube.svg" alt=""
-              /></a>
+          <div class="container">
+            <div class="slider-container">
+              <picture class="image">
+                <img
+                  src="./imagenes/testimonios/img1.jpeg"
+                  loading="lazy"
+                  alt="img-testimonio-1"
+              /></picture>
+              <picture class="image"
+                ><img
+                  src="./imagenes/testimonios/img2.jpeg"
+                  loading="lazy"
+                  alt="img-testimonio-2"
+              /></picture>
+              <picture class="image"
+                ><img
+                  src="./imagenes/testimonios/img3.jpeg"
+                  loading="lazy"
+                  alt="img-testimonio-3"
+              /></picture>
+              <picture class="image">
+                <img
+                  src="./imagenes/testimonios/img4.jpeg"
+                  loading="lazy"
+                  alt="img-testimonio-4"
+              /></picture>
+              <picture class="image"
+                ><img
+                  src="./imagenes/testimonios/img5.jpeg"
+                  loading="lazy"
+                  alt="img-testimonio-5"
+              /></picture>
+              <picture class="image">
+                <img
+                  src="./imagenes/testimonios/img6.jpeg"
+                  loading="lazy"
+                  alt="img-testimonio-6"
+              /></picture>
+              <picture class="image">
+                <img
+                  src="./imagenes/testimonios/img7.jpeg"
+                  loading="lazy"
+                  alt="img-testimonio-7"
+              /></picture>
+              <picture class="image">
+                <img
+                  src="./imagenes/testimonios/img8.jpeg"
+                  loading="lazy"
+                  alt="img-testimonio-8"
+              /></picture>
+              <picture class="image">
+                <img
+                  src="./imagenes/testimonios/img9.jpeg"
+                  loading="lazy"
+                  alt="img-testimonio-9"
+              /></picture>
+              <picture class="image"
+                ><img
+                  src="./imagenes/testimonios/img10.jpeg"
+                  loading="lazy"
+                  alt="img-testimonio-10"
+              /></picture>
+              <picture class="image">
+                <img
+                  src="./imagenes/testimonios/img11.jpeg"
+                  loading="lazy"
+                  alt="img-testimonio-11"
+              /></picture>
+              <picture class="image">
+                <img
+                  src="./imagenes/testimonios/img12.jpeg"
+                  loading="lazy"
+                  alt="img-testimonio-12"
+              /></picture>
             </div>
           </div>
+
+          <div class="arrow-right" id="arrow_right">
+            <img src="./imagenes/arrow-download.svg" alt="icon-arrow-slider" />
+          </div>
+          <div class="indicator-slider"></div>
         </div>
       </section>
 
@@ -498,237 +515,6 @@
           >
         </div>
       </section>
-      <section id="section-mentoria" class="section-mentoria">
-        <div class="header-title">
-          <p>¿Qué enseño en mi mentoría?</p>
-          <div></div>
-        </div>
-        <div class="mentoria_contenido">
-          <div class="mentoria-items">
-            <div class="mentoria_texto">
-              <img
-                class="visto"
-                src="/imagenes/visto.png"
-                alt=""
-                loading="lazy"
-              />
-              <p>Al ser personalizada si te equivocas yo te dare una pu#@da.</p>
-            </div>
-            <div class="mentoria_texto">
-              <img
-                class="visto"
-                src="/imagenes/visto.png"
-                alt=""
-                loading="lazy"
-              />
-              <p>Reconocer estafas.</p>
-            </div>
-            <div class="mentoria_texto">
-              <img
-                class="visto"
-                src="/imagenes/visto.png"
-                alt=""
-                loading="lazy"
-              />
-              <p>Como crear tus wallets.</p>
-            </div>
-            <div class="mentoria_texto">
-              <img
-                class="visto"
-                src="/imagenes/visto.png"
-                alt=""
-                loading="lazy"
-              />
-              <p>Como guardar tus llaves privadas.</p>
-            </div>
-            <div class="mentoria_texto">
-              <img
-                class="visto"
-                src="/imagenes/visto.png"
-                alt=""
-                loading="lazy"
-              />
-              <p>Como comprar BTC al mejor precio del mercado.</p>
-            </div>
-            <div class="mentoria_texto">
-              <img
-                class="visto"
-                src="/imagenes/visto.png"
-                alt=""
-                loading="lazy"
-              />
-              <p>Mis estrategia de inversión.</p>
-            </div>
-            <div class="mentoria_texto">
-              <img
-                class="visto"
-                src="/imagenes/visto.png"
-                alt=""
-                loading="lazy"
-              />
-              <p>Acceso al grupo de difusión exclusivo para ALUMNOS</p>
-            </div>
-            <div class="mentoria_texto">
-              <img
-                class="visto"
-                src="/imagenes/visto.png"
-                alt=""
-                loading="lazy"
-              />
-              <p>Soporte técnico 24/7.</p>
-            </div>
-            <div class="mentoria_texto">
-              <img
-                class="brojo"
-                src="/imagenes/puntorojo.png"
-                alt=""
-                loading="lazy"
-              />
-              <p class="remember">
-                RECUERDA: LA MENTORIA ES DE PAGO ÚNICO ANUAL
-              </p>
-            </div>
-          </div>
-          <!--
-          <div class="video-iframe">
-           <video src="./Video/MENTORIA PREMIUM.mp4" controls width="500" height="415" > 
-
-           </video>
-          </div>
-          -->
-        </div>
-      </section>
-      <!--===================================================================================-->
-
-      <section id="sect-testimonial" class="section-testimonial">
-        <div class="header-title">
-          <p>Testimonios</p>
-          <div></div>
-        </div>
-        <div class="section-slider">
-          <div class="arrow-left" id="arrow_left">
-          <img src="./imagenes/arrow-download.svg" alt="icon-arrow-slider" />
-          </div>
-          <div class="container">
-            <div class="slider-container">
-              <picture class="image">
-                <img
-                  src="./imagenes/testimonios/img1.jpg"
-                  loading="lazy"
-                  alt="img-testimonio-1"
-              /></picture>
-              <picture class="image"
-                ><img
-                  src="./imagenes/testimonios/img2.jpg"
-                  loading="lazy"
-                  alt="img-testimonio-2"
-              /></picture>
-              <picture class="image"
-                ><img
-                  src="./imagenes/testimonios/img3.jpg"
-                  loading="lazy"
-                  alt="img-testimonio-3"
-              /></picture>
-              <picture class="image">
-                <img
-                  src="./imagenes/testimonios/img4.jpg"
-                  loading="lazy"
-                  alt="img-testimonio-4"
-              /></picture>
-              <picture class="image"
-                ><img
-                  src="./imagenes/testimonios/img5.jpg"
-                  loading="lazy"
-                  alt="img-testimonio-5"
-              /></picture>
-              <picture class="image">
-                <img
-                  src="./imagenes/testimonios/img6.jpg"
-                  loading="lazy"
-                  alt="img-testimonio-6"
-              /></picture>
-              <picture class="image">
-                <img
-                  src="./imagenes/testimonios/img7.jpg"
-                  loading="lazy"
-                  alt="img-testimonio-7"
-              /></picture>
-              <picture class="image">
-                <img
-                  src="./imagenes/testimonios/img8.png"
-                  loading="lazy"
-                  alt="img-testimonio-8"
-              /></picture>
-              <picture class="image">
-                <img
-                  src="./imagenes/testimonios/img9.jpg"
-                  loading="lazy"
-                  alt="img-testimonio-9"
-              /></picture>
-              <picture class="image"
-                ><img
-                  src="./imagenes/testimonios/img10.jpg"
-                  loading="lazy"
-                  alt="img-testimonio-10"
-              /></picture>
-              <picture class="image">
-                <img
-                  src="./imagenes/testimonios/img11.jpg"
-                  loading="lazy"
-                  alt="img-testimonio-11"
-              /></picture>
-              <picture class="image">
-                <img
-                  src="./imagenes/testimonios/img12.jpg"
-                  loading="lazy"
-                  alt="img-testimonio-12"
-              /></picture>
-              <picture class="image">
-                <img
-                  src="./imagenes/testimonios/img13.jpg"
-                  loading="lazy"
-                  alt="img-testimonio-13"
-              /></picture>
-              <picture class="image">
-                <img
-                  src="./imagenes/testimonios/img14.jpg"
-                  loading="lazy"
-                  alt="img-testimonio-14"
-              /></picture>
-              <picture class="image">
-                <img
-                  src="./imagenes/testimonios/img15.jpg"
-                  loading="lazy"
-                  alt="img-testimonio-15"
-              /></picture>
-              <picture class="image">
-                <img
-                  src="./imagenes/testimonios/img16.jpg"
-                  loading="lazy"
-                  alt="img-testimonio-16"
-              /></picture>
-              <picture class="image">
-                <img
-                  src="./imagenes/testimonios/img17.jpg"
-                  loading="lazy"
-                  alt="img-testimonio-17"
-              /></picture>
-            </div>
-          </div>
-
-          <div class="arrow-right" id="arrow_right">
-            <img src="./imagenes/arrow-download.svg" alt="icon-arrow-slider" />
-              <path
-                fill="inherit"
-                d="M16.75 0L2.875 13.875.75 16l2.125 2.125L16.75 32h8.5l-16-16 16-16z"
-              ></path>
-            </svg>
-          </div>
-          <div class="indicator-slider"></div>
-        </div>
-      </section>
-
-      <!--===================================================================================-->
 
       <section id="sect-books" class="sect-books">
         <div class="header-title">
@@ -1040,6 +826,11 @@
             >Tabla - Block Subsidy</a
           >
         </li>
+        <li>
+          <a href="https://companiesmarketcap.com/assets-by-market-cap/"
+            >Top Assets by Market Cap</a
+          >
+        </li>
       </ul>
       <div class="footer-anounce">
         <p>¿Eres nuevo el el mundo de las criptomonedas?</p>
@@ -1120,7 +911,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="./build/clockHalvin/navBar.min.js"></script>
-    <script src="./src/clockHalvin/slider_hero.js"></script>
     <script src="./build/clockHalvin/flipclock.min.js"></script>
     <script src="./build/clockHalvin/main.min.js"></script>
     <script src="./src/clockHalvin/sliderTestimonios.js"></script>

@@ -5,7 +5,7 @@
 
 .section-testimonial {
   margin: 25px auto;
-  width: 99%;
+  width: 100%;
   max-width: 1800px;
 }
 
@@ -81,6 +81,11 @@
   border-radius: 20px;
   -o-object-fit: contain;
      object-fit: contain;
+  width: 300px;
+  scroll-snap-align: center;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+  object-fit: contain;
 }
 .section-slider .container .slider-container .image:hover {
   transform: scale(1.2);

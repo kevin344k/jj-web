@@ -2,40 +2,47 @@ header {
   width: 100%;
   min-width: 320px;
   height: -moz-fit-content;
-  height: 70vh;
+  height: 60vh;
   margin: auto;
   position: relative;
-  background-image: url("../../imagenes/hero/hero_mobile_craneo_satoshi.jpeg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   text-align: center;
   padding: 1.6rem 0px;
   padding-top: 0;
   display: flex;
   flex-direction: column;
 }
-header .contenido-encabezado {
+header video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+  z-index: -1;
+}
+
+.contenido-encabezado {
   margin: 1rem auto;
   padding: 0px 16px;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 3rem;
+  justify-content: center;
+  align-items: center;
   height: 100%;
 }
-header .contenido-encabezado .text-autor {
+.contenido-encabezado .text-autor {
   font-style: italic;
   font-weight: 700;
 }
-header .contenido-encabezado div .btc-container-data {
+.contenido-encabezado div .btc-container-data {
   height: 50px;
-  display: flex;
+  display: none;
   justify-content: center;
   gap: 1rem;
 }
-header .contenido-encabezado div .btc-container-data .div-btc-price {
+.contenido-encabezado div .btc-container-data .div-btc-price {
   background-color: #333;
   display: flex;
   justify-content: space-between;
@@ -45,31 +52,31 @@ header .contenido-encabezado div .btc-container-data .div-btc-price {
   min-width: 24rem;
   max-width: 36rem;
 }
-header .contenido-encabezado div .btc-container-data .div-btc-price div {
+.contenido-encabezado div .btc-container-data .div-btc-price div {
   display: flex;
   font-size: 1.8rem;
   font-weight: bold;
   align-items: center;
   gap: 0.5rem;
 }
-header .contenido-encabezado div .btc-container-data .div-btc-price div p {
+.contenido-encabezado div .btc-container-data .div-btc-price div p {
   color: white;
   font-size: 1.6rem;
 }
-header .contenido-encabezado div .btc-container-data .div-btc-price div p span {
+.contenido-encabezado div .btc-container-data .div-btc-price div p span {
   color: gray;
   font-size: 1.3rem;
 }
-header .contenido-encabezado div .btc-container-data .div-btc-price div img {
+.contenido-encabezado div .btc-container-data .div-btc-price div img {
   width: 2.5rem;
 }
-header .contenido-encabezado div .btc-container-data .div-btc-price span {
+.contenido-encabezado div .btc-container-data .div-btc-price span {
   color: white;
   font-size: 1.6rem;
   font-weight: bold;
 }
-header .contenido-encabezado div .btc-container-data .fear-and-greed {
-  display: flex;
+.contenido-encabezado div .btc-container-data .fear-and-greed {
+  display: none;
   position: relative;
   background-color: #333;
   border-radius: 5px;
@@ -80,39 +87,41 @@ header .contenido-encabezado div .btc-container-data .fear-and-greed {
   justify-content: center;
   align-items: center;
 }
-header .contenido-encabezado div .btc-container-data .fear-and-greed p {
+.contenido-encabezado div .btc-container-data .fear-and-greed p {
   color: rgb(146, 146, 146);
   font-size: 12px;
   position: absolute;
   left: 5px;
   top: 5px;
 }
-header .contenido-encabezado div .btc-container-data .fear-and-greed span {
+.contenido-encabezado div .btc-container-data .fear-and-greed span {
   font-size: 1.6rem;
   font-weight: bold;
 }
-header .contenido-encabezado div .clock {
+.contenido-encabezado div .clock {
   display: flex;
   justify-content: center;
   margin: auto 0px;
   width: 100%;
 }
-header .contenido-encabezado .text-effect-writter {
+.contenido-encabezado .text-effect-writter {
   display: flex;
+  flex-direction: column;
+  text-align: center;
   gap: 8px;
   align-items: center;
   justify-content: center;
 }
-header .contenido-encabezado .text-effect-writter .text_slogan {
+.contenido-encabezado .text-effect-writter .text_slogan {
   font-weight: bold;
   font-size: 2.2rem;
   color: white;
   text-shadow: #000;
-  text-align: start;
+  text-align: center;
   align-items: center;
   justify-content: center;
 }
-header .contenido-encabezado .text-effect-writter .boton {
+.contenido-encabezado .text-effect-writter .boton {
   background-color: #3ef2d0;
   color: #000000;
   margin-top: 1.6rem;
@@ -120,99 +129,109 @@ header .contenido-encabezado .text-effect-writter .boton {
   text-decoration: none;
   display: inline-block;
   border-radius: 0.5rem;
-  padding: 0.4rem 1.2rem;
+  padding: 0.8rem 1.2rem;
   min-width: 10rem;
   border-radius: 0.5rem;
   font-size: 1.4rem;
   font-weight: 700;
   width: -moz-fit-content;
-  width: fit-content;
-  align-self: flex-end;
-  border-bottom: 8px solid #299b86;
+  width: 25rem;
+  border-radius: 50px;
+  text-transform: uppercase;
+  color: #303235;
   box-shadow: 0px 5px 3px 2px rgba(0, 0, 0, 0.1);
 }
-header .contenido-encabezado .text-effect-writter .boton:hover {
+.contenido-encabezado .text-effect-writter .boton:hover {
   background-color: #19e6c0;
   cursor: pointer;
 }
-header .contenido-encabezado .text-effect-writter .boton:active {
+.contenido-encabezado .text-effect-writter .boton:active {
   transform: scale(0.9);
 }
-header .contenido-encabezado .flip-clock-wrapper ul {
+.contenido-encabezado .flip-clock-wrapper ul {
   margin: 0.3rem;
 }
-header .contenido-encabezado .flip-clock-wrapper ul li {
+.contenido-encabezado .flip-clock-wrapper ul li {
   line-height: 4.5rem;
 }
 @-moz-document url-prefix() {
-  header .contenido-encabezado .flip-clock-wrapper ul li {
+  .contenido-encabezado .flip-clock-wrapper ul li {
     line-height: 5.5rem;
   }
 }
-header .contenido-encabezado .flip-clock-wrapper ul li a .up .inn {
+.contenido-encabezado .flip-clock-wrapper ul li a .up .inn {
   font-size: 3.5rem;
 }
-header .contenido-encabezado .flip-clock-wrapper ul li a .down .inn {
+.contenido-encabezado .flip-clock-wrapper ul li a .down .inn {
   font-size: 3.5rem;
 }
-header .contenido-encabezado .flip-clock-wrapper ul li a div.up:after {
+.contenido-encabezado .flip-clock-wrapper ul li a div.up:after {
   top: 2.2rem;
 }
-header .contenido-encabezado .flip-clock-wrapper .flip-clock-divider {
+.contenido-encabezado .flip-clock-wrapper .flip-clock-divider {
   width: 1.1rem;
   height: -moz-fit-content;
   height: fit-content;
+  border-radius: 0rem;
 }
-header .contenido-encabezado .flip-clock-wrapper .flip-clock-divider .flip-clock-label {
+.contenido-encabezado .flip-clock-wrapper .flip-clock-divider .flip-clock-label {
   right: -50px;
   display: none;
 }
-header .contenido-encabezado .flip-clock-wrapper .days {
+.contenido-encabezado .flip-clock-wrapper .days {
   width: 0px;
 }
-header .contenido-encabezado .flip-clock-wrapper .hours .flip-clock-dot,
-header .contenido-encabezado .flip-clock-wrapper .minutes .flip-clock-dot,
-header .contenido-encabezado .flip-clock-wrapper .seconds .flip-clock-dot {
+.contenido-encabezado .flip-clock-wrapper .hours .flip-clock-dot,
+.contenido-encabezado .flip-clock-wrapper .minutes .flip-clock-dot,
+.contenido-encabezado .flip-clock-wrapper .seconds .flip-clock-dot {
   left: 0rem;
+  background-color: #ccc;
 }
-header .contenido-encabezado .flip-clock-wrapper .hours .top,
-header .contenido-encabezado .flip-clock-wrapper .minutes .top,
-header .contenido-encabezado .flip-clock-wrapper .seconds .top {
+.contenido-encabezado .flip-clock-wrapper .hours .top,
+.contenido-encabezado .flip-clock-wrapper .minutes .top,
+.contenido-encabezado .flip-clock-wrapper .seconds .top {
   top: 15px;
 }
-header .contenido-encabezado .flip-clock-wrapper .hours .bottom,
-header .contenido-encabezado .flip-clock-wrapper .minutes .bottom,
-header .contenido-encabezado .flip-clock-wrapper .seconds .bottom {
+.contenido-encabezado .flip-clock-wrapper .hours .bottom,
+.contenido-encabezado .flip-clock-wrapper .minutes .bottom,
+.contenido-encabezado .flip-clock-wrapper .seconds .bottom {
   top: 30px;
 }
-header .contenido-encabezado .clock .flip {
+.contenido-encabezado .flip-clock-wrapper ul li a div.down {
+  border-radius: 0rem;
+}
+.contenido-encabezado .flip-clock-wrapper ul li a div div.inn {
+  border-radius: 0rem;
+}
+.contenido-encabezado .clock .flip {
   width: 2.5rem;
   height: 4.5rem;
 }
-header .preview-container {
+
+.preview-container {
   position: absolute;
   display: none;
   bottom: 40px;
   right: 60px;
   gap: 1.2rem;
 }
-header .preview-container div {
+.preview-container div {
   border-radius: 12px;
   border: 3px solid white;
   position: relative;
   overflow: hidden;
   box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
 }
-header .preview-container div img {
+.preview-container div img {
   width: 9.6rem;
   height: 5.4rem;
   border-radius: 12px;
 }
-header .preview-container div:hover {
+.preview-container div:hover {
   cursor: pointer;
   transform: scale(0.98);
 }
-header .preview-container .img-preview-thumbnails::after {
+.preview-container .img-preview-thumbnails::after {
   position: absolute;
   content: "";
   height: 100%;
@@ -221,18 +240,22 @@ header .preview-container .img-preview-thumbnails::after {
   top: 0;
   animation: whiteOverlaySlide 6s ease-in-out infinite;
 }
-header .preview-container {
+
+.preview-container {
   display: none;
 }
-header .slide {
+
+.slide {
   display: none;
 }
-header .slide.active {
+
+.slide.active {
   display: none;
   opacity: 1;
   z-index: -10;
 }
-header .slide img {
+
+.slide img {
   display: none;
 }
 
@@ -249,7 +272,6 @@ header .slide img {
   header {
     width: 100%;
     height: 70vh;
-    background-image: url("../../imagenes/hero/hero_mobile_craneo_satoshi.jpeg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -262,6 +284,7 @@ header .slide img {
     gap: 20px;
   }
   header .contenido-encabezado div .btc-container-data .div-btc-price {
+    display: none;
     width: -moz-fit-content;
     width: fit-content;
     gap: 3rem;
@@ -279,7 +302,7 @@ header .slide img {
     font-size: 2rem;
   }
   header .contenido-encabezado div .btc-container-data .fear-and-greed {
-    display: flex;
+    display: none;
     position: relative;
     background-color: #333;
     border-radius: 5px;
@@ -307,9 +330,6 @@ header .slide img {
   }
   header .contenido-encabezado .text-effect-writter .text_slogan {
     font-size: 3rem;
-  }
-  header .contenido-encabezado .text-effect-writter .boton {
-    align-self: flex-start;
   }
   header .contenido-encabezado .flip-clock-wrapper ul {
     margin-top: 2.3rem;
@@ -430,8 +450,6 @@ header .slide img {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    background-image: none;
-    transition: opacity 2s ease-in-out;
   }
   header .contenido-encabezado {
     gap: 3rem;
@@ -451,26 +469,27 @@ header .slide img {
     font-size: 2rem;
   }
   header .contenido-encabezado .text-effect-writter {
-    padding-left: 6rem;
     padding-bottom: 4rem;
     min-width: 60rem;
-    width: 40%;
+    width: 60%;
     flex-direction: column;
     gap: 12px;
   }
   header .contenido-encabezado .text-effect-writter .text_slogan {
-    font-size: 5rem;
-    line-height: 6.5rem;
+    font-size: 3rem;
+  }
+  header .contenido-encabezado .text-effect-writter .text_slogan::after {
+    content: "-JJCHAGERBEN-";
+    font-size: 2rem;
+    display: block;
   }
   header .contenido-encabezado .text-effect-writter .boton {
     margin: 4rem 0rem;
     width: -moz-fit-content;
-    width: fit-content;
+    width: 45rem;
     margin: auto;
-    align-self: flex-start;
-    padding: 0.5rem 2rem;
-    margin-left: 0;
-    font-size: 2rem;
+    padding: 0.4rem 2rem;
+    font-size: 1.8rem;
   }
   header .preview-container {
     display: flex;
