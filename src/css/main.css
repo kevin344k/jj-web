@@ -353,19 +353,30 @@ main .section-mentoria .div-mis-redes .button-group {
   gap: 2rem;
   list-style: none;
 }
+main .section-mentoria .div-mis-redes .button-group li:first-child a img {
+  border-radius: 100%;
+}
+main .section-mentoria .div-mis-redes .button-group li:nth-child(2) a img {
+  border-radius: 100%;
+}
+main .section-mentoria .div-mis-redes .button-group li {
+  width: 100%;
+  max-width: 30rem;
+}
 main .section-mentoria .div-mis-redes .button-group li a {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  background-color: #f8c114;
-  transform: rotate(45deg);
-  border-radius: 15px;
+  background-color: white;
+  text-decoration: none;
+  color: black;
+  border-radius: 8px;
+  gap: 12px;
 }
 main .section-mentoria .div-mis-redes .button-group li a img {
-  width: 3rem;
-  height: 3rem;
-  transform: rotate(-45deg);
+  width: 4rem;
+  height: 4rem;
 }
 main .section-mentoria .div-mis-redes .linea {
   width: 25rem;
@@ -395,14 +406,19 @@ main .section-mentoria .div-mis-redes .redes-live .redes-live-icons li a {
   display: flex;
   justify-content: center;
   padding: 1rem;
-  background-color: #f8c114;
-  transform: rotate(45deg);
   border-radius: 15px;
+  background-color: white;
+  border: 1px solid #19e6c0;
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  transition: all 0.3s ease-in-out;
 }
 main .section-mentoria .div-mis-redes .redes-live .redes-live-icons li a img {
   width: 3rem;
   height: 3rem;
-  transform: rotate(-45deg);
+}
+main .section-mentoria .div-mis-redes .redes-live .redes-live-icons li a:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 .section-libros {
@@ -826,21 +842,6 @@ main .section-mentoria .div-mis-redes .redes-live .redes-live-icons li a img {
   main .section-announce .div-container--announce p {
     font-size: 2.5rem;
   }
-  main .section--mis-redes {
-    padding: 50px 0;
-  }
-  main .section--mis-redes .redes-conteiners {
-    max-width: 90rem;
-    margin: 8rem auto;
-    justify-content: space-between;
-  }
-  main .section--mis-redes .redes-conteiners .button-group .botones_redes {
-    max-width: none;
-    width: 30rem;
-  }
-  main .section--mis-redes .redes-conteiners .button-group .botones_redes span {
-    font-size: 2rem;
-  }
   main .section-mentoria {
     padding-top: 10rem;
     padding-bottom: 10rem;
@@ -860,8 +861,22 @@ main .section-mentoria .div-mis-redes .redes-live .redes-live-icons li a img {
     margin: auto;
     max-width: 100rem;
   }
-  main .section-mentoria .div-mis-redes .redes-live p {
-    font-size: 2.4rem;
+  main .section-mentoria .div-mis-redes .button-group li a {
+    transition: all 0.3s ease-in-out;
+  }
+  main .section-mentoria .div-mis-redes .button-group li a:hover {
+    cursor: pointer;
+    background-color: #19e6c0;
+    transform: scale(1.1);
+  }
+  main .section-mentoria .div-mis-redes .redes-live-icons li a {
+    width: 8rem;
+    transition: all 0.3s ease-in-out;
+  }
+  main .section-mentoria .div-mis-redes .redes-live-icons li a:hover {
+    cursor: pointer;
+    background-color: #19e6c0;
+    transform: scale(1.1);
   }
   @keyframes appear {
     from {

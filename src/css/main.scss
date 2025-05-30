@@ -407,21 +407,40 @@ filter: brightness(0.3);
         align-items: center;
         gap: 2rem;
         list-style: none;
-
+       
+          li:first-child{
+            a{
+            img{
+              border-radius: 100%;
+            }
+          }
+          }
+        
+  li:nth-child(2){
+            a{
+            img{
+              border-radius: 100%;
+            }
+          }
+          }
         li {
+          width: 100%;
+          max-width: 30rem;
           a {
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 1rem;
-            background-color: $icon-redes-yellow;
-            transform: rotate(45deg);
-            border-radius: 15px;
+            background-color: white;
+         text-decoration: none;
+         color: black;
+            border-radius: 8px;
+            gap: 12px;
 
             img {
-              width: 3rem;
-              height: 3rem;
-              transform: rotate(-45deg);
+              width: 4rem;
+              height: 4rem;
+              
             }
           }
         }
@@ -454,14 +473,22 @@ filter: brightness(0.3);
               display: flex;
               justify-content: center;
               padding: 1rem;
-              background-color: $icon-redes-yellow;
-              transform: rotate(45deg);
+            
+            
               border-radius: 15px;
+              background-color: white;
+              border: 1px solid $turquesa_strong;
+              box-shadow: $box-shadow;
+              transition: all 0.3s ease-in-out;
 
               img {
                 width: 3rem;
                 height: 3rem;
-                transform: rotate(-45deg);
+                
+              }
+              &:hover{
+                transform: scale(1.1);
+                cursor: pointer;
               }
             }
           }
@@ -980,26 +1007,7 @@ filter: brightness(0.3);
       }
     }
 
-    .section--mis-redes {
-      padding: 50px 0;
-      .redes-conteiners {
-        max-width: 90rem;
-        margin: 8rem auto;
-        justify-content: space-between;
-        .button-group {
-          .botones_redes {
-            max-width: none;
-            width: 30rem;
 
-            span {
-              font-size: 2rem;
-            }
-          }
-        }
-     
-    
-      }
-    }
 
     .section-mentoria {
 padding-top: 10rem;
@@ -1022,9 +1030,21 @@ font-size: 2.4rem;
     .div-mis-redes{
       margin: auto;
       max-width: 100rem;
-      .redes-live{
-        p{
-          font-size: 2.4rem;
+      .button-group li a {
+        transition: all 0.3s ease-in-out;
+        &:hover{
+          cursor: pointer;
+          background-color: $turquesa_strong;
+          transform: scale(1.1);
+        }
+      }
+      .redes-live-icons li a {
+        width: 8rem;
+           transition: all 0.3s ease-in-out;
+        &:hover{
+          cursor: pointer;
+          background-color: $turquesa_strong;
+          transform: scale(1.1);
         }
       }
     }
