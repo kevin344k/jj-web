@@ -5,6 +5,11 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Solo para depuración */
+* {
+  outline: 1px solid red;
+}
+
 body {
   font-family: "Inter", sans-serif;
   font-size: 1.6rem;
@@ -332,13 +337,18 @@ main .section-mentoria .div-mentoria .header-title {
   color: #3ef2d0;
 }
 main .section-mentoria .div-mentoria .mentoria-items {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1;
   color: white;
-  list-style: disc;
+  list-style: none;
   padding-left: 1.5rem;
-  gap: 0.6rem;
+  gap: 0.8rem;
   font-weight: bold;
+}
+main .section-mentoria .div-mentoria .mentoria-items li {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
 }
 main .section-mentoria .div-mis-redes {
   position: inherit;
@@ -856,6 +866,8 @@ main .section-mentoria .div-mis-redes .redes-live .redes-live-icons li a:hover {
   main .section-mentoria .div-mentoria .mentoria-items {
     font-size: 2.4rem;
     gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
   main .section-mentoria .div-mis-redes {
     margin: auto;

@@ -31,6 +31,10 @@ html {
   font-family: $font-family-ubuntu;
   scroll-behavior: smooth;
 }
+/* Solo para depuración */
+* {
+  outline: 1px solid red;
+}
 
 body {
   font-family: $font-family-ubuntu;
@@ -387,13 +391,18 @@ filter: brightness(0.3);
         color: $turquesa;
       }
       .mentoria-items {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+       grid-template-columns: 1;
         color: white;
-        list-style: disc;
+        list-style: none;
         padding-left: 1.5rem;
-        gap: 0.6rem;
+        gap: 0.8rem;
         font-weight: bold;
+        li{
+          width: fit-content;
+          display: flex;
+         
+        }
       }
     }
     .div-mis-redes {
@@ -1024,6 +1033,8 @@ margin: auto;
 .mentoria-items{
 font-size: 2.4rem;
  gap: 2rem;
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
 
 }
     }

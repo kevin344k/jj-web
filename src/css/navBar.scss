@@ -97,8 +97,25 @@ nav {
     p {
       color: white;
       font-weight: bold;
+      display: none;
     }
+   .but-seminario{
+    background-color: $turquesa;
+   padding: 8px 4px;
+     text-decoration: none;
+    color: $soft-black;
+    display: flex;
+  
+    
+  
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+
+  
+   }
   }
+
   .svg-menu {
     width: 30px;
     height: 30px;
@@ -189,6 +206,23 @@ nav {
     padding: 1.5rem 1rem;
 
   z-index: 10;
+    .logo{
+       div{
+ 
+   padding: 8px 4px;
+   margin-left: 20px;
+    border-radius: 10px;
+       .but-seminario{
+    
+    text-decoration: none;
+    color: $soft-black;
+    font-size: 12px;
+    font-weight: bold;
+   
+
+  }
+   }
+    }
     .sidebar{
       display: flex;
       position: static;
@@ -268,7 +302,17 @@ body{
   nav {
     padding: 1.5rem 4rem;
 
-  
+    .logo{
+      .but-seminario{
+        margin-left: 24px;
+        font-size: 16px;
+      }
+       p {
+      color: white;
+      font-weight: bold;
+      display: flex;
+    }
+    }
     .sidebar{
       display: flex;
       position: static;
