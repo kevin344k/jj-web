@@ -1,0 +1,351 @@
+@charset "UTF-8";
+/*ESTILOS PARA EL NAVBAR Y EL BOTON FLOTANTE DE NAVEGACIÓN*/
+/* Clase para oscurecer el body */
+body .overlay {
+  display: none;
+}
+body .active {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease;
+}
+
+.but-floating {
+  display: none;
+  position: fixed;
+  bottom: 25px;
+  left: 20px;
+  background-color: #fff;
+  border-radius: 100%;
+  box-shadow: 0px 0px 5px 0px rgb(24, 32, 37);
+  z-index: 10;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  animation: fadeInUp 0.4s forwards;
+}
+.but-floating img {
+  width: 4rem;
+  height: 3.5rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.hidden {
+  animation: fadeOutDown 0.4s forwards;
+}
+
+.but-floating-wasap {
+  position: fixed;
+  bottom: 25px;
+  right: 20px;
+  z-index: 10;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  animation: shake-bottom 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) both infinite;
+}
+.but-floating-wasap img {
+  width: 6rem;
+  height: 5.5rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+}
+
+nav {
+  display: flex;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem 1rem;
+  background-color: rgb(24, 32, 37);
+  align-items: center;
+  /* Estilos del menú lateral */
+  /* Botón de cierre */
+  /* Opciones del menú */
+}
+nav .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+}
+nav .logo img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100%;
+}
+nav .logo p {
+  color: white;
+  font-weight: bold;
+  display: none;
+}
+nav .logo .but-seminario {
+  background-color: #3ef2d0;
+  padding: 8px 4px;
+  text-decoration: none;
+  color: #212529;
+  display: flex;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 4px;
+}
+nav .svg-menu {
+  width: 30px;
+  height: 30px;
+}
+nav .sidebar {
+  position: fixed;
+  top: 0;
+  right: -300px; /* Oculto por defecto */
+  width: 300px;
+  height: 100%;
+  background-color: rgb(24, 32, 37);
+  transition: right 0.3s ease;
+  padding: 20px;
+  z-index: 10;
+}
+nav .sidebar.hidden {
+  transform: translateX(-100%);
+}
+nav .sidebar.active {
+  right: 0; /* Mostrar cuando esté activo */
+}
+nav .close-btn {
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: #212529;
+  font-size: 16px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+nav .menu-options {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+nav .menu-options li {
+  margin-bottom: 15px;
+}
+nav .menu-options li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+nav .menu-options li a:hover {
+  color: #3ef2d0;
+  transition: all 0.2s ease-in-out;
+}
+nav .menu-options li .boton-mentoria {
+  padding: 1rem 2rem;
+  background-color: #3ef2d0;
+  color: #000;
+  font-weight: bold;
+}
+nav .menu-options li .boton-mentoria:hover {
+  transform: scale(1.1);
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+}
+nav .menu-options li .boton-mentoria:active {
+  transform: scale(0.9);
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    padding: 1.5rem 1rem;
+    z-index: 10;
+  }
+  nav .logo div {
+    padding: 8px 4px;
+    margin-left: 20px;
+    border-radius: 10px;
+  }
+  nav .logo div .but-seminario {
+    text-decoration: none;
+    color: #212529;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  nav .sidebar {
+    display: flex;
+    position: static;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 0px;
+  }
+  nav .sidebar .menu-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  nav .sidebar .menu-options li {
+    list-style: none;
+    margin-bottom: 0;
+  }
+  nav .sidebar .menu-options li a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+  }
+  nav .sidebar .menu-options li a:hover {
+    color: #3ef2d0;
+    transition: all 0.2s ease-in-out;
+  }
+  nav .sidebar .menu-options li .boton-mentoria {
+    padding: 1rem 2rem;
+    background-color: #3ef2d0;
+    color: #000;
+    font-weight: bold;
+  }
+  nav .sidebar .menu-options li .boton-mentoria:hover {
+    transform: scale(1.1);
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+  }
+  nav .sidebar .menu-options li .boton-mentoria:active {
+    transform: scale(0.9);
+  }
+  nav .sidebar .close-btn {
+    display: none;
+  }
+  nav .svg-menu {
+    display: none;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body .but-floating img {
+    width: 6rem;
+    height: 5.5rem;
+  }
+  body .but-floating-wasap img {
+    width: 8rem;
+    height: 7.5rem;
+  }
+  nav {
+    padding: 1.5rem 4rem;
+  }
+  nav .logo .but-seminario {
+    margin-left: 24px;
+    font-size: 16px;
+  }
+  nav .logo p {
+    color: white;
+    font-weight: bold;
+    display: flex;
+  }
+  nav .sidebar {
+    display: flex;
+    position: static;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 0px;
+  }
+  nav .sidebar .menu-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  nav .sidebar .menu-options li {
+    list-style: none;
+    margin-bottom: 0;
+  }
+  nav .sidebar .menu-options li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  nav .sidebar .menu-options li a:hover {
+    color: #3ef2d0;
+    transition: all 0.2s ease-in-out;
+  }
+  nav .sidebar .menu-options li .boton-mentoria {
+    padding: 1rem 2rem;
+    background-color: #3ef2d0;
+    color: #000;
+    font-weight: bold;
+  }
+  nav .sidebar .menu-options li .boton-mentoria:hover {
+    transform: scale(1.1);
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+  }
+  nav .sidebar .menu-options li .boton-mentoria:active {
+    transform: scale(0.9);
+  }
+  nav .sidebar .close-btn {
+    display: none;
+  }
+  nav .svg-menu {
+    display: none;
+  }
+}
+@keyframes shake-bottom {
+  0%, 100% {
+    transform: rotate(0deg);
+    transform-origin: 50% 100%;
+  }
+  1% {
+    transform: rotate(2deg);
+  }
+  2%, 4%, 6% {
+    transform: rotate(-4deg);
+  }
+  3%, 5%, 7% {
+    transform: rotate(4deg);
+  }
+  8% {
+    transform: rotate(-2deg);
+  }
+  9% {
+    transform: rotate(2deg);
+  }
+  10%, 100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.9) translateY(10px);
+  }
+}/*# sourceMappingURL=navBar.css.map */

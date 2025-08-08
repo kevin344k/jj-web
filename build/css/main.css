@@ -1,0 +1,901 @@
+@charset "UTF-8";
+html {
+  font-size: 62.5%;
+  font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Solo para depuración */
+* {
+  outline: 1px solid red;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  min-width: 320px;
+  max-width: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: none;
+  margin: auto;
+}
+main > *:nth-child(even) {
+  background-color: #f3f5f7;
+}
+main section {
+  padding: 5rem 1rem;
+}
+main section .header-title {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+main section .header-title div {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 5px;
+  width: 100px;
+  background-color: #3ef2d0;
+}
+main section .header-title p {
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+main > section:not(:first-of-type) {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
+}
+main .section-calcujub {
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 0.5rem solid #23a78e;
+}
+main .section-calcujub .announce-calc-jub {
+  background-color: #effefa;
+  border: 1px solid #22dfc1;
+  border-radius: 1rem;
+  text-align: center;
+  padding: 1.4rem 1rem;
+  line-height: 2.5rem;
+  max-width: 425px;
+  box-shadow: 3px 3px 5px 0px #d6d7d8;
+  margin: 3rem auto;
+}
+main .section-calcujub div var {
+  font-size: 1.6rem;
+}
+main .section-calcujub .card-body-calculadora {
+  background-color: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  width: 310px;
+  padding: 1rem;
+  position: relative;
+  align-items: center;
+  border-radius: 0.375rem;
+}
+main .section-calcujub .card-body-calculadora .div-group-price-formula {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+  padding-bottom: 3rem;
+  margin-top: 2rem;
+}
+main .section-calcujub .card-body-calculadora .div-group-price-formula .precio-btc {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+main .section-calcujub .card-body-calculadora .div-group-price-formula .precio-btc .img-btc {
+  width: 30px;
+}
+main .section-calcujub .card-body-calculadora .div-group-price-formula .ecuacion-formula {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 0.2rem;
+  align-items: center;
+}
+main .section-calcujub .card-body-calculadora .div-group-price-formula .ecuacion-formula .denominador_fraccion {
+  border-top: 1px solid black;
+}
+main .section-calcujub .card-body-calculadora .input-group-inversion-inicial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid gray;
+}
+main .section-calcujub .card-body-calculadora .input-group-inversion-inicial .img {
+  width: 4rem;
+  height: 4rem;
+  margin: auto;
+}
+main .section-calcujub .card-body-calculadora .input-group-inversion-inicial p {
+  font-size: 3rem;
+}
+main .section-calcujub .card-body-calculadora .input-group-inversion-inicial input {
+  padding: 1rem;
+  outline-color: #3ef2d0;
+  width: 20rem;
+  text-align: center;
+}
+main .section-calcujub .card-body-calculadora .input-group-inversion-inicial .input-group-inversion {
+  display: flex;
+  gap: 2rem;
+}
+main .section-calcujub .card-body-calculadora .result-halvins {
+  padding: 3rem 0rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+  border-bottom: 1px solid gray;
+}
+main .section-calcujub .card-body-calculadora .result-halvins .halvin {
+  border-radius: 2rem;
+  border: 1px solid rgb(211, 208, 208);
+  padding: 1rem;
+  width: 100%;
+}
+main .section-calcujub .card-body-calculadora .result-halvins .halvin p {
+  font-weight: bold;
+  padding-bottom: 0.5rem;
+}
+main .section-calcujub .card-body-calculadora .result-halvins .halvin span {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1rem;
+  color: gray;
+}
+main .section-calcujub .card-body-calculadora .result-halvins .halvin-jub {
+  border-radius: 2rem;
+  background-color: #effefa;
+  border: 1px solid #19e6c0;
+  box-shadow: 0px 5px 0px 2px rgba(0, 0, 0, 0.1);
+}
+main .section-calcujub .card-body-calculadora .result-formula {
+  padding: 2rem;
+  text-align: center;
+}
+main .section-calcujub .card-body-calculadora .result-formula #result_calc-formula {
+  background-color: #19e6c0;
+  display: block;
+  justify-content: center;
+  border-radius: 2rem;
+  padding: 2rem 1rem;
+  margin: 2rem 0rem;
+  font-size: 2.4rem;
+  border-bottom: 5px solid #299b86;
+  box-shadow: 0px 5px 3px 2px rgba(0, 0, 0, 0.1);
+  min-width: 10rem;
+}
+main .section-calcujub .card-body-calculadora #btn_modal_info {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 1rem;
+  background-color: transparent;
+  border: none;
+}
+main .section-calcujub .card-body-calculadora #btn_modal_info img {
+  width: 3rem;
+}
+main .section-calcujub .aside-section-calc-jub {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  background-color: white;
+  width: 310px;
+  height: -moz-fit-content;
+  height: fit-content;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  border-radius: 0.375rem;
+}
+main .section-calcujub .aside-section-calc-jub .header-aside {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  justify-content: space-between;
+}
+main .section-calcujub .aside-section-calc-jub .header-aside p {
+  font-size: 1.6rem;
+}
+main .section-calcujub .aside-section-calc-jub #aside-calc-jub {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  gap: 0.45rem;
+}
+main .section-calcujub .aside-section-calc-jub #aside-calc-jub div {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  border: 1px solid #3ef2d0;
+  flex-direction: row;
+  border-radius: 0.5rem;
+  gap: 0.2rem;
+}
+main .section-calcujub .aside-section-calc-jub #aside-calc-jub div p:nth-child(1) {
+  font-weight: bold;
+}
+main .section-calcujub .aside-section-calc-jub #aside-calc-jub div p:nth-child(2) {
+  color: rgb(80, 79, 79);
+  width: 10rem;
+  text-align: right;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+main .section-calcujub .aside-section-calc-jub #aside-calc-jub div p:nth-child(3) {
+  width: 10rem;
+  text-align: right;
+  text-align: right;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+main .section-calcujub .aside-section-calc-jub #aside-calc-jub div p {
+  font-size: 1.4rem;
+}
+main .section-calcujub .aside-section-calc-jub #aside-calc-jub div .p-largest-number {
+  width: -moz-fit-content;
+  width: fit-content;
+  text-wrap: nowrap;
+}
+main .section-announce {
+  width: 100%;
+  background-color: #23a78e;
+}
+main .section-announce .div-container--announce {
+  background-color: #23a78e;
+  border-radius: 3rem;
+  text-align: center;
+  padding: 1.4rem 3.4rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+main .section-announce .div-container--announce .h2-red-tittle {
+  color: white;
+  font-weight: bold;
+}
+main .section-announce .div-container--announce .boton {
+  background-color: #3ef2d0;
+  color: #000000;
+  margin-top: 1.6rem;
+  font-size: 2rem;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.8rem 2.5rem;
+  width: 300px;
+  border-radius: 100px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #303235;
+}
+main .section-announce .div-container--announce .boton:hover {
+  background-color: #19e6c0;
+  cursor: pointer;
+}
+main .section-announce .div-container--announce .boton:active {
+  transform: scale(0.9);
+}
+main .section-mentoria {
+  min-width: 320px;
+  position: relative;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding: 2rem;
+}
+main .section-mentoria .bg-section-btc {
+  background-image: url("../../imagenes/btg-bg-section.jpg");
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  filter: brightness(0.3);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+}
+main .section-mentoria .div-mentoria {
+  position: inherit;
+  z-index: 2;
+}
+main .section-mentoria .div-mentoria .header-title {
+  color: #3ef2d0;
+}
+main .section-mentoria .div-mentoria .mentoria-items {
+  display: grid;
+  grid-template-columns: 1;
+  color: white;
+  list-style: none;
+  padding-left: 1.5rem;
+  gap: 0.8rem;
+  font-weight: bold;
+}
+main .section-mentoria .div-mentoria .mentoria-items li {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+}
+main .section-mentoria .div-mis-redes {
+  position: inherit;
+  z-index: 2;
+}
+main .section-mentoria .div-mis-redes .button-group {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+main .section-mentoria .div-mis-redes .button-group li:first-child a img {
+  border-radius: 100%;
+}
+main .section-mentoria .div-mis-redes .button-group li:nth-child(2) a img {
+  border-radius: 100%;
+}
+main .section-mentoria .div-mis-redes .button-group li {
+  width: 100%;
+  max-width: 30rem;
+}
+main .section-mentoria .div-mis-redes .button-group li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: white;
+  text-decoration: none;
+  color: black;
+  border-radius: 8px;
+  gap: 12px;
+}
+main .section-mentoria .div-mis-redes .button-group li a img {
+  width: 4rem;
+  height: 4rem;
+}
+main .section-mentoria .div-mis-redes .linea {
+  width: 25rem;
+  height: 0.4rem;
+  background-color: #23a78e;
+  margin: auto;
+  margin-top: 8rem;
+  margin-bottom: 3rem;
+}
+main .section-mentoria .div-mis-redes .redes-live {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+main .section-mentoria .div-mis-redes .redes-live p {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+main .section-mentoria .div-mis-redes .redes-live .redes-live-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  list-style: none;
+}
+main .section-mentoria .div-mis-redes .redes-live .redes-live-icons li a {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 15px;
+  background-color: white;
+  border: 1px solid #19e6c0;
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  transition: all 0.3s ease-in-out;
+}
+main .section-mentoria .div-mis-redes .redes-live .redes-live-icons li a img {
+  width: 3rem;
+  height: 3rem;
+}
+main .section-mentoria .div-mis-redes .redes-live .redes-live-icons li a:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.section-libros {
+  margin: auto;
+}
+.section-libros .carousel {
+  position: relative;
+  width: 100%;
+  max-width: 33rem;
+  padding: 10px 40px;
+  border: 1px solid gray;
+  border-radius: 15px;
+  background: #d3d3d3;
+  margin: auto;
+}
+.section-libros .carousel .img-book {
+  width: 24rem;
+  height: 38rem;
+  margin-right: 1.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  /* establecer block para remover el espacio alrededor de las imágenes */
+  display: block;
+}
+.section-libros .arrow {
+  position: absolute;
+  height: 100%;
+  border: none;
+  color: #444;
+  display: block;
+}
+.section-libros .arrow img {
+  width: 3rem;
+}
+.section-libros .arrow:focus {
+  outline: none;
+}
+.section-libros .arrow:hover {
+  cursor: pointer;
+}
+.section-libros .prev {
+  top: 0;
+  left: 5px;
+  background-color: transparent;
+}
+.section-libros .next {
+  height: 100%;
+  right: 5px;
+  top: 0;
+  background-color: transparent;
+}
+.section-libros .next img {
+  rotate: 180deg;
+}
+.section-libros .gallery {
+  overflow: hidden;
+}
+.section-libros .gallery ul {
+  height: 38rem;
+  width: 9999px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transition: margin-left 250ms;
+  /* eliminando los espacios en blanco entre los li inline-block'ed */
+  /* http://davidwalsh.name/remove-whitespace-inline-block */
+  font-size: 0;
+  display: flex;
+}
+.section-libros .gallery li {
+  display: inline-block;
+  position: relative;
+  height: 38rem;
+}
+.section-libros .gallery li .span-order-book {
+  height: 10rem;
+  color: #212529;
+  position: absolute;
+  bottom: 0;
+  font-size: 3rem;
+  width: 24rem;
+  background: linear-gradient(0deg, rgba(44, 46, 45, 0.836) 0%, rgba(62, 242, 208, 0) 100%);
+  border-radius: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+.section-libros .gallery li .span-order-book .span-order {
+  color: #19e6c0;
+  font-size: 5rem;
+  padding: 1.5rem;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+/* Add Animation */
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #212529;
+  color: white;
+}
+.modal-header h2 {
+  margin: 2rem 0rem;
+}
+
+.modal-body {
+  padding: 2px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem 0rem;
+  text-align: center;
+}
+.modal-body var {
+  font-weight: bold;
+}
+.modal-body .ecuacion-formula {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.modal-body .ecuacion-formula var {
+  font-size: 2rem;
+  font-weight: normal;
+}
+.modal-body .ecuacion-formula .denominador_fraccion {
+  border-top: 1px solid black;
+  text-align: center;
+}
+
+.modal-footer {
+  padding: 20px 16px;
+  background-color: #212529;
+  color: white;
+  text-align: center;
+}
+
+@media screen and (min-width: 560px) {
+  main {
+    width: 100%;
+    max-width: none;
+  }
+  main .section-announce .div-container--announce {
+    max-width: none;
+  }
+  main .section-calcujub .announce-calc-jub {
+    max-width: none;
+  }
+  main .section-calcujub .card-body-calculadora {
+    min-width: 524px;
+    padding: 1rem 2rem;
+  }
+  main .section-calcujub .card-body-calculadora .div-group-price-formula {
+    gap: 6rem;
+  }
+  main .section-calcujub .card-body-calculadora .div-group-price-formula span {
+    font-size: 2rem;
+  }
+  main .section-calcujub .card-body-calculadora .input-group-inversion-inicial {
+    flex-direction: row;
+    gap: 2rem;
+  }
+  main .section-calcujub .card-body-calculadora .input-group-inversion-inicial input {
+    width: 16rem;
+    font-size: 2rem;
+  }
+  main .section-calcujub .card-body-calculadora .result-halvins {
+    flex-direction: row;
+  }
+  main .section-calcujub .card-body-calculadora .result-formula #result_calc-formula {
+    margin: auto;
+    margin: 2rem auto;
+    width: 30rem;
+  }
+  main .section-calcujub .aside-section-calc-jub {
+    min-width: 524px;
+    padding: 1rem 2rem;
+  }
+  main .section-calcujub .aside-section-calc-jub .header-aside {
+    padding: 0.5rem 1.5rem;
+  }
+  main .section-calcujub .aside-section-calc-jub .header-aside p {
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+  main .section-calcujub .aside-section-calc-jub #aside-calc-jub div {
+    padding: 0.5rem 1.5rem;
+  }
+  main .section-calcujub .aside-section-calc-jub #aside-calc-jub div p {
+    font-size: 1.6rem;
+  }
+  main .section-calcujub .aside-section-calc-jub #aside-calc-jub div p:nth-child(2) {
+    width: 15rem;
+  }
+  main .section-calcujub .aside-section-calc-jub #aside-calc-jub div p:nth-child(3) {
+    width: 15rem;
+  }
+  main .section-calcujub .section--mis-redes {
+    width: 100%;
+    background-color: red;
+  }
+  main .section-calcujub .section--mis-redes .redes-conteiners {
+    background-color: red;
+    flex-direction: row;
+    justify-content: space-evenly;
+    max-width: none;
+  }
+  main .section-calcujub .section--mis-redes .redes-conteiners .button-group {
+    justify-content: space-around;
+  }
+  main .section-calcujub .section--mis-redes .redes-conteiners .button-group .botones-redes span {
+    font-size: 2rem;
+  }
+  main .section-calcujub .section--mis-redes .redes-conteiners .container-live {
+    padding-top: 0px;
+    background-color: red;
+  }
+  main .section-calcujub .section--mis-redes .redes-conteiners .container-live .stream_iconos {
+    gap: 0.5rem;
+  }
+  main .section-calcujub .section-mentoria .mentoria_contenido {
+    display: flex;
+    gap: 6.6rem;
+  }
+  main .section-calcujub .section-mentoria .mentoria_contenido .mentoria-items {
+    width: 50%;
+  }
+  main .section-calcujub .section-mentoria .mentoria_contenido .video-iframe {
+    width: 50%;
+    background-color: #000000;
+    height: 420px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  main .section-calcujub .section-mentoria .mentoria_contenido .video-iframe video {
+    border-radius: 10px;
+    height: 100%;
+    margin: auto;
+  }
+  main .section-calcujub .section-about-me {
+    max-width: none;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  main .section-calcujub .section-about-me .redes_contenido {
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 3rem;
+    max-width: none;
+  }
+  main .section-calcujub .section-about-me .redes_contenido .marco {
+    height: 500px;
+    margin: 0px;
+  }
+  main .section-calcujub .section-about-me .redes_contenido .video {
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 500px;
+    margin: 0px;
+  }
+  main .section--mis-redes .redes-conteiners {
+    flex-direction: row;
+    max-width: none;
+    justify-content: center;
+    padding-top: 2rem;
+  }
+  main .section--mis-redes .redes-conteiners .container-live {
+    padding-top: 0px;
+  }
+  main .section-about-me .redes_contenido {
+    display: flex;
+    flex-direction: row;
+  }
+  main .section-about-me .redes_contenido .marco {
+    border: 1px solid #3ef2d0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  p {
+    font-size: 1.6rem;
+  }
+  main {
+    max-width: none;
+  }
+  main section .header-title {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  main section .header-title div {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 5px;
+    width: 100px;
+    background-color: #3ef2d0;
+  }
+  main section .header-title p {
+    font-weight: bold;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  main {
+    max-width: none;
+  }
+  main section .header-title {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  main section .header-title div {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 5px;
+    width: 100px;
+    background-color: #3ef2d0;
+  }
+  main section .header-title p {
+    font-weight: bold;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  main .section-calcujub .group-calc-jub {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+  main .section-calcujub .group-calc-jub .card-body-calculadora {
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 70rem;
+  }
+  main .section-calcujub .group-calc-jub .card-body-calculadora .div-group-price-formula {
+    flex-direction: row;
+  }
+  main .section-calcujub .group-calc-jub .card-body-calculadora .input-group-inversion-inicial .input-group-inversion input {
+    width: 100%;
+  }
+  main .section-calcujub .group-calc-jub .card-body-calculadora .result-halvins {
+    justify-content: center;
+  }
+  main .section-calcujub .group-calc-jub .card-body-calculadora .result-halvins .halvin {
+    width: 25rem;
+  }
+  main .section-calcujub .group-calc-jub .aside-section-calc-jub {
+    min-width: 524px;
+    width: 600px;
+    padding: 1rem 2rem;
+    margin-top: 0rem;
+  }
+  main .section-calcujub .group-calc-jub .aside-section-calc-jub .header-aside p {
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+  main .section-calcujub .group-calc-jub .aside-section-calc-jub #aside-calc-jub div p {
+    font-size: 1.6rem;
+  }
+  main .section-announce .div-container--announce {
+    max-width: 90rem;
+  }
+  main .section-announce .div-container--announce p {
+    font-size: 2.5rem;
+  }
+  main .section-mentoria {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+  main .section-mentoria .div-mentoria {
+    max-width: 100rem;
+    margin: auto;
+  }
+  main .section-mentoria .div-mentoria .header-title p {
+    font-size: 3.4rem;
+  }
+  main .section-mentoria .div-mentoria .mentoria-items {
+    font-size: 2.4rem;
+    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  main .section-mentoria .div-mis-redes {
+    margin: auto;
+    max-width: 100rem;
+  }
+  main .section-mentoria .div-mis-redes .button-group li a {
+    transition: all 0.3s ease-in-out;
+  }
+  main .section-mentoria .div-mis-redes .button-group li a:hover {
+    cursor: pointer;
+    background-color: #19e6c0;
+    transform: scale(1.1);
+  }
+  main .section-mentoria .div-mis-redes .redes-live-icons li a {
+    width: 8rem;
+    transition: all 0.3s ease-in-out;
+  }
+  main .section-mentoria .div-mis-redes .redes-live-icons li a:hover {
+    cursor: pointer;
+    background-color: #19e6c0;
+    transform: scale(1.1);
+  }
+  @keyframes appear {
+    from {
+      opacity: 0.3;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}/*# sourceMappingURL=main.css.map */

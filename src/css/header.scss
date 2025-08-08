@@ -48,15 +48,16 @@ header {
   min-width: $xsmall;
   height: -webkit-fit-content;
   height: -moz-fit-content;
-  height: 60vh;
+height: fit-content;
   margin: auto;
   position: relative;
   text-align: center;
-  padding: 1.6rem 0px;
-  padding-top: 0;
+  
+  padding: 20px 0;
   display: flex;
   flex-direction: column;
-
+  justify-content: center;
+align-items: center;
   video {
     position: absolute;
     top: 0;
@@ -69,91 +70,27 @@ header {
 }
 .contenido-encabezado {
   margin: 1rem auto;
-  padding: 0px 16px;
+  padding: 0px 8px;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
+ 
   .text-autor {
     font-style: italic;
     font-weight: $font-W-bold-700;
   }
   div {
-    .btc-container-data {
-      height: 50px;
-      display: none;
-      justify-content: center;
-      gap: 1rem;
-      .div-btc-price {
-        background-color: #333;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1.1rem 1rem;
-        border-radius: 0.5rem;
-        min-width: 24rem;
-        max-width: 36rem;
-
-        div {
-          display: flex;
-          font-size: 1.8rem;
-          font-weight: bold;
-          align-items: center;
-          gap: 0.5rem;
-
-          p {
-            color: white;
-            font-size: 1.6rem;
-            span {
-              color: gray;
-              font-size: 1.3rem;
-            }
-          }
-          img {
-            width: 2.5rem;
-          }
-        }
-        span {
-          color: white;
-          font-size: 1.6rem;
-          font-weight: bold;
-        }
-      }
-      .fear-and-greed {
-        display: none;
-        position: relative;
-        background-color: #333;
-        border-radius: 5px;
-        color: white;
-        min-width: 10rem;
-
-        height: 100%;
-        padding: 2px;
-        justify-content: center;
-        align-items: center;
-        // padding: 0 30px;
-
-        p {
-          color: rgb(146, 146, 146);
-          font-size: 12px;
-          position: absolute;
-          left: 5px;
-          top: 5px;
-        }
-        span {
-          font-size: 1.6rem;
-          font-weight: bold;
-        }
-      }
-    }
+   
 
     .clock {
       display: flex;
       justify-content: center;
       margin: auto 0px;
       width: 100%;
+      
     }
   }
   .text-effect-writter {
@@ -177,6 +114,7 @@ header {
     .boton {
       @include but($turquesa, $negro);
       padding: 0.8rem 1.2rem;
+      margin-top: 8px;
       min-width: 10rem;
       border-radius: 0.5rem;
       font-size: 1.4rem;
@@ -190,7 +128,24 @@ header {
       box-shadow: 0px 5px 3px 2px rgba(0, 0, 0, 0.1);
     }
   }
+      .mentoria-items {
+        display: grid;
+    grid-template-columns: repeat(2, auto);
 
+        color: white;
+        list-style: none;
+        
+        gap: 0.5rem;
+        font-weight: bold;
+        margin-top: 20px;
+        li{
+          width: fit-content;
+          display: flex;
+          text-align: left;
+          font-size: 12px;
+         
+        }
+      }
   .flip-clock-wrapper ul {
     margin: 0.3rem;
   }
@@ -331,11 +286,12 @@ header {
   header {
     width: 100%;
     height: 70vh;
-
+padding: auto 12px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     .contenido-encabezado {
+     
       div {
         .btc-container-data {
           display: flex;
@@ -389,7 +345,7 @@ header {
           }
         }
       }
-
+  
       .text-effect-writter {
         width: 60%;
         line-height: 4.5rem;
@@ -398,6 +354,23 @@ header {
           font-size: 3rem;
         }
        
+      }
+       .mentoria-items {
+       
+     
+        list-style: none;
+        
+        gap: 0.5rem;
+        font-weight: bold;
+        margin-top: 20px;
+        li{
+          width: fit-content;
+          display: flex;
+          text-align: left;
+          font-weight: 400;
+          font-size: 16px;
+         
+        }
       }
 
       .flip-clock-wrapper ul {
@@ -591,6 +564,12 @@ header {
           padding: 0.4rem 2rem;
         
           font-size: 1.8rem;
+        }
+      }
+      .mentoria-items{
+        gap:12px;
+        li{
+          font-size: 24px;
         }
       }
     }
